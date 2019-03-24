@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+	<title>Data Structure, Spring, 2016</title>
+	<link rel="stylesheet" type="text/css" href="res\mystyle.css">
+
+    table {
+        border-collapse: collapse;
+        border: 1px solid black;
+    }
+</head>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29807050-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+<body>
+
+	<header>
+	<table width="960" height="50" border="0" align="center">
+	<tbody><tr>
+	<td class="ftheader" width="555" ><a href="2017spring-datastructure.htm">Data Structure, Spring, 2017</a></td>
+	</tbody>
+	</table>
+	</header>
+	
+<div class="container">
+  <div class="content">
+
+  <h2>Instructor</h2>
+	<ul>
+        <li><p><a href="index.htm">Dr. Xinggang Wang</a></p></li>
+        <li><p>E-mail: xgwang at hust.edu.cn</p></li>
+    </ul>
+
+ <h2>What you will learn</h2>
+	<ul>
+        <li><p>Definitions, operations, usages and implementations of various data structures, such array, list, tree and graph.</p></i>
+        <li><p>Principles and methods in the design and implementation of various data structures.</p></i>
+        <li><p>Basic searching and ranking algorithms based different data structures.</p></i>
+    </ul>
+ 
+    
+   
+ <h2>Syllabus</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Week</th>
+                <th>Date</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>3</td>
+                <td>Tue.</td>
+                <td>Introduction (绪论) <a href="slides/ds17/1 - 绪论.pptx">ppt</a> <a href="slides/ds17/poly_sum.c">code</a> </td> </td>
+
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Fri.</td>
+                <td>Linear List (线性表)</td>
+
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Tue.</td>
+                <td>Linear List and Array (线性表，数组) <a href="slides/ds17/线性表.pptx">ppt</a></td>
+ 
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Fri.</td>
+                <td>Stack (栈) <a href="slides/ds17/栈.pptx">ppt</a></td>
+    
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Tue.</td>
+                <td>Queue (队列) <a href="slides/ds17/队列.pptx">ppt</a></td>
+     
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Fri.</td>
+                <td>String (串) I</td>
+          
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Tue.</td>
+                <td>String (串) II <a href="slides/ds/串.pptx">ppt</a></td>
+        
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Fri.</td>
+                <td>Tree & Binary Tree (树和二叉树) I</td>
+   
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Tue.</td>
+                <td>Tree & Binary Tree (树和二叉树) II</td>
+               
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Fri.</td>
+                <td>Tree & Binary Tree (树和二叉树) III <a href="slides/ds/树.zip">ppt</a></td>
+              
+            </tr>
+            
+            <tr>
+                <td>9</td>
+                <td>Tue.</td>
+                <td>Graph (图) I</td>
+               
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Fri.</td>
+                <td>Graph (图) II</td>
+             
+            </tr>
+            
+            <tr>
+                <td>10</td>
+                <td>Tue.</td>
+                <td>Graph (图) III <a href="slides/ds/图.zip">ppt</a></td>
+              
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Fri.</td>
+                <td>Search (查找) I</td>
+              
+            </tr>
+            
+            <tr>
+                <td>11</td>
+                <td>Tue.</td>
+                <td>Search (查找) II <a href="slides/ds17/查找.zip">ppt</a></td>
+                
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Fri.</td>
+                <td>Rank (排序) I</td>
+          
+            </tr>
+            
+            <tr>
+                <td>12</td>
+                <td>Tue.</td>
+                <td>Rank (排序) II <a href="slides/ds17/排序.zip">ppt</a></td>
+        
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Fri.</td>
+                <td>Review</td>
+           
+            </tr>    
+        </tbody>
+
+    </table>
+    <br>
+    
+	<h2>Textbook</h2>
+	<ul>
+        <li><p>严蔚敏等，数据结构（C语言版），清华大学出版社，1997年4月第1版 （配题集）</p></li>
+	</ul>
+    
+    <h2>Reference Book</h2>
+	<ul>
+        <li><p>高一凡，《数据结构》算法实现及解析（第二版），西电出版社，2004年10月</p></li>
+        <li><p>李春葆，数据结构（C语言篇）-习题与解析（修订版），清华大学出版社，2002年4月</p></li>
+        <li><p>殷人昆等，数据结构（用面向对象方法与C++描述），清华大学出版社，1999年7月（2002年配题集）</p></li>
+	</ul>
+    
+    <h2>Online Resource</h2>
+    <ul>
+        <li><p>陈越, 何钦铭，数据结构，浙江大学，<a href="http://www.icourse163.org/course/zju0901-93001#/info">MOOC</a></p></li>
+        <li><p>在线C编译器，带分享功能，将作为编程作业提交工具，<a href="http://www.tutorialspoint.com/compile_c_online.php">tutorialspoint</a></p></li>
+        <li><p>在线C++编译器：<a href="http://cpp.sh/">cpp.sh</a></p></li>
+    </ul>
+	
+	<h2>Office Hour</h2>
+	<ul>
+	<li>
+	<p>
+	We have an office hour for every Monday, from 5pm to 6 pm, in Room West 205, Nan 1 Hall. In office hour, we can have discussion in face.
+   </p>
+   </li>
+   <li>
+	<p>
+	Office hour is available upon reservation by e-mail. Please send me e-mail at lease one day before if you want an office hour. 
+   </p>
+   </li>
+   </ul>
+	
+	<h2>Feedback</h2>
+	<ul>
+	<li>
+	<p>
+	If you have questions, welcome write e-mail to me.
+   </p>
+   </li>
+   <li>
+	<p>
+	Due to the large number of spam e-mails, please add ``[Data Structure][Question]'' as the prefix in the title of your e-mail. That will help me to identify your e-mails, thank you.
+   </p>
+   </li>
+   </ul>
+	
+
+</div>
+</div>
+
+	
+
+</body></html>

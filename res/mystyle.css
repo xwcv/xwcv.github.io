@@ -1,0 +1,212 @@
+ <style type="text/css" id="styleCSS">
+    body {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 13px;
+	color: #333333;
+        background-color:#FFFFFF;
+        
+        background-repeat:;
+        background-position:;
+        background-attachment:;
+}
+td, tr {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+
+h1 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 30px;
+}
+
+
+h2 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 26px;
+}
+
+
+h3 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 22px;
+}
+
+
+h4 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 20px;
+}
+
+
+h5 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 14px;
+}
+
+
+h6{
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 11px;
+}
+
+a img{border:none;}
+
+a:link {
+	text-decoration: none;
+	color: #333333;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+
+}
+body {
+	margin-top: 0px;
+}
+
+#container
+{
+	/*width: 90%;
+	margin: 10px auto;
+	max-width:1024px;*/
+	
+	width: 900px;;
+	margin: 0px auto;
+}
+
+#header{
+	width:900px;
+}
+
+#header h1{
+	padding-top: 25px;
+	padding-left: 15px;
+	text-decoration:none;
+	color: #333333;
+}
+#header h1 a:hover{
+	text-decoration:none;
+}
+#header h1 a{
+	text-decoration:none;
+}
+#menu{
+	float: left;
+	width: 140px;
+	margin: 0px;
+	padding: 1em;
+	text-align:left;
+	overflow:hidden;
+}
+#menu ul {
+	list-style: none;
+	list-style-position:outside;
+	font-size:larger;
+	padding-left:0px;
+	margin-left:0px;
+}
+
+#menu ul li {
+	padding-bottom:14px;
+}
+#menu ul li a{
+	padding-bottom:14px;
+	text-decoration: none;
+	font-size:14px;
+}
+ 
+#content{
+/*	padding: 1em;
+	margin-left:200px;
+	border-left: solid 1px #CCCCCC;*/
+
+	margin-left:10px;
+	padding: 1em;
+	float:left;
+	width:645px;
+	border-left: solid 1px #CCCCCC;
+}
+/*
+#content div {
+	float:left;
+}*/
+#full-content{
+	padding: 1em;
+}
+
+
+.sys_footer{
+    text-align:right;
+    font-size:small;
+    width:770px;
+    margin:10px auto;
+}
+
+#sys_designerfooter {
+    border: none;
+    margin:0 auto;
+    padding: 0;
+    background: none;
+}
+
+
+.sys_txt {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+.sys_txt h1 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 30px;
+}
+
+
+.sys_txt h2 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 26px;
+}
+
+
+.sys_txt h3 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 22px;
+}
+
+
+.sys_txt h4 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 20px;
+}
+
+
+.sys_txt h5 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 14px;
+}
+
+
+.sys_txt h6{
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 11px;
+}
+
+.sys_txt a:link {
+	text-decoration:underline;
+	color: #333333;
+}
+.sys_txt a:visited {
+	text-decoration:underline
+		
+}
+.sys_txt a:hover {
+	text-decoration:underline
+	color: #000000;
+
+}
+  </style>
+  

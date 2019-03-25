@@ -1,0 +1,260 @@
+%______________________________________________________________________________________________________________________
+% @brief    LaTeX2e Resume for Kamil K Wojcicki
+\documentclass[margin,line]{resume}
+\usepackage{url}
+\usepackage{enumitem}
+
+%______________________________________________________________________________________________________________________
+\begin{document}
+\name{\Large Dr. Xinggang Wang \small{Assistant Professor}}
+\begin{resume}
+
+    %__________________________________________________________________________________________________________________
+    % Contact Information
+    \section{\mysidestyle Contact\\Information}
+
+    Media and Communication Laboratory                            \hfill{mobile: +86 18802729359}\\
+    Huazhong University of Science and Technology           \hfill{e-mail: \url{xgwang@hust.edu.cn}}\\
+    google scholar profile: \url{http://goo.gl/UJbI9M}      \hfill{\url{http://www.xinggangw.info}}\\
+    \vspace{-5mm}
+
+    %__________________________________________________________________________________________________________________
+    % Research Interests
+    \section{\mysidestyle Research\\Interests}
+
+    computer vision, deep learning: object recognition, object detection, weakly-supervised visual learning.
+
+    %__________________________________________________________________________________________________________________
+    % Education
+    \section{\mysidestyle Education}
+    { Huazhong University of Science and Technology}, China, \hfill{09/2010 - 11/2014}\\
+    \vspace*{-.15in}
+    \begin{list1}
+    \item[] Ph.D. in Communication and Information System. Advisor: Prof. Wenyu Liu
+    \end{list1}
+    \vspace{-2.5mm}
+    { Huazhong University of Science and Technology}, China,    \hfill{09/2009 - 06/2010}\\
+    \vspace*{-.15in}
+    \begin{list1}
+    \item[] M.S. in Communication and Information System. Advisor: Prof. Wenyu Liu
+    \end{list1}
+    \vspace{-2.5mm}
+    { Huazhong University of Science and Technology}, China,    \hfill{09/2005 - 06/2009}\\
+    \vspace*{-.15in}
+    \begin{list1}
+    \item[] B.S. in Electronics and Information Engineering\\
+    \end{list1}
+    \vspace{-5mm}
+
+    \section{\mysidestyle Professional\\Experience}
+
+    Assistant Professor @ HUST, China \hfill {12/2014 - now}\\
+    Leading a research group with 3 Ph.D students and 11 master students doing research in computer vision and deep learning.\\
+
+    \vspace{-7mm}
+
+    Visiting Graduate Researcher @ UCLA, USA \hfill {02/2013 - 09/2013}\\
+    I was supervised by Prof. Alan Yuille and worked on object recognition using compositional models.\\
+
+    \vspace{-7mm}
+
+    Intern @ Microsoft Research Asia, China \hfill {12/2011 - 11/2012  }\\
+    I was mentored by Prof. Zhuowen Tu and collaborated with Prof. Yi Ma, worked on the applications of low-rank optimization, object recognition, object discovery in un-labeled images, and semi-supervised codebook learning.\\
+
+    \vspace{-7mm}
+
+    Visiting Scholar @ Temple University, USA \hfill {06/2010 - 08/2011  }\\
+    I was supervised by Prof. Longin Latecki and worked on object detection, image classification, shape based object modeling and machine learning.\\
+
+    \vspace{-7mm}
+    %__________________________________________________________________________________________________________________
+    % Honours and Awards
+    \section{\mysidestyle Honours and\\Awards}
+    Outstanding reviewers of the Pattern Recognition journal, the Nurocomputing journal, the Pattern Recognition Letter journal. \hfill{2017}\\
+    Nature \& Science Second Prize, Hubei Province.     \hfill{2017}\\
+    Excellent Ph.D. Thesis Award Nomination, China Education Society OF Electronics£¬CESE. \hfill{2017}\\
+    Excellent Ph.D. Thesis Award, Hubei Province. \hfill{2016}\\
+    Young Elite Sponsorship Program by China Association for Science and Technology.\footnote{one of the 180 award-winners from all the science and technology areas in China.}	\hfill{2015}
+    {Microsoft Research Asia Fellow Award} \footnote{one of the 10 winners out of $\sim$100 excellent applicants from top Asian universities.} \hfill{2012}\\
+    National Scholarship, Huazhong University of Science and Technology \hfill{2012}\\
+    Excellent Bachelor Thesis, Huazhong University of Science and Technology \hfill{2009}\\
+    National Ziqiang Scholarship, Huazhong University of Science and Technology    \hfill{2008}\\
+    Innovative Student, Huazhong University of Science and Technology   \hfill{2007}
+
+    \section{\mysidestyle Patents}
+    {A convolutional network based end-to-end object detection method }. Patent number: CN201611241694.3. \\
+    {A deep learning based video frame up-conversion method and system}. Patent number: CN201611241691.X
+
+
+    %__________________________________________________________________________________________________________________
+    % Publications
+    \section{\mysidestyle Selected Publications}
+         \subsection{\mysidestyle Top conferences}
+ \begin{enumerate}[leftmargin=0.02cm]
+ 
+        \item Zilong Huang, \underline{Xinggang Wang}*, Jiasi Wang, Wenyu Liu, Jingdong Wang. Weakly-Supervised Semantic Segmentation Network with Deep Seeded Region Growing. CVPR, 2018.
+            
+        \item Jianxiang Ma, Anlong Ming, Zilong Huang, \underline{Xinggang Wang}, Yu Zhou. Object-Level Proposals. ICCV, 2017
+
+        \item Peng Tang, \underline{Xinggang Wang}, Xiang Bai, and Wenyu Liu. Multiple Instance Detection Network with Online Instance Classifier Refinement. CVPR, 2017.
+
+        \item Minghui Liao, Baoguang Shi, Xiang Bai, \underline{Xinggang Wang}, Wenyu Liu. TextBoxes: A Fast Text Detector with a Single Deep Neural Network. AAAI, 2017
+
+        \item Baoguang Shi, \underline{Xinggang Wang}, Pengyuan Lv, Cong Yao, Xiang Bai.Robust Scene Text Recognition with Automatic Rectification. CVPR, 2016
+
+      \item \underline{Xinggang Wang}, Zhuotun Zhu, Cong Yao, Xiang Bai. Relaxed Multiple-Instance SVM with Application to Object Discovery. IEEE International Conference on Computer Vision (ICCV), 2015.
+
+      \item Wei Shen, \underline{Xinggang Wang}, Yan Wang, Xiang Bai, Zhijiang Zhang. DeepContour: A Deep Convolutional Feature for Contour Detection. IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR), 2015, Boston, USA.
+
+        \item Xiaojie Guo, \underline{Xinggang Wang}, Liang Yang, Xiaochun Cao, Yi Ma. Robust Foreground Detection Using Smoothness and Arbitrariness Constraints. European Conference on Computer Vision (ECCV), Zurich, September, 2014
+
+
+    \item \underline{Xinggang Wang}, Baoyuan Wang, Xiang Bai, Wenyu Liu, Zhuowen Tu. Max-Margin Multiple Instance Dictionary Learning. International Conference on Machine Learning (ICML), 2013, Atlanta, USA.
+
+    \item \underline{Xinggang Wang}, Xiang Bai, Tianyang Ma, Wenyu Liu, Longin Latecki. Fan Shape Model for Object Detection. IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR), 2012, Providence, USA.
+
+    \item \underline{Xinggang Wang}, Xiang Bai, Xingwei Yang, Wenyu Liu, Longin Jan Latecki. Maximal Cliques that Satisfy Hard Constraints with Application to Deformable Object Model Learning. Neural Information Processing Systems Conference (NIPS), 2011, Granada, Spain. (Google Scholar Citations=6)
+
+    \item \underline{Xinggang Wang}, Xiang Bai, Wenyu Liu, Longin Latecki. Feature Context for Object Detection and Image Classification. IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR), 2011, Colorado Spring, USA.
+
+
+
+        \item Xiang Bai, Bo Wang, \underline{Xinggang Wang}, Wenyu Liu, Zhuowen Tu. Co-Transduction for Shape Retrieval. European Conference on Computer Vision (ECCV), 2010, Crete, Greece.
+
+    \item Bo Wang, Xiang Bai, \underline{Xinggang Wang}, Wenyu Liu, Zhuowen Tu. Object Recognition using Junctions. European Conference on Computer Vision (ECCV), 2010, Crete, Greece.
+
+    \item Xiang Bai, \underline{Xinggang Wang}, Longin Jan Latecki, Wenyu Liu, Zhuowen Tu. Active Skeleton for Non-rigid Object Detection. IEEE International Conference on Computer Vision (ICCV), 2009, Kyoto, Japan.
+
+    \subsection{\mysidestyle Journals}
+   
+   \item Baoguang Shi, Mingkun Yang, \underline{Xinggang Wang}, Pengyuan Lyu, Cong Yao, Xiang Bai. ASTER: An Attentional Scene Text Recognizer with Flexible Rectification. IEEE Trans. on PAMI, accepted.
+   
+   \item Yuan Li, \underline{Xinggang Wang}, Wenyu Liu, Bin Feng. Deep attention network for joint hand gesture localization and recognition using static RGB-D images. Information Sciences. 441: 66-78 (2018)
+       
+   \item Chao Li, \underline{Xinggang Wang}*, Wenyu Liu, Longin Latecki. DeepMitosis: Mitosis Detection via Deep Detection, Verification and Segmentation Networks. Medical image analysis. 45: 121-133 (2018)
+
+   \item \underline{Xinggang Wang}, Yongluan Yan, Peng Tang, Xiang Bai, Wenyu Liu. Revisiting Multiple Instance Neural Networks. Pattern Recognition, 2018.
+
+   \item Peng Tang, \underline{Xinggang Wang*}, Zilong Huang, Xiang Bai, Wenyu Liu. Deep Patch Learning for Weakly Supervised Object Classification and Discovery. Pattern Recognition, Volume 71, Pages 446-459 (November 2017).
+
+   \item Chao Li, \underline{Xinggang Wang}, Wenyu Liu. Neural features for pedestrian detection. Neurocomputing, Volume 238, 17 May 2017, Pages 420?432
+
+   \item Peng Tang, Jin Zhang, \underline{Xinggang Wang*}, Bin Feng, Fabio Roli, Wenyu Liu. Learning Extremely Shared Middle-level Image Representation for Scene Classification. Knowledge and Information Systems (KAIS), doi:10.1007/s10115-016-1015-z.
+
+   \item \underline{Xinggang Wang}, Xiong Duan, Xiang Bai. Deep sketch feature for cross-domain image retrieval. Neurocomputing, Volume 207, 26 September 2016, Pages 387?397. [Github]
+
+   \item Zhuotun Zhu, \underline{Xinggang Wang*}, Song Bai, Cong Yao, Xiang Bai. Deep Learning Representation using Autoencoder for 3D Shape Retrieval. Neurocomputing, Volume 204, 5 September 2016, Pages 41?50
+
+   \item Yingying Zhu, Chengquan Zhang, Duoyou Zhou, \underline{Xinggang Wang}, Xiang Bai, Wenyu Liu. Traffic Sign Detection and Recognition using Fully Convolutional Network Guided Proposals. Neurocomputing, Volume 214, 19 November 2016, Pages 758?766
+
+   \item Wei Shen, Yuan Jiang, Wenjing Gao, Dan Zeng, \underline{Xinggang Wang}. Shape recognition by bag of skeleton-associated contour parts. Pattern Recognition Letters, Volume 83, Part 3, 1 November 2016, Pages 321?329
+
+   \item Sihua Yi, Nan Jiang, Bin Feng, \underline{Xinggang Wang}, Wenyu Liu. Online similarity learning for visual tracking. Information Sciences, 364-365: 33-50 (2016)
+
+   \item Sihua Yi, Nan Jiang, \underline{Xinggang Wang}, Wenyu Liu. Individual adaptive metric learning for visual tracking. Neurocomputing 191: 273-285 (2016)
+
+   \item Yang Wang, \underline{Xinggang Wang*}, Wenyu Liu. Unsupervised Local Deep Feature for Image Recognition. Information Sciences (2016), Volume 351, 10 July 2016, Pages 67?75
+
+   \item Chuanping Hu, Xiang Bai, Li Qi, \underline{Xinggang Wang}, Gengjian Xue, Lin Mei. Learning Discriminative Pattern for Real-Time Car Brand Recognition. IEEE Trans. Intelligent Transportation Systems 16(6): 3170-3181 (2015)
+
+   \item Xiang Bai, Song Bai, \underline{Xinggang Wang*}. Beyond diffusion process: Neighbor set similarity for fast re-ranking. Inf. Sci. 325: 342-354 (2015)
+
+   \item Xiang Bai, Cong Rao, \underline{Xinggang Wang*}. Shape Vocabulary: A Robust and Efficient Shape Representation for Shape Matching, IEEE Transactions on Image Processing 23(9): 3935-3949 (2014)
+
+   \item Chen Duan, \underline{Xinggang Wang}, Shuiming Shu, Changwei Jing, and Huawei Chang. Thermodynamic design of Stirling engine using multi-objective particle swarm optimization algorithm, Energy Conversion and Management, Volume 84, August 2014, Pages 88?96.
+
+    \item \underline{Xinggang Wang}, Bin Feng, Xiang Bai, Wenyu Liu, Login Latecki. Bag of Contour Fragments for Robust Shape Classification. Pattern Recognition, Volume 47, Issue 6, June 2014, Pages 2116-2125.
+
+    \item \underline{Xinggang Wang}, Zhengdong Zhang, Yi Ma, Xiang Bai, Wenyu Liu, Zhuowen Tu. Robust Subspace Discovery via Relaxed Rank Minimization. Neural Computation, Vol. 26, No. 3£¬ April 2014, Pages 611-635.
+
+
+	\subsection{\mysidestyle Other conferences}
+	\item Yongluan Yan, \underline{Xinggang Wang}, Xin Yang, Xiang Bai, and Wenyu Liu. Joint Classification Loss and Histogram Loss for Sketch-based Image Retrieval. ICIG, 2017 (oral)
+	
+	\item Xin Yang, \underline{Xinggang Wang}, Tim Cheng. OGB: A Distinctive and Efficient Feature for Mobile Augmented Reality. International Conference on Multimedia Modeling (MMM), 2016
+
+	\item \underline{Xinggang Wang}, Xin Yang, Wenyu Liu, Chen Duan, Longin Latecki. Location-Aware Image Classification. International Conference on Multimedia Modeling (MMM), 2016
+	
+    \item Weichao Qiu, \underline{Xinggang Wang}, Xiang Bai, Alan Yuille, Zhuowen Tu. Scale-space SIFT Flow, IEEE Winter Conference on Applications of Computer Vision (WACV), 2014, Steamboat Springs CO, USA.
+
+    \item Song Bai, \underline{Xinggang Wang}, Cong Yao, Xiang Bai. Multiple Stage Residual Model for Accurate Image Classification. Asian Conference on Computer Vision (ACCV), 2014.
+
+    \item Wei Shen, \underline{Xinggang Wang}, Cong Yao, Xiang Bai. Shape Recognition by Combining Contour and Skeleton into a Mid-level Representation. China Conference on Pattern Recognition (CCPR), Shanghai, Chian, 2014.
+
+        \item \underline{Xinggang Wang}, Zhengdong Zhang, Yi Ma, Xiang Bai, Wenyu Liu, Zhuowen Tu. One-Class Multiple Instance Learning via Robust PCA for Common Object Discovery. Asian Conference on Computer Vision (ACCV), 2012, Daejeon, Korea.
+
+
+    \item Yingying Zhu, \underline{Xinggang Wang}, Cong Yao, Xiang Bai. Traffic sign classification using two-layer image representation. International Conference on Image Processing (ICIP), 2013, Melbourne, Astralia.
+
+    \item Yueming Wang, \underline{Xinggang Wang}, Shaojun Zhu, Xiang Bai, Wenyu Liu. Adjacent Coding for Image Classification. International Conference on Pattern Recognition (ICPR), 2012, Tsukuba Science City, Japan.
+
+    \item Quannan Li, \underline{Xinggang Wang}, Wei Wang, Yuan Jiang, Zhi-Hua Zhou, Zhuowen Tu. Disagreement-Based Multi-System Tracking. ACCV Workshop of Detection and Tracking in Challenging Environments, 2012.
+
+    \item Meng Yi, Tatyana Nuzhnaya, Vasileios Megalooikonomou, \underline{Xinggang Wang}, Longin Jan Latecki, Mark Kohn, Robert Steiner. Lung Image Classification using Locality-Constrained Linear Coding. STMI 2012: MICCAI Workshop on Sparsity Techniques in Medical Imaging.
+\end{enumerate}
+
+   %  \section{\mysidestyle Product Projects}
+    % \textbf{Car Recognition}: Leading a car brand recognition project. We have developed a product which is able to recognize more than 2000 brands (including sub-brand) of car in surveillance video in urban road with high precision and efficiency. This product is the state-of-the-art in Chinese market. Deep learning is a major component inside.        \hfill{10/2013 - now}
+    % \vspace{-3mm}
+
+    % \textbf{Speech Recognition}: Guiding a Chinese speech recognition project cooperated with Tencent, Inc. This project uses deep learning methods to learn acoustic model from big speech data. It involves design learning architecture, CUDA GPU programming etc. \hfill{11/2013 - now}
+    % \vspace{-1mm}
+
+    \section{\mysidestyle Invited talks}
+    Modeling and Learning in Object Recognition, in Institute of Information Engineering, CAS, Beijing (10/2013), in Shanghai Univ. (03/2014), in Zhejiang Univ. (03/2014), and in Xidian Univ. (10/2014).\\
+    Multi-instance learning and its applications in computer vision. VALSE 2015\\
+    Weakly supervised deep learning for object classification and detection. Shenzhen Unv. (11/2016), Horizon Robotics (11/2017)
+
+    \section{\mysidestyle Other Experience}
+    %
+    {IPAM Graduate Summer School: Computer Vision}, Los Angeles, USA. \hfill{07/2013-08/2013} \\
+    {Vision, Learning and Pattern Recognition (VLPR) Summer School}, Chengdu, China. \hfill{08/2011}\\
+    Member and project leader in {Dian Group}, HUST. \hfill{03/2007-06/2009}\\
+    Member in {Seedclass 2005}, HUST. \hfill{06/2007-06/2009}
+
+    \section{\mysidestyle Service}
+    Reviewer for the following journals/institutes/conferences: TMPAI / JMLR / Pattern Recognition / T. Cybernetics / TIP / TITS / CVIU/ Neurocomputing / NIPS / ICDM / ICCV / ECCV / CVPR / ICME / ICIP / ICPR.\\
+Website chair of VALSE 2016 / Website chair of IEEE SIDAS 2016 / Website chair of IEEE CAS conference on intelligent media computing\\
+VALSE VOOC, Member of CSIG, Member of CCF, Member of IEEE
+
+    \section{\mysidestyle Skills}
+    Familar with: C, C++, Python, Caffe, TensorFlow, PyTorch etc. Excellent R\&D leadership. Excellent teamwork.  Strong quick-learning ability.  Strong problem-solving ability.
+
+
+
+    % \section{\mysidestyle References}
+    %
+    %\begin{tabular}{@{}p{12cm}}
+    %\textbf{Wenyu Liu}  \\
+    %\emph{Professor}    \\
+    %Department of Electronics and Information Engineering   \\
+    %Huazhong University of Science and Technology, Wuhan, China   \\
+    %Email: liuwy@hust.edu.cn    \\
+    %\end{tabular}
+
+
+    %\begin{tabular}{@{}p{12cm}}
+    %\textbf{Longin Jan Latecki} \\
+    %\emph{Professor}    \\
+    %Department of Computer and Information Sciences \\
+    %Temple University, Philadelphia, PA 19122, USA  \\
+    %Email: latecki@temple.edu   \\
+    %\end{tabular}
+
+    %\begin{tabular}{@{}p{12cm}}
+    %\textbf{Zhuowen Tu} \\
+    %\emph{Assistant Professor}  \\
+    %Department of Cognitive Science \\
+    %University of California, San Diego, 9500 Gilman Drive, CA 92093,  USA  \\
+    %Email: ztu@ucsd.edu \\
+    %\end{tabular}
+
+
+%______________________________________________________________________________________________________________________
+\end{resume}
+\end{document}
+
+
+%______________________________________________________________________________________________________________________
+% EOF
+

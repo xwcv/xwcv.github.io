@@ -3,11 +3,10 @@
 	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
 	font-size: 13px;
 	color: #333333;
-        background-color:#FFFFFF;
-        
-        background-repeat:;
-        background-position:;
-        background-attachment:;
+    background-color:#FFFFFF;
+    background-repeat:;
+    background-position:;
+    background-attachment:;
 }
 td, tr {
 	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
@@ -81,6 +80,7 @@ body {
 
 #header{
 	width:900px;
+	background: #3333FF;
 }
 
 #header h1{

@@ -3,9 +3,14 @@
 <!-- saved from url=(0028)http://www.richardcraib.com/ -->
 <html xmlns="http://www.w3.org/1999/xhtml" class="xinggang_wang_homepage">
 
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Xinggang Wang, Associate Professor in Huazhong University of Sci. and Tech.</title>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="Xinggang Wang is an Associate Professor in Huazhong University of Sci. and Tech. His research interests lie in computer vision, deep learning, & artificial intelligence.">
+    <meta name="keywords" content="Xinggang Wang,Computer,Vision,Machine,Learning,Deep,Object,Recognition,Detection,Science,Homepage">
+	<title>Xinggang Wang, Associate Professor in Huazhong University of Sci. and Tech. Research in computer vision, deep learning, & artificial intelligence.</title>
 	<link rel="stylesheet" type="text/css" href="res\mystyle.css">
+
+	
 </head>
 
 <script>
@@ -13,32 +18,28 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-29807050-2', 'auto');
   ga('send', 'pageview');
-
 </script>
 	
 <body>
 
-<div id="container">
-
-		
-
-	<div id="sys_heading">
-	<table width="960" height="50" border="0" align="center">
-	<tbody><tr>
-	<td class="ftheader" width="555" ></td>
-	<td class="ftsubheader" width="100"><a href="index.htm">Home</a></td>
-	<td class="ftsubheader" width="100"><a href="pubs.htm">Publications</a></td>
-    <td class="ftsubheader" width="100"><a href="group.htm">Group</a></td>
-    <td class="ftsubheader" width="100"><a href="index_cn.htm">中文</a></td>
-	</tbody>
-	</table>
-	</div>
-
+<div id="container" >
 	
-<div  id="I32eb71f3297d4aa684dd7d3571975f66_sys_txt" systemelement="true" class="sys_txt sys_text_widget new-text-widget">
+	
+	<div>
+		<table width="960" height="50" border="0" align="center">
+		<tbody><tr>
+			<td width="555" ></td>
+			<td width="100"><a href="index.htm">Home</a></td>
+			<td width="100"><a href="pubs.htm">Publications</a></td>
+	    	<td width="100"><a href="group.htm">Group</a></td>
+	    	<td width="100"><a href="index_cn.htm">中文</a></td>
+		</tbody>
+		</table>
+	</div>
+	
+	<div  id="sys_txt_main" systemelement="true" class="sys_txt sys_text_widget new-text-widget">
   
 <table width="960" border="0">
   <tbody><tr>
@@ -100,6 +101,76 @@
 	  </tr>
 	</tbody></table>
 
+
+	<p><strong>Recent works</strong></p>
+	<div class="slideshow-container">
+		<div class="mySlides fade">
+		  <div class="numbertext">1 / 8</div>
+		  <img src="./images/msrcnn.jpg" style="height:200px" >
+		  <div class="text">Mask Scoring R-CNN</div>
+		</div>
+		<div class="mySlides fade">
+		  <div class="numbertext">2 / 8</div>
+		  <img src="./images/pcl.jpg" style="height:200px" >
+		  <div class="text">PCL: Proposal Cluster Learning for Weakly Supervised Object Detection</div>
+		</div>
+		<div class="mySlides fade">
+		  <div class="numbertext">3 / 8</div>
+		  <img src="./images/fishernet.jpg" style="height:200px" >
+		  <div class="text">Deep FisherNet for Image Classification</div>
+		</div>
+		<div class="mySlides fade">
+		  <div class="numbertext">4 / 8</div>
+		  <img src="./images/renas.jpg" style="height:200px" >
+		  <div class="text">Reinforced Evolutionary Neural Architecture Search</div>
+		</div>
+		<div class="mySlides fade">
+		  <div class="numbertext">5 / 8</div>
+		  <img src="./images/dort.jpg" style="height:200px">
+		  <div class="text">Detect or Track: Towards Cost-Effective Video Object Detection/Tracking</div>
+		</div>
+		<div class="mySlides fade">
+		  <div class="numbertext">7 / 8</div>
+		  <img src="./images/objlink.jpg" style="height:200px">
+		  <div class="text">Object Detection in Videos by High Quality Object Linking</div>
+		</div>
+		<div class="mySlides fade">
+		  <div class="numbertext">8 / 8</div>
+		  <img src="./images/concentric.jpg" style="height:200px">
+		  <div class="text">Weakly Supervised Mitosis Detection in Breast Histopathology Images using Concentric Loss</div>
+		</div>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<br>
+	<div style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span> 
+	  <span class="dot" onclick="currentSlide(2)"></span> 
+	  <span class="dot" onclick="currentSlide(3)"></span> 
+	  <span class="dot" onclick="currentSlide(4)"></span> 
+	  <span class="dot" onclick="currentSlide(5)"></span> 
+	  <span class="dot" onclick="currentSlide(6)"></span> 
+	  <span class="dot" onclick="currentSlide(7)"></span> 
+	  <span class="dot" onclick="currentSlide(8)"></span> 
+	</div>
+
+	<script>
+	var slideIndex = 0;
+	showSlides();
+
+	function showSlides() {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none"; 
+	  }
+	  slideIndex++;
+	  if (slideIndex > slides.length) {slideIndex = 1} 
+	  slides[slideIndex-1].style.display = "block"; 
+	  setTimeout(showSlides, 3000); // Change image every 2 seconds
+	}
+	</script>
+
     
     <p><strong>News</strong></p>
     <ul><li><p>"<a href="https://medium.com/syncedreview/new-sota-on-instance-segmentation-mask-scoring-r-cnn-tops-mask-r-cnn-on-coco-84362d252bdf">New SOTA on Instance Segmentation: Mask Scoring R-CNN Tops Mask R-CNN on COCO</a>", in Medium</p></li></ul>
@@ -111,6 +182,8 @@
     <ul><li><p>Two papers on weakly-supervised object detection and person re-ID have been accepted in ECCV 2018. Congratulations to Peng & Cheng!</p></li></ul>
     <ul><li><p>The source code of the <a href="https://arxiv.org/pdf/1705.02429.pdf">Deep Patch Learning</a> paper accepted by Pattern Recognition Journal, state-of-the-art performance on PASCAL VOC image classification (using single model), is available. <a href="https://github.com/ppengtang/dpl">Code</a>.</p></li></ul>
     <ul><li><p>The source code of the <a href="https://arxiv.org/abs/1704.00138">OICR</a> paper accepted by CVPR 2017, state-of-the-art performance on weakly-supervised object detection, is available. <a href="https://github.com/ppengtang/oicr">Code</a>.</p></li></ul>
+
+
 
 	<p><strong>Academic Activities</strong></p>
 	<ul><li><p>Reviewer for the following journals/institutes/conferences: TPAMI / JMLR / Pattern Recognition / T. Cybernetics / TIP / TMM / IVC / TITS / CVIU/ Neurocomputing / NIPS / ICDM / ICCV / ECCV / CVPR / ICME / ICIP / ICPR / AISTATS / ICML.</p></li></ul>

@@ -322,7 +322,7 @@ img {vertical-align: middle;
 .topnav {
   background-color: rgb(196, 172, 172);
 	overflow: hidden;
-	width: 900px;
+	width: 100%;
 	margin: 0px auto;
 }
 
@@ -333,7 +333,7 @@ img {vertical-align: middle;
   text-align: center;
   padding: 12px 13px;
   text-decoration: none;
-	font-size: 13px;
+  font-size: 13px;
 }
 
 /* Change the color of links on hover */

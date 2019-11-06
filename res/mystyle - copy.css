@@ -1,0 +1,452 @@
+ <style type="text/css" id="styleCSS">
+    body {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 13px;
+	color: #333333;
+    background-color:#FFFFFF;
+    background-repeat:;
+    background-position:;
+    background-attachment:;
+}
+td, tr {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+
+h1 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 30px;
+}
+
+
+h2 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 26px;
+}
+
+
+h3 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 22px;
+}
+
+
+h4 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 20px;
+}
+
+
+h5 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 14px;
+}
+
+
+h6{
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 11px;
+}
+
+a img{border:none;}
+
+a:link {
+	text-decoration: none;
+	color: #333333;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+
+}
+body {
+	margin-top: 0px;
+}
+
+#container
+{
+	/*width: 90%;
+	margin: 10px auto;
+	max-width:1024px;*/
+	
+	width: 900px;;
+	margin: 0px auto;
+}
+
+#header{
+	width:900px;
+	background: #3333FF;
+}
+
+.nav{
+	width:100%;
+	color: #333333;
+	background: #001f3f;
+}
+
+#header h1{
+	padding-top: 25px;
+	padding-left: 15px;
+	text-decoration:none;
+	color: #333333;
+}
+#header h1 a:hover{
+	text-decoration:none;
+}
+#header h1 a{
+	text-decoration:none;
+}
+#menu{
+	float: left;
+	width: 140px;
+	margin: 0px;
+	padding: 1em;
+	text-align:left;
+	overflow:hidden;
+}
+#menu ul {
+	list-style: none;
+	list-style-position:outside;
+	font-size:larger;
+	padding-left:0px;
+	margin-left:0px;
+}
+
+#menu ul li {
+	padding-bottom:14px;
+}
+#menu ul li a{
+	padding-bottom:14px;
+	text-decoration: none;
+	font-size:14px;
+}
+ 
+#content{
+/*	padding: 1em;
+	margin-left:200px;
+	border-left: solid 1px #CCCCCC;*/
+
+	margin-left:10px;
+	padding: 1em;
+	float:left;
+	width:645px;
+	border-left: solid 1px #CCCCCC;
+}
+/*
+#content div {
+	float:left;
+}*/
+#full-content{
+	padding: 1em;
+}
+
+
+.sys_footer{
+    text-align:right;
+    font-size:small;
+    width:770px;
+    margin:10px auto;
+}
+
+#sys_designerfooter {
+    border: none;
+    margin:0 auto;
+    padding: 0;
+    background: none;
+}
+
+
+.sys_txt {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+.sys_txt h1 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 30px;
+}
+
+
+.sys_txt h2 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 26px;
+}
+
+
+.sys_txt h3 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 22px;
+}
+
+
+.sys_txt h4 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 20px;
+}
+
+
+.sys_txt h5 {
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 14px;
+}
+
+
+.sys_txt h6{
+	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-size: 11px;
+}
+
+.sys_txt a:link {
+	text-decoration:underline;
+	color: #333333;
+}
+.sys_txt a:visited {
+	text-decoration:underline
+		
+}
+.sys_txt a:hover {
+	text-decoration:underline
+	color: #000000;
+
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  }
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #001f3f;
+  background-color: rgba(76, 175, 80, 0.3) /* Green background with 30% opacity */
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+nav {
+  color: #fff;
+  background-color: #f3f3f3;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+}
+
+nav.nav-extended {
+  height: auto;
+}
+
+nav.nav-extended .nav-wrapper {
+  min-height: 56px;
+  height: auto;
+}
+
+nav.nav-extended .nav-content {
+  position: relative;
+  line-height: normal;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav i,
+nav [class^="mdi-"], nav [class*="mdi-"],
+nav i.material-icons {
+  display: block;
+  font-size: 24px;
+  height: 56px;
+  line-height: 56px;
+}
+
+nav .nav-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  .hide-on-med-and-down {
+    display: none !important;
+  }
+}
+
+nav ul a span.badge {
+  display: inline-block;
+  float: none;
+  margin-left: 4px;
+  line-height: 22px;
+  height: 22px;
+  -webkit-font-smoothing: auto;
+}
+
+span.badge {
+  min-width: 3rem;
+  padding: 0 6px;
+  margin-left: 14px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 22px;
+  height: 22px;
+  color: #757575;
+  float: right;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+span.badge.new {
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: #fff;
+  background-color: #26a69a;
+  border-radius: 2px;
+}
+
+span.badge.new:after {
+  content: "";
+}
+
+span.badge[data-badge-caption]::after {
+  content: " " attr(data-badge-caption);
+}
+
+nav ul a span.badge {
+  display: inline-block;
+  float: none;
+  margin-left: 4px;
+  line-height: 22px;
+  height: 22px;
+  -webkit-font-smoothing: auto;
+}
+
+.collection-item span.badge {
+  margin-top: calc(0.75rem - 11px);
+}
+
+.collapsible span.badge {
+  margin-left: auto;
+}
+
+.sidenav span.badge {
+  margin-top: calc(24px - 11px);
+}
+
+table span.badge {
+  display: inline-block;
+  float: none;
+  margin-left: auto;
+}
+
+i.right {
+  float: right;
+  margin-left: 15px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+
+</style>
+  

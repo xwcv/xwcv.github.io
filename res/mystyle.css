@@ -1,14 +1,14 @@
  <style type="text/css" id="styleCSS">
 
 body {
-	font-family: -apple-system,  'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
+	font-family: "Lucida Grande", "Helvetica", roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
 	font-size: 14.5px;
 	color: #000000;
     background-color:#FFFFFF;
 }
 
 td, tr {
-	font-family: -apple-system,  'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
+	font-family: "Lucida Grande", "Helvetica", roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
 	font-size: 14.5px;
 	color: #000000;
 }
@@ -116,7 +116,7 @@ a:hover {
 
 
 .sys_txt {
-	font-family: -apple-system,  'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
+	font-family: "Lucida Grande","Arial Unicode MS","Helvetica", roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
 	font-size: 14.5px;
 	color: #000000;
 }
@@ -178,7 +178,7 @@ a:hover {
 
 
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
+body {font-family: "Lucida Grande","Arial Unicode MS", sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;
 	display: block;

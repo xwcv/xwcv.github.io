@@ -1,71 +1,30 @@
  <style type="text/css" id="styleCSS">
-    body {
-	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
-	font-size: 13px;
-	color: #333333;
+
+body {
+	font-family: -apple-system,  'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
+	font-size: 14.5px;
+	color: #000000;
     background-color:#FFFFFF;
-    background-repeat:;
-    background-position:;
-    background-attachment:;
 }
+
 td, tr {
-	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
-	font-size: 13px;
-	color: #333333;
+	font-family: -apple-system,  'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
+	font-size: 14.5px;
+	color: #000000;
 }
 
-h1 {
-	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
-	font-size: 30px;
-}
-
-
-h2 {
-	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
-	font-size: 26px;
-}
-
-
-h3 {
-	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
-	font-size: 22px;
-}
-
-
-h4 {
-	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
-	font-size: 20px;
-}
-
-
-h5 {
-	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
-	font-size: 14px;
-}
-
-
-h6{
-	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
-	font-size: 11px;
-}
-
-a img{border:none;}
 
 a:link {
 	text-decoration: none;
-	color: #333333;
+	color: #001f3f;
 }
 a:visited {
 	text-decoration: none;
-	color: #333333;
+	color: #001f3f;
 }
 a:hover {
 	text-decoration: underline;
-	color: #000000;
-
-}
-body {
-	margin-top: 0px;
+	color: #001f3f;
 }
 
 #container
@@ -80,14 +39,14 @@ body {
 
 #header{
 	width:900px;
-	background: #3333FF;
+	background: #FFFFFF;
 }
 
 #header h1{
 	padding-top: 25px;
 	padding-left: 15px;
 	text-decoration:none;
-	color: #333333;
+	color: #000000;
 }
 #header h1 a:hover{
 	text-decoration:none;
@@ -131,6 +90,7 @@ body {
 	width:645px;
 	border-left: solid 1px #CCCCCC;
 }
+
 /*
 #content div {
 	float:left;
@@ -156,12 +116,31 @@ body {
 
 
 .sys_txt {
-	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
-	font-size: 13px;
-	color: #333333;
+	font-family: -apple-system,  'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
+	font-size: 14.5px;
+	color: #000000;
 }
+
+.sys_txt a:link {
+	text-decoration:none;
+	color: #0074D9;
+}
+.sys_txt a:visited {
+	text-decoration:none;
+	color: #0074D9;
+}
+.sys_txt a:hover {
+	text-decoration:underline;
+	color: #0074D9;
+
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
 .sys_txt h1 {
-	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
+	font-family: "Verdana", "Lucida Grande","Arial Unicode MS", sans-serif;
 	font-size: 30px;
 }
 
@@ -195,23 +174,7 @@ body {
 	font-size: 11px;
 }
 
-.sys_txt a:link {
-	text-decoration:underline;
-	color: #333333;
-}
-.sys_txt a:visited {
-	text-decoration:underline
-		
-}
-.sys_txt a:hover {
-	text-decoration:underline
-	color: #000000;
 
-}
-
-.img-circle {
-    border-radius: 50%;
-}
 
 
 * {box-sizing: border-box}

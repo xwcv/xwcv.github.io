@@ -100,78 +100,9 @@
 	  </tr>
 	</tbody></table>
 
-
-	<p><strong>Recent works</strong></p>
-	<div class="slideshow-container">
-		<div class="mySlides fade">
-		  <div class="numbertext">1 / 8</div>
-		  <img src="./images/msrcnn.jpg" style="height:200px" >
-		  <div class="text">Mask Scoring R-CNN</div>
-		</div>
-		<div class="mySlides fade">
-		  <div class="numbertext">2 / 8</div>
-		  <img src="./images/pcl.jpg" style="height:200px" >
-		  <div class="text">PCL: Proposal Cluster Learning for Weakly Supervised Object Detection</div>
-		</div>
-		<div class="mySlides fade">
-		  <div class="numbertext">3 / 8</div>
-		  <img src="./images/fishernet.jpg" style="height:200px" >
-		  <div class="text">Deep FisherNet for Image Classification</div>
-		</div>
-		<div class="mySlides fade">
-		  <div class="numbertext">4 / 8</div>
-		  <img src="./images/renas.jpg" style="height:200px" >
-		  <div class="text">Reinforced Evolutionary Neural Architecture Search</div>
-		</div>
-		<div class="mySlides fade">
-		  <div class="numbertext">5 / 8</div>
-		  <img src="./images/dort.jpg" style="height:200px">
-		  <div class="text">Detect or Track: Towards Cost-Effective Video Object Detection/Tracking</div>
-		</div>
-		<div class="mySlides fade">
-		  <div class="numbertext">7 / 8</div>
-		  <img src="./images/objlink.jpg" style="height:200px">
-		  <div class="text">Object Detection in Videos by High Quality Object Linking</div>
-		</div>
-		<div class="mySlides fade">
-		  <div class="numbertext">8 / 8</div>
-		  <img src="./images/concentric.jpg" style="height:200px">
-		  <div class="text">Weakly Supervised Mitosis Detection in Breast Histopathology Images using Concentric Loss</div>
-		</div>
-		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-		<a class="next" onclick="plusSlides(1)">&#10095;</a>
-	</div>
-	<br>
-	<div style="text-align:center">
-	  <span class="dot" onclick="currentSlide(1)"></span> 
-	  <span class="dot" onclick="currentSlide(2)"></span> 
-	  <span class="dot" onclick="currentSlide(3)"></span> 
-	  <span class="dot" onclick="currentSlide(4)"></span> 
-	  <span class="dot" onclick="currentSlide(5)"></span> 
-	  <span class="dot" onclick="currentSlide(6)"></span> 
-	  <span class="dot" onclick="currentSlide(7)"></span> 
-	  <span class="dot" onclick="currentSlide(8)"></span> 
-	</div>
-
-	<script>
-	var slideIndex = 0;
-	showSlides();
-
-	function showSlides() {
-	  var i;
-	  var slides = document.getElementsByClassName("mySlides");
-	  for (i = 0; i < slides.length; i++) {
-	    slides[i].style.display = "none"; 
-	  }
-	  slideIndex++;
-	  if (slideIndex > slides.length) {slideIndex = 1} 
-	  slides[slideIndex-1].style.display = "block"; 
-	  setTimeout(showSlides, 3000); // Change image every 2 seconds
-	}
-	</script>
-
     
     <p><strong>News</strong></p>
+    <ul><li><p>"<a href="http://doi.org/10.1109/TMI.2020.2995965">A Weakly-supervised Framework for COVID-19 Classification and Lesion Localization from Chest CT</a>", in published in IEEE Transactions on Medical Imaging.</p></li></ul>
     <ul><li><p>"<a href="https://medium.com/syncedreview/new-sota-on-instance-segmentation-mask-scoring-r-cnn-tops-mask-r-cnn-on-coco-84362d252bdf">New SOTA on Instance Segmentation: Mask Scoring R-CNN Tops Mask R-CNN on COCO</a>", in Medium</p></li></ul>
     <ul><li><p>Three papers have been accepted by CVPR 2019!</p></li></ul>
     <ul><li><p>EAT-NAS by Jiemin et al obtains 73.8% accuracy on ImageNet by taking less than 5 days on 8 TITAN X GPUs. Its technical report is available in <a href="https://arxiv.org/abs/1901.05884">arxiv</a>.</p></li></ul>

@@ -1,0 +1,10 @@
+@article{wang2019weakly,
+  title={Weakly-and Semi-Supervised Fast Region-Based CNN for Object Detection},
+  author={Wang, Xing-Gang and Wang, Jia-Si and Tang, Peng and Liu, Wen-Yu},
+  journal={Journal of Computer Science and Technology},
+  volume={34},
+  number={6},
+  pages={1269--1278},
+  year={2019},
+  publisher={Springer}
+}

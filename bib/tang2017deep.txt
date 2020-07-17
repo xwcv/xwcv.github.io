@@ -1,0 +1,9 @@
+@article{tang2017deep,
+  title={Deep patch learning for weakly supervised object classification and discovery},
+  author={Tang, Peng and Wang, Xinggang and Huang, Zilong and Bai, Xiang and Liu, Wenyu},
+  journal={Pattern Recognition},
+  volume={71},
+  pages={446--459},
+  year={2017},
+  publisher={Elsevier}
+}

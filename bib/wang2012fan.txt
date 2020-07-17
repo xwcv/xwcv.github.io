@@ -1,0 +1,8 @@
+@inproceedings{wang2012fan,
+  title={Fan shape model for object detection},
+  author={Wang, Xinggang and Bai, Xiang and Ma, Tianyang and Liu, Wenyu and Latecki, Longin Jan},
+  booktitle={2012 IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={151--158},
+  year={2012},
+  organization={IEEE}
+}

@@ -1,0 +1,7 @@
+@inproceedings{fang2020densely,
+  title={Densely connected search space for more flexible neural architecture search},
+  author={Fang, Jiemin and Sun, Yuzhu and Zhang, Qian and Li, Yuan and Liu, Wenyu and Wang, Xinggang},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={10628--10637},
+  year={2020}
+}

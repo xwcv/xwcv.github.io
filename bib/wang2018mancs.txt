@@ -1,0 +1,7 @@
+@inproceedings{wang2018mancs,
+ title={Mancs: A multi-task attentional network with curriculum sampling for person re-identification},
+ author={Wang, Cheng and Zhang, Qian and Huang, Chang and Liu, Wenyu and Wang, Xinggang},
+ booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+ pages={365--381},
+ year={2018}
+}

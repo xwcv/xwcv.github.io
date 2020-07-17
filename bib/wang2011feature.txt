@@ -1,0 +1,8 @@
+@inproceedings{wang2011feature,
+  title={Feature context for image classification and object detection},
+  author={Wang, Xinggang and Bai, Xiang and Liu, Wenyu and Latecki, Longin Jan},
+  booktitle={CVPR 2011},
+  pages={961--968},
+  year={2011},
+  organization={IEEE}
+}

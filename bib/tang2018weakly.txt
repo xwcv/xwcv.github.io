@@ -1,0 +1,7 @@
+@inproceedings{tang2018weakly,
+  title={Weakly supervised region proposal network and object detection},
+  author={Tang, Peng and Wang, Xinggang and Wang, Angtian and Yan, Yongluan and Liu, Wenyu and Huang, Junzhou and Yuille, Alan},
+  booktitle={Proceedings of the European conference on computer vision (ECCV)},
+  pages={352--368},
+  year={2018}
+}

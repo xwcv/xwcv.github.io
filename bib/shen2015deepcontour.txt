@@ -1,0 +1,7 @@
+@inproceedings{shen2015deepcontour,
+  title={Deepcontour: A deep convolutional feature learned by positive-sharing loss for contour detection},
+  author={Shen, Wei and Wang, Xinggang and Wang, Yan and Bai, Xiang and Zhang, Zhijiang},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={3982--3991},
+  year={2015}
+}

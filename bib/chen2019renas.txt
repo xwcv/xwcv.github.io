@@ -1,0 +1,7 @@
+@inproceedings{chen2019renas,
+  title={Renas: Reinforced evolutionary neural architecture search},
+  author={Chen, Yukang and Meng, Gaofeng and Zhang, Qian and Xiang, Shiming and Huang, Chang and Mu, Lisen and Wang, Xinggang},
+  booktitle={Proceedings of the IEEE Conference on computer vision and pattern recognition},
+  pages={4787--4796},
+  year={2019}
+}

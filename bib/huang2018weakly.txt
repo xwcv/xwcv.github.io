@@ -1,0 +1,7 @@
+@inproceedings{huang2018weakly,
+  title={Weakly-supervised semantic segmentation network with deep seeded region growing},
+  author={Huang, Zilong and Wang, Xinggang and Wang, Jiasi and Liu, Wenyu and Wang, Jingdong},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={7014--7023},
+  year={2018}
+}

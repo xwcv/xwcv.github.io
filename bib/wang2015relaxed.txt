@@ -1,0 +1,7 @@
+@inproceedings{wang2015relaxed,
+  title={Relaxed multiple-instance SVM with application to object discovery},
+  author={Wang, Xinggang and Zhu, Zhuotun and Yao, Cong and Bai, Xiang},
+  booktitle={Proceedings of the IEEE International Conference on Computer Vision},
+  pages={1224--1232},
+  year={2015}
+}

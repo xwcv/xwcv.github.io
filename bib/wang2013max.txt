@@ -1,0 +1,7 @@
+@inproceedings{wang2013max,
+  title={Max-margin multiple-instance dictionary learning},
+  author={Wang, Xinggang and Wang, Baoyuan and Bai, Xiang and Liu, Wenyu and Tu, Zhuowen},
+  booktitle={International conference on machine learning},
+  pages={846--854},
+  year={2013}
+}

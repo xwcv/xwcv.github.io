@@ -1,0 +1,7 @@
+@inproceedings{shi2016robust,
+  title={Robust scene text recognition with automatic rectification},
+  author={Shi, Baoguang and Wang, Xinggang and Lyu, Pengyuan and Yao, Cong and Bai, Xiang},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={4168--4176},
+  year={2016}
+}

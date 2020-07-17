@@ -1,0 +1,7 @@
+@inproceedings{tang2017multiple,
+  title={Multiple instance detection network with online instance classifier refinement},
+  author={Tang, Peng and Wang, Xinggang and Bai, Xiang and Liu, Wenyu},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={2843--2851},
+  year={2017}
+}

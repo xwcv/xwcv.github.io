@@ -1,0 +1,7 @@
+@inproceedings{huang2019mask,
+  title={Mask scoring r-cnn},
+  author={Huang, Zhaojin and Huang, Lichao and Gong, Yongchao and Huang, Chang and Wang, Xinggang},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={6409--6418},
+  year={2019}
+}

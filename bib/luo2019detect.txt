@@ -1,0 +1,8 @@
+@inproceedings{luo2019detect,
+  title={Detect or track: Towards cost-effective video object detection/tracking},
+  author={Luo, Hao and Xie, Wenxuan and Wang, Xinggang and Zeng, Wenjun},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={33},
+  pages={8803--8810},
+  year={2019}
+}

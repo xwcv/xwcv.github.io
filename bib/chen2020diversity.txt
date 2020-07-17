@@ -1,0 +1,7 @@
+@inproceedings{chen2020diversity,
+  title={Diversity Transfer Network for Few-Shot Learning.},
+  author={Chen, Mengting and Fang, Yuxin and Wang, Xinggang and Luo, Heng and Geng, Yifeng and Zhang, Xinyu and Huang, Chang and Liu, Wenyu and Wang, Bo},
+  booktitle={AAAI},
+  pages={10559--10566},
+  year={2020}
+}

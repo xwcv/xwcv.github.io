@@ -1,0 +1,7 @@
+@inproceedings{lei2019direct,
+  title={Direct object recognition without line-of-sight using optical coherence},
+  author={Lei, Xin and He, Liangyu and Tan, Yixuan and Wang, Ken Xingze and Wang, Xinggang and Du, Yihan and Fan, Shanhui and Yu, Zongfu},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={11737--11746},
+  year={2019}
+}

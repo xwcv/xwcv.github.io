@@ -1,0 +1,7 @@
+@inproceedings{yan2018deep,
+  title={Deep multi-instance learning with dynamic pooling},
+  author={Yan, Yongluan and Wang, Xinggang and Guo, Xiaojie and Fang, Jiemin and Liu, Wenyu and Huang, Junzhou},
+  booktitle={Asian Conference on Machine Learning},
+  pages={662--677},
+  year={2018}
+}

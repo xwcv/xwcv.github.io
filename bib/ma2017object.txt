@@ -1,0 +1,7 @@
+@inproceedings{ma2017object,
+  title={Object-level proposals},
+  author={Ma, Jianxiang and Ming, Anlong and Huang, Zilong and Wang, Xinggang and Zhou, Yu},
+  booktitle={Proceedings of the IEEE International Conference on Computer Vision},
+  pages={4921--4929},
+  year={2017}
+}

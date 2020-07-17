@@ -1,0 +1,7 @@
+@inproceedings{wang2011maximal,
+  title={Maximal cliques that satisfy hard constraints with application to deformable object model learning},
+  author={Wang, Xinggang and Bai, Xiang and Yang, Xingwei and Liu, Wenyu and Latecki, Longin J},
+  booktitle={Advances in Neural Information Processing Systems},
+  pages={864--872},
+  year={2011}
+}

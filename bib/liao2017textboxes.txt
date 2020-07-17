@@ -1,0 +1,6 @@
+@inproceedings{liao2017textboxes,
+  title={Textboxes: A fast text detector with a single deep neural network},
+  author={Liao, Minghui and Shi, Baoguang and Bai, Xiang and Wang, Xinggang and Liu, Wenyu},
+  booktitle={Thirty-First AAAI Conference on Artificial Intelligence},
+  year={2017}
+}

@@ -1,0 +1,9 @@
+@article{wang2019bag,
+  title={Bag similarity network for deep multi-instance learning},
+  author={Wang, Xinggang and Yan, Yongluan and Tang, Peng and Liu, Wenyu and Guo, Xiaojie},
+  journal={Information Sciences},
+  volume={504},
+  pages={578--588},
+  year={2019},
+  publisher={Elsevier}
+}

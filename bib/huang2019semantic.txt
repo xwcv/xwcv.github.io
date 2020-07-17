@@ -1,0 +1,10 @@
+@article{huang2019semantic,
+  title={Semantic image segmentation by scale-adaptive networks},
+  author={Huang, Zilong and Wang, Chunyu and Wang, Xinggang and Liu, Wenyu and Wang, Jingdong},
+  journal={IEEE Transactions on Image Processing},
+  volume={29},
+  number={1},
+  pages={2066--2077},
+  year={2019},
+  publisher={IEEE}
+}

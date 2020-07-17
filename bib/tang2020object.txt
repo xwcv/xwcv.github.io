@@ -1,5 +1,5 @@
-@ARTICLE{huang2020ccnet,
-  author={Peng Tang and Chunyu Wang and Xinggang Wang and Wenyu Liu and Wenjun Zeng and Jingdong Wang},
+@ARTICLE{huang2020object,
+  author={Peng, Tang and Chunyu, Wang and Xinggang, Wang and Wenyu, Liu and Wenjun, Zeng and Jingdong, Wang},
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
   title={Object Detection in Videos by High Quality Object Linking}, 
   year={2020},

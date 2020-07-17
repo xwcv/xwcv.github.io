@@ -1,0 +1,7 @@
+@article{wang2020weakly,
+  title={A Weakly-supervised Framework for COVID-19 Classification and Lesion Localization from Chest CT},
+  author={Wang, Xinggang and Deng, Xianbo and Fu, Qing and Zhou, Qiang and Feng, Jiapei and Ma, Hui and Liu, Wenyu and Zheng, Chuansheng},
+  journal={IEEE Transactions on Medical Imaging},
+  year={2020},
+  publisher={IEEE}
+}

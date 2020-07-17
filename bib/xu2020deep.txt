@@ -1,0 +1,9 @@
+@article{xu2020deep,
+  title={Deep multi-metric learning for text-independent speaker verification},
+  author={Xu, Jiwei and Wang, Xinggang and Feng, Bin and Liu, Wenyu},
+  journal={Neurocomputing},
+  volume={410},
+  pages={394--400},
+  year={2020},
+  publisher={Elsevier}
+}

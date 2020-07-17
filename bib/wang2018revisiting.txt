@@ -1,0 +1,9 @@
+@article{wang2018revisiting,
+  title={Revisiting multiple instance neural networks},
+  author={Wang, Xinggang and Yan, Yongluan and Tang, Peng and Bai, Xiang and Liu, Wenyu},
+  journal={Pattern Recognition},
+  volume={74},
+  pages={15--24},
+  year={2018},
+  publisher={Elsevier}
+}

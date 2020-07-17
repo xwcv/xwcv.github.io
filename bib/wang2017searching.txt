@@ -1,0 +1,10 @@
+@article{wang2017searching,
+  title={Searching for prostate cancer by fully automated magnetic resonance imaging classification: deep learning versus non-deep learning},
+  author={Wang, Xinggang and Yang, Wei and Weinreb, Jeffrey and Han, Juan and Li, Qiubai and Kong, Xiangchuang and Yan, Yongluan and Ke, Zan and Luo, Bo and Liu, Tao and others},
+  journal={Scientific reports},
+  volume={7},
+  number={1},
+  pages={1--8},
+  year={2017},
+  publisher={Nature Publishing Group}
+}

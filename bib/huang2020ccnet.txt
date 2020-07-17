@@ -1,0 +1,10 @@
+@ARTICLE{huang2020ccnet,
+  author={Zilong Huang and Xinggang Wang and Yunchao Wei and Lichao Huang and Humphrey Shi and Wenyu Liu and Thomas S. Huang},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={CCNet: Criss-Cross Attention for Semantic Segmentation}, 
+  year={2020},
+  volume={},
+  number={},
+  pages={1-15},
+  doi={10.1109/TPAMI.2020.3007032},
+}

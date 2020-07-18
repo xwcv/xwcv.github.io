@@ -16,7 +16,7 @@ td, tr {
 
 a:link {
 	text-decoration: none;
-	color: #001f3f;
+	color: #4267B2;
 }
 a:visited {
 	text-decoration: none;
@@ -33,7 +33,7 @@ a:hover {
 	margin: 10px auto;
 	max-width:1024px;*/
 	
-	width: 900px;;
+	width: 78%;
 	margin: 0px auto;
 }
 
@@ -283,20 +283,21 @@ img {vertical-align: middle;
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: rgb(196, 172, 172);
+  background-color: #4267B2;
 	overflow: hidden;
 	width: 100%;
 	margin: 0px auto;
 }
+
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float: right;
   color: #f2f2f2;
   text-align: center;
-  padding: 12px 13px;
+  padding: 14.5px;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14.5px;
 }
 
 /* Change the color of links on hover */
@@ -307,9 +308,11 @@ img {vertical-align: middle;
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #FC4A1A;
   color: white;
 }
+
+
 
 </style>
   

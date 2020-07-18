@@ -1,0 +1,8 @@
+@article{sebai2020maskmitosis,
+  title={MaskMitosis: a deep learning framework for fully supervised, weakly supervised, and unsupervised mitosis detection in histopathology images},
+  author={Sebai, Meriem and Wang, Xinggang and Wang, Tianjiang},
+  journal={Medical \& Biological Engineering \& Computing},
+  page={1603–1623},
+  year={2020},
+  publisher={Springer}
+}

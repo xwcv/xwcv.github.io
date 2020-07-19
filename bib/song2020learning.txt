@@ -1,0 +1,10 @@
+@article{song2020learning,
+  title={Learning from Synthetic Images via Active Pseudo-Labeling},
+  author={Song, Liangchen and Xu, Yonghao and Zhang, Lefei and Du, Bo and Zhang, Qian and Wang, Xinggang},
+  journal={IEEE Transactions on Image Processing},
+  volume={29},
+  number={},
+  pages={6452-6465},
+  year={2020},
+  publisher={IEEE}
+}

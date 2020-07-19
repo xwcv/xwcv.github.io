@@ -1,0 +1,10 @@
+@article{tang2018deep,
+  title={Deep FisherNet for image classification},
+  author={Tang, Peng and Wang, Xinggang and Shi, Baoguang and Bai, Xiang and Liu, Wenyu and Tu, Zhuowen},
+  journal={IEEE transactions on neural networks and learning systems},
+  volume={30},
+  number={7},
+  pages={2244--2250},
+  year={2018},
+  publisher={IEEE}
+}

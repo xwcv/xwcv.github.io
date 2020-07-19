@@ -1,0 +1,9 @@
+@article{wang2020multi,
+  title={Multi-scale multi-patch person re-identification with exclusivity regularized softmax},
+  author={Wang, Cheng and Song, Liangchen and Wang, Guoli and Zhang, Qian and Wang, Xinggang},
+  journal={Neurocomputing},
+  volume={382},
+  pages={64--70},
+  year={2020},
+  publisher={Elsevier}
+}

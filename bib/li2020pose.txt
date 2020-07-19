@@ -1,0 +1,10 @@
+@article{li2019pose,
+  title={Pose Anchor: A Single-stage Hand Keypoint Detection Network},
+  author={Li, Yuan and Wang, Xinggang and Liu, Wenyu and Feng, Bin},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  year={2020},
+  volume={30},
+  number={7},
+  pages={2104-2113},
+  publisher={IEEE}
+}

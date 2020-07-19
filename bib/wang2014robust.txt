@@ -1,0 +1,10 @@
+@article{wang2014robust,
+  title={Robust subspace discovery via relaxed rank minimization},
+  author={Wang, Xinggang and Zhang, Zhengdong and Ma, Yi and Bai, Xiang and Liu, Wenyu and Tu, Zhuowen},
+  journal={Neural computation},
+  volume={26},
+  number={3},
+  pages={611--635},
+  year={2014},
+  publisher={MIT Press}
+}

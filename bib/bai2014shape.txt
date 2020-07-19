@@ -1,0 +1,10 @@
+@article{bai2014shape,
+  title={Shape vocabulary: A robust and efficient shape representation for shape matching},
+  author={Bai, Xiang and Rao, Cong and Wang, Xinggang},
+  journal={IEEE Transactions on Image Processing},
+  volume={23},
+  number={9},
+  pages={3935--3949},
+  year={2014},
+  publisher={IEEE}
+}

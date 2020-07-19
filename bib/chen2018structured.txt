@@ -1,0 +1,9 @@
+@article{chen2018structured,
+  title={Structured random forest for label distribution learning},
+  author={Chen, Mengting and Wang, Xinggang and Feng, Bin and Liu, Wenyu},
+  journal={Neurocomputing},
+  volume={320},
+  pages={171--182},
+  year={2018},
+  publisher={Elsevier}
+}

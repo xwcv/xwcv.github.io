@@ -1,0 +1,10 @@
+@article{wang2014bag,
+  title={Bag of contour fragments for robust shape classification},
+  author={Wang, Xinggang and Feng, Bin and Bai, Xiang and Liu, Wenyu and Latecki, Longin Jan},
+  journal={Pattern Recognition},
+  volume={47},
+  number={6},
+  pages={2116--2125},
+  year={2014},
+  publisher={Elsevier}
+}

@@ -1,0 +1,9 @@
+@article{wang2016unsupervised,
+  title={Unsupervised local deep feature for image recognition},
+  author={Wang, Yang and Wang, Xinggang and Liu, Wenyu},
+  journal={Information Sciences},
+  volume={351},
+  pages={67--75},
+  year={2016},
+  publisher={Elsevier}
+}

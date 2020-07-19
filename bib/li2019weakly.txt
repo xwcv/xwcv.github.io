@@ -1,0 +1,9 @@
+@article{li2019weakly,
+  title={Weakly supervised mitosis detection in breast histopathology images using concentric loss},
+  author={Li, Chao and Wang, Xinggang and Liu, Wenyu and Latecki, Longin Jan and Wang, Bo and Huang, Junzhou},
+  journal={Medical image analysis},
+  volume={53},
+  pages={165--178},
+  year={2019},
+  publisher={Elsevier}
+}

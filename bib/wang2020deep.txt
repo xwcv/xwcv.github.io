@@ -1,0 +1,7 @@
+@article{wang2020deep,
+  title={Deep high-resolution representation learning for visual recognition},
+  author={Wang, Jingdong and Sun, Ke and Cheng, Tianheng and Jiang, Borui and Deng, Chaorui and Zhao, Yang and Liu, Dong and Mu, Yadong and Tan, Mingkui and Wang, Xinggang and others},
+  journal={IEEE transactions on pattern analysis and machine intelligence},
+  year={2020},
+  publisher={IEEE}
+}

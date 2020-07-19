@@ -1,0 +1,9 @@
+@article{li2018deep,
+  title={Deep attention network for joint hand gesture localization and recognition using static RGB-D images},
+  author={Li, Yuan and Wang, Xinggang and Liu, Wenyu and Feng, Bin},
+  journal={Information Sciences},
+  volume={441},
+  pages={66--78},
+  year={2018},
+  publisher={Elsevier}
+}

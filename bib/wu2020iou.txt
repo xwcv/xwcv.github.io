@@ -1,0 +1,8 @@
+@article{wu2020iou,
+  title={IoU-aware single-stage object detector for accurate localization},
+  author={Wu, Shengkai and Li, Xiaoping and Wang, Xinggang},
+  journal={Image and Vision Computing},
+  pages={103911},
+  year={2020},
+  publisher={Elsevier}
+}

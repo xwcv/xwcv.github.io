@@ -1,0 +1,10 @@
+@article{niu2020defect,
+  title={Defect Image Sample Generation With GAN for Improving Defect Recognition},
+  author={Niu, Shuanlong and Li, Bin and Wang, Xinggang and Lin, Hui},
+  journal={IEEE Transactions on Automation Science and Engineering},
+  volume={17},
+  number={3},
+  pages={1611-1622},
+  year={2020},
+  publisher={IEEE}
+}

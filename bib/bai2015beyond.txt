@@ -1,0 +1,9 @@
+@article{bai2015beyond,
+  title={Beyond diffusion process: Neighbor set similarity for fast re-ranking},
+  author={Bai, Xiang and Bai, Song and Wang, Xinggang},
+  journal={Information Sciences},
+  volume={325},
+  pages={342--354},
+  year={2015},
+  publisher={Elsevier}
+}

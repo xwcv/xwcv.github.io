@@ -283,19 +283,18 @@ img {vertical-align: middle;
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #4267B2;
+  	background-color: #3b5997;
 	overflow: hidden;
 	width: 100%;
-	margin: 0px auto;
 }
 
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float: right;
-  color: #f2f2f2;
+  color: #ffffff;
   text-align: center;
-  padding: 14.5px;
+  padding: 15.5px;
   text-decoration: none;
   font-size: 14.5px;
 }
@@ -310,6 +309,19 @@ img {vertical-align: middle;
 .topnav a.active {
   background-color: #FC4A1A;
   color: white;
+}
+
+.bottombar {
+	border: 2px;
+  	background-color: #2d3236;
+	overflow: hidden;
+	width: 100%;
+	float: right;
+  	color: #ffffff;
+  	text-align: center;
+  	padding: 20.5px;
+  	text-decoration: none;
+  	font-size: 14.5px;
 }
 
 

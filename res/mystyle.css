@@ -14,19 +14,6 @@ td, tr {
 }
 
 
-a:link {
-	text-decoration: none;
-	color: #4267B2;
-}
-a:visited {
-	text-decoration: none;
-	color: #001f3f;
-}
-a:hover {
-	text-decoration: underline;
-	color: #001f3f;
-}
-
 #container
 {
 	/*width: 90%;
@@ -103,7 +90,7 @@ a:hover {
 .sys_footer{
     text-align:right;
     font-size:small;
-    width:770px;
+    width:960px;
     margin:10px auto;
 }
 
@@ -123,15 +110,15 @@ a:hover {
 
 .sys_txt a:link {
 	text-decoration:none;
-	color: #0074D9;
+	color: #2196f3;
 }
 .sys_txt a:visited {
 	text-decoration:none;
-	color: #0074D9;
+	color: #2196f3;
 }
 .sys_txt a:hover {
 	text-decoration:underline;
-	color: #0074D9;
+	color: #2196f3;
 
 }
 

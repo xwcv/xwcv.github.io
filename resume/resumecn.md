@@ -19,7 +19,7 @@
 ####教育背景
 
 - `2005年09月至2009年06月`，本科，通信工程专业，华中科技大学
-- `2009年09月至2014年12月`，博士，通信与信息系统专业，华中科技大学
+- `2009年09月至2014年11月`，博士，通信与信息系统专业，华中科技大学
 
 ####科研经历
 
@@ -27,7 +27,7 @@
 - `2011年12月至2012年11月`，微软亚洲研究院（MSRA）实习生
 - `2013年02月至2013年09月`，美国加州大学洛杉矶分校（UCLA）访问学者
 - `2014年11月至2017年11月`，华中科技大学，讲师
-- `2017年12月至今`，                华中科技大学，副教授
+- `2017年12月至今`，			 华中科技大学，副教授
 
 ####所获荣誉
 
@@ -42,13 +42,15 @@
 
 - Associate Editor（副编辑）, [Image and Vision Computing (IMAVIS)](https://www.journals.elsevier.com/image-and-vision-computing/editorial-board), `2020 -`
 - 以下期刊、会议的审稿人: IEEE TPAMI, JMLR, Pattern Recognition, IEEE T. Cybernetics, IEEE TIP, IEEE TMM, IEEE TCSVT, IEEE TMI, MedIA, IMAVIS, IEEE TITS, CVIU, Neurocomputing, Scientific Reports, ICDM, ICCV, ECCV, CVPR, NeurIPS, ICME, ICIP, ICPR, AISTATS, ICML, ICLR, ACCV, WACV, PRCV, ICIG
-- 中国图象图形学学会会员 图象视频通信专委会 委员，VALSE在线委员（第1-3届） VALSE Senior AC, 中国图象图形学学会会员, 中国计算机学会会员, IEEE会员
+- 中国图象图形学学会会员 图象视频通信专委会 委员，VALSE在线委员（第1-3届） VALSE Senior AC, 中国图象图形学学会会员, 中国计算机学会会员, IEEE会员, 会员
 
 ####主要论文
 
 **标注通讯作者，#标注同等贡献，完整论文列表：*[xinggangw.info/pubs.htm](https://xinggangw.info/pubs.htm)
 
-1. Zilong Huang#, **Xinggang Wang**#*, Yunchao Wei, Lichao Huang, Humphrey Shi, Wenyu Liu, Thomas Huang. `CCNet: Criss-Cross Attention for Semantic Segmentation`. IEEE **TPAMI**, 2020
+*IEEE **TPAMI** (IF=17.86), IEEE **TIP** (IF=9.34), IEEE **TNNLS** (IF=8.79), IEEE **TMI** (IF=6.68), **Medical Image Analysis** (IF=11.148), **Pattern Recognition** (IF=7.196), **NIPS**，**ICLR**，**CVPR**，**ICCV**，**ECCV**，**AAAI**为领域内顶级期刊/会议。*
+
+1. Zilong Huang#, **Xinggang Wang**#*, Yunchao Wei, Lichao Huang, Humphrey Shi, Wenyu Liu, Thomas Huang. `CCNet: Criss-Cross Attention for Semantic Segmentation`. IEEE **TPAMI**, 2020, doi: 10.1109/TPAMI.2020.3007032
 2. Peng Tang, **Xinggang Wang***, Song Bai, Wei Shen, Xiang Bai, Wenyu Liu, Alan Yuille. `PCL: Proposal Cluster Learning for Weakly Supervised Object Detection`. IEEE **TPAMI**, vol. 42, no. 1, pp. 176-191, 1 Jan. 2020
 3. Jingdong Wang, Ke Sun, Tianheng Cheng, Borui Jiang, Chaorui Deng, Yang Zhao, Dong Liu, Yadong Mu, Mingkui Tan, **Xinggang Wang**, Wenyu Liu, Bin Xiao. `Deep High-Resolution Representation Learning for Visual Recognition`. IEEE **TPAMI**, doi: 10.1109/TPAMI.2020.2983686, 2020
 4. Peng Tang, Chunyu Wang, **Xinggang Wang**, Wenyu Liu*, Wenjun Zeng, Jingdong Wang. `Object Detection in Videos by High Quality Object Linking`. IEEE **TPAMI** vol. 42, no. 5, pp. 1272-1278, 2020
@@ -98,18 +100,19 @@
 
 - 2nd Place in the 2nd Large-scale Video Object Segmentation Challenge Workshop in conjunction with `ICCV 2019`
 - 2nd Place in the 1st Large-scale Video Object Segmentation Challenge Workshop in conjunction with `ECCV 2018`
-- 3rd Place in International Contest on Object Detection hosted by `ICPR 2018`
+- 3rd Place in International Contest on Object Detection in Aerial Images hosted by `ICPR 2018`
 
 ####主持项目
 
-- 复杂场景中的高效视觉感知，之江实验室开放课题，`2019-2021`
-- 弱监督图像分割项目，vivo公司，`2019-2020`
-- 基于视觉关系学习的弱监督图像理解研究, 国家自然科学基金, `2019 - 2022`
-- 非受限情况下人脸识别研究，湖北省技术创新专项重大项目, `2017 - 2019`
-- 华中科技大学-地平线计算机视觉技术研究中心, `2017-2020`
-- CCF-腾讯犀牛鸟基金，`2017 & 2019`
-- 基于区分型码本的图像表示的研究与应用，国家自然科学基金, `2016 - 2018`
-- 中国科协青年人才托举工程（No. YESS 20150077）, `2015 - 2017`
+- 复杂场景中的高效视觉感知，之江实验室开放课题，85万，`2019-2021`
+- 弱监督图像分割项目，vivo公司，67万，`2019-2020`
+- 基于视觉关系学习的弱监督图像理解研究, 国家自然科学基金，65万， `2019 - 2020`
+- 非受限情况下人脸识别研究，湖北省技术创新专项重大项目，50万， `2017 - 2019`
+- 华中科技大学-地平线计算机视觉技术研究中心，300万， `2017-2020`
+- CCF-腾讯犀牛鸟基金，30万，`2017 & 2019`
+- 基于区分型码本的图像表示的研究与应用，国家自然科学基金，23万, `2016 - 2018`
+- 中国科协青年人才托举工程，45万， `2015 - 2017`
+- 科技大数据价值链构建与解决方案，科技部重点研发子课题，35万，`2019-2022`
 
 ####学术报告
 
@@ -132,7 +135,7 @@
 #### 教授课程
 
 - **数据结构**，电信学院，一年级本科生，`2015-2020`
-- **计算机视觉**，电信学院，三年级种子班，`2015-2020`
+- **计算机视觉**，启明学院种子班，三年级本科生，`2015-2020`
 - **计算机视觉理论与实践**，电信学院，四年级本科生，`2017-2020`
 - **计算机与程序设计基础（C）**，电信学院，一年级本科生，`2016`
 - **图像分析与理解**，电信学院，一年级研究生，`2017-2018`

@@ -1,16 +1,12 @@
 ###王兴刚, 华中科技大学, 电信学院, 华中卓越学者晨星岗, 副教授
 ---
-邮件：xgwang@hust.edu.cn
+生日：1986年8月 | 邮件：xgwang@hust.edu.cn | 手机：188 0272 9359
 
-手机：188 0272 9359
+地址：湖北省武汉市洪山区珞瑜路1037号，华中科技大学南一楼E428-504室，邮编430074
 
-主页：[https://xinggangw.info](https://xinggangw.info)
+学术主页：[https://xinggangw.info](https://xinggangw.info) | 谷歌学术：[4200+引用，h-index=34](https://scholar.google.com/citations?user=qNCTLV0AAAAJ&hl=en)
 
-地址：湖北省武汉市洪山区珞瑜路1037号 华中科技大学南一楼E428-504室 
-
-研究方向：计算机视觉、深度学习，尤其在于弱监督、高效率的物体识别技术
-
-谷歌学术：[4200+引用，h-index=34](https://scholar.google.com/citations?user=qNCTLV0AAAAJ&hl=en)
+研究方向：计算机视觉、深度学习，尤其在于弱监督、高效率的物体识别技术 
 
 
 ---

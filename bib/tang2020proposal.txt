@@ -1,4 +1,4 @@
-@article{tang2018pcl,
+@article{tang2020pcl,
   title={Pcl: Proposal cluster learning for weakly supervised object detection},
   author={Tang, Peng and Wang, Xinggang and Bai, Song and Shen, Wei and Bai, Xiang and Liu, Wenyu and Yuille, Alan},
   journal={IEEE transactions on pattern analysis and machine intelligence},

@@ -1,0 +1,10 @@
+@ARTICLE{8852682,
+  author={L. {Xu} and X. {Wang} and W. {Liu} and B. {Feng}},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  title={Cascaded Boundary Network for High-Quality Temporal Action Proposal Generation},
+  year={2020},
+  volume={30},
+  number={10},
+  pages={3702-3713},}
+
+

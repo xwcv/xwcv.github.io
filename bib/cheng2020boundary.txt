@@ -1,7 +1,8 @@
 @inproceedings{cheng2020boundary,
- title={Boundary-preserving Mask R-CNN},
- author={Tianheng Cheng and Xinggang Wang and Lichao Huang and Wenyu Liu},
- booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
- pages={},
- year={2020}
+  title={Boundary-preserving mask R-CNN},
+  author={Cheng, Tianheng and Wang, Xinggang and Huang, Lichao and Liu, Wenyu},
+  booktitle={European Conference on Computer Vision},
+  pages={660--676},
+  year={2020},
+  organization={Springer}
 }

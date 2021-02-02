@@ -4,9 +4,9 @@
 
 地址：湖北省武汉市洪山区珞瑜路1037号，华中科技大学南一楼E428-504室，邮编430074
 
-学术主页：[https://xinggangw.info](https://xinggangw.info) | 谷歌学术：[4200+引用，h-index=34](https://scholar.google.com/citations?user=qNCTLV0AAAAJ&hl=en)
+学术主页：[https://xinggangw.info](https://xinggangw.info) | 谷歌学术：[5700+引用，h-index=38](https://scholar.google.com/citations?user=qNCTLV0AAAAJ&hl=en)
 
-研究方向：计算机视觉、深度学习，尤其在于弱监督、高效率的物体识别技术 
+研究方向：计算机视觉、深度学习，尤其在于弱监督、高效率的物体检测分割 
 
 
 ---
@@ -36,9 +36,10 @@
 
 ####学术服务
 
+- Associate Editor（副编辑）, Pattern Recognition, `2021 -`****
 - Associate Editor（副编辑）, [Image and Vision Computing (IMAVIS)](https://www.journals.elsevier.com/image-and-vision-computing/editorial-board), `2020 -`
-- 以下期刊、会议的审稿人: IEEE TPAMI, JMLR, Pattern Recognition, IEEE T. Cybernetics, IEEE TIP, IEEE TMM, IEEE TCSVT, IEEE TMI, MedIA, IMAVIS, IEEE TITS, CVIU, Neurocomputing, Scientific Reports, ICDM, ICCV, ECCV, CVPR, NeurIPS, ICME, ICIP, ICPR, AISTATS, ICML, ICLR, ACCV, WACV, PRCV, ICIG
-- 中国图象图形学学会会员 图象视频通信专委会 委员，VALSE在线委员（第1-3届） VALSE Senior AC, 中国图象图形学学会会员, 中国计算机学会会员, IEEE会员, 会员
+- 以下期刊、会议的审稿人: IEEE TPAMI, JMLR, Pattern Recognition, IEEE T. Cybernetics, IEEE TIP, IEEE TMM, IEEE TCSVT, IEEE TMI, MedIA, IMAVIS, IEEE TITS, CVIU, Neurocomputing, Scientific Reports, ICDM, ICCV, ECCV, CVPR, NeurIPS, ICME, ICIP, ICPR, AISTATS, ICML, ICLR, ACCV, WACV, PRCV, ICIG。AAAI 2021 & IJCAI 2021 Senior PC.
+- 中国图象图形学学会会员 图象视频通信/机器视觉专委会 委员，VALSE在线委员（第1-3届） VALSE Senior AC, 中国图象图形学学会会员, 中国计算机学会会员, IEEE会员, 会员
 
 ####主要论文
 
@@ -46,50 +47,53 @@
 
 *IEEE **TPAMI** (IF=17.86), IEEE **TIP** (IF=9.34), IEEE **TNNLS** (IF=8.79), IEEE **TMI** (IF=6.68), **Medical Image Analysis** (IF=11.148), **Pattern Recognition** (IF=7.196), **NIPS**，**ICLR**，**CVPR**，**ICCV**，**ECCV**，**AAAI**为领域内顶级期刊/会议。*
 
-1. Zilong Huang#, **Xinggang Wang**#*, Yunchao Wei, Lichao Huang, Humphrey Shi, Wenyu Liu, Thomas Huang. `CCNet: Criss-Cross Attention for Semantic Segmentation`. IEEE **TPAMI**, 2020, doi: 10.1109/TPAMI.2020.3007032
-2. Peng Tang, **Xinggang Wang***, Song Bai, Wei Shen, Xiang Bai, Wenyu Liu, Alan Yuille. `PCL: Proposal Cluster Learning for Weakly Supervised Object Detection`. IEEE **TPAMI**, vol. 42, no. 1, pp. 176-191, 1 Jan. 2020
-3. Jingdong Wang, Ke Sun, Tianheng Cheng, Borui Jiang, Chaorui Deng, Yang Zhao, Dong Liu, Yadong Mu, Mingkui Tan, **Xinggang Wang**, Wenyu Liu, Bin Xiao. `Deep High-Resolution Representation Learning for Visual Recognition`. IEEE **TPAMI**, doi: 10.1109/TPAMI.2020.2983686, 2020
-4. Peng Tang, Chunyu Wang, **Xinggang Wang**, Wenyu Liu*, Wenjun Zeng, Jingdong Wang. `Object Detection in Videos by High Quality Object Linking`. IEEE **TPAMI** vol. 42, no. 5, pp. 1272-1278, 2020
-5. Baoguang Shi, Mingkun Yang, **Xinggang Wang,** Pengyuan Lyu, Cong Yao, Xiang Bai*. `ASTER: An attentional scene text recognizer with flexible rectification`. IEEE **TPAMI**, vol. 41, no. 9, pp. 2035-2048, 1 Sept. 2019. 
-6. **Xinggang Wang**#, Xianbo Deng#, Qing Fu#, Qiang Zhou#, Jiapei Feng, Hui Ma, Wenyu Liu, Chuansheng Zheng. `A Weakly-supervised Framework for COVID-19 Classification and Lesion Localization from Chest CT`. IEEE **TMI** 2020
-7. **Xinggang Wang**, Xiang Bai, Xingwei Yang, Wenyu Liu, and Longin Jan Latecki. `Maximal Cliques that Satisfy Hard Constraints with Application to Deformable Object Model Learning`. **NIPS**, 2011
-8. **Xinggang Wang**, Baoyuan Wang, Xiang Bai, Wenyu Liu, and Zhuowen Tu, `Max-Margin Multiple Instance Dictionary Learning`, **ICML**, 2013
-9. Jiemin Fang#, Yuzhu Sun#, Kangjian Peng#, Qian Zhang, Yuan Li, Wenyu Liu, **Xinggang Wang***. `Fast Neural Network Adaptation via Parameter Remapping and Architecture Search`. **ICLR**, 2020
-10. Jiemin Fang, Yuzhu Sun, Qian Zhang, Yuan Li, Wenyu Liu, **Xinggang Wang***. `Densely Connected Search Space for More Flexible Neural Architecture Search`. **CVPR**, 2020
-11. Zhaojin Huang, Lichao Huang, Yongchao Gong, Chang Huang, **Xinggang Wang***. `Mask Scoring R-CNN`. **CVPR**, 2019. Oral
-12. Yukang Chen, Gaofeng Meng, Qian Zhang, Shiming Xiang, Chang Huang, Lisen Mu, **Xinggang Wang**. `RENAS: Reinforced Evolutionary Neural Architecture Search`. **CVPR**, 2019
-13. Zilong Huang, **Xinggang Wang***, Jiasi Wang, Wenyu Liu, Jingdong Wang. `Weakly Supervised Semantic Segmentation Network with Deep Seeded Region Growing`. **CVPR**, 2018
-14. Peng Tang, **Xinggang Wang**, Xiang Bai, and Wenyu Liu. `Multiple Instance Detection Network with Online Instance Classifier Refinement`. **CVPR**, 2017
-15. Wei Shen, **Xinggang Wang**, Yan Wang, Xiang Bai, Zhijiang Zhang. `DeepContour: A Deep Convolutional Feature for Contour Detection`. **CVPR**, 2015
-16. **Xinggang Wang**, Xiang Bai, Tianyang Ma, Wenyu Liu, Longin Latecki. `Fan Shape Model for Object Detection`. **CVPR**, 2012
-17. **Xinggang Wang,** Xiang Bai, Wenyu Liu, Longin Latecki. `Feature Context for Object Detection and Image Classification`. **CVPR**, 2011
-18. Zilong Huang, **Xinggang Wang***, Lichao Huang, Chang Huang, Yunchao Wei, Wenyu Liu. `CCNet: Criss-Cross Attention for Semantic Segmentation`. **ICCV**, 2019
-19. **Xinggang Wang**#, Zhuotun Zhu#, Cong Yao, Xiang Bai. `Relaxed Multiple-Instance SVM with Application to Object Discovery`. **ICCV**, 2015
-20. Xiang Bai, **Xinggang Wang**, Longin Jan Latecki, Wenyu Liu, and Zhuowen Tu. `Active Skeleton for Non-rigid Object Detection`, **ICCV**, 2009
-21. Tianheng Cheng, **Xinggang Wang***, Lichao Huang, Wenyu Liu. `Boundary-preserving Mask R-CNN`. **ECCV**, 2020.
-22. Peng Tang, **Xinggang Wang**, Angtian Wang, Yongluan Yan, Wenyu Liu, Junzhou Huang, Alan Yuille. `Weakly Supervised Region Proposal Network and Object Detection`, **ECCV**, 2018
-23. Cheng Wang, Qian Zhang, Chang Huang, Wenyu Liu, **Xinggang Wang***. `Mancs: A Multi-task Attentional Network with Curriculum Sampling for Person Re-identification`, **ECCV**, 2018
-24. Xiaojie Guo, **Xinggang Wang**, Liang Yang, Xiaochun Cao and Yi Ma, `Robust Foreground Detection Using Smoothness and Arbitrariness Constraints`, **ECCV**, 2014. 
-25. Mengting Chen#, Yuxin Fang#, Xinggang Wang, Heng Luo, Yifeng Geng, Xinyu Zhang, Chang Huang, Wenyu Liu, Bo Wang. `Diversity Transfer Network for Few-Shot Learning`. **AAAI**, 2020. Oral 
-26. Peng Tang, **Xinggang Wang***, Baoguang Shi, Xiang Bai, Wenyu Liu, Zhuowen Tu. `Deep FisherNet for Image Classification`. IEEE **TNNLS**, Volume: 30, Issue: 7, 2019
-27. Zilong Huang, Chunyu Wang, **Xinggang Wang***, Wenyu Liu, Jingdong Wang. `Semantic Image Segmentation by Scale-Adaptive Networks`. IEEE **TIP**,  vol. 29, pp. 2066-2077, 2020, doi: 10.1109/TIP.2019.2941644
-28. Liangchen Song, Yonghao Xu, Lefei Zhang, Bo Du, Qian Zhang, **Xinggang Wang**. `Learning from Synthetic Images via Active Pseudo-Labeling`. IEEE **TIP**, vol. 29, pp. 6452-6465, 2020
-29. Peng Tang, **Xinggang Wang**, Bin Feng, Wenyu Liu*. `Learning Multi-instance Deep Discriminative Patterns for Image Classification`. IEEE **TIP**, vol. 26, no. 7, 2017.
-30. Xiang Bai, Cong Rao, and **Xinggang Wang***. `Shape Vocabulary: A Robust and Efficient Shape Representation for Shape Matching`. IEEE **TIP** vol. 23, no. 9, pp. 3935-3949, Sept. 2014
-31. Liangchen Song, Cheng Wang, Lefei Zhang, Bo Du, Qian Zhang, Chang Huang, **Xinggang Wang**. `Unsupervised Domain Adaptive Re-Identification: Theory and Practice`. **Pattern Recognition**, Volume 102, 2020, 107173
-32. **Xinggang Wang***, Yongluan Yan, Peng Tang, Xiang Bai*, Wenyu Liu. `Revisiting Multiple Instance Neural Networks`. **Pattern Recognition**, 74:15-24 (2018)
-33. Peng Tang, **Xinggang Wang***, Zilong Huang, Xiang Bai, Wenyu Liu. `Deep Patch Learning for Weakly Supervised Object Classification and Discovery`. **Pattern Recognition**, Volume 71, Pages 446-459, 2017
-34. **Xinggang Wang,** Bin Feng, Xiang Bai, Wenyu Liu, and Longin Jan Latecki. `Bag of Contour Fragments for Robust Shape Classification`. **Pattern Recognition**, Volume 47, Issue 6, 2014, Pages 2116-2125
-35. **Xinggang Wang**, Yongluan Yan, Peng Tang, Wenyu Liu*, Xiaojie Guo. `Bag similarity network for deep multi-instance learning`. **Information Sciences**. Volume 504, 2019, Pages 578-588
-36. Yang Wang, **Xinggang Wang***, Wenyu Liu. `Unsupervised Local Deep Feature for Image Recognition`. **Information Sciences** (2016), Volume 351, 10 July 2016, Pages 67–75, 10.1016/j.ins.2016.02.044.
-37. Chao Li, **Xinggang Wang**, Wenyu Liu*, Longin Latecki, Bo Wang, Junzhou Huang. `Weakly Supervised Mitosis Detection in Breast Histopathology Images using Concentric Loss`. **Medical Image Analysis**. Volume 53, Pages 165-178 (2019)
-38. Chao Li, **Xinggang Wang***, Wenyu Liu, Longin Latecki. `DeepMitosis: Mitosis detection via deep detection, verification and segmentation networks`. **Medical Image Analysis**. Volume 45, Pages 121-133, (2018)
-39. **Xinggang Wang**, Wei Yang, Jeffrey Weinreb, et al. `Searching for prostate cancer by fully automated magnetic resonance imaging classification: deep learning versus non-deep learning`. **Scientific Reports**, volume 7, Article number: 15415 (2017)
-40. **Xinggang Wang**, Zhengdong Zhang, Yi Ma, Xiang Bai, Wenyu Liu, Zhuowen Tu. `Robust Subspace Discovery via Relaxed Rank Minimization`. **Neural Computation**, Vol. 26, 2014
+1. Jiemin Fang#, Yuzhu Sun#, Qian Zhang, Kangjian Peng, Yuan Li, Wenyu Liu, **Xinggang Wang***. `FNA++: Fast Network Adaptation via Parameter Remapping and Architecture Search`. IEEE **TPAMI**，2020, doi: 10.1109/TPAMI.2020.3044416
+2. Zilong Huang#, **Xinggang Wang**#*, Yunchao Wei, Lichao Huang, Humphrey Shi, Wenyu Liu, Thomas Huang. `CCNet: Criss-Cross Attention for Semantic Segmentation`. IEEE **TPAMI**, 2020, doi: 10.1109/TPAMI.2020.3007032
+3. Peng Tang, **Xinggang Wang***, Song Bai, Wei Shen, Xiang Bai, Wenyu Liu, Alan Yuille. `PCL: Proposal Cluster Learning for Weakly Supervised Object Detection`. IEEE **TPAMI**, vol. 42, no. 1, pp. 176-191, 1 Jan. 2020
+4. Jingdong Wang, Ke Sun, Tianheng Cheng, Borui Jiang, Chaorui Deng, Yang Zhao, Dong Liu, Yadong Mu, Mingkui Tan, **Xinggang Wang**, Wenyu Liu, Bin Xiao. `Deep High-Resolution Representation Learning for Visual Recognition`. IEEE **TPAMI**, doi: 10.1109/TPAMI.2020.2983686, 2020
+5. Peng Tang, Chunyu Wang, **Xinggang Wang**, Wenyu Liu*, Wenjun Zeng, Jingdong Wang. `Object Detection in Videos by High Quality Object Linking`. IEEE **TPAMI** vol. 42, no. 5, pp. 1272-1278, 2020
+6. Baoguang Shi, Mingkun Yang, **Xinggang Wang,** Pengyuan Lyu, Cong Yao, Xiang Bai*. `ASTER: An attentional scene text recognizer with flexible rectification`. IEEE **TPAMI**, vol. 41, no. 9, pp. 2035-2048, 1 Sept. 2019. 
+7. **Xinggang Wang**#, Xianbo Deng#, Qing Fu#, Qiang Zhou#, Jiapei Feng, Hui Ma, Wenyu Liu, Chuansheng Zheng. `A Weakly-supervised Framework for COVID-19 Classification and Lesion Localization from Chest CT`. IEEE **TMI** 2020
+8. **Xinggang Wang**, Xiang Bai, Xingwei Yang, Wenyu Liu, and Longin Jan Latecki. `Maximal Cliques that Satisfy Hard Constraints with Application to Deformable Object Model Learning`. **NIPS**, 2011
+9. **Xinggang Wang**, Baoyuan Wang, Xiang Bai, Wenyu Liu, and Zhuowen Tu, `Max-Margin Multiple Instance Dictionary Learning`, **ICML**, 2013
+10. Jiemin Fang#, Yuzhu Sun#, Kangjian Peng#, Qian Zhang, Yuan Li, Wenyu Liu, **Xinggang Wang***. `Fast Neural Network Adaptation via Parameter Remapping and Architecture Search`. **ICLR**, 2020
+11. Jiemin Fang, Yuzhu Sun, Qian Zhang, Yuan Li, Wenyu Liu, **Xinggang Wang***. `Densely Connected Search Space for More Flexible Neural Architecture Search`. **CVPR**, 2020
+12. Zhaojin Huang, Lichao Huang, Yongchao Gong, Chang Huang, **Xinggang Wang***. `Mask Scoring R-CNN`. **CVPR**, 2019. Oral
+13. Yukang Chen, Gaofeng Meng, Qian Zhang, Shiming Xiang, Chang Huang, Lisen Mu, **Xinggang Wang**. `RENAS: Reinforced Evolutionary Neural Architecture Search`. **CVPR**, 2019
+14. Zilong Huang, **Xinggang Wang***, Jiasi Wang, Wenyu Liu, Jingdong Wang. `Weakly Supervised Semantic Segmentation Network with Deep Seeded Region Growing`. **CVPR**, 2018
+15. Peng Tang, **Xinggang Wang**, Xiang Bai, and Wenyu Liu. `Multiple Instance Detection Network with Online Instance Classifier Refinement`. **CVPR**, 2017
+16. Wei Shen, **Xinggang Wang**, Yan Wang, Xiang Bai, Zhijiang Zhang. `DeepContour: A Deep Convolutional Feature for Contour Detection`. **CVPR**, 2015
+17. **Xinggang Wang**, Xiang Bai, Tianyang Ma, Wenyu Liu, Longin Latecki. `Fan Shape Model for Object Detection`. **CVPR**, 2012
+18. **Xinggang Wang,** Xiang Bai, Wenyu Liu, Longin Latecki. `Feature Context for Object Detection and Image Classification`. **CVPR**, 2011
+19. Zilong Huang, **Xinggang Wang***, Lichao Huang, Chang Huang, Yunchao Wei, Wenyu Liu. `CCNet: Criss-Cross Attention for Semantic Segmentation`. **ICCV**, 2019
+20. **Xinggang Wang**#, Zhuotun Zhu#, Cong Yao, Xiang Bai. `Relaxed Multiple-Instance SVM with Application to Object Discovery`. **ICCV**, 2015
+21. Xiang Bai, **Xinggang Wang**, Longin Jan Latecki, Wenyu Liu, and Zhuowen Tu. `Active Skeleton for Non-rigid Object Detection`, **ICCV**, 2009
+22. Tianheng Cheng, **Xinggang Wang***, Lichao Huang, Wenyu Liu. `Boundary-preserving Mask R-CNN`. **ECCV**, 2020.
+23. Peng Tang, **Xinggang Wang**, Angtian Wang, Yongluan Yan, Wenyu Liu, Junzhou Huang, Alan Yuille. `Weakly Supervised Region Proposal Network and Object Detection`, **ECCV**, 2018
+24. Cheng Wang, Qian Zhang, Chang Huang, Wenyu Liu, **Xinggang Wang***. `Mancs: A Multi-task Attentional Network with Curriculum Sampling for Person Re-identification`, **ECCV**, 2018
+25. Xiaojie Guo, **Xinggang Wang**, Liang Yang, Xiaochun Cao and Yi Ma, `Robust Foreground Detection Using Smoothness and Arbitrariness Constraints`, **ECCV**, 2014. 
+26. Mengting Chen#, Yuxin Fang#, Xinggang Wang, Heng Luo, Yifeng Geng, Xinyu Zhang, Chang Huang, Wenyu Liu, Bo Wang. `Diversity Transfer Network for Few-Shot Learning`. **AAAI**, 2020. Oral 
+27. Peng Tang, **Xinggang Wang***, Baoguang Shi, Xiang Bai, Wenyu Liu, Zhuowen Tu. `Deep FisherNet for Image Classification`. IEEE **TNNLS**, Volume: 30, Issue: 7, 2019
+28. Zilong Huang, Chunyu Wang, **Xinggang Wang***, Wenyu Liu, Jingdong Wang. `Semantic Image Segmentation by Scale-Adaptive Networks`. IEEE **TIP**,  vol. 29, pp. 2066-2077, 2020, doi: 10.1109/TIP.2019.2941644
+29. Liangchen Song, Yonghao Xu, Lefei Zhang, Bo Du, Qian Zhang, **Xinggang Wang**. `Learning from Synthetic Images via Active Pseudo-Labeling`. IEEE **TIP**, vol. 29, pp. 6452-6465, 2020
+30. Peng Tang, **Xinggang Wang**, Bin Feng, Wenyu Liu*. `Learning Multi-instance Deep Discriminative Patterns for Image Classification`. IEEE **TIP**, vol. 26, no. 7, 2017.
+31. Xiang Bai, Cong Rao, and **Xinggang Wang***. `Shape Vocabulary: A Robust and Efficient Shape Representation for Shape Matching`. IEEE **TIP** vol. 23, no. 9, pp. 3935-3949, Sept. 2014
+32. Liangchen Song, Cheng Wang, Lefei Zhang, Bo Du, Qian Zhang, Chang Huang, **Xinggang Wang**. `Unsupervised Domain Adaptive Re-Identification: Theory and Practice`. **Pattern Recognition**, Volume 102, 2020, 107173
+33. **Xinggang Wang***, Yongluan Yan, Peng Tang, Xiang Bai*, Wenyu Liu. `Revisiting Multiple Instance Neural Networks`. **Pattern Recognition**, 74:15-24 (2018)
+34. Peng Tang, **Xinggang Wang***, Zilong Huang, Xiang Bai, Wenyu Liu. `Deep Patch Learning for Weakly Supervised Object Classification and Discovery`. **Pattern Recognition**, Volume 71, Pages 446-459, 2017
+35. **Xinggang Wang,** Bin Feng, Xiang Bai, Wenyu Liu, and Longin Jan Latecki. `Bag of Contour Fragments for Robust Shape Classification`. **Pattern Recognition**, Volume 47, Issue 6, 2014, Pages 2116-2125
+36. **Xinggang Wang**, Yongluan Yan, Peng Tang, Wenyu Liu*, Xiaojie Guo. `Bag similarity network for deep multi-instance learning`. **Information Sciences**. Volume 504, 2019, Pages 578-588
+37. Yang Wang, **Xinggang Wang***, Wenyu Liu. `Unsupervised Local Deep Feature for Image Recognition`. **Information Sciences** (2016), Volume 351, 10 July 2016, Pages 67–75, 10.1016/j.ins.2016.02.044.
+38. Chao Li, **Xinggang Wang**, Wenyu Liu*, Longin Latecki, Bo Wang, Junzhou Huang. `Weakly Supervised Mitosis Detection in Breast Histopathology Images using Concentric Loss`. **Medical Image Analysis**. Volume 53, Pages 165-178 (2019)
+39. Chao Li, **Xinggang Wang***, Wenyu Liu, Longin Latecki. `DeepMitosis: Mitosis detection via deep detection, verification and segmentation networks`. **Medical Image Analysis**. Volume 45, Pages 121-133, (2018)
+40. **Xinggang Wang**, Wei Yang, Jeffrey Weinreb, et al. `Searching for prostate cancer by fully automated magnetic resonance imaging classification: deep learning versus non-deep learning`. **Scientific Reports**, volume 7, Article number: 15415 (2017)
+41. **Xinggang Wang**, Zhengdong Zhang, Yi Ma, Xiang Bai, Wenyu Liu, Zhuowen Tu. `Robust Subspace Discovery via Relaxed Rank Minimization`. **Neural Computation**, Vol. 26, 2014
+42. Bin Hu#, Jiwei Xu#, **Xinggang Wang***. `Learning Generalizable Deep Feature using Triplet-Batch-Center Loss for Person Re-identification`. **Sci. China Inf. Sci.** 64, 120111 (2021)
+43. **Xinggang Wang**, Jiasi Wang, Peng Tang, Wenyu Liu*. `Weakly- and Semi-Supervised Fast Region-Based CNN for Object Detection`. Journal of Computer Science and Technology (**JCST**) 34(6): 1269–1278 Nov. 2019
 
 ####发明专利
 
-- 王兴刚; 陈凯兵; 姜玉静; 刘文予; 一种基于卷积神经网络的端到端物体检测方法, `ZL201611241694.3`
+- 王兴刚; 陈凯兵; 姜玉静; 刘文予; 一种基于卷积神经网络的端到端物体检测方法, `ZL201611241694.3`，转化金额30万
 - 王兴刚; 罗浩; 姜玉静; 刘文予; 一种基于深度学习的高帧率视频生成方法及系统, `ZL201611241691.X`
 
 ####竞赛获奖
@@ -100,6 +104,7 @@
 
 ####主持项目
 
+- DNAS关键技术及性能优化研究技术项目，华为技术有限公司，78万，`2020-2020`
 - 复杂场景中的高效视觉感知，之江实验室开放课题，85万，`2019-2021`
 - 弱监督图像分割项目，vivo公司，67万，`2019-2020`
 - 基于视觉关系学习的弱监督图像理解研究, 国家自然科学基金，65万， `2019 - 2020`
@@ -135,4 +140,3 @@
 - **计算机视觉理论与实践**，电信学院，四年级本科生，`2017-2020`
 - **计算机与程序设计基础（C）**，电信学院，一年级本科生，`2016`
 - **图像分析与理解**，电信学院，一年级研究生，`2017-2018`
-

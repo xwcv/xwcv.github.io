@@ -1,0 +1,10 @@
+@article{feng2021deep,
+  title={Deep Graph Cut Network for Weakly-supervised Semantic Segmentation},
+  author={Feng, Jiapei and Wang, Xinggang and Liu Wenyu},
+  journal={Science China Information Sciences},
+  volume={64},
+  number={3},
+  pages={1--13},
+  year={2021},
+  publisher={Science China Press}
+}

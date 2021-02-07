@@ -1,0 +1,10 @@
+@article{hu2021learning,
+  title={Learning generalizable deep feature using triplet-batch-center loss for person re-identification},
+  author={Hu, Bin and Xu, Jiwei and Wang, Xinggang},
+  journal={Science China Information Sciences},
+  volume={64},
+  number={2},
+  pages={1--2},
+  year={2021},
+  publisher={Science China Press}
+}

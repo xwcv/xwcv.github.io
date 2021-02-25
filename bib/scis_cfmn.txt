@@ -1,0 +1,10 @@
+@article{chen2021learning,
+  title={Learning to Focus: Cascaded Feature Matching Network for Few-shot Image Recognition},
+  author={Chen, Mengting and Wang, Xinggang and Luo, Heng and Geng, Yifeng and Liu, Wenyu},
+  journal={Science China Information Sciences},
+  volume={},
+  number={},
+  pages={},
+  year={2021},
+  publisher={Science China Press}
+}

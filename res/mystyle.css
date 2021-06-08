@@ -2,14 +2,14 @@
 
 body {
 	font-family: "Lucida Grande", "Helvetica", roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
-	font-size: 14.5px;
+	font-size: 13.0px;
 	color: #000000;
     background-color:#FFFFFF;
 }
 
 td, tr {
 	font-family: "Lucida Grande", "Helvetica", roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
-	font-size: 14.5px;
+	font-size: 13.0px;
 	color: #000000;
 }
 
@@ -104,7 +104,7 @@ td, tr {
 
 .sys_txt {
 	font-family: "Lucida Grande","Arial Unicode MS","Helvetica", roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
-	font-size: 14.5px;
+	font-size: 13.0px;
 	color: #000000;
 }
 
@@ -283,7 +283,7 @@ img {vertical-align: middle;
   text-align: center;
   padding: 15.5px;
   text-decoration: none;
-  font-size: 14.5px;
+  font-size: 13.0px;
 }
 
 /* Change the color of links on hover */
@@ -307,7 +307,7 @@ img {vertical-align: middle;
   	text-align: center;
   	padding: 15.5px;
   	text-decoration: none;
-  	font-size: 14.5px;
+  	font-size: 13.0px;
 }
 
 

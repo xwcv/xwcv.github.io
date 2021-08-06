@@ -2,9 +2,10 @@
   title={EAT-NAS: elastic architecture transfer for accelerating large-scale neural architecture search},
   author={Fang, Jiemin and Chen, Yukang and Zhang, Xinbang and Zhang, Qian and Huang, Chang and Meng, Gaofeng and Liu, Wenyu and Wang, Xinggang},
   journal={Science China Information Sciences},
-  volume={},
-  number={},
-  pages={},
+  volume={64},
+  number={9},
+  pages={192106-},
   year={2021},
+  doi={10.1007/s11432-020-3112-8},
   publisher={Science China Press}
 }

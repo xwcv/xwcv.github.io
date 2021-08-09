@@ -2,9 +2,9 @@
   title={Learning to Focus: Cascaded Feature Matching Network for Few-shot Image Recognition},
   author={Chen, Mengting and Wang, Xinggang and Luo, Heng and Geng, Yifeng and Liu, Wenyu},
   journal={Science China Information Sciences},
-  volume={},
-  number={},
-  pages={},
+  volume={64},
+  number={9},
+  pages={192105-},
   year={2021},
   publisher={Science China Press}
 }

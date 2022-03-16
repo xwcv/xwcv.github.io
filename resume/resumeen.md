@@ -1,50 +1,52 @@
-王兴刚, 华中科技大学, 华中卓越学者晨星岗, 副教授
+Dr. Xinggang Wang, Associate Professor
 ---
-生日：1986年8月 | 邮件：xgwang@hust.edu.cn | 手机：188 0272 9359
+Email：xgwang@hust.edu.cn | Mobile：188 0272 9359
 
-地址：湖北省武汉市洪山区珞瑜路1037号，华中科技大学南一楼E428-504室，邮编430074
+Address：Room E428-504, Nan-1 Hall, Luoyu Rd 1037, Wuhan, 430074, China
 
-学术主页：[https://xinggangw.info](https://xinggangw.info) | 谷歌学术：[7400+引用，h-index=40](https://scholar.google.com/citations?user=qNCTLV0AAAAJ&hl=en)
+Homepage：[https://xinggangw.info](https://xinggangw.info) | Google Scholar：[7400+ citations，h-index=40](https://scholar.google.com/citations?user=qNCTLV0AAAAJ&hl=en)
 
-研究方向：计算机视觉、深度学习，尤其在于弱监督、高效率的物体检测分割 
+Research Direction: Computer Vision, Deep Learning
 
 
 ---
 
-#### 教育背景
+#### Education
 
-- `2005年09月至2009年06月`，本科，通信工程专业，华中科技大学
-- `2009年09月至2014年11月`，博士，通信与信息系统专业，华中科技大学
+- `2005/09 - 2009/06`，Bachelor in Telecommunication，Huazhong University of Science and Technology
+- `2009/09 - 2014/11`，Ph.D. in Communication and Information System, Huazhong University of Science and Technology
 
-#### 科研经历
+#### Research Experience
 
-- `2010年06月至2011年08月`，美国天普大学（Temple University）访问学者
-- `2011年12月至2012年11月`，微软亚洲研究院（MSRA）实习生
-- `2013年02月至2013年09月`，美国加州大学洛杉矶分校（UCLA）访问学者
-- `2014年11月至2017年11月`，华中科技大学，讲师
-- `2017年12月至今`，			 华中科技大学，副教授
+- `2010/06 - 2011/08`，Visiting Scholar, Temple University
+- `2011/12 - 2012/11`，Research Intern, Microsoft Research Asia
+- `2013/02 - 2013/09`，Visiting Graduate Researcher, UCLA
+- `2014/11 - 2017/11`，Assistant Professor, Huazhong University of Science and Technology
+- `2017/12 - now`，		Associate Professor, Huazhong University of Science and Technology
 
-#### 所获荣誉
+#### Award
 
-- 中国科协“**青年人才托举工程**”`（2015年）`（首届全国182人之一）
-- **微软学者**`（2012年）`（全亚洲仅10名获奖者）
-- 湖北省自然科学二等奖（排名第四）`（2017年）`
-- 中国电子教育学会优秀博士论文提名奖`（2017年）`
-- 湖北省优秀博士论文奖`（2017年）`
-- CCF-腾讯犀牛鸟基金优秀奖`（2018年）`
+- Huawei's Excellent Technical Cooperation Project Award, 2020
+- Excellent Award of CCF-Tencent Research Fund, 2017
+- Outstanding reviewers of the Pattern Recognition journal, the Nurocomputing journal, the Pattern Recognition Letter journal, 2017
+- Excellent Ph.D. Thesis Award Nomination, China Education Society OF Electronics, CESE, 2017
+- Excellent Ph.D. Thesis Award, Hubei Province, 2016
+- Microsoft Research Asia Fellowship Award , 2012 [[more information ](http://research.microsoft.com/en-us/collaboration/global/asia-pacific/talent/fellows.aspx)]
+- National PhD Fellowship, Huazhong University of Science and Technology, 2012
 
-#### 学术服务
+#### Academic Services
 
-- **领域主席(AC)**: CVPR 2022
-- **副编辑/编委**: [Pattern Recognition (PR, IF 7.196)](https://www.journals.elsevier.com/pattern-recognition/editorial-board/xinggang-wang); [Image and Vision Computing (IMAVIS, IF 3.103)](https://www.journals.elsevier.com/image-and-vision-computing/editorial-board); [Electronics](https://www.mdpi.com/journal/electronics/editors) (Artificial Intelligence Section , IF 2.412).
-- 以下期刊、会议的审稿人: IEEE TPAMI, JMLR, Pattern Recognition, IEEE T. Cybernetics, IEEE TIP, IEEE TMM, IEEE TCSVT, IEEE TMI, MedIA, IMAVIS, IEEE TITS, CVIU, Neurocomputing, Scientific Reports, ICDM, ICCV, ECCV, CVPR, NeurIPS, ICME, ICIP, ICPR, AISTATS, ICML, ICLR, ACCV, WACV, PRCV, ICIG。AAAI 2021 & IJCAI 2021 Senior PC.
-- 中国图象图形学学会会员 图象视频通信/机器视觉专委会 委员，VALSE在线委员（第1-3届） VALSE Senior AC, 中国图象图形学学会会员, 中国计算机学会会员, IEEE会员, 会员
+- Area Chair: CVPR 2022
+- Associate Editor/Editorial Board Member: Pattern Recognition (PR, IF 7.196), since 2021; Image and Vision Computing (IMAVIS, IF 3.103), since 2020; Electronics (Artificial Intelligence Section , IF 2.412), since 2021.
+- Reviewer for the following journals/institutes/conferences: IEEE TPAMI, JMLR, Pattern Recognition, IEEE T. Cybernetics, IEEE TIP, IEEE TMM, IEEE TCSVT, IVC, IEEE TITS, CVIU, Neurocomputing, Scientific Reports, NeurIPS, ICDM, ICCV, ECCV, CVPR, ICME, ICIP, ICPR, AISTATS, ICML, ICLR.
+- Website chair of VALSE 2016 / Website chair of IEEE SIDAS 2016 / Website chair of IEEE CAS conference on intelligent media computing
+- VALSE VOOC, Member of CSIG, Member of CCF, Member of IEEE
 
-#### 主要论文
+#### Publication
 
-**标注通讯作者，#标注同等贡献，完整论文列表：*[xinggangw.info/pubs.htm](https://xinggangw.info/pubs.htm)
+** denotes corresponding author，# denotes equal contribution，full publication list：*[xinggangw.info/pubs.htm](https://xinggangw.info/pubs.htm)
 
-*IEEE **TPAMI** (IF=17.86), IEEE **TIP** (IF=9.34), IEEE **TNNLS** (IF=8.79), IEEE **TMI** (IF=6.68), **Medical Image Analysis** (IF=11.148), **Pattern Recognition** (IF=7.196), **NIPS**，**ICLR**，**CVPR**，**ICCV**，**ECCV**，**AAAI**为领域内顶级期刊/会议。*
+*IEEE **TPAMI** (IF=17.86), IEEE **TIP** (IF=9.34), IEEE **TNNLS** (IF=8.79), IEEE **TMI** (IF=6.68), **Medical Image Analysis** (IF=11.148), **Pattern Recognition** (IF=7.196), **NIPS**，**ICLR**，**CVPR**，**ICCV**，**ECCV**，**AAAI** are top-tier conferences/journals*
 
 1. Jiemin Fang#, Yuzhu Sun#, Qian Zhang, Kangjian Peng, Yuan Li, Wenyu Liu, **Xinggang Wang***. `FNA++: Fast Network Adaptation via Parameter Remapping and Architecture Search`. IEEE **TPAMI**，2020, doi: 10.1109/TPAMI.2020.3044416
 2. Zilong Huang#, **Xinggang Wang**#*, Yunchao Wei, Lichao Huang, Humphrey Shi, Wenyu Liu, Thomas Huang. `CCNet: Criss-Cross Attention for Semantic Segmentation`. IEEE **TPAMI**, 2020, doi: 10.1109/TPAMI.2020.3007032
@@ -92,52 +94,29 @@
 44. Bin Hu#, Jiwei Xu#, **Xinggang Wang***. `Learning Generalizable Deep Feature using Triplet-Batch-Center Loss for Person Re-identification`. **Sci. China Inf. Sci.** 64, 120111 (2021)
 45. **Xinggang Wang**, Jiasi Wang, Peng Tang, Wenyu Liu*. `Weakly- and Semi-Supervised Fast Region-Based CNN for Object Detection`. Journal of Computer Science and Technology (**JCST**) 34(6): 1269–1278 Nov. 2019
 
-#### 发明专利
-
-- 王兴刚; 陈凯兵; 姜玉静; 刘文予; 一种基于卷积神经网络的端到端物体检测方法, `ZL201611241694.3`，转化金额30万
-- 王兴刚; 罗浩; 姜玉静; 刘文予; 一种基于深度学习的高帧率视频生成方法及系统, `ZL201611241691.X`
-
-#### 竞赛获奖
+#### Competition
 
 - 2nd Place in the 2nd Large-scale Video Object Segmentation Challenge Workshop in conjunction with `ICCV 2019`
 - 2nd Place in the 1st Large-scale Video Object Segmentation Challenge Workshop in conjunction with `ECCV 2018`
 - 3rd Place in International Contest on Object Detection in Aerial Images hosted by `ICPR 2018`
 
-#### 主持项目
+#### Grant
 
-- DNAS关键技术及性能优化研究技术项目，华为技术有限公司，78万，`2020-2020`
-- 复杂场景中的高效视觉感知，之江实验室开放课题，85万，`2019-2021`
-- 弱监督图像分割项目，vivo公司，67万，`2019-2020`
-- 基于视觉关系学习的弱监督图像理解研究, 国家自然科学基金，65万， `2019 - 2020`
-- 非受限情况下人脸识别研究，湖北省技术创新专项重大项目，50万， `2017 - 2019`
-- 华中科技大学-地平线计算机视觉技术研究中心，300万， `2017-2020`
-- CCF-腾讯犀牛鸟基金，30万，`2017 & 2019`
-- 基于区分型码本的图像表示的研究与应用，国家自然科学基金，23万, `2016 - 2018`
-- 中国科协青年人才托举工程，45万， `2015 - 2017`
-- 科技大数据价值链构建与解决方案，科技部重点研发子课题，35万，`2019-2022`
+- DNAS performance optimization research technology project, Huawei Technologies Co., Ltd., ￥780,000, `2020-2020`, PI
+- High visual vision in complex scenes, Zhejiang Laboratory Open Class, ￥850,000, `2019-2021`, PI
+- Weakly supervised image segmentation project, vivo company, ￥670,000, `2019-2020`, PI
+- Research on weakly supervised image understanding based on visual relationship learning, National Natural Science Foundation of China, ￥650,000, `2019-2020`, PI
+- Research on face recognition under non-peripheral conditions, a major technological innovation project of Hubei Province, ￥500,000, `2017-2019`, PI
+- Huazhong University of Science and Technology-Horizon Computer Vision Technology Research Center, ￥3,000,000 , `2017-2020`
+- CCF-Tencent Rhino Bird Fund, ￥300,000, `2017 & 2019`, PI
+- Research and application of image representation based on individual types of codebooks, National Natural Science Foundation of China, ￥230,000, `2016-2018`, PI
+- China Association for Science and Technology Youth Talent Support Project, ￥450,000, `2015-2017`, PI
+- Construction and solutions for the value chain of big data in science and technology, a key research sub-project of the Ministry of Science and Technology, ￥350,000, `2019-2022`, PI
 
-#### 学术报告
+#### Teaching
 
-1. "视频物体分割：业内领先模型和网络设计技巧", 阿里MEDIA AI大咖讲堂,`2020/07`, [相关报道](https://mp.weixin.qq.com/s/ZClNhV8j3O6bned2tSdOwg)
-2. "胸部CT影像中的弱监督COVID-19分类与病灶定位", CCF-CV 视界无限系列研讨会（第六期，新冠诊断特别专题）,` 2020/07`.
-3. "面向高效率物体识别的神经网络设计和搜索", NCIG 2020 优秀博士与青年学者论坛, `2020/06`
-4. "面向高效率物体识别的神经网络设计和搜索", CSIG云讲堂, `2020/05`
-5. "A Weakly supervised Framework for COVID19 Classification and Lesion Localization from Chest CT)", MICCAI Webinar Series: Imaging AI-based Management of COVID-19, `2020/05`
-6. "弱监督高效率物体检测与分割", CSIG图像图形中国行—中原工学院，`2019/12`, [相关报道](http://www.csig.org.cn/detail/2909)
-7. "深度视觉感知中的弱与强", CSIG图像图形中国行—天津理工大学，`2019/8`, [相关报道](http://www.csig.org.cn/detail/2831)
-8. "Deep visual recognition: Fewer, Faster & Stronger", 南京邮电大学，`2019/8`, [相关报道](https://ctie.njupt.edu.cn/_t509/2019/0810/c2908a152920/page.psp)
-9. "弱监督视觉学习", 世界智能大会机器视觉与学习论坛，`2019/4`, [相关报道](http://news.tju.edu.cn/info/1017/38964.htm)
-10. "Proposal Tracking and Segmentation (PTS): A cascaded network for video object segmentation", in the 1st Large-scale Video Object Segmentation Challenge Workshop in conjunction with ECCV2018, Munich, Germany, `2018/9`, [幻灯片](https://xinggangw.info/slides/PTS-ECCV2018-v4.pdf)
-11. "弱监督深度视觉学习", 中国图象图形学学会青年科学家论坛，兰州，`2018/8`, [幻灯片](https://xinggangw.info/slides/wsvl-lanzhou.pdf)
-12. "Weakly-Supervised Semantic Segmentation Network with Deep Seeded Region Growing", in the first VALSE Workshop on Pixel Level Image Understanding (PLIU), 大连，`2018/4`,[幻灯片](https://xinggangw.info/slides/dsrg-valse.pdf)
-13. "深度学习与计算机视觉", 武汉大学，`2017/10` , [相关报道](http://swrh.whu.edu.cn/xwjj/2017-10-15/4534.html)
-14. "多示例学习简介及其在计算机视觉中的应用", [VALSE 2016](http://valser.org/2016/guests.html#wangxinggang), `2016/4`
-15. "目标识别中的建模和学习"，浙江大学，`2014/3`
-
-#### 教授课程
-
-- **数据结构**，电信学院，一年级本科生，`2015-now`
-- **计算机视觉**，启明学院种子班，三年级本科生，`2015-now`
-- **计算机视觉理论与实践**，电信学院，四年级本科生，`2017-now`
-- **计算机与程序设计基础（C）**，电信学院，一年级本科生，`2016`
-- **图像分析与理解**，电信学院，一年级研究生，`2017-2018`
+- **Data Structure**, School of EIC, first-year undergraduate, `2015-now`
+- **Computer Vision**, Qiming College Seed Class, third-year undergraduate, `2015-now`
+- **Computer Vision Theory and Practice**, School of EIC, fourth-year undergraduate student, `2017-now`
+- **Computer and Programming Fundamentals (C)**, School of EIC, first-year undergraduate, `2016`
+- **Image Analysis and Understanding**, graduate student, School of EIC, `2017-2018`

@@ -2,9 +2,9 @@
    title={Alignseg: Feature-aligned segmentation networks},
   author={Huang, Zilong and Wei, Yunchao and Wang, Xinggang and Liu, Wenyu and Huang, Thomas S and Shi, Honghui},
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  year={2021},
-  volume={},
-  number={},
-  pages={1-1},
+  year={2022},
+  volume={44},
+  number={1},
+  pages={550-557},
   doi={10.1109/TPAMI.2021.3062772}
 }

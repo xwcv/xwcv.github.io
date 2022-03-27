@@ -1,0 +1,6 @@
+@inproceedings{yang2022tevit,
+  title={Temporally Efficient Vision Transformer for Video Instance Segmentation,
+  author={Yang, Shusheng and Wang, Xinggang and Li, Yu and Fang, Yuxin and Fang, Jiemin and Liu and Zhao, Xun and Shan, Ying},
+  booktitle =   {Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR)},
+  year      =   {2022}
+}

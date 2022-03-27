@@ -1,0 +1,6 @@
+@inproceedings{Chen2022AziNorm,
+  title     =   {AziNorm: Exploiting the Radial Symmetry of Point Cloud for Azimuth-Normalized 3D Perception},
+  author    =   {Shaoyu Chen, Xinggang Wang, Tianheng Cheng, Wenqiang Zhang, Qian Zhang, Chang Huang and Wenyu, Liu},
+  booktitle =   {Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR)},
+  year      =   {2022}
+}

@@ -1,0 +1,6 @@
+@inproceedings{fang2022msg,
+  title={Msg-transformer: Exchanging local spatial information by manipulating messenger tokens},
+  author={Fang, Jiemin and Xie, Lingxi and Wang, Xinggang and Zhang, Xiaopeng and Liu, Wenyu and Tian, Qi},
+  booktitle =   {Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR)},
+  year      =   {2022}
+}

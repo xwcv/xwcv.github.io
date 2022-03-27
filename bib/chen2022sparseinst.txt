@@ -1,0 +1,6 @@
+@inproceedings{Cheng2022SparseInst,
+  title     =   {Sparse Instance Activation for Real-Time Instance Segmentation},
+  author    =   {Cheng, Tianheng and Wang, Xinggang and Chen, Shaoyu and Zhang, Wenqiang and Zhang, Qian and Huang, Chang and Zhang, Zhaoxiang and Liu, Wenyu},
+  booktitle =   {Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR)},
+  year      =   {2022}
+}

@@ -1,0 +1,6 @@
+@article{zhang2022topformer,
+  title={opFormer: Token Pyramid Transformer for Mobile Semantic Segmentation},
+  author={Zhang, Wenqiang and Huang, Zilong and Luo, Guozhong and Chen, Tao and Wang,  Xinggang and Liu, Wenyu and Yu, Gang and Shen, Chunhua.},
+  booktitle =   {Proc. IEEE Conf. Computer Vision and Pattern Recognition (CVPR)},
+  year      =   {2022}
+}

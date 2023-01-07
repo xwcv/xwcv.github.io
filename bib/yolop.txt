@@ -1,0 +1,20 @@
+@article{DBLP:journals/ijautcomp/WuLZWBCL22,
+  author    = {Dong Wu and
+               Manwen Liao and
+               Weitian Zhang and
+               Xinggang Wang and
+               Xiang Bai and
+               Wenqing Cheng and
+               Wenyu Liu},
+  title     = {{YOLOP:} You Only Look Once for Panoptic Driving Perception},
+  journal   = {Machine Intelligence Research},
+  volume    = {19},
+  number    = {6},
+  pages     = {550--562},
+  year      = {2022},
+  url       = {https://doi.org/10.1007/s11633-022-1339-y},
+  doi       = {10.1007/s11633-022-1339-y},
+  timestamp = {Mon, 05 Dec 2022 13:34:38 +0100},
+  biburl    = {https://dblp.org/rec/journals/ijautcomp/WuLZWBCL22.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}

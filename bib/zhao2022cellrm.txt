@@ -1,0 +1,15 @@
+@article{ZHAO2022100775,
+title = {Self-supervised learning enables 3D digital subtraction angiography reconstruction from ultra-sparse 2D projection views: A multicenter study},
+journal = {Cell Reports Medicine},
+volume = {3},
+number = {10},
+pages = {100775},
+year = {2022},
+issn = {2666-3791},
+doi = {https://doi.org/10.1016/j.xcrm.2022.100775},
+url = {https://www.sciencedirect.com/science/article/pii/S2666379122003305},
+author = {Huangxuan Zhao and Zhenghong Zhou and Feihong Wu and Dongqiao Xiang and Hui Zhao and Wei Zhang and Lin Li and Zhong Li and Jia Huang and Hongyao Hu and Chengbo Liu and Tao Wang and Wenyu Liu and Jinqiang Ma and Fan Yang and Xinggang Wang and Chuansheng Zheng},
+keywords = {clinical study, cerebrovascular diseases, digital subtraction angiography, medical imaging reconstruction, deep learning},
+abstract = {Summary
+3D digital subtraction angiography (DSA) reconstruction from rotational 2D projection X-ray angiography is an important basis for diagnosis and treatment of intracranial aneurysms (IAs). The gold standard requires approximately 133 different projection views for 3D reconstruction. A method to significantly reduce the radiation dosage while ensuring the reconstruction quality is yet to be developed. We propose a self-supervised learning method to realize 3D-DSA reconstruction using ultra-sparse 2D projections. 202 cases (100 from one hospital for training and testing, 102 from two other hospitals for external validation) suspected to be suffering from IAs were conducted to analyze the reconstructed images. Two radiologists scored the reconstructed images from internal and external datasets using eight projections and identified all 82 lesions with high diagnostic confidence. The radiation dosages are approximately 1/16.7 compared with the gold standard method. Our proposed method can help develop a revolutionary 3D-DSA reconstruction method for use in clinic.}
+}

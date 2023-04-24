@@ -1,4 +1,14 @@
-Xinggang Wang 
+
+一写是预围绕申着指报南书任务注和意考核事指项标，阐述清楚：项目到底要做什么，达到什么目的，
+怎么来干，干成什么样，对行业技术领域发展及其对国家整体科学的发展有哪些影响
+和推进;
+
+二是告诉专业机构和评审专家，申报单位和团队具备组织承担项目的条件和实力，
+项目负责人具备协调实施项目的能力和经验
+
+
+
+###Xinggang Wang 
 
 Professor of the School of Electronic Information and Communications, Huazhong University of Science and Technology
 

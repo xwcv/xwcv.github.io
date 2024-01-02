@@ -1,0 +1,6 @@
+@article{zou2023circuit,
+  title={Circuit as Set of Points},
+  author={Zou, Jialv and Wang, Xinggang and Guo, Jiahao and Liu, Wenyu and Zhang, Qian and Huang, Chang},
+  journal={Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)},
+  year={2023}
+}

@@ -1,0 +1,7 @@
+@inproceedings{fang2023eva,
+  title={Eva: Exploring the limits of masked visual representation learning at scale},
+  author={Fang, Yuxin and Wang, Wen and Xie, Binhui and Sun, Quan and Wu, Ledell and Wang, Xinggang and Huang, Tiejun and Wang, Xinlong and Cao, Yue},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={19358--19369},
+  year={2023}
+}

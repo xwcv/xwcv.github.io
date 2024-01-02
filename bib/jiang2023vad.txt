@@ -1,0 +1,7 @@
+@article{jiang2023vad,
+  title={VAD: Vectorized Scene Representation for Efficient Autonomous Driving},
+  author={Jiang, Bo and Chen, Shaoyu and Xu, Qing and Liao, Bencheng and Chen, Jiajie and Zhou, Helong and Zhang, Qian and Liu, Wenyu and Huang, Chang and Wang, Xinggang},
+  booktitle={International Conference on Computer Vision (ICCV)},
+  pages={8340--8350},
+  year={2023}
+}

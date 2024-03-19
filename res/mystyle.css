@@ -101,7 +101,6 @@ td, tr {
     background: none;
 }
 
-
 .sys_txt {
 	font-family: "Lucida Grande","Arial Unicode MS","Helvetica", roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
 	font-size: 13.0px;
@@ -160,8 +159,6 @@ td, tr {
 	font-family: "Lucida Grande","Arial Unicode MS", sans-serif;
 	font-size: 11px;
 }
-
-
 
 
 * {box-sizing: border-box}
@@ -310,12 +307,9 @@ img {vertical-align: middle;
   	font-size: 13.0px;
 }
 
-
-
 .mark {
   background-color: white;
   color: red;
 }
 
 </style>
-  

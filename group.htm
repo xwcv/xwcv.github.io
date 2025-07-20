@@ -1,183 +1,221 @@
 <!DOCTYPE html>
-
-<html>
-
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-	<title>Group - Xinggang WANG</title>
-	<link rel="stylesheet" type="text/css" href="res\mystyle.css">
-  <!-- 添加响应式设计的元标签 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Group - Xinggang WANG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" type="text/css" href="res/mystyle.css">
+  <style>
+    .members-section {
+      margin: 2rem 0;
+      display: flex;
+      justify-content: center;
+    }
+    .members-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      max-width: 1200px;
+    }
+    .member-card {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
+      width: 240px;
+      padding: 1.5rem 1rem 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s;
+      position: relative;
+    }
+    .member-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+    .member-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      overflow: hidden;
+      user-select: none;
+    }
+    .member-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.3rem;
+      text-align: center;
+    }
+    .member-desc {
+      font-size: 0.98rem;
+      color: var(--text-light);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .member-link a {
+      color: var(--primary-color);
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: border-bottom-color 0.3s;
+      border-bottom: 1px solid transparent;
+    }
+    .member-link a:hover {
+      border-bottom: 1px solid var(--primary-color);
+    }
+    @media (max-width: 900px) {
+      .members-grid { gap: 1rem; }
+      .member-card { width: 48vw; min-width: 180px; }
+    }
+    @media (max-width: 600px) {
+      .members-section { justify-content: stretch; }
+      .members-grid { flex-direction: column; gap: 1rem; align-items: center; }
+      .member-card { width: 100%; }
+    }
+  </style>
 </head>
-
-
-
-
-
+<body>
 <div class="topnav">
+  <div id="container">
+    <a href="index_cn.htm">中   文</a>
+    <a class="active" href="group.htm">GROUP</a>
+    <a href="pubs.htm">PUBLICATION</a>
+    <a href="index.htm">HOME</a>
+  </div>
+</div>
 <div id="container">
-  <a href="index_cn.htm">中   文</a>
-  <a class="active" href="group.htm">GROUP</a>
-  <a href="pubs.htm">PUBLICATION</a>
-  <a href="index.htm">HOME</a>
+  <div class="sys_txt">
+    <h2>Current Students</h2>
+    <div class="members-section">
+      <div class="members-grid" id="current-members"></div>
+    </div>
+    <h2>Alumni</h2>
+    <div class="members-section">
+      <div class="members-grid" id="alumni-members"></div>
+    </div>
+  </div>
 </div>
-</div>
-
-  
-<div id="container">
-<div  id="I32eb71f3297d4aa684dd7d3571975f66_sys_txt" systemelement="true" class="sys_txt sys_text_widget new-text-widget">
-  
-    <p><strong>Current Students</strong></p>
-	<ul>
-        <li><p>Jiangxiao Han, deep learning and medical image analysis, PhD student co-supervised with Prof. Wenyu Liu</p></li>
-        <li><p><a href="https://scholar.google.com/citations?user=PH8rJHYAAAAJ&hl=zh-CN">Tianheng Cheng</a>, instance segmentation, PhD student co-supervised with Prof. Wenyu Liu</p></i>
-        <li><p><a href="https://scholar.google.com/citations?user=PIeNN2gAAAAJ&hl=en">Shaoyu Chen</a>, object detection, PhD student co-supervised with Prof. Wenyu Liu</p></i>
-        <li><p>Bin Hu, self-supervised learing, PhD student co-supervised with Prof. Wenyu Liu</p></i>
-        <li><p><a href="https://scholar.google.com/citations?user=PdJIyPIAAAAJ&hl=zh-CN">Cheng Wang</a>, object detection, PhD student co-supervised with Prof. Peng Guo</p></i>
-        <li><p><a href="https://scholar.google.com/citations?user=rUBdh_sAAAAJ&hl=en">Bencheng Liao</a>, object detection, PhD student</p></i>
-        <li><p><a href="https://scholar.google.com/citations?user=UlDxGP0AAAAJ&hl=zh-CN">Bo Jiang</a>, driving perception & planning, PhD student, co-supervised with Prof. Wenyu Liu</p></i>
-        <li><p>Shuai Zhang, 3D vision, PhD student, co-supervised with Prof. Wenyu Liu</p></i>
-        <li><p><a href="https://scholar.google.com/citations?user=4qc1qJ0AAAAJ&hl=zh-CN">Jingfeng Yao</a>, segmentation, PhD student</p></i>
-        <li><p><a href="https://guanjunwu.github.io/">Guanjun Wu</a>, neural rendering, PhD student</p></i>
-        <li><p><a href="https://scholar.google.com/citations?user=NvMHcs0AAAAJ&hl=zh-CN">Lianghui Zhu</a>, foundation model and generation model, PhD student, co-supervised with Prof. Wenyu Liu</p></i>
-        <li><p>Yiang Shi, driving perception, PhD student</p></i>
-        <li><p><a href="https://scholar.google.com/citations?user=_45BVtQAAAAJ&hl=en">Haoyi Jiang</a>, autonomous driving, PhD student, co-supervised with Prof. Wenyu Liu</p></i>
-        <li><p><a href="https://taoranyi.com/">Taoran Yi</a>, NeRF, PhD student, co-supervised with Prof. Wenyu Liu</p></i>
-        <li><p>Yuting Zhu, AI4Science, PhD student</p></i>
-        <li><p>Sixu Yan, Robotics, PhD student, co-supervised with BIGAI</p></i>
-        <li><p>Yuhan Li, Robotics, PhD student, co-supervised with BIGAI</p></i>
-        <br>
-        
-        <br>
-        <li><p>Yiqing Wen, medical image segmentation, Master student</p></i>
-        <li><p>Lianjun Wu, detection & segmentation, Master student</p></i>
-        <li><p>Jiawei Liu, network quantization & multimodal LLM, Master student</p></i>
-        <li><p>Ruiqi Wang, segmentation & pose estimation, Master student</p></i>
-        <li><p>Ziyang Xu, detection & deep learning, Master student</p></i>
-        <li><p>Jiajun Cai, autonomous driving, Master student</p></i>
-        <li><p>Lang Ye, autonomous driving, Master student</p></i>
-        <li><p>Hongyu Tian, deep learning, Master student</p></i>
-
-        <br>
-        <li><p>Hao Gao, driving proception, Master student</p></i>
-        <li><p>Zongmin Li, next-gen transformer, Master student</p></i>
-        <li><p>Jialv Zou, driving proception, Master student</p></i>
-        <li><p>Jia Lu, multi-object tracking, Master student</p></i>
-        <li><p>Yingyu Li, multimodal LLM, Master student</p></i>   
-        <li><p>Ya Zou, diffusion models, Master student</p></i>  
-        <li><p>Rui Hu, multimodal LLM, Master student</p></i>  
-        <li><p>Xiangyu Guo, multimodal LLM, Master student</p></i>
-        <li><p>Kangsheng Duan, detection & segmentation, Master student</p></i>
-        <li><p>Fei Gao, detection & segmentation, Master student</p></i>
-
-        <br>
-        <li><p>Yuehao Song, foundation models, Master student</p></i>
-        <li><p>Wenrui Zhang, multimodal LLM, Master student</p></i>
-        <li><p>Bao Tang, multimodal LLM, Master student</p></i>
-        <li><p>Shikang Wang, detection, Master student</p></i>
-        <li><p>Zixuan Qian, detection, Master student</p></i>
-        <li><p>Jiahao Guo, detection, Master student</p></i>
-        <li><p>Can Zhang, detection, Master student</p></i>
-        <li><p>Zimo Zhou, detection, Master student</p></i>
-        <li><p>Bin Ouyang, detection, Master student</p></i>
-        <li><p>Jie Li, detection, Master student</p></i>
-	</ul>
-    
-    
-    <p><strong>Alumni</strong></p>
-  
-    <ul>        
-        <li><p><a href="https://scholar.google.com/citations?user=v6dmW5cntoMC&hl=zh-CN">Shusheng Yang</a>, detection & foundation models, Master student, Ph.D. in New York University</p></i>
-        <li><p>Zelin Liu, detection & tracking, Master student, The Great Company</p></i>
-        <li><p>Yunchi Zhang, detection, Master student, Horizon Robotics</p></i>
-        <li><p>Xingsheng Zhou, deep learning, Master student, COSIC Inc</p></i>
-        <li><p>Zhenghong Zhou, 3D vision, Master student, co-supervised with Prof. Wenyu Liu, Ph.D. of University of Rochester</p></i>
-        <li><p>Renhong Zhang, segmentation, Master student, co-supervised with Prof. Wenyu Liu, ByteDance</p></i>
-        <li><p>Lin Niu, network quantization, Master student, co-supervised with Prof. Wenyu Liu, Tencent Inc</p></i>
-
-        <li><p><a href="http://jaminfong.cn/">Jiemin Fang</a>, neural architecture search & NeRF, PhD student co-supervised with Prof. Wenyu Liu, at Huawei after graduation.</p></i>
-        <li><p><a href="https://scholar.google.com/citations?user=_Lk0-fQAAAAJ&hl=en">Yuxin Fang</a>, weakly supervised visual learning, Master student, at Microsoft Research Asia after graduation.</p></i>
-        <li><p>Zhenyang Hao, object detection, Master student,  at Alibaba after graduation.</p></i>
-        <li><p>Junyu Wang, object detection, Master student, at Horizon Robotics after graduation.</p></i>
-        <li><p>Shijie Wang, object detection, Master student, at Alibaba after graduation.</p></i>
-        <li><p><a href="https://scholar.google.com/citations?user=v8pL6_gAAAAJ&hl=zh-CN">Jiyang Qi</a>, instance segmentation, Master student co-supervised with Prof. Wenyu Liu,  at Xiaohongshu after graduation.</p></i>
-        <li><p>Fucheng Weng, object segmentation, Master student co-supervised with Prof. Wenyu Liu,  at HUST after graduation.</p></i>
-        <li><p><a href="https://scholar.google.com/citations?user=sBjFwuQAAAAJ&hl=en">Xiaohu Huang</a>, video classification, Master student  co-supervised with Prof. Bin Feng, at The University of HongKong after graduation.</p></i>
-
-        <li><p>Jiapei Feng, weakly supervised learning and deep learning, Master studentat, at SmartMore.ai after graduation.</p></i>
-        <li><p>Bin Hu, weakly supervised object detection, Master student, at Pony.ai after graduation.</p></i>
-        <li><p><a href="https://ifzhang.github.io/">Yifu Zhang</a>, multiple object tracking, Master student co-supervised with Prof. Wenyu Liu, at Baidu after graduation.</p></i> 
-        <li><p>Weiping Mao, deep learning, Master, at a great company after graduation.</p></i>      
-
-
-        <li><p>Weitian Zhang, medical image analysis, Undergraduate student, at SJTU after graduation.</p></i>
-        <li><p>Dong Wu, object detection, Undergraduate student, at Peking Univ. after graduation.</p></i>
-        <li><p>Manwen Liao, object detection, Undergraduate student, at HKUST after graduation.</p></i>
-
-        <li><p>Haoyang Li, adversarial defense & attack, Master student (quit), at Cornell Univ. after leaving.</p></i>
-
-        <li><p><a href="https://scholar.google.com/citations?user=8NIZGJcAAAAJ&hl=en">Qiang Zhou</a>, video object segmentation, Master student, at ByteDance after graduation.</p></i>      
-        <li><p>Yuzhu Sun, neural architecture search, Master student, at DJI after graduation.</p></i>
-        <li><p>Chengguo Zhang, computer vision, Master student, at Changan Automobile after graduation.</p></i>
-        <li><p>Yixuan Liu, medical image analysis, Master student, at Dahua Inc after graduation.</p></i>
-        <li><p>Zigang Zhao, computer vision, Master student, at Guazi Inc after graduation.</p></i>
-        
-
-        <li><p>Jian Ling, video classification and segmentation, Master student, at Xpeng Motors after graduation.</p></i>
-        <li><p>Wenqiang Zhang, neural architecture search, Master student co-supervised with Prof. Wenyu Liu, at Baidu after graduation.</p></i>
-
-        <li><p><a href="http://speedinghzl.github.io/">Zilong Huang</a>, object detection & instance segmentation using deep learning, PhD student co-supervised with Prof. Wenyu Liu. National scholarship winner, at Tencent after graduation.</p></li>
-
-        <li><p><a href="https://scholar.google.com/citations?user=PFiN_xkAAAAJ&hl=zh-CN">Zhaojin Huang</a>, object detection, Master, National scholarship winner, at Kuishou after graduation.</p></i>
-        <li><p>Mengting Chen, low-shot learning, Master, co-supervised with Prof. Wenyu Liu, National scholarship winner, at Alibaba after graduation.</p></i>
-        <li><p>Jiwei Xu, deep metric learning, Master, at a great company after graduation.</p></i>      
-        <li><p>Xue Wen, object detection, Master, at China Construction Bank after graduation.</p></i>  
-        <li><p>Yulun Wu, computer vision, Master, at HoloMatic.com after graduation.</p></i>
-        <li><p>Yihan Du, pose estimation, Master, at ABCPen.com after graduation.</p></i>
-        <li><p>Yufei Jiao, computer vision, Master, at NullMax.ai after graduation.</p></i>
-
-        <li><p>Xincheng Xie, unsupervised learning and multi-instance learning, Undergraduate student</p></i>
-
-        <li><p><a href="https://ppengtang.github.io/">Peng Tang</a>, mid-level representation for scene understanding, weakly supervised learning & deep learning, PhD, co-supervised with Prof. Wenyu Liu, at Salesforce Research after graduation. Visiting student at John Hopkins University. National scholarship winner.</p></li>
-        <li><p>Chao Li, object detection and medical image analysis, PhD co-supervised with Prof. Wenyu Liu, at vivo Research after graduation. Visiting student at Temple University.</p></li>
-        <li><p><a href="https://github.com/yanyongluan">Yongluan Yan</a>, computer vision, metric learning & multi-instance learning, Master, at Megvii Inc after graduation. National scholarship winner.</p></i>
-        <li><p>Hao Luo, object detection & video editing, Master, at Alibaba after graduation</p></i>
-        <li><p>Cheng Wang, face recognition, Master, at Alibaba after graduation. National scholarship winner.</p></i>
-        <li><p>Kunpeng Chen, object detection, Master, at Megvii after graduation.</p></i>
-        <li><p>Jiasi Wang, weakly supervised object detection, Master, co-supervised with Prof. Wenyu Liu, at Alibaba after graduation.</p></i>
-        <li><p>Xudong Rao, object detection, Master, co-supervised with Prof. Wenyu Liu, at Sogou after graduation.</p></i>
-        <li><p>Haiwei Kuang, computer vision, Master, at Nullmax.ai after graduation</p></i>
-        <li><p>Nuoya Zhou, computer vision, Master. at Nullmax.ai after graduation</p></i>
-
-        <li><p><a href="https://scholar.google.com/citations?user=ogoCvHEAAAAJ&hl=en">Shoufa Chen</a>, object detection, Under-graduate student. Research intern in National University of Singapore (NUS), working with Prof. Jiashi Feng.</p></i>
-        <li><p>Ruiguang Li, object detection, Under-graduate student. Master student at Columbia University.</p></i>  
-        <li><p><a href="https://scholar.google.com/citations?user=cTTRbeMAAAAJ&hl=en">Zonglin Yang</a>, capsule networks, Under-graduate student. Accepted as Master student in Cornell University</p></i>
-        <li><p>Hao Tian, object detection, Under-graduate student. Accepted as Master student in Germany</p></i>
-        <li><p><a href="http://ztzhu.weebly.com/">Zhuotun Zhu</a>, multiple instance learning, Under-graduate student. Accepted as Ph.D student in UCLA</p></i>
-        <li><p>Yang Wang, unsupervised feature learning, Under-graduate student. Accepted as master student in Tsinghua University</p></i>
-        <li><p>Hanqiang Song, multiple instance learning, Under-graduate student. Accepted as Ph.D. student in Cornell University</p></i>
-        <li><p>Kaibing Chen, object detection and deep learning, Master,  co-supervised with Prof. Wenyu Liu, at Baidu IDL after graduation</p></li>
-        <li><p>Yujing Jiang, image retrieval, Master, co-supervised with Prof. Wenyu Liu, at Wuhan Patent Center after graduation</p></li>
-        <li><p>Yang Hu, deep Learning, Master, at Baidu IDL after graduation</p></li>
-        <li><p>Lei Li, computer vision applications, Master, at Huawei after graduation</p></li>
-        <li><p>Jin Zhang, dictionary learning, Under-graduate student, Master student in CMU after graduation.</p></i>
-        <li><p>Yuan Li, object detection, Master, co-supervised with Prof. Wenyu Liu and Prof. Bin Feng, at Momenta.ai after graduation</p></i>
-    </ul>
-	
-	</div>
-</div>
-
 <div class="bottombar">xwcv.github.io</div>
-
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-29807050-2', 'auto');
-  ga('send', 'pageview');
+// ===================== 成员数据结构 =====================
+const currentMembers = [
+  { name: "Jiangxiao Han", desc: "deep learning and medical image analysis, PhD student co-supervised with Prof. Wenyu Liu" },
+  { name: "Tianheng Cheng", link: "https://scholar.google.com/citations?user=PH8rJHYAAAAJ&hl=zh-CN", desc: "instance segmentation, PhD student co-supervised with Prof. Wenyu Liu" },
+  { name: "Shaoyu Chen", link: "https://scholar.google.com/citations?user=PIeNN2gAAAAJ&hl=en", desc: "object detection, PhD student co-supervised with Prof. Wenyu Liu" },
+  { name: "Bin Hu", desc: "self-supervised learing, PhD student co-supervised with Prof. Wenyu Liu" },
+  { name: "Cheng Wang", link: "https://scholar.google.com/citations?user=PdJIyPIAAAAJ&hl=zh-CN", desc: "object detection, PhD student co-supervised with Prof. Peng Guo" },
+  { name: "Bencheng Liao", link: "https://scholar.google.com/citations?user=rUBdh_sAAAAJ&hl=en", desc: "object detection, PhD student" },
+  { name: "Bo Jiang", link: "https://scholar.google.com/citations?user=UlDxGP0AAAAJ&hl=zh-CN", desc: "driving perception & planning, PhD student, co-supervised with Prof. Wenyu Liu" },
+  { name: "Shuai Zhang", desc: "3D vision, PhD student, co-supervised with Prof. Wenyu Liu" },
+  { name: "Jingfeng Yao", link: "https://scholar.google.com/citations?user=4qc1qJ0AAAAJ&hl=zh-CN", desc: "segmentation, PhD student" },
+  { name: "Guanjun Wu", link: "https://guanjunwu.github.io/", desc: "neural rendering, PhD student" },
+  { name: "Lianghui Zhu", link: "https://scholar.google.com/citations?user=NvMHcs0AAAAJ&hl=zh-CN", desc: "foundation model and generation model, PhD student, co-supervised with Prof. Wenyu Liu" },
+  { name: "Yiang Shi", desc: "driving perception, PhD student" },
+  { name: "Haoyi Jiang", link: "https://scholar.google.com/citations?user=_45BVtQAAAAJ&hl=en", desc: "autonomous driving, PhD student, co-supervised with Prof. Wenyu Liu" },
+  { name: "Taoran Yi", link: "https://taoranyi.com/", desc: "NeRF, PhD student, co-supervised with Prof. Wenyu Liu" },
+  { name: "Yuting Zhu", desc: "AI4Science, PhD student" },
+  { name: "Sixu Yan", desc: "Robotics, PhD student, co-supervised with BIGAI" },
+  { name: "Yuhan Li", desc: "Robotics, PhD student, co-supervised with BIGAI" },
+  { name: "Yiqing Wen", desc: "medical image segmentation, Master student" },
+  { name: "Lianjun Wu", desc: "detection & segmentation, Master student" },
+  { name: "Jiawei Liu", desc: "network quantization & multimodal LLM, Master student" },
+  { name: "Ruiqi Wang", desc: "segmentation & pose estimation, Master student" },
+  { name: "Ziyang Xu", desc: "detection & deep learning, Master student" },
+  { name: "Jiajun Cai", desc: "autonomous driving, Master student" },
+  { name: "Lang Ye", desc: "autonomous driving, Master student" },
+  { name: "Hongyu Tian", desc: "deep learning, Master student" },
+  { name: "Hao Gao", desc: "driving proception, Master student" },
+  { name: "Zongmin Li", desc: "next-gen transformer, Master student" },
+  { name: "Jialv Zou", desc: "driving proception, Master student" },
+  { name: "Jia Lu", desc: "multi-object tracking, Master student" },
+  { name: "Yingyu Li", desc: "multimodal LLM, Master student" },
+  { name: "Ya Zou", desc: "diffusion models, Master student" },
+  { name: "Rui Hu", desc: "multimodal LLM, Master student" },
+  { name: "Xiangyu Guo", desc: "multimodal LLM, Master student" },
+  { name: "Kangsheng Duan", desc: "detection & segmentation, Master student" },
+  { name: "Fei Gao", desc: "detection & segmentation, Master student" },
+  { name: "Yuehao Song", desc: "foundation models, Master student" },
+  { name: "Wenrui Zhang", desc: "multimodal LLM, Master student" },
+  { name: "Bao Tang", desc: "multimodal LLM, Master student" },
+  { name: "Shikang Wang", desc: "detection, Master student" },
+  { name: "Zixuan Qian", desc: "detection, Master student" },
+  { name: "Jiahao Guo", desc: "detection, Master student" },
+  { name: "Can Zhang", desc: "detection, Master student" },
+  { name: "Zimo Zhou", desc: "detection, Master student" },
+  { name: "Bin Ouyang", desc: "detection, Master student" },
+  { name: "Jie Li", desc: "detection, Master student" }
+];
+// 这里只展示部分校友，完整可补充
+const alumniMembers = [
+  { name: "Shusheng Yang", link: "https://scholar.google.com/citations?user=v6dmW5cntoMC&hl=zh-CN", desc: "detection & foundation models, Master student, Ph.D. in New York University" },
+  { name: "Zelin Liu", desc: "detection & tracking, Master student, The Great Company" },
+  { name: "Yunchi Zhang", desc: "detection, Master student, Horizon Robotics" },
+  { name: "Xingsheng Zhou", desc: "deep learning, Master student, COSIC Inc" },
+  { name: "Zhenghong Zhou", desc: "3D vision, Master student, co-supervised with Prof. Wenyu Liu, Ph.D. of University of Rochester" },
+  { name: "Renhong Zhang", desc: "segmentation, Master student, co-supervised with Prof. Wenyu Liu, ByteDance" },
+  { name: "Lin Niu", desc: "network quantization, Master student, co-supervised with Prof. Wenyu Liu, Tencent Inc" },
+  { name: "Jiemin Fang", link: "http://jaminfong.cn/", desc: "neural architecture search & NeRF, PhD student co-supervised with Prof. Wenyu Liu, at Huawei after graduation." },
+  { name: "Yuxin Fang", link: "https://scholar.google.com/citations?user=_Lk0-fQAAAAJ&hl=en", desc: "weakly supervised visual learning, Master student, at Microsoft Research Asia after graduation." },
+  { name: "Zhenyang Hao", desc: "object detection, Master student,  at Alibaba after graduation." }
+  // ... 其余校友可继续补充
+];
+// ===================== 头像生成函数 =====================
+function getInitials(name) {
+  // 只取英文名（firstname）的首字母
+  const first = name.split(' ')[0];
+  return first[0].toUpperCase();
+}
+function randomColor(str) {
+  // 用字符串生成 hash
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  // 映射到色环，保证色彩明亮且分布均匀
+  const hue = Math.abs(hash) % 360;
+  const saturation = 65; // %
+  const lightness = 60;  // %
+  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+}
+function createAvatar(name) {
+  // 只用第一个非空单词作为 first name
+  const first = (name || '').trim().split(/\s+/)[0];
+  const bg = randomColor(first);
+  // SVG 占位符，内容为 first name，字体更大
+  return `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><rect width='100%' height='100%' rx='60' fill='${bg}'/><text x='50%' y='50%' text-anchor='middle' dominant-baseline='middle' dy='.1em' font-size='1.3em' font-family='Arial' fill='white' font-weight='bold'>${first}</text></svg>`;
+}
+// ===================== 渲染成员卡片 =====================
+function renderMembers(members, containerId) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = '';
+  members.forEach(member => {
+    // 真实图片接口：如有真实图片，将 src 换成图片路径
+    const imgSrc = member.photo ? member.photo : createAvatar(member.name);
+    const card = document.createElement('div');
+    card.className = 'member-card';
+    card.innerHTML = `
+      <img class="member-photo" src="${imgSrc}" alt="${member.name}" loading="lazy">
+      <div class="member-name">${member.name}</div>
+      <div class="member-desc">${member.desc}</div>
+      ${member.link ? `<div class="member-link"><a href="${member.link}" target="_blank">Profile</a></div>` : ''}
+    `;
+    container.appendChild(card);
+  });
+}
+renderMembers(currentMembers, 'current-members');
+renderMembers(alumniMembers, 'alumni-members');
+// ===================== 图片替换接口说明 =====================
+// 若有真实照片，只需在成员对象加 photo 字段，如：
+// { name: "XXX", photo: "images/xxx.jpg", desc: "..." }
 </script>
-
-</body></html>
+</body>
+</html>

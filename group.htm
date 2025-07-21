@@ -250,7 +250,7 @@ function createAvatar(name) {
   const first = (name || '').trim().split(/\s+/)[0];
   const bg = randomColor(first);
   // SVG 占位符，内容为 first name，字体更大
-  return `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><rect width='100%' height='100%' rx='60' fill='${bg}'/><text x='50%' y='50%' text-anchor='middle' dominant-baseline='middle' dy='.1em' font-size='0.8em' font-family='Arial' fill='white' font-weight='bold'>${first}</text></svg>`;
+  return `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><rect width='100%' height='100%' rx='60' fill='${bg}'/><text x='50%' y='50%' text-anchor='middle' dominant-baseline='middle' dy='.1em' font-size='1.2em' font-family='Arial' fill='white' font-weight='bold'>${first}</text></svg>`;
 }
 // ===================== 渲染成员卡片 =====================
 function renderMembers(members, containerId) {

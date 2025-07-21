@@ -108,10 +108,11 @@
 <script>
 // ===================== 成员数据结构 =====================
 const currentMembers = [
-  { name: "Jiangxiao Han", desc: "deep learning and medical image analysis, PhD student co-supervised with Prof. Wenyu Liu" },
-  { name: "Bin Hu", desc: "self-supervised learing, PhD student co-supervised with Prof. Wenyu Liu" },
-  { name: "Bencheng Liao", link: "https://scholar.google.com/citations?user=rUBdh_sAAAAJ&hl=en", desc: "object detection, PhD student" },
-  { name: "Bo Jiang", link: "https://scholar.google.com/citations?user=UlDxGP0AAAAJ&hl=zh-CN", desc: "driving perception & planning, PhD student, co-supervised with Prof. Wenyu Liu" },
+  // { name: "Jiangxiao Han", desc: "deep learning and medical image analysis, PhD student co-supervised with Prof. Wenyu Liu" },
+  // { name: "Bin Hu", desc: "self-supervised learing, PhD student co-supervised with Prof. Wenyu Liu" },
+  
+  { name: "Bencheng Liao", link: "https://scholar.google.com/citations?user=rUBdh_sAAAAJ&hl=en", desc: "PhD student (Year 2022). Object detection, autonomous driving, multimodal LLMs. Representative works: [MapTR](https://github.com/hustvl/MapTR), [DiffusionDrive](https://github.com/hustvl/DiffusionDrive), [Vision Mamba](https://github.com/hustvl/vim). National scholarship winner. [Contributor of Seed1.5-VL](https://arxiv.org/abs/2505.07062)." },
+  { name: "Bo Jiang", link: "https://scholar.google.com/citations?user=UlDxGP0AAAAJ&hl=zh-CN", desc: "PhD student (Year 2023), co-supervised with Prof. Wenyu Liu. Driving perception & planning. Representative works: [VAD](https://github.com/hustvl/VAD) " },
   { name: "Shuai Zhang", desc: "3D vision, PhD student, co-supervised with Prof. Wenyu Liu" },
   { name: "Jingfeng Yao", link: "https://scholar.google.com/citations?user=4qc1qJ0AAAAJ&hl=zh-CN", desc: "segmentation, PhD student" },
   { name: "Guanjun Wu", link: "https://guanjunwu.github.io/", desc: "neural rendering, PhD student" },
@@ -259,12 +260,19 @@ function renderMembers(members, containerId) {
   members.forEach(member => {
     // 真实图片接口：如有真实图片，将 src 换成图片路径
     const imgSrc = member.photo ? member.photo : createAvatar(member.name);
+
+    // 新增：将 desc 中的 Markdown 链接 [text](url) 转换为 HTML <a> 标签
+    const descWithLinks = (member.desc || '').replace(
+      /\[([^\]]+)\]\(([^)]+)\)/g,
+      '<a href="$2" target="_blank" style="font-weight: 600;">$1</a>'
+    );
+
     const card = document.createElement('div');
     card.className = 'member-card';
     card.innerHTML = `
       <img class="member-photo" src="${imgSrc}" alt="${member.name}" loading="lazy">
       <div class="member-name">${member.name}</div>
-      <div class="member-desc">${member.desc}</div>
+      <div class="member-desc">${descWithLinks}</div>
       ${member.link ? `<div class="member-link"><a href="${member.link}" target="_blank">Profile</a></div>` : ''}
     `;
     container.appendChild(card);

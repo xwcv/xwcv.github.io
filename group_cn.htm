@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>团队成员 - 王兴刚课题组</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="res/mystyle.css">
+  <style>
+    .members-section {
+      margin: 2rem 0;
+      display: flex;
+      justify-content: center;
+    }
+    .members-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      max-width: 1200px;
+    }
+    .member-card {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
+      width: 240px;
+      padding: 1.5rem 1rem 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s;
+      position: relative;
+    }
+    .member-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+    .member-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      overflow: hidden;
+      user-select: none;
+    }
+    .member-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.3rem;
+      text-align: center;
+    }
+    .member-desc {
+      font-size: 0.98rem;
+      color: var(--text-light);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .member-link a {
+      color: var(--primary-color);
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: border-bottom-color 0.3s;
+      border-bottom: 1px solid transparent;
+    }
+    .member-link a:hover {
+      border-bottom: 1px solid var(--primary-color);
+    }
+    @media (max-width: 900px) {
+      .members-grid { gap: 1rem; }
+      .member-card { width: 48vw; min-width: 180px; }
+    }
+    @media (max-width: 600px) {
+      .members-section { justify-content: stretch; }
+      .members-grid { flex-direction: column; gap: 1rem; align-items: center; }
+      .member-card { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+<div class="topnav">
+  <div id="container">
+    <a href="index.htm">English</a>
+    <a class="active" href="group_cn.htm">团队成员</a>
+    <a href="pubs.htm">论文</a>
+    <a href="index_cn.htm">主页</a>
+  </div>
+</div>
+<div id="container">
+  <div class="sys_txt">
+    <h2>教师成员</h2>
+    <div class="members-section">
+      <div class="members-grid" id="faculty-members"></div>
+    </div>
+    <h2>在读学生</h2>
+    <div class="members-section">
+      <div class="members-grid" id="current-members"></div>
+    </div>
+    <h2>毕业生</h2>
+    <div class="members-section">
+      <div class="members-grid" id="alumni-members"></div>
+    </div>
+  </div>
+</div>
+<div class="bottombar">xwcv.github.io</div>
+<script>
+// ===================== 成员数据结构 =====================
+const facultyMembers = [
+  { name: "刘文宇 教授", link: "https://eic.hust.edu.cn/professor/liuwenyu/", desc: "二级教授，中国图象图形学学会会士，常务理事，图像与视频通信专委会主任。" },
+  { name: "王兴刚 教授", link: "http://faculty.hust.edu.cn/xwang", desc: "Image and Vision Computing 期刊联合主编，IEEE TPAMI 副编辑。" },
+];
+
+const currentMembers = [
+  { name: "廖本成 博士生（2022级）", link: "https://scholar.google.com/citations?user=rUBdh_sAAAAJ&hl=zh-CN", desc: "研究方向：目标检测、自动驾驶、多模态大模型。代表作：[MapTR](https://github.com/hustvl/MapTR)、[DiffusionDrive](https://github.com/hustvl/DiffusionDrive)、[Vision Mamba](https://github.com/hustvl/vim)。国家奖学金获得者。[Seed1.5-VL 贡献者](https://arxiv.org/abs/2505.07062)。" },
+  { name: "姜博 博士生（2023级）", link: "https://scholar.google.com/citations?user=UlDxGP0AAAAJ&hl=zh-CN", desc: "联合指导教师：刘文宇。研究方向：自动驾驶感知与规划。代表作：[VAD](https://github.com/hustvl/VAD)。" },
+  { name: "张帅 博士生", desc: "联合指导教师：刘文宇。研究方向：三维视觉。" },
+  { name: "姚景峰 博士生", link: "https://scholar.google.com/citations?user=4qc1qJ0AAAAJ&hl=zh-CN", desc: "研究方向：分割。" },
+  { name: "吴冠君 博士生", link: "https://guanjunwu.github.io/", desc: "研究方向：神经渲染。" },
+  { name: "朱亮辉 博士生", link: "https://scholar.google.com/citations?user=NvMHcs0AAAAJ&hl=zh-CN", desc: "联合指导教师：刘文宇。研究方向：基础模型与生成模型。" },
+  { name: "石洋 博士生", desc: "研究方向：自动驾驶感知。" },
+  { name: "姜浩一 博士生", link: "https://scholar.google.com/citations?user=_45BVtQAAAAJ&hl=zh-CN", desc: "联合指导教师：刘文宇。研究方向：自动驾驶。" },
+  { name: "易韬然 博士生", link: "https://taoranyi.com/", desc: "联合指导教师：刘文宇。研究方向：NeRF。" },
+  { name: "朱雨婷 博士生", desc: "研究方向：AI4Science。" },
+  { name: "闫思旭 博士生", desc: "联合指导教师：BIGAI。研究方向：机器人。" },
+  { name: "李宇涵 博士生", desc: "联合指导教师：BIGAI。研究方向：机器人。" },
+  { name: "高昊 硕士生", desc: "研究方向：自动驾驶感知。" },
+  { name: "李宗敏 硕士生", desc: "研究方向：新一代 Transformer。" },
+  { name: "邹佳律 硕士生", desc: "研究方向：自动驾驶感知。" },
+  { name: "卢佳 硕士生", desc: "研究方向：多目标跟踪。" },
+  { name: "李盈宇 硕士生", desc: "研究方向：多模态大模型。" },
+  { name: "邹雅 硕士生", desc: "研究方向：扩散模型。" },
+  { name: "胡睿 硕士生", desc: "研究方向：多模态大模型。" },
+  { name: "郭翔宇 硕士生", desc: "研究方向：多模态大模型。" },
+  { name: "段康盛 硕士生", desc: "研究方向：检测与分割。" },
+  { name: "高飞 硕士生", desc: "研究方向：检测与分割。" },
+  { name: "赵伟恒 硕士生", desc: "研究方向：多模态大模型。" },
+  { name: "宋越豪 硕士生", desc: "研究方向：基础模型。" },
+  { name: "张文睿 硕士生", desc: "研究方向：多模态大模型。" },
+  { name: "唐宝 硕士生", desc: "研究方向：多模态大模型。" },
+  { name: "王世康 硕士生", desc: "研究方向：检测。" },
+  { name: "钱子轩 硕士生", desc: "研究方向：检测。" },
+  { name: "郭嘉豪 硕士生", desc: "研究方向：检测。" },
+  { name: "张灿 硕士生", desc: "研究方向：检测。" },
+  { name: "周子默 硕士生", desc: "研究方向：检测。" },
+  { name: "欧阳斌 硕士生", desc: "研究方向：检测。" },
+  { name: "李杰 硕士生", desc: "研究方向：检测。" },
+  { name: "余思源 硕士生（2024级）", desc: "研究方向：视频/图像生成。" }
+];
+// 这里只展示部分毕业生，完整可补充
+const alumniMembers = [
+  { name: "程天恒 博士生", link: "https://scholar.google.com/citations?user=PH8rJHYAAAAJ&hl=zh-CN", desc: "联合指导教师：刘文宇。研究方向：实例分割。现为纽约大学博士。" },
+  { name: "陈少宇 博士生", link: "https://scholar.google.com/citations?user=PIeNN2gAAAAJ&hl=zh-CN", desc: "联合指导教师：刘文宇。研究方向：目标检测。" },
+  { name: "王成 博士生", link: "https://scholar.google.com/citations?user=PdJIyPIAAAAJ&hl=zh-CN", desc: "联合指导教师：郭鹏。研究方向：目标检测。" },
+  { name: "文奕清 硕士生", desc: "研究方向：医学图像分割。" },
+  { name: "吴连军 硕士生", desc: "研究方向：检测与分割。" },
+  { name: "刘嘉伟 硕士生", desc: "研究方向：网络量化与多模态大模型。" },
+  { name: "王睿琪 硕士生", desc: "研究方向：分割与姿态估计。" },
+  { name: "徐子阳 硕士生", desc: "研究方向：检测与深度学习。" },
+  { name: "蔡佳俊 硕士生", desc: "研究方向：自动驾驶。" },
+  { name: "叶朗 硕士生", desc: "研究方向：自动驾驶。" },
+  { name: "田鸿宇 硕士生", desc: "研究方向：深度学习。" },
+  { name: "崔子炜 硕士生", desc: "研究方向：深度学习。" },
+  { name: "杨舒晟 博士生", link: "https://scholar.google.com/citations?user=v6dmW5cntoMC&hl=zh-CN", desc: "研究方向：检测与基础模型。现为纽约大学博士。" },
+  { name: "刘泽霖 硕士生", desc: "研究方向：检测与跟踪。现于 The Great Company 工作。" },
+  { name: "张云驰 硕士生", desc: "研究方向：检测。现于地平线机器人公司工作。" },
+  { name: "周兴盛 硕士生", desc: "研究方向：深度学习。现于 COSIC Inc 工作。" },
+  { name: "周正宏 硕士生", desc: "联合指导教师：刘文宇。研究方向：三维视觉。现为罗切斯特大学博士。" },
+  { name: "张仁宏 硕士生", desc: "联合指导教师：刘文宇。研究方向：分割。现于字节跳动工作。" },
+  { name: "牛林 硕士生", desc: "联合指导教师：刘文宇。研究方向：网络量化。现于腾讯工作。" },
+  { name: "方洁敏 博士生", link: "http://jaminfong.cn/", desc: "联合指导教师：刘文宇。研究方向：神经架构搜索与 NeRF。毕业后入职华为。" },
+  { name: "方煜昕 硕士生", link: "https://scholar.google.com/citations?user=_Lk0-fQAAAAJ&hl=zh-CN", desc: "研究方向：弱监督视觉学习。毕业后入职微软亚洲研究院。" },
+  { name: "郝振阳 硕士生", desc: "研究方向：目标检测。毕业后入职阿里巴巴。" },
+  { name: "王俊宇 硕士生", desc: "研究方向：目标检测。毕业后入职地平线机器人公司。" },
+  { name: "王世杰 硕士生", desc: "研究方向：目标检测。毕业后入职阿里巴巴。" },
+  { name: "齐继阳 硕士生", link: "https://scholar.google.com/citations?user=v8pL6_gAAAAJ&hl=zh-CN", desc: "联合指导教师：刘文宇。研究方向：实例分割。毕业后入职小红书。" },
+  { name: "翁福成 硕士生", desc: "联合指导教师：刘文宇。研究方向：目标分割。毕业后入职华科。" },
+  { name: "黄晓虎 硕士生", link: "https://scholar.google.com/citations?user=sBjFwuQAAAAJ&hl=zh-CN", desc: "联合指导教师：冯斌。研究方向：视频分类。毕业后入职香港大学。" },
+  { name: "冯家培 硕士生", desc: "研究方向：弱监督学习与深度学习。毕业后入职 SmartMore.ai。" },
+  { name: "胡斌 硕士生", desc: "研究方向：弱监督目标检测。毕业后入职小马智行。" },
+  { name: "张一夫 硕士生", link: "https://ifzhang.github.io/", desc: "联合指导教师：刘文宇。研究方向：多目标跟踪。毕业后入职百度。" },
+  { name: "毛伟平 硕士生", desc: "研究方向：深度学习。毕业后入职知名企业。" },
+  { name: "张伟天 本科生", desc: "研究方向：医学图像分析。毕业后入职上海交通大学。" },
+  { name: "吴东 本科生", desc: "研究方向：目标检测。毕业后入职北京大学。" },
+  { name: "廖满文 本科生", desc: "研究方向：目标检测。毕业后入职香港科技大学。" },
+  { name: "李昊阳 硕士生（退学）", desc: "研究方向：对抗防御与攻击。后赴康奈尔大学。" },
+  { name: "周强 硕士生", link: "https://scholar.google.com/citations?user=8NIZGJcAAAAJ&hl=zh-CN", desc: "研究方向：视频目标分割。毕业后入职字节跳动。" },
+  { name: "孙宇柱 硕士生", desc: "研究方向：神经架构搜索。毕业后入职大疆。" },
+  { name: "张成国 硕士生", desc: "研究方向：计算机视觉。毕业后入职长安汽车。" },
+  { name: "刘奕轩 硕士生", desc: "研究方向：医学图像分析。毕业后入职大华股份。" },
+  { name: "赵子刚 硕士生", desc: "研究方向：计算机视觉。毕业后入职瓜子二手车。" },
+  { name: "凌健 硕士生", desc: "研究方向：视频分类与分割。毕业后入职小鹏汽车。" },
+  { name: "张文强 硕士生", desc: "联合指导教师：刘文宇。研究方向：神经架构搜索。毕业后入职百度。" },
+  { name: "黄子龙 博士生", link: "http://speedinghzl.github.io/", desc: "联合指导教师：刘文宇。研究方向：深度学习目标检测与实例分割。国家奖学金获得者。毕业后入职腾讯。" },
+  { name: "黄兆进 硕士生", link: "https://scholar.google.com/citations?user=PFiN_xkAAAAJ&hl=zh-CN", desc: "研究方向：目标检测。国家奖学金获得者。毕业后入职快手。" },
+  { name: "陈梦婷 硕士生", desc: "联合指导教师：刘文宇。研究方向：小样本学习。国家奖学金获得者。毕业后入职阿里巴巴。" },
+  { name: "徐继伟 硕士生", desc: "研究方向：度量学习。毕业后入职知名企业。" },
+  { name: "文雪 硕士生", desc: "研究方向：目标检测。毕业后入职中国建设银行。" },
+  { name: "吴雨伦 硕士生", desc: "研究方向：计算机视觉。毕业后入职禾赛科技。" },
+  { name: "杜一涵 硕士生", desc: "研究方向：姿态估计。毕业后入职 ABCPen.com。" },
+  { name: "焦宇飞 硕士生", desc: "研究方向：计算机视觉。毕业后入职 NullMax.ai。" },
+  { name: "谢新成 本科生", desc: "研究方向：无监督学习与多实例学习。" },
+  { name: "唐鹏 博士生", link: "https://ppengtang.github.io/", desc: "联合指导教师：刘文宇。研究方向：场景理解中层表征、弱监督学习与深度学习。毕业后入职 Salesforce Research。曾赴约翰霍普金斯大学交流。国家奖学金获得者。" },
+  { name: "李超 博士生", desc: "联合指导教师：刘文宇。研究方向：目标检测与医学图像分析。毕业后入职 vivo Research。曾赴天普大学交流。" },
+  { name: "闫永鸾 硕士生", link: "https://github.com/yanyongluan", desc: "研究方向：计算机视觉、度量学习与多实例学习。国家奖学金获得者。毕业后入职旷视科技。" },
+  { name: "罗浩 硕士生", desc: "研究方向：目标检测与视频编辑。毕业后入职阿里巴巴。" },
+  { name: "王成 硕士生", desc: "研究方向：人脸识别。国家奖学金获得者。毕业后入职阿里巴巴。" },
+  { name: "陈昆鹏 硕士生", desc: "研究方向：目标检测。毕业后入职旷视科技。" },
+  { name: "王佳思 硕士生", desc: "联合指导教师：刘文宇。研究方向：弱监督目标检测。毕业后入职阿里巴巴。" },
+  { name: "饶旭东 硕士生", desc: "联合指导教师：刘文宇。研究方向：目标检测。毕业后入职搜狗。" },
+  { name: "邝海威 硕士生", desc: "研究方向：计算机视觉。毕业后入职 Nullmax.ai。" },
+  { name: "周诺雅 硕士生", desc: "研究方向：计算机视觉。毕业后入职 Nullmax.ai。" },
+  { name: "陈守发 本科生", link: "https://scholar.google.com/citations?user=ogoCvHEAAAAJ&hl=zh-CN", desc: "新加坡国立大学（NUS）实习，合作导师冯嘉熹。" },
+  { name: "李瑞光 本科生", desc: "毕业后入读哥伦比亚大学。" },
+  { name: "杨宗霖 本科生", link: "https://scholar.google.com/citations?user=cTTRbeMAAAAJ&hl=zh-CN", desc: "研究方向：胶囊网络。毕业后入读康奈尔大学。" },
+  { name: "田昊 本科生", desc: "研究方向：目标检测。毕业后入读德国高校。" },
+  { name: "朱卓屯 本科生", link: "http://ztzhu.weebly.com/", desc: "研究方向：多实例学习。毕业后入读 UCLA。" },
+  { name: "王洋 本科生", desc: "研究方向：无监督特征学习。毕业后入读清华大学。" },
+  { name: "宋涵强 本科生", desc: "研究方向：多实例学习。毕业后入读康奈尔大学。" },
+  { name: "陈凯兵 硕士生", desc: "联合指导教师：刘文宇。研究方向：深度学习目标检测与实例分割。国家奖学金获得者。毕业后入职百度IDL。" },
+  { name: "姜宇婧 硕士生", desc: "联合指导教师：刘文宇。研究方向：图像检索。毕业后入职武汉专利中心。" },
+  { name: "胡洋 硕士生", desc: "研究方向：深度学习。毕业后入职百度IDL。" },
+  { name: "李磊 硕士生", desc: "研究方向：计算机视觉应用。毕业后入职华为。" },
+  { name: "张瑾 本科生", desc: "研究方向：字典学习。毕业后入读卡内基梅隆大学。" },
+  { name: "李媛 硕士生", desc: "联合指导教师：冯斌。研究方向：目标检测。毕业后入职 Momenta.ai。" }
+];
+// ===================== 头像生成函数 =====================
+function getInitials(name) {
+  // 只取中文名第一个字
+  return (name || '').replace(/\s/g, '')[0];
+}
+function randomColor(str) {
+  // 用字符串生成 hash
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  // 映射到色环，保证色彩明亮且分布均匀
+  const hue = Math.abs(hash) % 360;
+  const saturation = 65; // %
+  const lightness = 60;  // %
+  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+}
+function createAvatar(name) {
+  // 只用中文名第一个字
+  const first = (name || '').replace(/\s/g, '')[0];
+  const bg = randomColor(first);
+  // SVG 占位符，内容为中文名第一个字，字体更大
+  return `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><rect width='100%' height='100%' rx='60' fill='${bg}'/><text x='50%' y='50%' text-anchor='middle' dominant-baseline='middle' dy='.1em' font-size='2.2em' font-family='Arial' fill='white' font-weight='bold'>${first}</text></svg>`;
+}
+// ===================== 渲染成员卡片 =====================
+function renderMembers(members, containerId) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = '';
+  members.forEach(member => {
+    // 真实图片接口：如有真实图片，将 src 换成图片路径
+    const imgSrc = member.photo ? member.photo : createAvatar(member.name);
+
+    // 新增：将 desc 中的 Markdown 链接 [text](url) 转换为 HTML <a> 标签
+    const descWithLinks = (member.desc || '').replace(
+      /\[([^\]]+)\]\(([^)]+)\)/g,
+      '<a href="$2" target="_blank" style="font-weight: 600;">$1</a>'
+    );
+
+    const card = document.createElement('div');
+    card.className = 'member-card';
+    card.innerHTML = `
+      <img class="member-photo" src="${imgSrc}" alt="${member.name}" loading="lazy">
+      <div class="member-name">${member.name}</div>
+      <div class="member-desc">${descWithLinks}</div>
+      ${member.link ? `<div class="member-link"><a href="${member.link}" target="_blank">个人主页</a></div>` : ''}
+    `;
+    container.appendChild(card);
+  });
+}
+
+renderMembers(facultyMembers, 'faculty-members');
+renderMembers(currentMembers, 'current-members');
+renderMembers(alumniMembers, 'alumni-members');
+// ===================== 图片替换接口说明 =====================
+// 若有真实照片，只需在成员对象加 photo 字段，如：
+// { name: "XXX", photo: "images/xxx.jpg", desc: "..." }
+</script>
+</body>
+</html> 

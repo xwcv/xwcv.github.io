@@ -94,6 +94,10 @@
 </div>
 <div id="container">
   <div class="sys_txt">
+    <h2>Faculty Members</h2>
+    <div class="members-section">
+      <div class="members-grid" id="faculty-members"></div>
+    </div>
     <h2>Current Students</h2>
     <div class="members-section">
       <div class="members-grid" id="current-members"></div>
@@ -107,6 +111,11 @@
 <div class="bottombar">xwcv.github.io</div>
 <script>
 // ===================== 成员数据结构 =====================
+const facultyMembers = [
+  { name: "Wenyu Liu, Professor", link: "https://eic.hust.edu.cn/professor/liuwenyu/", desc: "Second-level Professor, Fellow of CIC, Executive Director of CSIG, Director of CSIG Image and Video Communication Committee." },
+  { name: "Xinggang Wang, Professor", link: "http://faculty.hust.edu.cn/xwang", desc: "Co-EiC of Image and Vision Computing, AE of IEEE TPAMI." },
+];
+
 const currentMembers = [
   // { name: "Jiangxiao Han", desc: "deep learning and medical image analysis, PhD student co-supervised with Prof. Wenyu Liu" },
   // { name: "Bin Hu", desc: "self-supervised learing, PhD student co-supervised with Prof. Wenyu Liu" },
@@ -278,6 +287,8 @@ function renderMembers(members, containerId) {
     container.appendChild(card);
   });
 }
+
+renderMembers(facultyMembers, 'faculty-members');
 renderMembers(currentMembers, 'current-members');
 renderMembers(alumniMembers, 'alumni-members');
 // ===================== 图片替换接口说明 =====================

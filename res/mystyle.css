@@ -106,6 +106,7 @@ body, table {
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 70px);
+    padding: 20px 0;
 }
 
 /* 菜单样式 - 移动端优先设计 */
@@ -259,22 +260,22 @@ body, table {
     font-family: var(--font-serif);
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 0.4em;
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
     font-weight: 600;
     font-variant-numeric: lining-nums;
 }
 
 /* 系统文本二级标题样式 */
 .sys_txt h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--primary-color);
     font-family: var(--font-serif);
     font-weight: 600;
     letter-spacing: -0.014em;
     line-height: 1.5;
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.8rem;
     padding-left: 0.8rem;
     border-left: 4px solid var(--secondary-color);
     font-variant-numeric: lining-nums;
@@ -291,9 +292,9 @@ body, table {
 .sys_txt p {
     font-family: var(--font-serif);
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.9;
     letter-spacing: -0.003em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.8em;
 }
 
 .sys_txt ul {
@@ -305,7 +306,11 @@ body, table {
 .sys_txt ul li {
     position: relative;
     padding-left: 1.8em;
-    margin-bottom: 0.8em;
+    margin-bottom: 1.2em;
+    transition: transform 0.2s ease;
+}
+.sys_txt ul li:hover {
+    transform: translateX(5px);
 }
 
 .sys_txt ul li::before {
@@ -357,7 +362,8 @@ table {
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid var(--border-color);
 }
 
 /* 表格表头和单元格样式 */
@@ -440,7 +446,11 @@ button:hover {
         width: 100%;
         height: auto;
         position: static;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        padding: 15px;
+    }
+    .profile-image img {
+        max-width: 160px;
     }
     
     #content {
@@ -462,6 +472,27 @@ button:hover {
     .bottombar-links {
         flex-wrap: wrap;
         gap: 16px;
+    }
+    
+    .sys_txt h2 {
+        font-size: 1.4rem;
+        margin-top: 2.5rem;
+    }
+    .sys_txt p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+}
+    .sys_txt h1 {
+        font-size: 1.8rem;
+    }
+    .sys_txt h2 {
+        font-size: 1.4rem;
+        margin-top: 2.5rem;
+    }
+    .sys_txt p {
+        font-size: 15px;
+        line-height: 1.8;
     }
 }
 
@@ -498,10 +529,10 @@ button:hover {
     font-family: var(--font-sans);
     font-size: 14px;
     font-weight: 500;
-    padding: 8px 16px;
+    padding: 10px 16px;
     margin: 0 8px;
     border-radius: 20px;
-    transition: background-color 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 /* 顶部导航栏链接悬停样式 */
@@ -516,6 +547,7 @@ button:hover {
     background-color: var(--primary-color);
     color: white;
     box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
 }
 
 /* 顶部导航栏左侧部分样式 */
@@ -554,21 +586,22 @@ button:hover {
 
 /* 底部导航栏样式 */
 .bottombar {
-    background-color: #fff;
+    background-color: var(--background-alt);
     border-top: 1px solid var(--border-color);
-    padding: 24px 20px;
-    margin-top: 48px;
+    padding: 32px 20px;
+    margin-top: 60px;
+    text-align: center;
 }
 
 /* 底部导航栏内容样式 */
 .bottombar-content {
-    max-width: 680px;
+    max-width: 800px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
+    gap: 20px;
 }
 
 /* 底部导航栏链接部分样式 */
@@ -619,7 +652,7 @@ button:hover {
 
 /* 个人资料部分样式 */
 .profile-section {
-    margin: 40px 0;
+    margin: 40px 0 60px;
     padding: 35px;
     background-color: var(--background-alt);
     border-radius: var(--border-radius);

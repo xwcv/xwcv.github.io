@@ -65,9 +65,9 @@ body, table {
 
 /* 容器样式，设置最大宽度并居中显示 */
 #container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 /* 头部样式，设置背景、边框和阴影 */
@@ -468,7 +468,7 @@ button:hover {
 /* 响应式设计 - 中等屏幕（平板） */
 @media (min-width: 769px) and (max-width: 1024px) {
     #container {
-        max-width: 720px;
+        max-width: 960px;
     }
 
     #menu {
@@ -485,7 +485,7 @@ button:hover {
     background: #fff;
     border-bottom: 1px solid var(--border-color);
     padding: 0 20px;
-    height: 64px;
+    height: 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -499,7 +499,7 @@ button:hover {
     font-size: 14px;
     font-weight: 500;
     padding: 8px 16px;
-    margin: 0 4px;
+    margin: 0 8px;
     border-radius: 20px;
     transition: background-color 0.2s ease;
 }
@@ -619,8 +619,8 @@ button:hover {
 
 /* 个人资料部分样式 */
 .profile-section {
-    margin: 30px 0;
-    padding: 25px;
+    margin: 40px 0;
+    padding: 35px;
     background-color: var(--background-alt);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
@@ -631,7 +631,7 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 @media (max-width: 768px) {
@@ -663,7 +663,7 @@ button:hover {
 
 /* 个人资料图片样式 */
 .profile-image img {
-    max-width: 180px;
+    max-width: 200px;
     height: auto;
     display: block;
 }

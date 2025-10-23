@@ -170,7 +170,7 @@
 // ===================== 成员数据结构 =====================
 const facultyMembers = [
   { name: "刘文予 教授", photo: "./res/lwy.jpg", link: "https://eic.hust.edu.cn/professor/liuwenyu/", desc: "二级教授，中国图象图形学学会常务理事，图像与视频通信专委会主任。" },
-  { name: "王兴刚 教授", photo: "./res/xw2018.jpg", link: "https://faculty.hust.edu.cn/xwang/zh_CN/index.htm", desc: "Image and Vision Computing 期刊联合主编，IEEE TPAMI 副编辑。" },
+  { name: "王兴刚 教授", photo: "./res/xw2018.jpg", link: "https://faculty.hust.edu.cn/xwang/zh_CN/index.htm", desc: "Image and Vision Computing 期刊联合主编，IEEE TPAMI 编委。" },
 ];
 
 const currentMembers = [
@@ -194,6 +194,7 @@ const currentMembers = [
   { name: "纪开松", photo: "https://hustvl.github.io/images/members/jks.jpeg", desc: "博士生。" },
   
   // 硕士生
+  // 研三
   { name: "李综名", photo: "https://hustvl.github.io/images/members/lzm.jpg", desc: "硕士生。研究方向：可控图像生成。代表作：ControlAR。荣誉：第十八届挑战杯专项赛全国一等奖。" },
   { name: "陆佳", photo: "https://hustvl.github.io/images/members/lj.jpeg", desc: "硕士生。研究方向：三维重建与生成。荣誉：第十八届挑战杯专项赛全国一等奖。" },
   { name: "李应悦", photo: "https://hustvl.github.io/images/members/lyy.jpeg", desc: "硕士生。研究方向：多模态大模型。代表作：MaTVLM。" },
@@ -202,6 +203,8 @@ const currentMembers = [
   { name: "郭翔宇", photo: "https://hustvl.github.io/images/members/gxy.jpg", desc: "硕士生。研究方向：自动驾驶场景生成。" },
   { name: "高菲", photo: "https://hustvl.github.io/images/members/gf.jpeg", desc: "硕士生。研究方向：图像生成、三维重建。" },
   { name: "赵维恒", photo: "https://hustvl.github.io/images/members/zwh.jpeg", desc: "硕士生。研究方向：多模态、具身智能。" },
+
+  // 研二
   { name: "宋悦豪", photo: "https://hustvl.github.io/images/members/syh.jpg", desc: "硕士生。研究方向：自动驾驶VLA、基础模型。代表作：ViTGaze。荣誉：第十届全国青年科普创新实验暨作品大赛湖北赛区二等奖、“华为杯”第二十一届中国研究生数学建模竞赛三等奖。" },
   { name: "张文睿", photo: "https://hustvl.github.io/images/members/zwr.png", desc: "硕士生。研究方向：多模态大模型、图像分割。" },
   { name: "汤报", photo: "https://hustvl.github.io/images/members/tb.jpg", desc: "硕士生。研究方向：图像/视频生成。荣誉：本科特优生、“华为杯”第二十一届中国研究生数学建模竞赛二等奖。" },
@@ -214,6 +217,8 @@ const currentMembers = [
   { name: "李洁", photo: "https://hustvl.github.io/images/members/ljie.jpeg", desc: "硕士生。研究方向：目标检测、多模态大模型。" },
   { name: "喻思远", photo: "https://hustvl.github.io/images/members/ysy.jpeg", desc: "硕士生。研究方向：图像与视频生成。" },
   { name: "黄彬桦", photo: "https://hustvl.github.io/images/members/hbh.jpeg", desc: "硕士生。研究方向：具身智能。荣誉：港澳及华侨学生奖学金二等奖。" },
+
+  // 研一
   { name: "陶鸿远", photo: "https://hustvl.github.io/images/members/thy.jpeg", desc: "硕士生。研究方向：多模态大模型、基础模型。代表作：mmMamba。荣誉：优秀毕业生、全国大学生数学建模竞赛湖北赛区一等奖、全国大学生电子设计竞赛湖北赛区一等奖。" },
   { name: "王澍正", photo: "https://hustvl.github.io/images/members/wsz.jpg", desc: "硕士生。研究方向：图像生成、模型部署加速。荣誉：全国大学生数学竞赛湖北赛区一等奖、二等奖；全国大学生电子设计竞赛湖北赛区二等奖；学习优秀奖学金。" },
   { name: "贾茹婷", photo: "https://hustvl.github.io/images/members/jrt.jpg", desc: "硕士生。研究方向：三维重建。荣誉：全国嵌入式大赛国家三等奖。" },
@@ -224,19 +229,32 @@ const currentMembers = [
   { name: "吴垂云", photo: "https://hustvl.github.io/images/members/wcy.png", desc: "硕士生。研究方向：三维重建与生成、视频理解大模型。荣誉：全国大学生机器人大赛（Robomaster）全国一等奖、科学创新奖学金、自强奖学金。" }
 
 ];
-// 这里只展示部分毕业生，完整可补充
+
+// 毕业生
 const alumniMembers = [
+
+  // PhDs
   { name: "程天恒", photo: "https://hustvl.github.io/images/members/cth.jpg", link: "https://scholar.google.com/citations?user=PH8rJHYAAAAJ", desc: "博士 (2019-2024), 联合指导教师: 刘文予. 研究方向: 目标检测, 多模态大模型. 现就职于: 字节跳动." },
   { name: "陈少宇", photo: "https://hustvl.github.io/images/members/csy.jpg", link: "https://scholar.google.com/citations?user=PIeNN2gAAAAJ", desc: "博士 (2021-2025), 联合指导教师: 刘文予. 研究方向: 自动驾驶. 现就职于: 地平线." },
   { name: "汪成", photo: "https://hustvl.github.io/images/members/wc.jpeg", link: "https://scholar.google.com/citations?user=PdJIyPIAAAAJ", desc: "博士 (2021-2025), 联合指导教师: 郭鹏. 研究方向: 目标检测. 现就职于: 三峡集团." },
-  { name: "文一晴", desc: "医学图像分割, 硕士生，现就职于: 华为." },
+  { name: "方杰民", photo: "https://jaminfong.cn/img/me.jpg", link: "http://jaminfong.cn/", desc: "博士 (2018-2023), 联合指导教师: 刘文予. 研究方向: 3D视觉, 神经架构搜索/设计. 现就职于: 华为（天才少年）." },
+  { name: "黄子龙", photo: "https://hustvl.github.io/images/members/hzl.jpeg", link: "http://speedinghzl.github.io/", desc: "博士(2015-2020) 联合指导教师: 刘文予. 研究方向：目标检测与图像分割. 国家奖学金获得者, 现就职于：字节跳动." },
+  { name: "唐芃", photo: "https://hustvl.github.io/images/members/tp.jpeg", link: "https://ppengtang.github.io/", desc: "博士 (2014-2019), 联合指导教师: 刘文予. 研究方向: 目标检测, 图像识别. 现就职于: Salesforce Research." },
+  { name: "李超", desc: "博士 (2013-2019), 联合指导教师: 刘文予. 研究方向: 目标检测, 医学图像理解. 现就职于: vivo." },
+
+  // 2025
+  { name: "张宇轩", photo: "https://hustvl.github.io/images/members/zyx.jpg", desc: "硕士 (2022-2025), 联合指导教师: 王兴刚. 研究方向: 目标检测, 多模态. 现就职于: vivo." },
   { name: "吴连俊", photo: "https://hustvl.github.io/images/members/wlj.jpg", desc: "检测与分割, 硕士生，现就职于: 米塔碳科技." },
   { name: "刘佳伟", photo: "https://hustvl.github.io/images/members/ljw.JPG", desc: "硕士 (2022-2025), 联合指导教师: 刘文予. 研究方向: 图像生成, 多模态大模型. 现就职于: 阿里巴巴." },
   { name: "王睿奇", desc: "分割与姿态估计, 硕士生，现就职于: 阿里巴巴." },
   { name: "蔡佳俊", photo: "https://hustvl.github.io/images/members/cjj.jpg", desc: "自动驾驶, 硕士生，现就职于: 小米." },
   { name: "叶朗", desc: "自动驾驶, 硕士生，现就职于: 小米." },
   { name: "田弘宇", desc: "深度学习, 硕士生" },
-  { name: "崔孜威", desc: "深度学习, 硕士生" },
+  { name: "文一晴", desc: "医学图像分割, 硕士生，现就职于: 华为." },
+  { name: "崔孜威", desc: "深度学习, 硕士生，现就职于: 百度." },
+
+
+  // 2024
   { name: "杨澍生", link: "https://scholar.google.com/citations?user=v6dmW5cntoMC", desc: "检测与基础模型, 硕士生, 纽约大学博士." },
   { name: "刘泽林", photo: "https://hustvl.github.io/images/members/lzl.jpeg", desc: "硕士 (2021-2024), 联合指导教师: 王兴刚. 研究方向: 目标检测, 多目标跟踪. " },
   { name: "张运驰", desc: "检测, 硕士生, 地平线." },
@@ -244,21 +262,20 @@ const alumniMembers = [
   { name: "周政宏", photo: "https://hustvl.github.io/images/members/zzh.jpg", desc: "三维视觉, 硕士生, 联合指导教师: 刘文予, 罗切斯特大学博士." },
   { name: "张壬泓", desc: "分割, 硕士生, 联合指导教师: 刘文予, 字节跳动." },
   { name: "牛琳", desc: "硕士 (2021-2024), 联合指导教师: 刘文予. 研究方向: 模型推理加速. 现就职于: 腾讯." },
-  { name: "方杰民", link: "http://jaminfong.cn/", desc: "博士 (2018-2023), 联合指导教师: 刘文予. 研究方向: 3D视觉, 神经架构搜索/设计. 现就职于: 华为（天才少年）." },
   { name: "方羽新", photo: "https://hustvl.github.io/images/members/fyx.jpeg", link: "https://scholar.google.com/citations?user=_Lk0-fQAAAAJ", desc: "弱监督视觉学习, 硕士生, 毕业后就职于微软亚洲研究院." },
   { name: "郝振阳", desc: "目标检测, 硕士生,  毕业后就职于阿里巴巴." },
-  { name: "方羽新", desc: "目标检测, 硕士生, 毕业后就职于地平线." },
   { name: "王世杰", desc: "目标检测, 硕士生, 毕业后就职于阿里巴巴." },
   { name: "齐继扬", link: "https://scholar.google.com/citations?user=v8pL6_gAAAAJ", desc: "硕士 (2020-2023), 联合指导教师: 刘文予. 研究方向: 视频实例分割, 语义分割. 现就职于: 小红书." },
   { name: "翁付成", photo: "https://hustvl.github.io/images/members/wfc.jpg", desc: "目标分割, 硕士生 联合指导教师: 刘文予,  毕业后就职于华中科技大学." },
   { name: "黄晓虎", link: "https://scholar.google.com/citations?user=sBjFwuQAAAAJ", desc: "硕士 (2020-2023), 联合指导教师: 刘文予. 研究方向: 小样本学习, 多目标跟踪. 现就职于: 华中科技大学." },
+
+  // 2023
   { name: "冯嘉佩", photo: "https://hustvl.github.io/images/members/fjp.jpg", desc: "硕士 (2019-2022), 联合指导教师: 王兴刚. 研究方向: 弱监督学习, 语义分割. 现就职于: 思谋科技." },
   { name: "胡斌", desc: "硕士 (2019-2022), 联合指导教师: 余文勇 (机械学院). 研究方向: 弱监督学习. 现就职于: 小马智行." },
   { name: "张一夫", photo: "https://hustvl.github.io/images/members/zyf.jpeg", link: "https://ifzhang.github.io/", desc: "硕士 (2019-2022), 联合指导教师: 刘文予. 研究方向: 多目标跟踪, 人体姿态估计. 现就职于: 百度." },
+  { name: "李健锐", photo: "https://hustvl.github.io/images/members/ljr.jpeg", desc: "硕士 (2020-2022), 联合指导教师: 刘文予. 研究方向: 多目标跟踪, 嵌入式算法部署. 现就职于: 腾讯." },
   { name: "毛伟平", desc: "深度学习, 硕士, 毕业后就职于一家优秀公司." },
-  { name: "张维天", photo: "https://hustvl.github.io/images/members/zwt.jpg", desc: "本科 (2018-2022), 联合指导教师: 王兴刚. 研究方向: 医学图像. 现就职于: 上海交通大学." },
-  { name: "吴栋", photo: "https://hustvl.github.io/images/members/wd.jpg", desc: "目标检测, 本科生, 毕业后就职于北京大学." },
-  { name: "廖满文", photo: "https://hustvl.github.io/images/members/lmw.jpg", desc: "本科 (2018-2022), 联合指导教师: 王兴刚. 研究方向: 目标检测, 图像分割. 现就职于: 香港大学." },
+
   { name: "李皓阳", desc: "对抗防御与攻击, 硕士生 (退学), 后就职于康奈尔大学." },
   { name: "周强", photo: "https://hustvl.github.io/images/members/zq.jpg", link: "https://scholar.google.com/citations?user=8NIZGJcAAAAJ", desc: "硕士 (2018-2023), 联合指导教师: 王兴刚. 研究方向: 视频目标分割. 现就职于: 字节跳动." },
   { name: "孙玉柱", photo: "https://hustvl.github.io/images/members/syz.jpeg", desc: "硕士 (2019-2021), 联合指导教师: 王兴刚. 研究方向: 神经架构搜索. 现就职于: 大疆." },
@@ -267,17 +284,19 @@ const alumniMembers = [
   { name: "赵子刚", desc: "计算机视觉, 硕士生, 毕业后就职于瓜子." },
   { name: "凌健", desc: "视频分类与分割, 硕士生, 毕业后就职于小鹏汽车." },
   { name: "张文强", desc: "硕士 (2020-2022), 联合指导教师: 刘文予. 研究方向: 神经架构搜索/设计. 现就职于: 百度." },
-  { name: "黄子龙", photo: "https://hustvl.github.io/images/members/hzl.jpeg", link: "http://speedinghzl.github.io/", desc: "目标检测与实例分割 (深度学习), 博士生 联合指导教师: 刘文予. 国家奖学金获得者, 毕业后就职于腾讯." },
+  
+
+
+  // 2022
   { name: "黄钊金", photo: "https://hustvl.github.io/images/members/hzj.jpg", link: "https://scholar.google.com/citations?user=PFiN_xkAAAAJ", desc: "硕士 (2017-2020), 联合指导教师: 王兴刚. 研究方向: 目标检测, 图像分割. 现就职于: 卓驭." },
   { name: "陈梦婷", desc: "小样本学习, 硕士, 联合指导教师: 刘文予, 国家奖学金获得者, 毕业后就职于阿里巴巴." },
-  { name: "徐继伟", desc: "硕士 (2017-2020), 联合指导教师: 王兴刚. 研究方向: 行人重识别, 声纹识别. 现就职于: 军队." },
+  { name: "徐继伟", desc: "硕士 (2017-2020), 联合指导教师: 王兴刚. 研究方向: 行人重识别, 声纹识别." },
   { name: "文雪", desc: "目标检测, 硕士, 毕业后就职于中国建设银行." },
   { name: "吴羽伦", desc: "计算机视觉, 硕士, 毕业后就职于HoloMatic.com." },
   { name: "杜依晗", desc: "姿态估计, 硕士, 毕业后就职于ABCPen.com." },
   { name: "焦裕斐", desc: "计算机视觉, 硕士, 毕业后就职于NullMax.ai." },
-  { name: "谢欣承", desc: "无监督学习与多实例学习, 本科生" },
-  { name: "唐芃", photo: "https://hustvl.github.io/images/members/tp.jpeg", link: "https://ppengtang.github.io/", desc: "博士 (2014-2019), 联合指导教师: 刘文予. 研究方向: 目标检测, 图像识别. 现就职于: Salesforce Research." },
-  { name: "李超", desc: "博士 (2013-2019), 联合指导教师: 刘文予. 研究方向: 目标检测, 医学图像理解. 现就职于: vivo." },
+  
+  
   { name: "晏雍娈", link: "https://github.com/yanyongluan", desc: "计算机视觉, 度量学习与多实例学习, 硕士, 毕业后就职于旷视科技. 国家奖学金获得者." },
   { name: "罗浩", photo: "https://hustvl.github.io/images/members/lh.png", desc: "硕士 (2016-2019), 联合指导教师: 王兴刚. 研究方向: 视频编辑, 目标检测. 现就职于: 优酷." },
   { name: "陈坤鹏", desc: "目标检测, 硕士, 毕业后就职于旷视." },
@@ -285,21 +304,26 @@ const alumniMembers = [
   { name: "饶旭东", desc: "目标检测, 硕士, 联合指导教师: 刘文予, 毕业后就职于搜狗." },
   { name: "匡海威", desc: "硕士 (2017-2019), 联合指导教师: 王兴刚. 研究方向: 目标检测, 图像分割. 现就职于: 卓驭." },
   { name: "周诺亚", photo: "https://hustvl.github.io/images/members/zny.jpeg", desc: "硕士 (2013-2019), 联合指导教师: 王兴刚. 研究方向: 目标检测. 现就职于: 地平线." },
-  { name: "陈守法", link: "https://scholar.google.com/citations?user=ogoCvHEAAAAJ", desc: "目标检测, 本科生. 新加坡国立大学(NUS)研究实习生, 导师: 冯嘉实." },
-  { name: "李睿光", desc: "目标检测, 本科生. 哥伦比亚大学硕士生." },
-  { name: "杨宗霖", desc: "胶囊网络, 本科生. 已被康奈尔大学录取为硕士生." },
-  { name: "田昊", desc: "本科 (2014-2018), 联合指导教师: 王兴刚. 研究方向: 自动驾驶, 多模态大模型. 现就职于: 小米." },
-  { name: "朱卓暾", link: "http://ztzhu.weebly.com/", desc: "多实例学习, 本科生. 已被UCLA录取为博士生." },
-  { name: "汪洋", desc: "无监督特征学习, 本科生. 已被清华大学录取为硕士生." },
-  { name: "宋汉强", desc: "多实例学习, 本科生. 已被康奈尔大学录取为博士生." },
   { name: "陈凯兵", desc: "目标检测与深度学习, 硕士,  联合指导教师: 刘文予, 毕业后就职于百度IDL." },
   { name: "姜玉静", desc: "图像检索, 硕士, 联合指导教师: 刘文予, 毕业后就职于武汉专利中心." },
   { name: "胡扬", desc: "深度学习, 硕士, 毕业后就职于百度IDL." },
   { name: "李磊", desc: "计算机视觉应用, 硕士, 毕业后就职于华为." },
-  { name: "张瑾", desc: "字典学习, 本科生, 毕业后就职于卡内基梅隆大学." },
-  { name: "李源", photo: "https://hustvl.github.io/images/members/yl.png", desc: "硕士 (2011-2018), 联合指导教师: 刘文予. 研究方向: 目标检测, 手势识别. 现就职于: Momenta." },
-  { name: "李健锐", photo: "https://hustvl.github.io/images/members/ljr.jpeg", desc: "硕士 (2020-2022), 联合指导教师: 刘文予. 研究方向: 多目标跟踪, 嵌入式算法部署. 现就职于: 腾讯." },
-  { name: "张宇轩", photo: "https://hustvl.github.io/images/members/zyx.jpg", desc: "硕士 (2022-2025), 联合指导教师: 王兴刚. 研究方向: 目标检测, 多模态. 现就职于: vivo." }
+  { name: "李源", desc: "目标检测, 手势识别，硕士, 联合指导教师: 刘文予. 现就职于: Momenta." } ,
+
+
+  { name: "陈守法", link: "https://scholar.google.com/citations?user=ogoCvHEAAAAJ", desc: "目标检测, 本科生. 新加坡国立大学(NUS)研究实习生." },
+  { name: "田昊", desc: "本科 (2014-2018), 联合指导教师: 王兴刚. 研究方向: 自动驾驶, 多模态大模型. 现就职于: 小米." },
+  { name: "张维天", photo: "https://hustvl.github.io/images/members/zwt.jpg", desc: "本科 (2018-2022), 联合指导教师: 王兴刚. 研究方向: 医学图像. 现就职于: 上海交通大学." },
+  { name: "吴栋", photo: "https://hustvl.github.io/images/members/wd.jpg", desc: "目标检测, 本科生, 毕业后就职于北京大学." },
+  { name: "廖满文", photo: "https://hustvl.github.io/images/members/lmw.jpg", desc: "本科 (2018-2022), 联合指导教师: 王兴刚. 研究方向: 目标检测, 图像分割. 现就职于: 香港大学." },
+  { name: "李睿光", desc: "目标检测, 本科生. 哥伦比亚大学硕士生." },
+  { name: "杨宗霖", desc: "胶囊网络, 本科生. 已被康奈尔大学录取为硕士生." },
+  { name: "谢欣承", desc: "无监督学习与多实例学习, 本科生" },
+  { name: "朱卓暾", link: "http://ztzhu.weebly.com/", desc: "多实例学习, 本科生. 已被UCLA录取为博士生." },
+  { name: "汪洋", desc: "无监督特征学习, 本科生. 已被清华大学录取为硕士生." },
+  { name: "宋汉强", desc: "多实例学习, 本科生. 已被康奈尔大学录取为博士生." },
+  { name: "张瑾", desc: "字典学习, 本科生, 毕业后就职于卡内基梅隆大学." }
+
 ];
 // ===================== 头像生成函数 =====================
 function getInitials(name) {

@@ -140,7 +140,7 @@ body, table {
 
 /* 菜单项样式 */
 #menu ul li {
-    padding: 8px 0;
+    padding: 5px 0;
     position: relative;
 }
 
@@ -306,7 +306,7 @@ body, table {
 .sys_txt ul li {
     position: relative;
     padding-left: 1.8em;
-    margin-bottom: 1.2em;
+    margin-bottom: 0.6em;
     transition: transform 0.2s ease;
 }
 .sys_txt ul li:hover {

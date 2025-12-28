@@ -78,7 +78,7 @@ body {
 
 /* ===== Profile Section ===== */
 .profile-section {
-    padding: 40px 0;
+    padding: 12px 0 8px;
 }
 
 .profile-content {
@@ -155,6 +155,12 @@ section h2 {
 
 section h2 strong {
     font-weight: 600;
+}
+
+section > p {
+    margin: -8px 0 16px;
+    font-size: 13px;
+    color: var(--muted);
 }
 
 /* ===== Lists ===== */

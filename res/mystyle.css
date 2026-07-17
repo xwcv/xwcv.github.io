@@ -700,72 +700,115 @@ sup, sub {
     }
 }
 
-/* ===== Dark mode (follows system preference) ===== */
-@media (prefers-color-scheme: dark) {
-    :root {
-        color-scheme: dark;
-        --primary: #7ea4f0;
-        --primary-light: #9db9f5;
-        --accent: #7ea4f0;
-        --accent-soft: rgba(126, 164, 240, 0.13);
-        --amber: #e5a558;
-        --amber-soft: rgba(229, 165, 88, 0.13);
-        --text: #e5e9f0;
-        --text-light: #b4bdc9;
-        --muted: #8b95a6;
-        --bg: #0e1319;
-        --white: #171e28;
-        --border: #2a3444;
-        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-        --shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
-        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
-        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.55);
-    }
+/* ===== Dark mode (data-theme attribute; default follows system, toggle overrides) ===== */
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --primary: #7ea4f0;
+    --primary-light: #9db9f5;
+    --accent: #7ea4f0;
+    --accent-soft: rgba(126, 164, 240, 0.13);
+    --amber: #e5a558;
+    --amber-soft: rgba(229, 165, 88, 0.13);
+    --text: #e5e9f0;
+    --text-light: #b4bdc9;
+    --muted: #8b95a6;
+    --bg: #0e1319;
+    --white: #171e28;
+    --border: #2a3444;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.55);
+}
 
-    .topnav {
-        background: rgba(14, 19, 25, 0.88);
-    }
+[data-theme="dark"] .topnav {
+    background: rgba(14, 19, 25, 0.88);
+}
 
-    .topnav a:hover {
-        background: rgba(126, 164, 240, 0.12);
-    }
+[data-theme="dark"] .topnav a:hover {
+    background: rgba(126, 164, 240, 0.12);
+}
 
-    .topnav a.active {
-        color: #0e1319;
-        background: var(--primary);
-    }
+[data-theme="dark"] .topnav a.active {
+    color: #0e1319;
+    background: var(--primary);
+}
 
-    .profile-section {
-        background: linear-gradient(135deg, #1b2434 0%, #141b27 100%);
-    }
+[data-theme="dark"] .profile-section {
+    background: linear-gradient(135deg, #1b2434 0%, #141b27 100%);
+}
 
-    .profile-text h2 {
-        color: #0e1319;
-    }
+[data-theme="dark"] .profile-text h2 {
+    color: #0e1319;
+}
 
-    .year-nav {
-        background: rgba(23, 30, 40, 0.94);
-    }
+[data-theme="dark"] .year-nav {
+    background: rgba(23, 30, 40, 0.94);
+}
 
-    .year-nav a:hover {
-        color: #0e1319;
-    }
+[data-theme="dark"] .year-nav a:hover {
+    color: #0e1319;
+}
 
-    a.cite-badge {
-        border-color: rgba(229, 165, 88, 0.35);
-    }
+[data-theme="dark"] a.cite-badge {
+    border-color: rgba(229, 165, 88, 0.35);
+}
 
-    a.cite-badge:hover {
-        color: #0e1319;
-    }
+[data-theme="dark"] a.cite-badge:hover {
+    color: #0e1319;
+}
 
-    a.res-chip {
-        border-color: rgba(126, 164, 240, 0.3);
-    }
+[data-theme="dark"] a.res-chip {
+    border-color: rgba(126, 164, 240, 0.3);
+}
 
-    a.res-chip:hover {
-        color: #0e1319;
-    }
+[data-theme="dark"] a.res-chip:hover {
+    color: #0e1319;
+}
+
+/* ===== Theme toggle button ===== */
+.theme-toggle {
+    margin-left: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.theme-toggle:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    background: var(--accent-soft);
+}
+
+.theme-toggle svg {
+    width: 15px;
+    height: 15px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.theme-toggle .icon-sun {
+    display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-sun {
+    display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-moon {
+    display: none;
 }
 
 /* ===== Print ===== */

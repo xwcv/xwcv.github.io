@@ -6,44 +6,71 @@
 }
 
 :root {
-    --primary: #1a365d;
+    --primary: #16305c;
     --primary-light: #2c5282;
-    --accent: #3182ce;
-    --text: #2d3748;
-    --text-light: #4a5568;
-    --muted: #718096;
-    --bg: #f7fafc;
+    --accent: #2563eb;
+    --accent-soft: rgba(37, 99, 235, 0.07);
+    --amber: #b45309;
+    --amber-soft: rgba(217, 119, 6, 0.09);
+    --text: #1f2937;
+    --text-light: #4b5563;
+    --muted: #6b7280;
+    --bg: #f4f6fa;
     --white: #ffffff;
-    --border: #e2e8f0;
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
-    --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --font-serif: Georgia, Cambria, "Times New Roman", serif;
-    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --border: #e5e9f0;
+    --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
+    --shadow: 0 1px 3px rgba(16, 24, 40, 0.08);
+    --shadow-md: 0 4px 12px rgba(16, 24, 40, 0.08);
+    --shadow-lg: 0 8px 24px rgba(16, 24, 40, 0.12);
+    --radius: 12px;
+    --nav-h: 56px;
+    --font-serif: Georgia, Cambria, "Times New Roman", "Songti SC", "STSong", "SimSun", serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 body {
     font-family: var(--font-serif);
     font-size: 15px;
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--text);
     background: var(--bg);
     -webkit-font-smoothing: antialiased;
 }
 
+::selection {
+    background: rgba(37, 99, 235, 0.18);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
 /* ===== Layout ===== */
 #container {
-    max-width: 900px;
+    max-width: 920px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
 /* ===== Navigation ===== */
 .topnav {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.88);
+    -webkit-backdrop-filter: blur(10px) saturate(1.5);
+    backdrop-filter: blur(10px) saturate(1.5);
     border-bottom: 1px solid var(--border);
-    padding: 12px 0;
+    box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -51,24 +78,29 @@ body {
 
 .topnav #container {
     display: flex;
-    gap: 8px;
+    align-items: center;
+    gap: 4px;
+    min-height: var(--nav-h);
     padding: 0 24px;
-    max-width: 900px;
+    max-width: 920px;
 }
 
 .topnav a {
     color: var(--text-light);
-    text-decoration: none;
-    padding: 6px 14px;
-    border-radius: 6px;
+    padding: 7px 14px;
+    border-radius: 8px;
+    border-bottom: none;
     font-family: var(--font-sans);
-    font-size: 14px;
-    transition: all 0.2s;
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s, background 0.2s;
 }
 
 .topnav a:hover {
     color: var(--primary);
-    background: rgba(26, 54, 93, 0.06);
+    background: rgba(22, 48, 92, 0.07);
+    border-bottom: none;
 }
 
 .topnav a.active {
@@ -76,9 +108,29 @@ body {
     background: var(--primary);
 }
 
+.topnav a.lang {
+    margin-left: auto;
+    border: 1px solid var(--border);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    color: var(--muted);
+}
+
+.topnav a.lang:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    background: var(--white);
+}
+
 /* ===== Profile Section ===== */
 .profile-section {
-    padding: 12px 0 8px;
+    margin-top: 24px;
+    background: linear-gradient(135deg, #ffffff 0%, #edf3fc 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 30px 32px;
+    box-shadow: var(--shadow-md);
 }
 
 .profile-content {
@@ -89,36 +141,49 @@ body {
 
 .profile-text {
     flex: 1;
+    min-width: 0;
 }
 
 .profile-text h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
+    letter-spacing: -0.01em;
     color: var(--primary);
-    margin: 0 0 4px 0;
+    margin: 0 0 8px 0;
     font-family: var(--font-sans);
 }
 
 .profile-text h2 {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: var(--text-light);
-    margin: 0 0 20px 0;
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    background: var(--primary);
+    padding: 3px 14px;
+    border-radius: 999px;
+    margin: 0 0 18px 0;
 }
 
 .affiliation, .contact, .research-interests {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .affiliation p, .contact p {
-    margin: 0 0 4px 0;
+    margin: 0 0 3px 0;
     font-size: 14px;
     color: var(--text-light);
+    overflow-wrap: anywhere;
 }
 
 .research-interests p {
     margin: 0;
     font-size: 14px;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
 }
 
 .profile-image {
@@ -126,31 +191,52 @@ body {
 }
 
 .profile-image img {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 16px;
+    border: 4px solid var(--white);
     box-shadow: var(--shadow-lg);
 }
 
 /* ===== Main Content ===== */
 main#container {
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding-top: 8px;
+    padding-bottom: 48px;
 }
 
 section {
-    margin-bottom: 36px;
+    margin-bottom: 24px;
+}
+
+main section:not(.profile-section) {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 24px 28px;
 }
 
 section h2 {
-    font-size: 1.2rem;
+    position: relative;
+    font-size: 1.18rem;
     font-weight: 600;
     color: var(--primary);
     margin: 0 0 16px 0;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--border);
+    padding: 0 0 10px 14px;
+    border-bottom: 1px solid var(--border);
     font-family: var(--font-sans);
+}
+
+section h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 14px;
+    width: 4px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, var(--accent), var(--primary));
 }
 
 section h2 strong {
@@ -158,7 +244,7 @@ section h2 strong {
 }
 
 section > p {
-    margin: -8px 0 16px;
+    margin: -6px 0 14px;
     font-size: 13px;
     color: var(--muted);
 }
@@ -172,17 +258,24 @@ ul {
 
 ul li {
     position: relative;
-    padding-left: 20px;
-    margin-bottom: 12px;
+    padding: 5px 10px 5px 22px;
+    margin-bottom: 6px;
+    border-radius: 8px;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.65;
+    transition: background 0.15s;
+}
+
+ul li:hover {
+    background: var(--accent-soft);
 }
 
 ul li::before {
     content: "•";
     position: absolute;
-    left: 0;
-    color: var(--primary);
+    left: 8px;
+    color: var(--accent);
+    font-weight: 700;
 }
 
 ul li p {
@@ -193,6 +286,132 @@ ul li p {
 ul li p + p {
     display: block;
     margin-top: 4px;
+}
+
+/* Ordered lists (publications page) */
+ol {
+    list-style: decimal;
+    padding-left: 2.4em;
+    margin: 0;
+}
+
+ol li {
+    margin-bottom: 12px;
+    padding-left: 4px;
+    line-height: 1.65;
+    overflow-wrap: break-word;
+}
+
+ol li::marker {
+    color: var(--primary-light);
+    font-family: var(--font-sans);
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+ol li p {
+    margin: 0;
+}
+
+/* Year headings inside the publication list */
+ol > p {
+    margin: 30px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--primary);
+}
+
+ol > p:first-of-type {
+    margin-top: 16px;
+}
+
+/* Anchor offset so sticky bars don't cover jump targets */
+ol > p[id^="year-"] {
+    scroll-margin-top: calc(var(--nav-h) + 72px);
+}
+
+/* ===== Citation badge & resource chips (added by site.js) ===== */
+a.cite-badge {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.78em;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--amber);
+    background: var(--amber-soft);
+    border: 1px solid rgba(217, 119, 6, 0.28);
+    border-radius: 999px;
+    padding: 0 9px;
+    white-space: nowrap;
+    transition: color 0.2s, background 0.2s;
+}
+
+a.cite-badge:hover {
+    color: var(--white);
+    background: var(--amber);
+    border-color: var(--amber);
+}
+
+a.res-chip {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.78em;
+    font-weight: 600;
+    line-height: 1.55;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid rgba(37, 99, 235, 0.22);
+    border-radius: 6px;
+    padding: 0 7px;
+    margin: 0 1px;
+    white-space: nowrap;
+    transition: color 0.2s, background 0.2s;
+}
+
+a.res-chip:hover {
+    color: var(--white);
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+/* ===== Year quick navigation (added by site.js) ===== */
+.year-nav {
+    position: sticky;
+    top: calc(var(--nav-h) + 10px);
+    z-index: 50;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 10px 12px;
+    margin: 6px 0 22px;
+    background: rgba(255, 255, 255, 0.94);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.year-nav a {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-light);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px 11px;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.year-nav a:hover {
+    color: var(--white);
+    background: var(--primary);
+    border-color: var(--primary);
 }
 
 /* ===== Links ===== */
@@ -208,13 +427,21 @@ a:hover {
     border-bottom-color: var(--primary);
 }
 
-/* ===== Text Widget (for cvcn.htm) ===== */
+/* Author-mark superscripts (# student, * corresponding) */
+li sup {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* ===== Text Widget (pubs.htm / group pages) ===== */
 .sys_txt {
     background: var(--white);
-    border-radius: 12px;
-    padding: 32px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 36px;
     box-shadow: var(--shadow);
     margin-top: 24px;
+    margin-bottom: 40px;
 }
 
 .sys_txt > img {
@@ -243,14 +470,60 @@ a:hover {
     margin-bottom: 0;
 }
 
+/* Section titles inside the text widget ("Major Journal & Conference Papers" etc.) */
+.sys_txt > p > b,
+.sys_txt > div > p > b {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 1.12rem;
+    color: var(--primary);
+}
+
+.sys_txt > p:has(> b) {
+    margin-top: 30px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+.sys_txt > p:first-child:has(> b) {
+    margin-top: 0;
+}
+
 .sys_txt b {
     color: var(--primary);
     font-weight: 600;
 }
 
-/* ===== Member Cards (group.htm) ===== */
+/* Group-page subsection headings ("Faculty Members" etc.) */
+.sys_txt h2 {
+    position: relative;
+    font-family: var(--font-sans);
+    font-size: 1.18rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 34px 0 18px;
+    padding: 0 0 10px 14px;
+    border-bottom: 1px solid var(--border);
+}
+
+.sys_txt h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 14px;
+    width: 4px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, var(--accent), var(--primary));
+}
+
+.sys_txt h2:first-child {
+    margin-top: 0;
+}
+
+/* ===== Member Cards (group pages) ===== */
 .members-section {
-    margin: 24px 0;
+    margin: 8px 0 26px;
     display: flex;
     justify-content: center;
 }
@@ -258,72 +531,90 @@ a:hover {
 .members-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
-    justify-content: flex-start;
+    gap: 18px;
+    justify-content: center;
+    max-width: 100%;
 }
 
 .member-card {
     background: var(--white);
     border: 1px solid var(--border);
-    border-radius: 10px;
+    border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
-    width: 260px;
-    padding: 16px 12px 12px;
+    width: 240px;
+    padding: 22px 16px 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: box-shadow 0.2s;
     overflow: hidden;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .member-card:hover {
+    transform: translateY(-3px);
     box-shadow: var(--shadow-md);
 }
 
 .member-photo {
-    width: 80px;
-    height: 80px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     object-fit: cover;
+    background: #f0f0f0;
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 4px var(--border);
+    user-select: none;
 }
 
 .member-name {
-    font-size: 0.95rem;
+    font-family: var(--font-sans);
+    font-size: 0.98rem;
     font-weight: 600;
     color: var(--text);
     text-align: center;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
     word-wrap: break-word;
     overflow-wrap: break-word;
     max-width: 100%;
 }
 
 .member-desc {
-    font-size: 0.85rem;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
     color: var(--text-light);
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.55;
     word-wrap: break-word;
     overflow-wrap: break-word;
     max-width: 100%;
 }
 
 .member-link {
-    margin-top: 8px;
+    margin-top: auto;
+    padding-top: 12px;
 }
 
 .member-link a {
-    font-size: 0.85rem;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 600;
     color: var(--accent);
+    border-bottom: none;
+}
+
+.member-link a:hover {
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary);
 }
 
 /* ===== Footer ===== */
 .bottombar {
     text-align: center;
-    padding: 24px 0;
+    padding: 26px 0;
     color: var(--muted);
-    font-size: 13px;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.08em;
     border-top: 1px solid var(--border);
     background: var(--white);
 }
@@ -340,14 +631,19 @@ sup, sub {
         padding: 0 16px;
     }
 
+    .profile-section {
+        padding: 24px 20px;
+    }
+
     .profile-content {
         flex-direction: column-reverse;
         align-items: center;
         text-align: center;
+        gap: 20px;
     }
 
     .profile-text h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .profile-image img {
@@ -355,16 +651,12 @@ sup, sub {
         height: 120px;
     }
 
-    .members-grid {
-        justify-content: center;
-    }
-
-    .member-card {
-        width: 200px;
+    main section:not(.profile-section) {
+        padding: 18px 20px;
     }
 
     .sys_txt {
-        padding: 20px;
+        padding: 22px 20px;
     }
 
     .sys_txt > img {
@@ -374,17 +666,37 @@ sup, sub {
         width: 100px;
         height: 100px;
     }
+
+    ol {
+        padding-left: 2em;
+    }
+
+    .year-nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .member-card {
+        width: calc(50% - 9px);
+        min-width: 170px;
+    }
 }
 
 @media (max-width: 480px) {
     .topnav #container {
         flex-wrap: wrap;
         justify-content: center;
+        padding: 8px 16px;
+    }
+
+    .topnav a.lang {
+        margin-left: 0;
     }
 
     .member-card {
         width: 100%;
-        max-width: 280px;
+        max-width: 300px;
     }
 }
 
@@ -394,7 +706,7 @@ sup, sub {
         background: white;
     }
 
-    .topnav, .bottombar {
+    .topnav, .bottombar, .year-nav {
         display: none;
     }
 
@@ -403,8 +715,18 @@ sup, sub {
         padding: 0;
     }
 
-    .sys_txt {
+    .sys_txt,
+    main section:not(.profile-section),
+    .profile-section {
         box-shadow: none;
+        border: none;
         padding: 0;
+    }
+
+    a.cite-badge, a.res-chip {
+        border: none;
+        padding: 0;
+        color: var(--accent);
+        background: none;
     }
 }

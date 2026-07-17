@@ -3,6 +3,16 @@
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
+  /* 0. Theme toggle: persists choice to localStorage (read by the inline head script) */
+  var root = document.documentElement;
+  document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  });
+
   /* 1. Citation badges: "4000+ citations" -> pill */
   document.querySelectorAll('a').forEach(function (a) {
     if (/^[\d,]+\+?\s*citations?$/i.test(a.textContent.trim())) {

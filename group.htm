@@ -64,14 +64,14 @@
 </head>
 <body>
 <nav class="topnav" role="navigation" aria-label="Main navigation">
-  <div id="container">
+  <div class="container">
     <a href="index.htm">HOME</a>
     <a href="pubs.htm">PUBLICATION</a>
     <a class="active" href="group.htm" aria-current="page">GROUP</a>
     <a class="lang" href="index_cn.htm" lang="zh">中文</a>
   </div>
 </nav>
-<div id="container">
+<div class="container">
   <div class="sys_txt">
     <h2>Faculty Members</h2>
     <div class="members-section">
@@ -87,7 +87,7 @@
     </div>
   </div>
 </div>
-<div class="bottombar">xwcv.github.io</div>
+<footer class="bottombar" role="contentinfo">© 2026 Xinggang Wang · Last updated: July 2026</footer>
 <script>
 // ===================== 成员数据结构 =====================
 const facultyMembers = [
@@ -312,7 +312,7 @@ renderMembers(currentMembers, 'current-members');
 renderMembers(alumniMembers, 'alumni-members');
 // ===================== 图片替换接口说明 =====================
 // 若有真实照片，只需在成员对象加 photo 字段，如：
-// { name: "XXX", photo: "images/xxx.jpg", desc: "..." }
+// { name: "XXX", photo: "res/xxx.jpg", desc: "..." }
 </script>
 </body>
 </html>

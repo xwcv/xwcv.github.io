@@ -58,7 +58,7 @@ body {
 }
 
 /* ===== Layout ===== */
-#container {
+.container {
     max-width: 920px;
     margin: 0 auto;
     padding: 0 24px;
@@ -76,7 +76,7 @@ body {
     z-index: 100;
 }
 
-.topnav #container {
+.topnav .container {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -200,7 +200,7 @@ body {
 }
 
 /* ===== Main Content ===== */
-main#container {
+main.container {
     padding-top: 8px;
     padding-bottom: 48px;
 }
@@ -627,7 +627,7 @@ sup, sub {
 
 /* ===== Responsive ===== */
 @media (max-width: 720px) {
-    #container {
+    .container {
         padding: 0 16px;
     }
 
@@ -684,7 +684,7 @@ sup, sub {
 }
 
 @media (max-width: 480px) {
-    .topnav #container {
+    .topnav .container {
         flex-wrap: wrap;
         justify-content: center;
         padding: 8px 16px;
@@ -700,8 +700,89 @@ sup, sub {
     }
 }
 
+/* ===== Dark mode (follows system preference) ===== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+        --primary: #7ea4f0;
+        --primary-light: #9db9f5;
+        --accent: #7ea4f0;
+        --accent-soft: rgba(126, 164, 240, 0.13);
+        --amber: #e5a558;
+        --amber-soft: rgba(229, 165, 88, 0.13);
+        --text: #e5e9f0;
+        --text-light: #b4bdc9;
+        --muted: #8b95a6;
+        --bg: #0e1319;
+        --white: #171e28;
+        --border: #2a3444;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+        --shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.55);
+    }
+
+    .topnav {
+        background: rgba(14, 19, 25, 0.88);
+    }
+
+    .topnav a:hover {
+        background: rgba(126, 164, 240, 0.12);
+    }
+
+    .topnav a.active {
+        color: #0e1319;
+        background: var(--primary);
+    }
+
+    .profile-section {
+        background: linear-gradient(135deg, #1b2434 0%, #141b27 100%);
+    }
+
+    .profile-text h2 {
+        color: #0e1319;
+    }
+
+    .year-nav {
+        background: rgba(23, 30, 40, 0.94);
+    }
+
+    .year-nav a:hover {
+        color: #0e1319;
+    }
+
+    a.cite-badge {
+        border-color: rgba(229, 165, 88, 0.35);
+    }
+
+    a.cite-badge:hover {
+        color: #0e1319;
+    }
+
+    a.res-chip {
+        border-color: rgba(126, 164, 240, 0.3);
+    }
+
+    a.res-chip:hover {
+        color: #0e1319;
+    }
+}
+
 /* ===== Print ===== */
 @media print {
+    :root {
+        --primary: #16305c;
+        --primary-light: #2c5282;
+        --accent: #2563eb;
+        --amber: #b45309;
+        --text: #1f2937;
+        --text-light: #4b5563;
+        --muted: #6b7280;
+        --bg: #ffffff;
+        --white: #ffffff;
+        --border: #e5e9f0;
+    }
+
     body {
         background: white;
     }
@@ -710,7 +791,7 @@ sup, sub {
         display: none;
     }
 
-    #container {
+    .container {
         max-width: 100%;
         padding: 0;
     }

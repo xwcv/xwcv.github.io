@@ -186,6 +186,36 @@ body {
     padding: 10px 14px;
 }
 
+/* Google Scholar stats in the profile section */
+.scholar-stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+}
+
+.scholar-stats .scholar-link {
+    font-weight: 600;
+    color: var(--primary);
+    margin-right: 2px;
+}
+
+.scholar-stat {
+    color: var(--text-light);
+    background: var(--amber-soft);
+    border: 1px solid rgba(217, 119, 6, 0.28);
+    border-radius: 999px;
+    padding: 1px 11px;
+    white-space: nowrap;
+}
+
+.scholar-stat strong {
+    color: var(--amber);
+}
+
 .profile-image {
     flex-shrink: 0;
 }

@@ -50,4 +50,20 @@ document.addEventListener('DOMContentLoaded', function () {
     var firstOl = yearPs[0].parentNode;
     firstOl.parentNode.insertBefore(nav, firstOl);
   }
+
+  /* 4. Google Scholar stats: refresh the hard-coded numbers from res/scholar.json
+        (written by the scheduled GitHub Action). Fails silently, keeping the
+        hard-coded values, when the file is missing or unreachable. */
+  var gsCit = document.getElementById('gs-citations');
+  var gsH = document.getElementById('gs-hindex');
+  if (gsCit || gsH) {
+    fetch('res/scholar.json', { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d) return;
+        if (gsCit && d.citations) gsCit.textContent = Number(d.citations).toLocaleString('en-US');
+        if (gsH && d.hindex) gsH.textContent = d.hindex;
+      })
+      .catch(function () {});
+  }
 });

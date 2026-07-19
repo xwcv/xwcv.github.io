@@ -672,6 +672,10 @@ sup, sub {
         gap: 20px;
     }
 
+    .scholar-stats {
+        justify-content: center;
+    }
+
     .profile-text h1 {
         font-size: 1.6rem;
     }

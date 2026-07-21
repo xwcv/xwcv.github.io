@@ -53,7 +53,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* 4. Google Scholar stats: refresh the hard-coded numbers from res/scholar.json
         (written by the scheduled GitHub Action). Fails silently, keeping the
-        hard-coded values, when the file is missing or unreachable. */
+        hard-coded values, when the file is missing or unreachable.
+        d.papers maps each paper's citation_for_view cluster id to its citation
+        count, so every "N+ citations" badge linking to a citation page gets
+        refreshed too (rounded down to the nearest 100, matching the badges). */
   var gsCit = document.getElementById('gs-citations');
   var gsH = document.getElementById('gs-hindex');
   if (gsCit || gsH) {
@@ -63,6 +66,15 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!d) return;
         if (gsCit && d.citations) gsCit.textContent = Number(d.citations).toLocaleString('en-US');
         if (gsH && d.hindex) gsH.textContent = d.hindex;
+        if (d.papers) {
+          document.querySelectorAll('a[href*="citation_for_view="]').forEach(function (a) {
+            var m = /citation_for_view=[^&:]+:([\w-]+)/.exec(a.href);
+            var n = m && d.papers[m[1]];
+            if (n) {
+              a.textContent = (Math.floor(n / 100) * 100).toLocaleString('en-US') + '+ citations';
+            }
+          });
+        }
       })
       .catch(function () {});
   }

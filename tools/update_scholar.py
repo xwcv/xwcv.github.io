@@ -1,71 +1,114 @@
 #!/usr/bin/env python3
-"""Fetch citation stats from a public Google Scholar profile and update res/scholar.json.
+"""Fetch citation stats via SerpAPI's Google Scholar Author endpoint and
+update res/scholar.json.
 
 Fetches both the profile-level stats (total citations, h-index) and the
 per-publication citation counts, keyed by each paper's cluster id — the id in
 the "citation_for_view" link that every "N+ citations" badge on the site uses,
 so res/site.js can refresh those badges from the same JSON file.
 
-Google Scholar offers no official API, so this scrapes the public profile pages.
-The fetch can be blocked (HTTP 429 / CAPTCHA), especially from CI machines —
-in that case the existing JSON is left untouched and the script exits 0.
+Direct scraping of Google Scholar is blocked (HTTP 403) from CI machines, so
+this goes through SerpAPI (https://serpapi.com). The API key is read from the
+SERPAPI_API_KEY environment variable (stored as a GitHub Actions secret).
+
+Note on quota: SerpAPI's free plan allows 100 searches/month. The profile
+stats come with the first page of articles; the remaining article pages cost
+one request per 20 papers (~15 extra requests for ~300 papers), so the
+workflow runs weekly to stay within the free quota.
+
+On any failure the existing JSON is left untouched and the script exits 1 so
+the workflow run is visibly marked as failed.
 """
 import datetime
 import json
 import os
-import re
+import sys
+import urllib.parse
 import urllib.request
 
 USER_ID = "qNCTLV0AAAAJ"
-URL = "https://scholar.google.com/citations?hl=en&user=" + USER_ID
-LIST_URL = URL + "&view_op=list_works&pagesize=100&cstart=%d"
+API_URL = "https://serpapi.com/search.json"
+PAGE_SIZE = 20  # SerpAPI returns 20 articles per page for author profiles
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "res", "scholar.json")
 
-UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
+API_KEY = os.environ.get("SERPAPI_API_KEY", "")
 
 
-def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
+def fetch(params):
+    params = dict(params)
+    params.update({
+        "engine": "google_scholar_author",
+        "author_id": USER_ID,
+        "hl": "en",
+        "api_key": API_KEY,
+    })
+    url = API_URL + "?" + urllib.parse.urlencode(params)
+    req = urllib.request.Request(url, headers={"User-Agent": "curl/8"})
     with urllib.request.urlopen(req, timeout=30) as resp:
-        return resp.read().decode("utf-8", "ignore")
+        data = json.loads(resp.read().decode("utf-8", "ignore"))
+    if "error" in data:
+        raise RuntimeError("SerpAPI error: %s" % data["error"])
+    return data
 
 
-def fetch_papers():
-    """Return {cluster_id: citation_count} from the publication list pages."""
+def parse_stats(data):
+    """Extract (citations_all, h_index_all) from the cited_by table.
+
+    The table rows are Citations / h-index / i10-index in document order;
+    row keys are localized, so match positionally but defensively.
+    """
+    table = data.get("cited_by", {}).get("table", [])
+    if len(table) < 2:
+        raise RuntimeError("cited_by table missing or too short")
+
+    def row_all(row):
+        for cell in row.values():
+            if isinstance(cell, dict) and "all" in cell:
+                return int(cell["all"])
+        raise RuntimeError("could not find 'all' value in cited_by row")
+
+    return row_all(table[0]), row_all(table[1])
+
+
+def parse_articles(data):
+    """Return {cluster_id: citation_count} from one page of articles."""
     papers = {}
-    cstart = 0
-    while True:
-        html = fetch(LIST_URL % cstart)
-        # One title link and one citation-count cell per row, in the same order.
-        clusters = re.findall(
-            r'<a href="[^"]*citation_for_view=' + USER_ID + r':([\w-]+)[^"]*" class="gsc_a_at"',
-            html)
-        counts = re.findall(r'<a [^>]*class="gsc_a_ac[^"]*"[^>]*>(\d*)<', html)
-        if not clusters or len(clusters) != len(counts):
+    for art in data.get("articles", []):
+        cid = art.get("citation_id", "")
+        if ":" not in cid:
+            continue
+        cluster = cid.split(":", 1)[1]
+        papers[cluster] = int(art.get("cited_by", {}).get("value", 0))
+    return papers
+
+
+def fetch_all_papers(first_page):
+    """Paginate through the article list; first_page is already fetched."""
+    papers = parse_articles(first_page)
+    cstart = len(papers)
+    while cstart and cstart % PAGE_SIZE == 0:
+        page = fetch({"cstart": cstart})
+        chunk = parse_articles(page)
+        if not chunk:
             break
-        for c, n in zip(clusters, counts):
-            papers[c] = int(n) if n else 0
-        if len(clusters) < 100:
+        papers.update(chunk)
+        if len(chunk) < PAGE_SIZE:
             break
-        cstart += 100
+        cstart += len(chunk)
     return papers
 
 
 def main():
+    if not API_KEY:
+        print("SERPAPI_API_KEY is not set")
+        sys.exit(1)
+
     try:
-        html = fetch(URL)
+        first_page = fetch({})
+        citations, hindex = parse_stats(first_page)
     except Exception as e:
         print("fetch failed, keeping existing data: %s" % e)
-        return
-
-    # Profile stats table: rows are Citations / h-index / i10-index,
-    # each with "all" and "since 20xx" cells, in document order.
-    vals = re.findall(r'gsc_rsb_std">(\d+)<', html)
-    if len(vals) < 3:
-        print("could not parse stats table, keeping existing data")
-        return
-    citations, hindex = int(vals[0]), int(vals[2])
+        sys.exit(1)
 
     old = {}
     if os.path.exists(OUT):
@@ -75,17 +118,19 @@ def main():
         except Exception:
             pass
 
-    # Sanity check: stats should never drop; a smaller number means a bad fetch.
-    if citations < int(old.get("citations", 0)) or hindex < int(old.get("hindex", 0)):
+    # Sanity check: citations should never drop; h-index may legitimately
+    # fluctuate by 1 (Scholar merges/recounts), so only flag a larger drop —
+    # a much smaller number means a bad fetch.
+    if (citations < int(old.get("citations", 0))
+            or hindex < int(old.get("hindex", 0)) - 1):
         print("parsed values (%d, %d) lower than existing, skipping" % (citations, hindex))
-        return
+        sys.exit(1)
 
-    # Per-paper counts are best-effort: keep the old ones if the list pages
-    # could not be fetched or parsed.
+    # Per-paper counts are best-effort: keep the old ones if pagination fails.
     try:
-        papers = fetch_papers()
+        papers = fetch_all_papers(first_page)
     except Exception as e:
-        print("paper list fetch failed, keeping existing: %s" % e)
+        print("paper list pagination failed, keeping existing: %s" % e)
         papers = {}
     if not papers:
         papers = old.get("papers", {})
@@ -104,7 +149,7 @@ def main():
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
         f.write("\n")
-    print("updated: %s" % json.dumps(data))
+    print("updated: citations=%d h-index=%d papers=%d" % (citations, hindex, len(papers)))
 
 
 if __name__ == "__main__":

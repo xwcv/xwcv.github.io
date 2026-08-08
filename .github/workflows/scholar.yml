@@ -2,8 +2,8 @@ name: Update Google Scholar stats
 
 on:
   schedule:
-    # 03:17 UTC, every Monday and Thursday
-    - cron: '17 3 * * 1,4'
+    # 03:17 UTC, every Monday (weekly to stay within SerpAPI free quota)
+    - cron: '17 3 * * 1'
   workflow_dispatch:
 
 permissions:
@@ -16,6 +16,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Fetch stats and update res/scholar.json
+        env:
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
         run: python3 tools/update_scholar.py
 
       - name: Commit and push if changed

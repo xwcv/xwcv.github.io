@@ -7,14 +7,14 @@ per-publication citation counts, keyed by each paper's cluster id — the id in
 the "citation_for_view" link that every "N+ citations" badge on the site uses,
 so res/site.js can refresh those badges from the same JSON file.
 
+A single request is enough: the Scholar profile's article list is sorted by
+citation count, and every paper with a badge on the site sits on the first
+page (top 20), right next to the profile stats.
+
 Direct scraping of Google Scholar is blocked (HTTP 403) from CI machines, so
 this goes through SerpAPI (https://serpapi.com). The API key is read from the
 SERPAPI_API_KEY environment variable (stored as a GitHub Actions secret).
-
-Note on quota: SerpAPI's free plan allows 100 searches/month. The profile
-stats come with the first page of articles; the remaining article pages cost
-one request per 20 papers (~15 extra requests for ~300 papers), so the
-workflow runs weekly to stay within the free quota.
+One request per run costs 1 quota unit (free plan: 100/month).
 
 On any failure the existing JSON is left untouched and the script exits 1 so
 the workflow run is visibly marked as failed.
@@ -28,7 +28,6 @@ import urllib.request
 
 USER_ID = "qNCTLV0AAAAJ"
 API_URL = "https://serpapi.com/search.json"
-PAGE_SIZE = 20  # SerpAPI returns 20 articles per page for author profiles
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "res", "scholar.json")
 
 API_KEY = os.environ.get("SERPAPI_API_KEY", "")
@@ -71,7 +70,7 @@ def parse_stats(data):
 
 
 def parse_articles(data):
-    """Return {cluster_id: citation_count} from one page of articles."""
+    """Return {cluster_id: citation_count} from the page of articles."""
     papers = {}
     for art in data.get("articles", []):
         cid = art.get("citation_id", "")
@@ -82,30 +81,15 @@ def parse_articles(data):
     return papers
 
 
-def fetch_all_papers(first_page):
-    """Paginate through the article list; first_page is already fetched."""
-    papers = parse_articles(first_page)
-    cstart = len(papers)
-    while cstart and cstart % PAGE_SIZE == 0:
-        page = fetch({"cstart": cstart})
-        chunk = parse_articles(page)
-        if not chunk:
-            break
-        papers.update(chunk)
-        if len(chunk) < PAGE_SIZE:
-            break
-        cstart += len(chunk)
-    return papers
-
-
 def main():
     if not API_KEY:
         print("SERPAPI_API_KEY is not set")
         sys.exit(1)
 
     try:
-        first_page = fetch({})
-        citations, hindex = parse_stats(first_page)
+        page = fetch({})
+        citations, hindex = parse_stats(page)
+        fresh = parse_articles(page)
     except Exception as e:
         print("fetch failed, keeping existing data: %s" % e)
         sys.exit(1)
@@ -126,14 +110,10 @@ def main():
         print("parsed values (%d, %d) lower than existing, skipping" % (citations, hindex))
         sys.exit(1)
 
-    # Per-paper counts are best-effort: keep the old ones if pagination fails.
-    try:
-        papers = fetch_all_papers(first_page)
-    except Exception as e:
-        print("paper list pagination failed, keeping existing: %s" % e)
-        papers = {}
-    if not papers:
-        papers = old.get("papers", {})
+    # Merge the fresh top-20 counts into the existing per-paper dict, so the
+    # badge papers get refreshed while older entries for other papers stay.
+    papers = dict(old.get("papers", {}))
+    papers.update(fresh)
 
     if (citations == old.get("citations") and hindex == old.get("hindex")
             and papers == old.get("papers", {})):

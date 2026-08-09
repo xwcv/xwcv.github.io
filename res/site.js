@@ -78,4 +78,29 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .catch(function () {});
   }
+
+  /* 5. GitHub star counts: extend each code chip on pubs.htm into a
+        GitHub-style "code | ★ N" button, using res/stars.json (written
+        weekly by the scheduled GitHub Action). Fails silently when the
+        file is missing or a repo has no count. */
+  fetch('res/stars.json', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || !d.stars) return;
+      var fmt = function (n) {
+        if (n < 1000) return String(n);
+        var k = (n / 1000).toFixed(1);
+        return (k.slice(-2) === '.0' ? k.slice(0, -2) : k) + 'k';
+      };
+      document.querySelectorAll('a[href^="https://github.com/"]').forEach(function (a) {
+        var m = /^https:\/\/github\.com\/([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/.exec(a.href);
+        var n = m && d.stars[m[1]];
+        if (n == null || !a.classList.contains('res-chip')) return;
+        var s = document.createElement('span');
+        s.className = 'chip-stars';
+        s.textContent = '★ ' + fmt(n);
+        a.appendChild(s);
+      });
+    })
+    .catch(function () {});
 });

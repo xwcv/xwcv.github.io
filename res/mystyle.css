@@ -386,6 +386,21 @@ a.cite-badge:hover {
     border-color: var(--amber);
 }
 
+/* GitHub star count inside a code chip (added by site.js):
+   turns the chip into a GitHub-style "code | ★ N" button */
+a.res-chip .chip-stars {
+    margin-left: 6px;
+    padding-left: 7px;
+    border-left: 1px solid rgba(37, 99, 235, 0.25);
+    color: var(--amber);
+    transition: color 0.2s, border-color 0.2s;
+}
+
+a.res-chip:hover .chip-stars {
+    color: var(--white);
+    border-left-color: rgba(255, 255, 255, 0.45);
+}
+
 a.res-chip {
     display: inline-block;
     font-family: var(--font-sans);
@@ -794,6 +809,15 @@ sup, sub {
 
 [data-theme="dark"] a.res-chip {
     border-color: rgba(126, 164, 240, 0.3);
+}
+
+[data-theme="dark"] a.res-chip .chip-stars {
+    border-left-color: rgba(126, 164, 240, 0.3);
+}
+
+[data-theme="dark"] a.res-chip:hover .chip-stars {
+    color: #0e1319;
+    border-left-color: rgba(14, 19, 25, 0.4);
 }
 
 [data-theme="dark"] a.res-chip:hover {

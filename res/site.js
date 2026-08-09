@@ -84,12 +84,42 @@ document.addEventListener('DOMContentLoaded', function () {
     empty.textContent = 'No matching papers.';
     empty.style.display = 'none';
     firstOl.parentNode.insertBefore(empty, firstOl);
+    // wrap every occurrence of q in <mark> inside the entry's text nodes
+    var highlight = function (li, q) {
+      Array.prototype.forEach.call(li.querySelectorAll('mark'), function (m) {
+        m.replaceWith(m.textContent);
+      });
+      li.normalize();
+      if (!q) return;
+      var walker = document.createTreeWalker(li, NodeFilter.SHOW_TEXT);
+      var nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(function (node) {
+        var text = node.nodeValue;
+        var lower = text.toLowerCase();
+        var idx = lower.indexOf(q);
+        if (idx === -1) return;
+        var frag = document.createDocumentFragment();
+        var pos = 0;
+        while (idx !== -1) {
+          frag.appendChild(document.createTextNode(text.slice(pos, idx)));
+          var mark = document.createElement('mark');
+          mark.textContent = text.slice(idx, idx + q.length);
+          frag.appendChild(mark);
+          pos = idx + q.length;
+          idx = lower.indexOf(q, pos);
+        }
+        frag.appendChild(document.createTextNode(text.slice(pos)));
+        node.parentNode.replaceChild(frag, node);
+      });
+    };
     input.addEventListener('input', function () {
       var q = input.value.trim().toLowerCase();
       var shown = 0;
       items.forEach(function (li) {
         var hit = !q || li.textContent.toLowerCase().indexOf(q) !== -1;
         li.style.display = hit ? '' : 'none';
+        highlight(li, hit ? q : '');
         if (hit) shown++;
       });
       yearPs.forEach(function (p) {

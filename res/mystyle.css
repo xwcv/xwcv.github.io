@@ -495,6 +495,14 @@ a.res-chip:hover {
     margin: 18px 0;
 }
 
+/* matched keywords while filtering the publication list */
+ol li mark {
+    background: var(--amber-soft);
+    color: var(--amber);
+    border-radius: 3px;
+    padding: 0 1px;
+}
+
 /* ===== Year quick navigation (added by site.js) ===== */
 .year-nav {
     position: sticky;

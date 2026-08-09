@@ -745,6 +745,13 @@ ol li mark {
     border-color: var(--primary);
 }
 
+/* scrollspy: the year currently in view (class added by site.js) */
+.year-nav a.active {
+    color: var(--white);
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
 /* ===== Links ===== */
 a {
     color: var(--accent);
@@ -895,6 +902,11 @@ li sup {
     background: #f0f0f0;
     box-shadow: 0 0 0 3px var(--white), 0 0 0 4px var(--border);
     user-select: none;
+    transition: transform 0.25s ease;
+}
+
+.member-card:hover .member-photo {
+    transform: scale(1.06);
 }
 
 .member-name {
@@ -1131,6 +1143,10 @@ sup, sub {
 }
 
 [data-theme="dark"] .year-nav a:hover {
+    color: #0e1319;
+}
+
+[data-theme="dark"] .year-nav a.active {
     color: #0e1319;
 }
 

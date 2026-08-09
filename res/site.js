@@ -55,6 +55,23 @@ document.addEventListener('DOMContentLoaded', function () {
     var firstOl = yearPs[0].parentNode;
     firstOl.parentNode.insertBefore(nav, firstOl);
 
+    // scrollspy: highlight the pill of the year currently in view
+    if ('IntersectionObserver' in window) {
+      var navLinks = {};
+      Array.prototype.forEach.call(nav.querySelectorAll('a'), function (a) {
+        navLinks[a.getAttribute('href').slice(1)] = a;
+      });
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          for (var id in navLinks) navLinks[id].classList.remove('active');
+          var link = navLinks[en.target.id];
+          if (link) link.classList.add('active');
+        });
+      }, { rootMargin: '-80px 0px -70% 0px' });
+      yearPs.forEach(function (p) { spy.observe(p); });
+    }
+
     /* 3b. Paper search: instant keyword filter over every paper entry
            (matches title / authors / venue text), with a match counter.
            While searching, the year headers (and their <br>) and any
@@ -164,8 +181,25 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (d) {
         if (!d) return;
-        if (gsCit && d.citations) gsCit.textContent = Number(d.citations).toLocaleString('en-US');
-        if (gsH && d.hindex) gsH.textContent = d.hindex;
+        // count-up animation for the two headline numbers
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var countUp = function (el, target) {
+          if (reduce || !('requestAnimationFrame' in window)) {
+            el.textContent = Number(target).toLocaleString('en-US');
+            return;
+          }
+          var t0 = null, dur = 900;
+          var tick = function (t) {
+            if (!t0) t0 = t;
+            var p = Math.min((t - t0) / dur, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(target * eased).toLocaleString('en-US');
+            if (p < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        };
+        if (gsCit && d.citations) countUp(gsCit, d.citations);
+        if (gsH && d.hindex) countUp(gsH, d.hindex);
         if (d.years) {
           // yearly-citation bar chart next to the totals
           var stats = document.querySelector('.scholar-stats');

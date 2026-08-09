@@ -321,6 +321,42 @@ body {
     font-size: 13px;
 }
 
+/* footnote legend under the profile chips on the publications page */
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 12.5px;
+    color: var(--muted);
+}
+
+.legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.legend sup {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    font-size: 10.5px;
+    font-weight: 700;
+    border-radius: 5px;
+    color: var(--primary);
+    background: var(--accent-soft);
+}
+
+/* matching tint for the in-text author markers */
+ol sup {
+    color: var(--primary);
+    font-weight: 600;
+}
+
 /* Yearly-citations bar chart (added by site.js from res/scholar.json) */
 .gs-graph {
     display: inline-flex;

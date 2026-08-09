@@ -309,6 +309,13 @@ body {
 .v-aaai { --vc: #dc2626; }
 .v-journal { --vc: #475569; }
 
+/* top journals (Nature/Cell portfolio, TPAMI, IJCV): gold with a hairline ring */
+.v-top {
+    --vc: #b45309;
+    box-shadow: inset 0 0 0 1px rgba(180, 83, 9, 0.35);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--vc) 35%, transparent);
+}
+
 /* Reveal-on-scroll animation (class added by site.js) */
 main section.reveal {
     opacity: 0;
@@ -1023,6 +1030,12 @@ sup, sub {
 [data-theme="dark"] .v-iclr { --vc: #f472b6; }
 [data-theme="dark"] .v-aaai { --vc: #f87171; }
 [data-theme="dark"] .v-journal { --vc: #94a3b8; }
+
+[data-theme="dark"] .v-top {
+    --vc: #e5a558;
+    box-shadow: inset 0 0 0 1px rgba(229, 165, 88, 0.4);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--vc) 40%, transparent);
+}
 
 /* ===== Theme toggle button ===== */
 .theme-toggle {

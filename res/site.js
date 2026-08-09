@@ -238,7 +238,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if (papersSec) {
     var VENUES = /\b(IEEE TPAMI|IEEE TMI|IJCV|TPAMI|CVPR|ICCV|ECCV|NeurIPS|ICML|ICLR|AAAI)(\s+\d{4})?/g;
     var vclass = function (v) {
-      return /TPAMI|TMI|IJCV/.test(v) ? 'v-journal' : 'v-' + v.toLowerCase();
+      if (/TPAMI|IJCV/.test(v)) return 'v-top';
+      return /TMI/.test(v) ? 'v-journal' : 'v-' + v.toLowerCase();
     };
     Array.prototype.forEach.call(papersSec.querySelectorAll('li'), function (li) {
       var walker = document.createTreeWalker(li, NodeFilter.SHOW_TEXT);
@@ -274,18 +275,26 @@ document.addEventListener('DOMContentLoaded', function () {
     'NeurIPS': 'v-neurips', 'NIPS': 'v-neurips',
     'ICML': 'v-icml',
     'ICLR': 'v-iclr',
-    'AAAI': 'v-aaai'
+    'AAAI': 'v-aaai',
+    // top journals (Nature/Cell portfolio, TPAMI, IJCV) get the gold tag
+    'IEEE TPAMI': 'v-top', 'IJCV': 'v-top',
+    'Nat. Med.': 'v-top', 'Nat. Commun.': 'v-top', 'NPJ Digit. Med.': 'v-top',
+    'Cell Rep. Med.': 'v-top', 'Med': 'v-top'
   };
-  ['IEEE TPAMI', 'IJCV', 'IEEE TIP', 'IEEE TMI', 'IEEE TCSVT', 'IEEE TNNLS',
+  ['IEEE TIP', 'IEEE TMI', 'IEEE TCSVT', 'IEEE TNNLS',
    'TITS', 'THMS', 'IEEE TASE', 'RA-L', 'SCIS', 'PRL', 'JCST', 'J Intell Manuf',
    'InfSci', 'IMAVIS', 'CVIU', 'CVMJ', 'APL', 'ACM MM', 'ICIP', 'ICPR', 'PRCV',
    'ACCV', 'WACV', 'ECAI', 'CoRL', 'CCPR', '3DV'
   ].forEach(function (v) { VMAP[v] = 'v-journal'; });
   Array.prototype.forEach.call(document.querySelectorAll('ol li strong'), function (st) {
     var cls = VMAP[st.textContent.trim()];
-    var prev = st.previousSibling, next = st.nextSibling;
-    if (!cls || !prev || !next || prev.nodeType !== 3 || next.nodeType !== 3) return;
-    if (!/\(\s*$/.test(prev.nodeValue) || !/^\s*\)/.test(next.nodeValue)) return;
+    if (!cls) return;
+    if (cls !== 'v-top') {
+      // non-top venues must be wrapped in literal parentheses: (CVPR)
+      var prev = st.previousSibling, next = st.nextSibling;
+      if (!prev || !next || prev.nodeType !== 3 || next.nodeType !== 3) return;
+      if (!/\(\s*$/.test(prev.nodeValue) || !/^\s*\)/.test(next.nodeValue)) return;
+    }
     st.classList.add('venue-tag', cls);
   });
 

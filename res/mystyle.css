@@ -36,6 +36,12 @@ html {
     html {
         scroll-behavior: auto;
     }
+
+    main section.reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }
 
 body {
@@ -214,6 +220,105 @@ body {
 
 .scholar-stat strong {
     color: var(--amber);
+}
+
+/* Icon buttons row in the profile contact block */
+.contact-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px !important;
+}
+
+.contact-icons a {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    color: var(--text-light);
+    background: var(--white);
+    font-family: var(--font-sans);
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    box-shadow: var(--shadow-sm);
+    transition: color 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-icons a:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+}
+
+.contact-icons svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.contact-icons svg.fill {
+    fill: currentColor;
+    stroke: none;
+}
+
+/* Yearly-citations bar chart (added by site.js from res/scholar.json) */
+.gs-graph {
+    display: inline-flex;
+    align-items: flex-end;
+}
+
+.gs-graph rect {
+    fill: var(--accent);
+    opacity: 0.75;
+}
+
+.gs-graph rect:last-of-type {
+    fill: var(--amber);
+    opacity: 1;
+}
+
+/* Venue tags on the influential-papers list (added by site.js) */
+.venue-tag {
+    font-family: var(--font-sans);
+    font-size: 0.72em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    border-radius: 5px;
+    padding: 0 6px;
+    color: var(--vc, #475569);
+    background: rgba(100, 116, 139, 0.10);
+    background: color-mix(in srgb, var(--vc, #475569) 12%, transparent);
+}
+
+.v-cvpr { --vc: #2563eb; }
+.v-iccv { --vc: #0d9488; }
+.v-eccv { --vc: #7c3aed; }
+.v-neurips { --vc: #16a34a; }
+.v-icml { --vc: #ea580c; }
+.v-iclr { --vc: #db2777; }
+.v-aaai { --vc: #dc2626; }
+.v-journal { --vc: #475569; }
+
+/* Reveal-on-scroll animation (class added by site.js) */
+main section.reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+main section.reveal.in {
+    opacity: 1;
+    transform: none;
 }
 
 .profile-image {
@@ -771,6 +876,10 @@ sup, sub {
         justify-content: center;
     }
 
+    .contact-icons {
+        justify-content: center;
+    }
+
     .profile-text h1 {
         font-size: 1.6rem;
     }
@@ -905,6 +1014,15 @@ sup, sub {
 [data-theme="dark"] a.res-chip:hover {
     color: #0e1319;
 }
+
+[data-theme="dark"] .v-cvpr { --vc: #7ea4f0; }
+[data-theme="dark"] .v-iccv { --vc: #2dd4bf; }
+[data-theme="dark"] .v-eccv { --vc: #a78bfa; }
+[data-theme="dark"] .v-neurips { --vc: #4ade80; }
+[data-theme="dark"] .v-icml { --vc: #fb923c; }
+[data-theme="dark"] .v-iclr { --vc: #f472b6; }
+[data-theme="dark"] .v-aaai { --vc: #f87171; }
+[data-theme="dark"] .v-journal { --vc: #94a3b8; }
 
 /* ===== Theme toggle button ===== */
 .theme-toggle {

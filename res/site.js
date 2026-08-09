@@ -166,6 +166,23 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!d) return;
         if (gsCit && d.citations) gsCit.textContent = Number(d.citations).toLocaleString('en-US');
         if (gsH && d.hindex) gsH.textContent = d.hindex;
+        if (d.years) {
+          // yearly-citation bar chart next to the totals
+          var stats = document.querySelector('.scholar-stats');
+          if (stats && !stats.querySelector('.gs-graph')) {
+            var years = Object.keys(d.years).sort();
+            var max = Math.max.apply(null, years.map(function (y) { return d.years[y]; }));
+            var H = 30;
+            var svg = '<svg class="gs-graph" width="' + (years.length * 8 - 2) + '" height="' + H
+              + '" role="img" aria-label="Citations per year">';
+            years.forEach(function (y, i) {
+              var h = Math.max(2, Math.round(d.years[y] / max * (H - 4)));
+              svg += '<rect x="' + i * 8 + '" y="' + (H - h) + '" width="6" height="' + h + '" rx="1.5">'
+                + '<title>' + y + ': ' + Number(d.years[y]).toLocaleString('en-US') + ' citations</title></rect>';
+            });
+            stats.insertAdjacentHTML('beforeend', svg + '</svg>');
+          }
+        }
         if (d.papers) {
           document.querySelectorAll('a[href*="citation_for_view="]').forEach(function (a) {
             var m = /citation_for_view=[^&:]+:([\w-]+)/.exec(a.href);
@@ -211,4 +228,58 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     })
     .catch(function () {});
+
+  /* 6. Venue tags on the influential-papers list: wrap "CVPR 2024"-style
+        venue mentions in colored tags. Text inside links is left alone. */
+  var papersSec = document.querySelector('[aria-labelledby="papers-heading"]');
+  if (papersSec) {
+    var VENUES = /\b(IEEE TPAMI|IEEE TMI|IJCV|TPAMI|CVPR|ICCV|ECCV|NeurIPS|ICML|ICLR|AAAI)(\s+\d{4})?/g;
+    var vclass = function (v) {
+      return /TPAMI|TMI|IJCV/.test(v) ? 'v-journal' : 'v-' + v.toLowerCase();
+    };
+    Array.prototype.forEach.call(papersSec.querySelectorAll('li'), function (li) {
+      var walker = document.createTreeWalker(li, NodeFilter.SHOW_TEXT);
+      var nodes = [];
+      while (walker.nextNode()) {
+        var n = walker.currentNode;
+        VENUES.lastIndex = 0;
+        if (!n.parentNode.closest('a') && VENUES.test(n.nodeValue)) nodes.push(n);
+      }
+      nodes.forEach(function (node) {
+        var text = node.nodeValue;
+        var frag = document.createDocumentFragment();
+        var pos = 0, m;
+        VENUES.lastIndex = 0;
+        while ((m = VENUES.exec(text))) {
+          frag.appendChild(document.createTextNode(text.slice(pos, m.index)));
+          var s = document.createElement('span');
+          s.className = 'venue-tag ' + vclass(m[1]);
+          s.textContent = m[0];
+          frag.appendChild(s);
+          pos = m.index + m[0].length;
+        }
+        frag.appendChild(document.createTextNode(text.slice(pos)));
+        node.parentNode.replaceChild(frag, node);
+      });
+    });
+  }
+
+  /* 7. Subtle reveal-on-scroll for page sections. Skipped entirely when the
+        user prefers reduced motion, and never applied without JS support. */
+  if ('IntersectionObserver' in window
+      && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    Array.prototype.forEach.call(document.querySelectorAll('main section'), function (sec, i) {
+      sec.classList.add('reveal');
+      sec.style.transitionDelay = Math.min(i * 60, 240) + 'ms';
+      io.observe(sec);
+    });
+  }
 });

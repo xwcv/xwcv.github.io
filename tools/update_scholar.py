@@ -69,6 +69,12 @@ def parse_stats(data):
     return row_all(table[0]), row_all(table[1])
 
 
+def parse_graph(data):
+    """Extract {year: citations} from the per-year citation graph."""
+    graph = data.get("cited_by", {}).get("graph", [])
+    return {str(g["year"]): int(g["citations"]) for g in graph}
+
+
 def parse_articles(data):
     """Return {cluster_id: citation_count} from the page of articles."""
     papers = {}
@@ -90,6 +96,7 @@ def main():
         page = fetch({})
         citations, hindex = parse_stats(page)
         fresh = parse_articles(page)
+        years = parse_graph(page)
     except Exception as e:
         print("fetch failed, keeping existing data: %s" % e)
         sys.exit(1)
@@ -116,7 +123,7 @@ def main():
     papers.update(fresh)
 
     if (citations == old.get("citations") and hindex == old.get("hindex")
-            and papers == old.get("papers", {})):
+            and papers == old.get("papers", {}) and years == old.get("years", {})):
         print("no change: citations=%d h-index=%d" % (citations, hindex))
         return
 
@@ -126,6 +133,8 @@ def main():
         "updated": datetime.date.today().isoformat(),
         "papers": papers,
     }
+    if years:
+        data["years"] = years
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
         f.write("\n")

@@ -21,14 +21,17 @@ jobs:
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
         run: python3 tools/update_scholar.py
 
+      - name: Sync badge numbers on the homepages
+        run: python3 tools/update_badges.py
+
       - name: Commit and push if changed
         run: |
-          if git diff --quiet res/scholar.json; then
+          if git diff --quiet res/scholar.json index.htm index_cn.htm; then
             echo "no change"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add res/scholar.json
+            git add res/scholar.json index.htm index_cn.htm
             git commit -m "Update Google Scholar stats"
             git push
           fi

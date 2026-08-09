@@ -21,6 +21,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 tools/update_stars.py
 
+      - name: Sync badge numbers on the homepages
+        run: python3 tools/update_badges.py
+
       - name: Commit and push if changed
         run: |
           if git diff --quiet res/stars.json; then

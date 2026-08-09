@@ -229,8 +229,11 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .catch(function () {});
 
-  /* 6. Venue tags on the influential-papers list: wrap "CVPR 2024"-style
-        venue mentions in colored tags. Text inside links is left alone. */
+  /* 6. Venue tags. Homepage influential-papers list: wrap "CVPR 2024"-style
+        venue mentions in colored tags (text inside links is left alone).
+        Publications list: parenthesized venue abbreviations like
+        "(<strong>CVPR</strong>)" get the same treatment — only whitelisted
+        abbreviations are touched, everything else stays as it is. */
   var papersSec = document.querySelector('[aria-labelledby="papers-heading"]');
   if (papersSec) {
     var VENUES = /\b(IEEE TPAMI|IEEE TMI|IJCV|TPAMI|CVPR|ICCV|ECCV|NeurIPS|ICML|ICLR|AAAI)(\s+\d{4})?/g;
@@ -263,6 +266,28 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  var VMAP = {
+    'CVPR': 'v-cvpr',
+    'ICCV': 'v-iccv', 'ICCVW': 'v-iccv',
+    'ECCV': 'v-eccv',
+    'NeurIPS': 'v-neurips', 'NIPS': 'v-neurips',
+    'ICML': 'v-icml',
+    'ICLR': 'v-iclr',
+    'AAAI': 'v-aaai'
+  };
+  ['IEEE TPAMI', 'IJCV', 'IEEE TIP', 'IEEE TMI', 'IEEE TCSVT', 'IEEE TNNLS',
+   'TITS', 'THMS', 'IEEE TASE', 'RA-L', 'SCIS', 'PRL', 'JCST', 'J Intell Manuf',
+   'InfSci', 'IMAVIS', 'CVIU', 'CVMJ', 'APL', 'ACM MM', 'ICIP', 'ICPR', 'PRCV',
+   'ACCV', 'WACV', 'ECAI', 'CoRL', 'CCPR', '3DV'
+  ].forEach(function (v) { VMAP[v] = 'v-journal'; });
+  Array.prototype.forEach.call(document.querySelectorAll('ol li strong'), function (st) {
+    var cls = VMAP[st.textContent.trim()];
+    var prev = st.previousSibling, next = st.nextSibling;
+    if (!cls || !prev || !next || prev.nodeType !== 3 || next.nodeType !== 3) return;
+    if (!/\(\s*$/.test(prev.nodeValue) || !/^\s*\)/.test(next.nodeValue)) return;
+    st.classList.add('venue-tag', cls);
+  });
 
   /* 7. Subtle reveal-on-scroll for page sections. Skipped entirely when the
         user prefers reduced motion, and never applied without JS support. */

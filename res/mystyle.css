@@ -695,39 +695,6 @@ a.res-chip:hover {
     white-space: nowrap;
 }
 
-/* quick venue filter chips (added by site.js) */
-.filter-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin: 8px 0 4px;
-}
-
-.filter-chip {
-    font-family: var(--font-sans);
-    font-size: 12px;
-    font-weight: 600;
-    padding: 2px 11px;
-    border-radius: 999px;
-    cursor: pointer;
-    color: var(--vc, #475569);
-    background: rgba(100, 116, 139, 0.10);
-    background: color-mix(in srgb, var(--vc, #475569) 10%, transparent);
-    border: 1px solid rgba(100, 116, 139, 0.25);
-    border: 1px solid color-mix(in srgb, var(--vc, #475569) 30%, transparent);
-    transition: color 0.2s, background 0.2s, border-color 0.2s;
-}
-
-.filter-chip:hover {
-    border-color: var(--vc, #475569);
-}
-
-.filter-chip.active {
-    color: #ffffff;
-    background: var(--vc, #475569);
-    border-color: var(--vc, #475569);
-}
-
 .pubs-no-results {
     font-size: 0.9rem;
     color: var(--muted);
@@ -1183,10 +1150,6 @@ sup, sub {
     color: #0e1319;
 }
 
-[data-theme="dark"] .filter-chip.active {
-    color: #0e1319;
-}
-
 [data-theme="dark"] a.cite-badge,
 [data-theme="dark"] a.star-badge {
     border-color: rgba(229, 165, 88, 0.35);
@@ -1293,7 +1256,7 @@ sup, sub {
         background: white;
     }
 
-    .topnav, .bottombar, .year-nav, .back-to-top, .pubs-search, .filter-chips {
+    .topnav, .bottombar, .year-nav, .back-to-top, .pubs-search {
         display: none;
     }
 

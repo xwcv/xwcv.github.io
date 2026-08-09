@@ -13,10 +13,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /* 1. Citation badges: "4000+ citations" -> pill */
+  /* 1. Citation badges: "4000+ citations" -> pill; "3.9k stars" -> star pill
+        (the star glyph comes from CSS, the number is refreshed in step 5) */
   document.querySelectorAll('a').forEach(function (a) {
-    if (/^[\d,]+\+?\s*citations?$/i.test(a.textContent.trim())) {
+    var t = a.textContent.trim();
+    if (/^[\d,]+\+?\s*citations?$/i.test(t)) {
       a.classList.add('cite-badge');
+      a.innerHTML = a.innerHTML.replace(/^([\d,]+\+?)/, '<strong>$1</strong>');
+    } else if (/^[\d.,]+k?\s+stars?$/i.test(t)) {
+      a.classList.add('star-badge');
     }
   });
 
@@ -49,6 +54,71 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     var firstOl = yearPs[0].parentNode;
     firstOl.parentNode.insertBefore(nav, firstOl);
+
+    /* 3b. Paper search: instant keyword filter over every paper entry
+           (matches title / authors / venue text), with a match counter.
+           While searching, the year headers (and their <br>) and any
+           section left empty ("Other Conference Papers", ...) are hidden.
+           "/" focuses the box, Esc clears it. */
+    var items = Array.prototype.slice.call(document.querySelectorAll('ol li'));
+    // map each list to its section header, e.g. <br><p><b>Book Chapters</b></p><ol>
+    var lists = Array.prototype.map.call(document.querySelectorAll('ol'), function (ol) {
+      var prev = ol.previousElementSibling;
+      while (prev && prev.nodeName === 'BR') prev = prev.previousElementSibling;
+      return { ol: ol, header: prev && prev.nodeName === 'P' && prev.querySelector('b') ? prev : null };
+    });
+    var box = document.createElement('div');
+    box.className = 'pubs-search';
+    box.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>';
+    var input = document.createElement('input');
+    input.type = 'search';
+    input.placeholder = 'Search papers by title, author, venue ...  ( / )';
+    input.setAttribute('aria-label', 'Search papers');
+    var count = document.createElement('span');
+    count.className = 'pubs-search-count';
+    box.appendChild(input);
+    box.appendChild(count);
+    firstOl.parentNode.insertBefore(box, nav);
+    var empty = document.createElement('p');
+    empty.className = 'pubs-no-results';
+    empty.textContent = 'No matching papers.';
+    empty.style.display = 'none';
+    firstOl.parentNode.insertBefore(empty, firstOl);
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      items.forEach(function (li) {
+        var hit = !q || li.textContent.toLowerCase().indexOf(q) !== -1;
+        li.style.display = hit ? '' : 'none';
+        if (hit) shown++;
+      });
+      yearPs.forEach(function (p) {
+        var br = p.previousSibling;
+        p.style.display = q ? 'none' : '';
+        if (br && br.nodeName === 'BR') br.style.display = q ? 'none' : '';
+      });
+      lists.forEach(function (s) {
+        var any = Array.prototype.some.call(s.ol.querySelectorAll('li'), function (li) {
+          return li.style.display !== 'none';
+        });
+        var hide = q && !any;
+        if (s.header) s.header.style.display = hide ? 'none' : '';
+        if (s.ol !== firstOl) s.ol.style.display = hide ? 'none' : '';
+      });
+      empty.style.display = q && !shown ? '' : 'none';
+      count.textContent = q ? shown + ' / ' + items.length : '';
+    });
+    document.addEventListener('keydown', function (e) {
+      var tag = document.activeElement && document.activeElement.tagName;
+      if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') {
+        e.preventDefault();
+        input.focus();
+      } else if (e.key === 'Escape' && document.activeElement === input) {
+        input.value = '';
+        input.dispatchEvent(new Event('input'));
+        input.blur();
+      }
+    });
   }
 
   /* 4. Google Scholar stats: refresh the hard-coded numbers from res/scholar.json
@@ -71,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var m = /citation_for_view=[^&:]+:([\w-]+)/.exec(a.href);
             var n = m && d.papers[m[1]];
             if (n) {
-              a.textContent = (Math.floor(n / 100) * 100).toLocaleString('en-US') + '+ citations';
+              a.innerHTML = '<strong>' + (Math.floor(n / 100) * 100).toLocaleString('en-US') + '+</strong> citations';
             }
           });
         }
@@ -79,10 +149,11 @@ document.addEventListener('DOMContentLoaded', function () {
       .catch(function () {});
   }
 
-  /* 5. GitHub star counts: extend each code chip on pubs.htm into a
-        GitHub-style "code | ★ N" button, using res/stars.json (written
-        weekly by the scheduled GitHub Action). Fails silently when the
-        file is missing or a repo has no count. */
+  /* 5. GitHub star counts, using res/stars.json (written weekly by the
+        scheduled GitHub Action): each code chip on pubs.htm becomes a
+        GitHub-style "code | ★ N" button, and hard-coded "N stars" links
+        on the homepage get their number refreshed. Fails silently when
+        the file is missing or a repo has no count. */
   fetch('res/stars.json', { cache: 'no-store' })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (d) {
@@ -95,11 +166,18 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('a[href^="https://github.com/"]').forEach(function (a) {
         var m = /^https:\/\/github\.com\/([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/.exec(a.href);
         var n = m && d.stars[m[1]];
-        if (n == null || !a.classList.contains('res-chip')) return;
-        var s = document.createElement('span');
-        s.className = 'chip-stars';
-        s.textContent = '★ ' + fmt(n);
-        a.appendChild(s);
+        if (n == null) return;
+        if (a.classList.contains('res-chip')) {
+          var s = document.createElement('span');
+          s.className = 'chip-stars';
+          s.textContent = '★ ' + fmt(n);
+          s.title = n.toLocaleString('en-US') + ' GitHub stars';
+          a.appendChild(s);
+        } else if (/^\s*[\d.,]+k?\s+stars?\s*$/i.test(a.textContent)) {
+          // Homepage-style hard-coded "3.9k stars" links: refresh the number
+          var t = a.querySelector('strong') || a;
+          t.textContent = fmt(n) + ' stars';
+        }
       });
     })
     .catch(function () {});

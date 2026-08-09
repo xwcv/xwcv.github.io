@@ -365,7 +365,8 @@ ol > p[id^="year-"] {
 }
 
 /* ===== Citation badge & resource chips (added by site.js) ===== */
-a.cite-badge {
+a.cite-badge,
+a.star-badge {
     display: inline-block;
     font-family: var(--font-sans);
     font-size: 0.78em;
@@ -380,7 +381,21 @@ a.cite-badge {
     transition: color 0.2s, background 0.2s;
 }
 
-a.cite-badge:hover {
+a.star-badge::before {
+    content: "★ ";
+}
+
+a.cite-badge::before {
+    content: "❝ ";
+}
+
+a.cite-badge strong,
+a.star-badge strong {
+    font-weight: 700;
+}
+
+a.cite-badge:hover,
+a.star-badge:hover {
     color: var(--white);
     background: var(--amber);
     border-color: var(--amber);
@@ -421,6 +436,63 @@ a.res-chip:hover {
     color: var(--white);
     background: var(--accent);
     border-color: var(--accent);
+}
+
+/* ===== Paper search box (added by site.js) ===== */
+.pubs-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 14px 0 4px;
+}
+
+.pubs-search svg {
+    position: absolute;
+    left: 11px;
+    width: 15px;
+    height: 15px;
+    fill: none;
+    stroke: var(--muted);
+    stroke-width: 2;
+    stroke-linecap: round;
+    pointer-events: none;
+}
+
+.pubs-search input {
+    flex: 1;
+    max-width: 420px;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--text);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 7px 12px 7px 34px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.pubs-search input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.pubs-search input::placeholder {
+    color: var(--muted);
+}
+
+.pubs-search-count {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.pubs-no-results {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin: 18px 0;
 }
 
 /* ===== Year quick navigation (added by site.js) ===== */
@@ -799,11 +871,13 @@ sup, sub {
     color: #0e1319;
 }
 
-[data-theme="dark"] a.cite-badge {
+[data-theme="dark"] a.cite-badge,
+[data-theme="dark"] a.star-badge {
     border-color: rgba(229, 165, 88, 0.35);
 }
 
-[data-theme="dark"] a.cite-badge:hover {
+[data-theme="dark"] a.cite-badge:hover,
+[data-theme="dark"] a.star-badge:hover {
     color: #0e1319;
 }
 
@@ -905,7 +979,7 @@ sup, sub {
         padding: 0;
     }
 
-    a.cite-badge, a.res-chip {
+    a.cite-badge, a.star-badge, a.res-chip {
         border: none;
         padding: 0;
         color: var(--accent);

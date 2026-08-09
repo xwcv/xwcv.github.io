@@ -96,6 +96,30 @@ document.addEventListener('DOMContentLoaded', function () {
     box.appendChild(input);
     box.appendChild(count);
     firstOl.parentNode.insertBefore(box, nav);
+    // quick venue filters: toggle chips that drive the same search input
+    var VENUE_FILTERS = [
+      ['CVPR', 'v-cvpr'], ['ICCV', 'v-iccv'], ['ECCV', 'v-eccv'],
+      ['NeurIPS', 'v-neurips'], ['ICML', 'v-icml'], ['ICLR', 'v-iclr'],
+      ['AAAI', 'v-aaai'], ['TPAMI', 'v-top'], ['IJCV', 'v-top']
+    ];
+    var chipRow = document.createElement('div');
+    chipRow.className = 'filter-chips';
+    VENUE_FILTERS.forEach(function (vf) {
+      var chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'filter-chip ' + vf[1];
+      chip.textContent = vf[0];
+      chip.addEventListener('click', function () {
+        var on = !chip.classList.contains('active');
+        Array.prototype.forEach.call(chipRow.children, function (c) { c.classList.remove('active'); });
+        if (on) chip.classList.add('active');
+        input.value = on ? vf[0] : '';
+        input.dispatchEvent(new Event('input'));
+        input.focus();
+      });
+      chipRow.appendChild(chip);
+    });
+    box.parentNode.insertBefore(chipRow, box.nextSibling);
     var empty = document.createElement('p');
     empty.className = 'pubs-no-results';
     empty.textContent = 'No matching papers.';
@@ -154,6 +178,10 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       empty.style.display = q && !shown ? '' : 'none';
       count.textContent = q ? shown + ' / ' + items.length : '';
+      // keep the quick-filter chips in sync with manual typing / Esc
+      Array.prototype.forEach.call(chipRow.children, function (c) {
+        c.classList.toggle('active', !!q && c.textContent.toLowerCase() === q);
+      });
     });
     document.addEventListener('keydown', function (e) {
       var tag = document.activeElement && document.activeElement.tagName;

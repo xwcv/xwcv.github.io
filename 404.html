@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem('theme'); } catch (e) {}
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Xinggang Wang</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="res/logo.png">
+    <link rel="stylesheet" type="text/css" href="res/mystyle.css">
+    <style>
+        .notfound {
+            text-align: center;
+            padding: 90px 24px 110px;
+        }
+        .notfound .code {
+            font-family: var(--font-sans);
+            font-size: 4.5rem;
+            font-weight: 800;
+            line-height: 1;
+            color: var(--primary);
+            margin: 0 0 10px;
+        }
+        .notfound .msg {
+            color: var(--muted);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            margin: 0 0 28px;
+        }
+        .notfound a {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 7px 18px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: var(--white);
+            font-family: var(--font-sans);
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--text-light);
+            transition: color 0.2s, border-color 0.2s, transform 0.2s;
+        }
+        .notfound a:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="topnav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+        <a href="index.htm">HOME</a>
+        <a href="pubs.htm">PUBLICATION</a>
+        <a href="group.htm">GROUP</a>
+    </div>
+</nav>
+
+<main class="container" role="main">
+    <div class="notfound">
+        <p class="code">404</p>
+        <p class="msg">The page you are looking for does not exist.</p>
+        <a href="index.htm">Home</a>
+        <a href="pubs.htm">Publications</a>
+        <a href="group.htm">Group</a>
+    </div>
+</main>
+
+</body>
+</html>

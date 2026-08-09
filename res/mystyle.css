@@ -51,6 +51,7 @@ body {
     color: var(--text);
     background: var(--bg);
     -webkit-font-smoothing: antialiased;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 ::selection {
@@ -295,6 +296,7 @@ body {
     white-space: nowrap;
     border-radius: 5px;
     padding: 0 6px;
+    margin: 0 -1px;
     color: var(--vc, #475569);
     background: rgba(100, 116, 139, 0.10);
     background: color-mix(in srgb, var(--vc, #475569) 12%, transparent);
@@ -439,9 +441,15 @@ ol {
 
 ol li {
     margin-bottom: 12px;
-    padding-left: 4px;
+    padding: 2px 6px 2px 4px;
+    border-radius: 6px;
     line-height: 1.65;
     overflow-wrap: break-word;
+    transition: background-color 0.15s;
+}
+
+ol li:hover {
+    background: var(--accent-soft);
 }
 
 ol li::marker {
@@ -539,7 +547,7 @@ a.res-chip {
     border: 1px solid rgba(37, 99, 235, 0.22);
     border-radius: 6px;
     padding: 0 7px;
-    margin: 0 1px;
+    margin: 0 0 0 1px;
     white-space: nowrap;
     transition: color 0.2s, background 0.2s;
 }
@@ -945,6 +953,51 @@ sup, sub {
     }
 }
 
+/* ===== Back-to-top button (added by site.js on long pages) ===== */
+.back-to-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 90;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--text-light);
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.25s, transform 0.25s, visibility 0.25s,
+                color 0.2s, border-color 0.2s;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.back-to-top:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.back-to-top svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
 /* ===== Dark mode (data-theme attribute; default follows system, toggle overrides) ===== */
 :root[data-theme="dark"] {
     color-scheme: dark;
@@ -1101,7 +1154,7 @@ sup, sub {
         background: white;
     }
 
-    .topnav, .bottombar, .year-nav {
+    .topnav, .bottombar, .year-nav, .back-to-top, .pubs-search {
         display: none;
     }
 

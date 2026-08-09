@@ -316,4 +316,24 @@ document.addEventListener('DOMContentLoaded', function () {
       io.observe(sec);
     });
   }
+
+  /* 8. Back-to-top button, only on long pages */
+  if (document.documentElement.scrollHeight > window.innerHeight * 3) {
+    var top = document.createElement('button');
+    top.className = 'back-to-top';
+    top.type = 'button';
+    top.title = 'Back to top';
+    top.setAttribute('aria-label', 'Back to top');
+    top.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+    document.body.appendChild(top);
+    var onScroll = function () {
+      top.classList.toggle('show', window.scrollY > 600);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    top.addEventListener('click', function () {
+      var smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+    });
+  }
 });

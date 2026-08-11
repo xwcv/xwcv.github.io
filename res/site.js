@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* 2. Resource chips inside ordered lists: pdf / code / arXiv ... -> chip */
   document.querySelectorAll('ol a').forEach(function (a) {
     var t = a.textContent.trim();
-    if (t.length <= 32 && /^(pdf|code|arxiv|project page|project|video|website|dataset|demo|supplementary|slides)$/i.test(t)) {
+    if (t.length <= 32 && /^(pdf|code|arxiv|bib|project page|project|video|website|dataset|demo|supplementary|slides)$/i.test(t)) {
       a.classList.add('res-chip');
     }
   });

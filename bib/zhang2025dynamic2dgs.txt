@@ -1,0 +1,9 @@
+@inproceedings{10.1145/3746027.3755328,
+author = {Zhang, Shuai and Wu, Guanjun and Xie, Zhoufeng and Wang, Xinggang and Feng, Bin and Liu, Wenyu},
+title = {Dynamic 2D Gaussians: Geometrically Accurate Radiance Fields for Dynamic Objects},
+year = {2025},
+url = {https://doi.org/10.1145/3746027.3755328},
+doi = {10.1145/3746027.3755328},
+booktitle = {Proceedings of the 33rd ACM International Conference on Multimedia},
+pages = {8144--8153},
+}

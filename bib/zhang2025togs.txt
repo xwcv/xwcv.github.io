@@ -1,0 +1,9 @@
+@ARTICLE{11020652,
+  author={Zhang, Shuai and Zhao, Huangxuan and Zhou, Zhenghong and Wu, Guanjun and Zheng, Chuansheng and Wang, Xinggang and Liu, Wenyu},
+  journal={IEEE Journal of Biomedical and Health Informatics},
+  title={TOGS: Gaussian Splatting With Temporal Opacity Offset for Real-Time 4D DSA Rendering},
+  year={2025},
+  volume={29},
+  number={9},
+  pages={6793-6805},
+  doi={10.1109/JBHI.2025.3575613}}

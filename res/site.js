@@ -371,26 +371,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* 9. Email: the address is split across data attributes so the static HTML
-        never contains it whole. JS replaces the "#" fallback text with a
-        clickable mailto link and prepends an envelope icon to the
-        contact-icons row. Without JS the obfuscated text remains. */
-  document.querySelectorAll('.js-email[data-u][data-d]').forEach(function (span) {
-    var addr = span.getAttribute('data-u') + '@' + span.getAttribute('data-d');
-    var link = document.createElement('a');
-    link.href = 'mailto:' + addr;
-    link.textContent = addr;
-    span.textContent = '';
-    span.appendChild(link);
-    var box = span.closest('.contact');
-    var icons = box && box.querySelector('.contact-icons');
-    if (icons) {
-      var a = document.createElement('a');
-      a.href = 'mailto:' + addr;
-      a.title = 'Email';
-      a.setAttribute('aria-label', 'Email');
-      a.innerHTML = '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>';
-      icons.insertBefore(a, icons.firstChild);
-    }
+  /* 9. Email: the address is split across data attributes on the
+        contact-icons row so the static HTML never contains it whole. JS
+        prepends an envelope mailto icon; without JS no email is shown. */
+  document.querySelectorAll('.contact-icons[data-u][data-d]').forEach(function (icons) {
+    var addr = icons.getAttribute('data-u') + '@' + icons.getAttribute('data-d');
+    var a = document.createElement('a');
+    a.href = 'mailto:' + addr;
+    a.title = 'Email';
+    a.setAttribute('aria-label', 'Email');
+    a.innerHTML = '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>';
+    icons.insertBefore(a, icons.firstChild);
   });
 });

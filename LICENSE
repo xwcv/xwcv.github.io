@@ -1,5 +1,5 @@
-License for xwcv.github.io (Xinggang Wang's academic homepage)
-================================================================
+License for the xwcv theme — xwcv.github.io (Xinggang Wang's academic homepage)
+=================================================================================
 
 This repository is licensed in three parts:
 
@@ -22,7 +22,7 @@ all copies or substantial portions of the Software.
 
 If you use this code (or a substantial part of it) to build your own website,
 you MUST include a visible attribution in the footer of the rendered site,
-e.g. "Site design based on Xinggang Wang's homepage
+e.g. "Built with the xwcv theme
 (https://github.com/xwcv/xwcv.github.io)".
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
@@ -39,9 +39,10 @@ Applies to: the visual design and layout of the pages (CSS styling embedded
 in the HTML files, page structure, and overall look-and-feel).
 
 You may reuse and adapt the design for your own academic homepage, provided
-that you give appropriate credit with a visible link to
-https://xwcv.github.io/ (e.g. in the page footer), indicate if changes were
-made, and do not suggest that Xinggang Wang endorses you or your site.
+that you give appropriate credit, e.g. "Built with the xwcv theme" with a
+visible link to https://github.com/xwcv/xwcv.github.io in the page footer,
+indicate if changes were made, and do not suggest that Xinggang Wang
+endorses you or your site.
 
 Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
 
@@ -56,6 +57,6 @@ The following are NOT licensed for reuse and may not be copied:
   authors/publishers)
 - BibTeX snippets under bib/
 
-In short: you are welcome to learn from and reuse the code and design of
-this site with attribution, but the personal content and identity of the
-site are not a template.
+In short: you are welcome to learn from and reuse the xwcv theme's code and
+design with attribution, but the personal content and identity of the site
+are not part of the theme.

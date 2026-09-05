@@ -9,8 +9,8 @@ client-side enhancements keep working.
 
 This repository is licensed under the terms in `LICENSE`: code is MIT and
 the design is CC BY 4.0, both requiring **visible attribution** on any
-derived site (a footer credit such as "Site design based on Xinggang Wang's
-homepage (https://github.com/xwcv/xwcv.github.io)"). Personal content —
+derived site (a footer credit such as "Built with the xwcv theme
+(https://github.com/xwcv/xwcv.github.io)"). Personal content —
 portraits, biographical text, publication lists, PDFs under `pubs/`, BibTeX
 snippets under `bib/` — is **not licensed** and must not be copied.
 

@@ -1,6 +1,7 @@
-/* Progressive UI enhancements for xwcv.github.io.
+/* Progressive UI enhancements for the xwcv theme (xwcv.github.io).
    Copyright (c) Xinggang Wang — licensed under the terms in LICENSE (MIT with
-   attribution; derived sites must credit https://xwcv.github.io/ visibly).
+   attribution; derived sites must credit the xwcv theme visibly, linking to
+   https://github.com/xwcv/xwcv.github.io).
    Every feature degrades gracefully: without JS the pages render identically. */
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';

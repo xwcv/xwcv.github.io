@@ -1,0 +1,61 @@
+License for xwcv.github.io (Xinggang Wang's academic homepage)
+================================================================
+
+This repository is licensed in three parts:
+
+1. CODE — MIT License (with an attribution request)
+---------------------------------------------------
+Applies to: res/site.js, tools/*.py, .github/workflows/*, and other
+scripts/markup logic in this repository.
+
+Copyright (c) 2016-2026 Xinggang Wang
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+If you use this code (or a substantial part of it) to build your own website,
+you MUST include a visible attribution in the footer of the rendered site,
+e.g. "Site design based on Xinggang Wang's homepage
+(https://github.com/xwcv/xwcv.github.io)".
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+2. DESIGN — Creative Commons Attribution 4.0 International (CC BY 4.0)
+----------------------------------------------------------------------
+Applies to: the visual design and layout of the pages (CSS styling embedded
+in the HTML files, page structure, and overall look-and-feel).
+
+You may reuse and adapt the design for your own academic homepage, provided
+that you give appropriate credit with a visible link to
+https://xwcv.github.io/ (e.g. in the page footer), indicate if changes were
+made, and do not suggest that Xinggang Wang endorses you or your site.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+3. PERSONAL CONTENT — All Rights Reserved
+-----------------------------------------
+The following are NOT licensed for reuse and may not be copied:
+
+- Photographs and images of people (most files under res/, e.g. portraits)
+- Biographical text, news items, and publication list content in
+  index.htm, index_cn.htm, group.htm, group_cn.htm, pubs.htm
+- PDF files under pubs/ (copyright belongs to the respective
+  authors/publishers)
+- BibTeX snippets under bib/
+
+In short: you are welcome to learn from and reuse the code and design of
+this site with attribution, but the personal content and identity of the
+site are not a template.

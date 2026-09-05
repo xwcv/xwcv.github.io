@@ -1,4 +1,6 @@
 /* Progressive UI enhancements for xwcv.github.io.
+   Copyright (c) Xinggang Wang — licensed under the terms in LICENSE (MIT with
+   attribution; derived sites must credit https://xwcv.github.io/ visibly).
    Every feature degrades gracefully: without JS the pages render identically. */
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';

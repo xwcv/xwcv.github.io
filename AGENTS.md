@@ -137,6 +137,9 @@ Rules:
   `.proj-grid`, `.proj-card`, …) following site conventions (920px container,
   `--radius`, `--shadow-*`, site-standard heading with accent bar) — don't
   add per-page `<style>` blocks or one-off styles.
+- `res/site.js` auto-injects a keyword search box above `.proj-grid`
+  (filters `li.proj-card` by title/authors/description/topic, `/` to focus,
+  Esc to clear) — just keep the card markup intact.
 
 ## Dynamic data (stars & citations)
 

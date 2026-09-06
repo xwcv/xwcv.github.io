@@ -36,6 +36,37 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  /* Wrap every occurrence of q in <mark> inside the element's text nodes
+     (used by the publication and project search boxes). */
+  var markMatches = function (el, q) {
+    Array.prototype.forEach.call(el.querySelectorAll('mark'), function (m) {
+      m.replaceWith(m.textContent);
+    });
+    el.normalize();
+    if (!q) return;
+    var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    var nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(function (node) {
+      var text = node.nodeValue;
+      var lower = text.toLowerCase();
+      var idx = lower.indexOf(q);
+      if (idx === -1) return;
+      var frag = document.createDocumentFragment();
+      var pos = 0;
+      while (idx !== -1) {
+        frag.appendChild(document.createTextNode(text.slice(pos, idx)));
+        var mark = document.createElement('mark');
+        mark.textContent = text.slice(idx, idx + q.length);
+        frag.appendChild(mark);
+        pos = idx + q.length;
+        idx = lower.indexOf(q, pos);
+      }
+      frag.appendChild(document.createTextNode(text.slice(pos)));
+      node.parentNode.replaceChild(frag, node);
+    });
+  };
+
   /* 3. Year quick navigation on the publications page.
         Turns "Year 2026" paragraphs into anchor targets and builds a sticky jump bar. */
   var yearPs = Array.prototype.filter.call(
@@ -104,42 +135,13 @@ document.addEventListener('DOMContentLoaded', function () {
     empty.textContent = 'No matching papers.';
     empty.style.display = 'none';
     firstOl.parentNode.insertBefore(empty, firstOl);
-    // wrap every occurrence of q in <mark> inside the entry's text nodes
-    var highlight = function (li, q) {
-      Array.prototype.forEach.call(li.querySelectorAll('mark'), function (m) {
-        m.replaceWith(m.textContent);
-      });
-      li.normalize();
-      if (!q) return;
-      var walker = document.createTreeWalker(li, NodeFilter.SHOW_TEXT);
-      var nodes = [];
-      while (walker.nextNode()) nodes.push(walker.currentNode);
-      nodes.forEach(function (node) {
-        var text = node.nodeValue;
-        var lower = text.toLowerCase();
-        var idx = lower.indexOf(q);
-        if (idx === -1) return;
-        var frag = document.createDocumentFragment();
-        var pos = 0;
-        while (idx !== -1) {
-          frag.appendChild(document.createTextNode(text.slice(pos, idx)));
-          var mark = document.createElement('mark');
-          mark.textContent = text.slice(idx, idx + q.length);
-          frag.appendChild(mark);
-          pos = idx + q.length;
-          idx = lower.indexOf(q, pos);
-        }
-        frag.appendChild(document.createTextNode(text.slice(pos)));
-        node.parentNode.replaceChild(frag, node);
-      });
-    };
     input.addEventListener('input', function () {
       var q = input.value.trim().toLowerCase();
       var shown = 0;
       items.forEach(function (li) {
         var hit = !q || li.textContent.toLowerCase().indexOf(q) !== -1;
         li.style.display = hit ? '' : 'none';
-        highlight(li, hit ? q : '');
+        markMatches(li, hit ? q : '');
         if (hit) shown++;
       });
       yearPs.forEach(function (p) {
@@ -165,6 +167,55 @@ document.addEventListener('DOMContentLoaded', function () {
         input.value = '';
         input.dispatchEvent(new Event('input'));
         input.blur();
+      }
+    });
+  }
+
+  /* 3c. Project search on the projects page: instant keyword filter over the
+         project cards (matches title / authors / description / topic), with a
+         match counter. "/" focuses the box, Esc clears it. */
+  var projGrid = document.querySelector('ol.proj-grid');
+  if (projGrid) {
+    var cards = Array.prototype.slice.call(projGrid.querySelectorAll('li.proj-card'));
+    var zh = /^zh/i.test(document.documentElement.lang || '');
+    var pbox = document.createElement('div');
+    pbox.className = 'pubs-search';
+    pbox.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>';
+    var pinput = document.createElement('input');
+    pinput.type = 'search';
+    pinput.placeholder = zh ? '搜索项目：名称、作者、关键词 ...  ( / )' : 'Search projects by name, author, keyword ...  ( / )';
+    pinput.setAttribute('aria-label', zh ? '搜索项目' : 'Search projects');
+    var pcount = document.createElement('span');
+    pcount.className = 'pubs-search-count';
+    pbox.appendChild(pinput);
+    pbox.appendChild(pcount);
+    projGrid.parentNode.insertBefore(pbox, projGrid);
+    var pempty = document.createElement('p');
+    pempty.className = 'pubs-no-results';
+    pempty.textContent = zh ? '没有匹配的项目。' : 'No matching projects.';
+    pempty.style.display = 'none';
+    projGrid.parentNode.insertBefore(pempty, projGrid);
+    pinput.addEventListener('input', function () {
+      var q = pinput.value.trim().toLowerCase();
+      var shown = 0;
+      cards.forEach(function (card) {
+        var hit = !q || card.textContent.toLowerCase().indexOf(q) !== -1;
+        card.style.display = hit ? '' : 'none';
+        markMatches(card, hit ? q : '');
+        if (hit) shown++;
+      });
+      pempty.style.display = q && !shown ? '' : 'none';
+      pcount.textContent = q ? shown + ' / ' + cards.length : '';
+    });
+    document.addEventListener('keydown', function (e) {
+      var tag = document.activeElement && document.activeElement.tagName;
+      if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') {
+        e.preventDefault();
+        pinput.focus();
+      } else if (e.key === 'Escape' && document.activeElement === pinput) {
+        pinput.value = '';
+        pinput.dispatchEvent(new Event('input'));
+        pinput.blur();
       }
     });
   }

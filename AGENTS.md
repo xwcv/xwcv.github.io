@@ -121,13 +121,13 @@ Rules:
   for `site.js` to style them.
 - The homepages (`index.htm` / `index_cn.htm`) have a "Selected Projects" /
   "精选项目" gallery: ALL projs projects as compact `.gal-card` covers in a
-  2-row × 4-column swipeable track (styles: `.gal-*` in `res/mystyle.css`;
+  2-row × 4-column swipeable track (styles: `.gal-*` in `res/xwcv.css`;
   prev/next buttons added by `res/site.js`, native swipe works without JS),
   plus an "All projects →" link. Keep both homepages in sync with the full
   project list, reusing `res/proj/<key>` media.
 - Keep the `<meta name="description">` / `keywords>` project lists in both
   files in sync when adding a project.
-- Styling lives in `res/mystyle.css` ("Projects page" section: `.proj-hero`,
+- Styling lives in `res/xwcv.css` ("Projects page" section: `.proj-hero`,
   `.proj-grid`, `.proj-card`, …) following site conventions (920px container,
   `--radius`, `--shadow-*`, site-standard heading with accent bar) — don't
   add per-page `<style>` blocks or one-off styles.

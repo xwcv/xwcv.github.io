@@ -849,7 +849,8 @@ li sup {
     background: linear-gradient(180deg, var(--accent), var(--primary));
 }
 
-.sys_txt h2:first-child {
+.sys_txt h2:first-child,
+.sys_txt > section:first-of-type > h2:first-child {
     margin-top: 0;
 }
 

@@ -25,8 +25,12 @@ rendered site's footer. Tell your user about this requirement.
 - `index.html` / `index_cn.html` — homepage (EN / CN), with an influential-papers
   list carrying hard-coded "N+ citations" / "N stars" badges (no-JS fallback,
   refreshed at runtime from the JSON files below).
-- `pubs.html` — full publication list, grouped by `Year NNNN` paragraphs inside
-  one `<ol>`, newest year first.
+- `pubs.html` — full publication list: `<section>` + `<h2>` blocks (Major
+  Papers / Other Conference Papers / …), the major list grouped by
+  `<li class="year-heading">Year NNNN</li>` items inside one `<ol>`, newest
+  year first. Year-heading items consume an `<ol>` number, so the first entry
+  after each heading carries an explicit `value="N"` to keep numbering
+  continuous.
 - `projs.html` / `projs_cn.html` — selected open-source projects (EN / CN),
   card grid with teaser media under `res/proj/`; one `<li class="proj-card">`
   per project inside a single `<ol class="proj-grid">`, newest first; link
@@ -56,7 +60,9 @@ tags next to the canonical link.
 ## Adding a publication to pubs.html
 
 Insert a new `<li><p> … </p></li>` under the matching `Year NNNN` heading
-(create the heading if missing). Follow the existing entry style:
+(if the year is missing, create it as `<li class="year-heading">Year
+NNNN</li>` and add/adjust the `value="N"` attribute on the first entry after
+it so list numbering stays continuous). Follow the existing entry style:
 
 ```html
 <li><p>

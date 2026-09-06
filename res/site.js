@@ -81,11 +81,11 @@ document.addEventListener('DOMContentLoaded', function () {
            section left empty ("Other Conference Papers", ...) are hidden.
            "/" focuses the box, Esc clears it. */
     var items = Array.prototype.slice.call(document.querySelectorAll('ol li:not(.year-heading)'));
-    // map each list to its section header, e.g. <br><p><b>Book Chapters</b></p><ol>
+    // map each list to its section header, e.g. <h2>Book Chapters</h2><ol>
     var lists = Array.prototype.map.call(document.querySelectorAll('ol'), function (ol) {
       var prev = ol.previousElementSibling;
-      while (prev && prev.nodeName === 'BR') prev = prev.previousElementSibling;
-      return { ol: ol, header: prev && prev.nodeName === 'P' && prev.querySelector('b') ? prev : null };
+      while (prev && prev.nodeName !== 'H2') prev = prev.previousElementSibling;
+      return { ol: ol, header: prev };
     });
     var box = document.createElement('div');
     box.className = 'pubs-search';

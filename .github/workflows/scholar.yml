@@ -26,12 +26,12 @@ jobs:
 
       - name: Commit and push if changed
         run: |
-          if git diff --quiet res/scholar.json index.htm index_cn.htm; then
+          if git diff --quiet res/scholar.json index.html index_cn.html; then
             echo "no change"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add res/scholar.json index.htm index_cn.htm
+            git add res/scholar.json index.html index_cn.html
             git commit -m "Update Google Scholar stats"
             git push
           fi

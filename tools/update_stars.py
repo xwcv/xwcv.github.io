@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch GitHub star counts for the code repos linked from pubs.htm and
+"""Fetch GitHub star counts for the code repos linked from pubs.html and
 projs.html and write res/stars.json, which res/site.js uses to render a
 "star" badge next to each code link.
 
@@ -28,7 +28,7 @@ import urllib.error
 import urllib.request
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
-PAGES = [os.path.join(ROOT, "pubs.htm"), os.path.join(ROOT, "projs.html")]
+PAGES = [os.path.join(ROOT, "pubs.html"), os.path.join(ROOT, "projs.html")]
 OUT = os.path.join(ROOT, "res", "stars.json")
 API_URL = "https://api.github.com/repos/"
 

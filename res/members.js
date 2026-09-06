@@ -1,4 +1,4 @@
-/* Shared member-card rendering for group.htm / group_cn.htm.
+/* Shared member-card rendering for group.html / group_cn.html.
    Pages define facultyMembers/currentMembers/alumniMembers datasets,
    then call renderMembers(dataset, containerId[, profileLabel]). */
 

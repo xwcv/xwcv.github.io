@@ -22,17 +22,17 @@ rendered site's footer. Tell your user about this requirement.
 
 ## Layout
 
-- `index.htm` / `index_cn.htm` — homepage (EN / CN), with an influential-papers
+- `index.html` / `index_cn.html` — homepage (EN / CN), with an influential-papers
   list carrying hard-coded "N+ citations" / "N stars" badges (no-JS fallback,
   refreshed at runtime from the JSON files below).
-- `pubs.htm` — full publication list, grouped by `Year NNNN` paragraphs inside
+- `pubs.html` — full publication list, grouped by `Year NNNN` paragraphs inside
   one `<ol>`, newest year first.
 - `projs.html` / `projs_cn.html` — selected open-source projects (EN / CN),
   card grid with teaser media under `res/proj/`; one `<li class="proj-card">`
   per project inside a single `<ol class="proj-grid">`, newest first; link
-  chips and GitHub star badges follow the same conventions as `pubs.htm`
+  chips and GitHub star badges follow the same conventions as `pubs.html`
   (see below).
-- `group.htm` / `group_cn.htm` — group members. Each page defines its member
+- `group.html` / `group_cn.html` — group members. Each page defines its member
   datasets (`facultyMembers` / `currentMembers` / `alumniMembers`) inline and
   renders cards via the shared `res/members.js` (`renderMembers(dataset,
   containerId[, profileLabel])`; avatar fallback: first char for CJK names,
@@ -40,12 +40,12 @@ rendered site's footer. Tell your user about this requirement.
   ≤ 384px wide (`sips -Z 384`).
 - `res/` — images, `site.js`, `members.js`, `stars.json`, `scholar.json`
   (both generated).
-- `bib/` — BibTeX snippets (`*.txt`) linked from some `pubs.htm` entries.
+- `bib/` — BibTeX snippets (`*.txt`) linked from some `pubs.html` entries.
 - `pubs/` — self-hosted PDFs.
 - `tools/` — Python scripts run by CI (see below).
 - `.github/workflows/` — `stars.yml`, `scholar.yml`.
 - `404.html` — not-found page. GitHub Pages serves it at the *requested* URL,
-  so all its asset/page links are root-absolute (`/res/...`, `/index.htm`).
+  so all its asset/page links are root-absolute (`/res/...`, `/index.html`).
 
 General conventions: every content page wraps its body in
 `<main class="container">` with exactly one `<h1>` (visible page title, or
@@ -53,7 +53,7 @@ General conventions: every content page wraps its body in
 carry reciprocal `<link rel="alternate" hreflang="en|zh-CN|x-default">`
 tags next to the canonical link.
 
-## Adding a publication to pubs.htm
+## Adding a publication to pubs.html
 
 Insert a new `<li><p> … </p></li>` under the matching `Year NNNN` heading
 (create the heading if missing). Follow the existing entry style:
@@ -117,9 +117,9 @@ Rules:
   Add one `<span class="proj-topic">` for the area (e.g. Autonomous
   Driving / 自动驾驶, Embodied AI / 具身智能).
 - Link chips, author markers (`#` / `*`), and the GitHub star badge follow
-  the same rules as pubs.htm (see above). Links must sit inside the `<ol>`
+  the same rules as pubs.html (see above). Links must sit inside the `<ol>`
   for `site.js` to style them.
-- The homepages (`index.htm` / `index_cn.htm`) have a "Selected Projects" /
+- The homepages (`index.html` / `index_cn.html`) have a "Selected Projects" /
   "精选项目" gallery: ALL projs projects as compact `.gal-card` covers in a
   2-row × 4-column swipeable track (styles: `.gal-*` in `res/xwcv.css`;
   prev/next buttons added by `res/site.js`, native swipe works without JS),
@@ -135,7 +135,7 @@ Rules:
 ## Dynamic data (stars & citations)
 
 - `res/stars.json` — GitHub star counts for every repo linked from
-  `pubs.htm` and `projs.html`. Written by `tools/update_stars.py`, run
+  `pubs.html` and `projs.html`. Written by `tools/update_stars.py`, run
   weekly (Mon 04:23 UTC) by `.github/workflows/stars.yml`, also via
   `workflow_dispatch`.
   **A newly added repo shows no star badge until the next run.** To refresh
@@ -146,7 +146,7 @@ Rules:
   Written by `tools/update_scholar.py`, run Mon & Thu by `scholar.yml` via
   SerpAPI (needs the `SERPAPI_API_KEY` secret).
 - `tools/update_badges.py` — syncs the hard-coded badge numbers on
-  `index.htm` / `index_cn.htm` with the two JSON files (run by both
+  `index.html` / `index_cn.html` with the two JSON files (run by both
   workflows after updating the JSON).
 - The stars workflow also refreshes the footer "Last updated" dates and
   `sitemap.xml` lastmod whenever `res/stars.json` changes — don't hand-edit

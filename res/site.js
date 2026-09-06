@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* 5. GitHub star counts, using res/stars.json (written weekly by the
-        scheduled GitHub Action): each code chip on pubs.htm becomes a
+        scheduled GitHub Action): each code chip on pubs.html becomes a
         GitHub-style "code | ★ N" button, and hard-coded "N stars" links
         on the homepage get their number refreshed. Fails silently when
         the file is missing or a repo has no count. */

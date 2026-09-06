@@ -17,7 +17,7 @@ import os
 import re
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
-PAGES = ["index.htm", "index_cn.htm"]
+PAGES = ["index.html", "index_cn.html"]
 
 
 def load(name):

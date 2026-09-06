@@ -52,7 +52,7 @@ The following are NOT licensed for reuse and may not be copied:
 
 - Photographs and images of people (most files under res/, e.g. portraits)
 - Biographical text, news items, and publication list content in
-  index.htm, index_cn.htm, group.htm, group_cn.htm, pubs.htm
+  index.html, index_cn.html, group.html, group_cn.html, pubs.html
 - PDF files under pubs/ (copyright belongs to the respective
   authors/publishers)
 - BibTeX snippets under bib/

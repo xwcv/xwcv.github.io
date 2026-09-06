@@ -450,6 +450,7 @@ main section:not(.profile-section) {
     padding: 24px 28px;
 }
 
+section h1,
 section h2 {
     position: relative;
     font-size: 1.18rem;
@@ -461,6 +462,7 @@ section h2 {
     font-family: var(--font-sans);
 }
 
+section h1::before,
 section h2::before {
     content: "";
     position: absolute;
@@ -472,6 +474,7 @@ section h2::before {
     background: linear-gradient(180deg, var(--accent), var(--primary));
 }
 
+section h1 strong,
 section h2 strong {
     font-weight: 600;
 }
@@ -776,84 +779,6 @@ li sup {
 }
 
 /* ===== Text Widget (pubs.html / group pages) ===== */
-.sys_txt {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 32px 36px;
-    box-shadow: var(--shadow);
-    margin-top: 24px;
-    margin-bottom: 40px;
-}
-
-.sys_txt::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.sys_txt p {
-    margin: 0 0 12px 0;
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-.sys_txt p:last-child {
-    margin-bottom: 0;
-}
-
-/* Section titles inside the text widget ("Major Journal & Conference Papers" etc.) */
-.sys_txt > p > b,
-.sys_txt > div > p > b {
-    display: inline-block;
-    font-family: var(--font-sans);
-    font-size: 1.12rem;
-    color: var(--primary);
-}
-
-.sys_txt > p:has(> b) {
-    margin-top: 30px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-}
-
-.sys_txt > p:first-child:has(> b) {
-    margin-top: 0;
-}
-
-.sys_txt b {
-    color: var(--primary);
-    font-weight: 600;
-}
-
-/* Group-page subsection headings ("Faculty Members" etc.) */
-.sys_txt h2 {
-    position: relative;
-    font-family: var(--font-sans);
-    font-size: 1.18rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin: 34px 0 18px;
-    padding: 0 0 10px 14px;
-    border-bottom: 1px solid var(--border);
-}
-
-.sys_txt h2::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 5px;
-    bottom: 14px;
-    width: 4px;
-    border-radius: 2px;
-    background: linear-gradient(180deg, var(--accent), var(--primary));
-}
-
-.sys_txt h2:first-child,
-.sys_txt > section:first-of-type > h2:first-child {
-    margin-top: 0;
-}
-
 /* ===== Member Cards (group pages) ===== */
 .members-section {
     margin: 8px 0 26px;
@@ -1161,10 +1086,6 @@ sup, sub {
         padding: 18px 20px;
     }
 
-    .sys_txt {
-        padding: 22px 20px;
-    }
-
     ol {
         padding-left: 2em;
     }
@@ -1417,7 +1338,6 @@ sup, sub {
         padding: 0;
     }
 
-    .sys_txt,
     main section:not(.profile-section),
     .profile-section {
         box-shadow: none;
@@ -1455,26 +1375,6 @@ sup, sub {
 }
 
 /* ===== Projects page (projs.html / projs_cn.html) ===== */
-.proj-hero h1 {
-    position: relative;
-    font-family: var(--font-sans);
-    font-size: 1.18rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin: 26px 0 12px;
-    padding: 0 0 10px 14px;
-    border-bottom: 1px solid var(--border);
-}
-.proj-hero h1::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 3px;
-    bottom: 13px;
-    width: 4px;
-    border-radius: 2px;
-    background: linear-gradient(180deg, var(--accent), var(--primary));
-}
 .proj-hero .proj-sub {
     margin: 0;
     font-size: 13px;

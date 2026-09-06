@@ -53,7 +53,10 @@ rendered site's footer. Tell your user about this requirement.
 
 General conventions: every content page wraps its body in
 `<main class="container">` with exactly one `<h1>` (visible page title, or
-`class="visually-hidden"` where the design has no title); EN/CN page pairs
+`class="visually-hidden"` where the design has no title); content is grouped
+into `<section>` cards (styled by `main section:not(.profile-section)`) with
+accent-bar headings (`section h1/h2`, one shared rule in `res/xwcv.css`) —
+the legacy `.sys_txt` wrapper is gone, don't reintroduce it; EN/CN page pairs
 carry reciprocal `<link rel="alternate" hreflang="en|zh-CN|x-default">`
 tags next to the canonical link.
 

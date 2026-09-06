@@ -27,6 +27,11 @@ rendered site's footer. Tell your user about this requirement.
   refreshed at runtime from the JSON files below).
 - `pubs.htm` — full publication list, grouped by `Year NNNN` paragraphs inside
   one `<ol>`, newest year first.
+- `projs.html` / `projs_cn.html` — selected open-source projects (EN / CN),
+  card grid with teaser media under `res/proj/`; one `<li class="proj-card">`
+  per project inside a single `<ol class="proj-grid">`, newest first; link
+  chips and GitHub star badges follow the same conventions as `pubs.htm`
+  (see below).
 - `group.htm` / `group_cn.htm` — group members.
 - `res/` — images, `site.js`, `stars.json`, `scholar.json` (both generated).
 - `bib/` — BibTeX snippets (`*.txt`) linked from some `pubs.htm` entries.
@@ -58,11 +63,62 @@ Rules that the dynamic features depend on:
 - Optional: add a BibTeX snippet to `bib/<key>.txt` and link it as `bib`.
 - Optional: self-host the PDF under `pubs/` and link it as `./pubs/<file>.pdf`.
 
+## Adding a project to projs.html / projs_cn.html
+
+Both files must be updated together — same card, same position (newest
+first by arXiv/venue date), English text in `projs.html`, Chinese UI text
+and Chinese one-line descriptions in `projs_cn.html` (paper titles and
+author lists stay in English). Card skeleton:
+
+```html
+<li class="proj-card">
+  <a class="proj-media" href="<project page or repo>">
+    <img src="res/proj/<key>.png" alt="..." loading="lazy">
+  </a>
+  <div class="proj-body">
+    <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">Autonomous Driving</span></div>
+    <h3 class="proj-title">Paper Title</h3>
+    <p class="proj-authors">First Author, ..., Xinggang Wang*</p>
+    <p class="proj-desc">One-sentence summary.</p>
+    <p class="proj-links"><a href="...">arxiv</a> <a href="https://github.com/owner/repo">code</a> <a href="...">project page</a></p>
+  </div>
+</li>
+```
+
+Rules:
+
+- **Card media** lives in `res/proj/<key>.<ext>` (`<key>` = lowercase project
+  name). Download the most representative asset from the project's official
+  page/repo (teaser or framework figure, demo GIF, or a demo `<video>` mp4
+  with the framework figure as `poster`); never hotlink. Verify with `file`
+  and `sips -g pixelWidth -g pixelHeight`: real image/video (not an HTML
+  error page), width ≥ 1000px, size < 8 MB (shrink with `sips -Z 1600`).
+- **Venue tag**: reuse the native `venue-tag` classes — `v-cvpr` / `v-iccv`
+  / `v-eccv` / `v-neurips` / `v-icml` / `v-iclr` / `v-aaai` for conferences,
+  `v-top` for top journals (IJCV/TPAMI/…), `v-journal` for `arXiv NNNN`.
+  Add one `<span class="proj-topic">` for the area (e.g. Autonomous
+  Driving / 自动驾驶, Embodied AI / 具身智能).
+- Link chips, author markers (`#` / `*`), and the GitHub star badge follow
+  the same rules as pubs.htm (see above). Links must sit inside the `<ol>`
+  for `site.js` to style them.
+- The homepages (`index.htm` / `index_cn.htm`) have a "Selected Projects" /
+  "精选项目" gallery: ALL projs projects as compact `.gal-card` covers in a
+  2-row × 4-column swipeable track (styles: `.gal-*` in `res/mystyle.css`;
+  prev/next buttons added by `res/site.js`, native swipe works without JS),
+  plus an "All projects →" link. Keep both homepages in sync with the full
+  project list, reusing `res/proj/<key>` media.
+- Keep the `<meta name="description">` / `keywords>` project lists in both
+  files in sync when adding a project.
+- Styling is a `<style>` block scoped in each file and mirrors
+  `mystyle.css` conventions (920px container, `--radius`, `--shadow-*`,
+  site-standard h2 with accent bar) — don't introduce one-off styles.
+
 ## Dynamic data (stars & citations)
 
 - `res/stars.json` — GitHub star counts for every repo linked from
-  `pubs.htm`. Written by `tools/update_stars.py`, run weekly (Mon 04:23 UTC)
-  by `.github/workflows/stars.yml`, also via `workflow_dispatch`.
+  `pubs.htm` and `projs.html`. Written by `tools/update_stars.py`, run
+  weekly (Mon 04:23 UTC) by `.github/workflows/stars.yml`, also via
+  `workflow_dispatch`.
   **A newly added repo shows no star badge until the next run.** To refresh
   immediately: `gh workflow run stars.yml` (the workflow commits and pushes
   itself). Running the script locally requires `GITHUB_TOKEN`

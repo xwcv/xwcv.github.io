@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+
+<head>
+    <script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem('theme'); } catch (e) {}
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>科研项目 - 王兴刚 | 计算机视觉与人工智能</title>
+    <meta name="title" content="科研项目 - 王兴刚 | 计算机视觉与人工智能">
+    <meta name="description" content="王兴刚教授团队的开源科研项目，涵盖机器人操作、自动驾驶、生成模型与高效多模态基础模型，包括 InfiniteVL、DreamWAM、Faster-WAM、Moebius、AdaRoboVLG、UniDriveVLA、DriveLaW、ReWorld、ReCogDrive、RAD-2、VTP、DiffusionVL、Senna、Senna-2、DiffusionDrive、VADv2、MapTR、YOLO-World、4DGaussians、ByteTrack、FairMOT、EVA、Vim、TransLight、4DLangVGGT、GaussTR、LENS、CCNet。">
+    <meta name="keywords" content="王兴刚 项目, 计算机视觉, 机器人, 自动驾驶, 世界动作模型, 视觉语言模型, DreamWAM, Faster-WAM, InfiniteVL, Moebius, AdaRoboVLG, UniDriveVLA, DriveLaW, ReWorld, ReCogDrive, RAD-2, VTP, DiffusionVL, Senna, Senna-2, DiffusionDrive, VADv2, MapTR, YOLO-World, 4DGaussians, ByteTrack, FairMOT, EVA, Vim, Vision Mamba, TransLight, 4DLangVGGT, GaussTR, LENS, CCNet">
+    <meta name="author" content="Xinggang Wang">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xwcv.github.io/projs_cn.html">
+    <meta property="og:title" content="科研项目 - 王兴刚">
+    <meta property="og:description" content="王兴刚教授团队的开源科研项目，涵盖机器人操作、自动驾驶、生成模型与高效多模态基础模型。">
+    <meta property="og:image" content="https://xwcv.github.io/res/proj/adarobovlg-2.png">
+    <meta property="og:site_name" content="王兴刚 - 科研项目">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="language" content="Chinese">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://xwcv.github.io/projs_cn.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="res/logo.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="res/mystyle.css">
+    <script src="res/site.js" defer></script>
+
+    <style>
+      /* ===== Projects page (scoped; follows mystyle.css conventions) ===== */
+      .proj-hero h2 {
+        position: relative;
+        font-family: var(--font-sans);
+        font-size: 1.18rem;
+        font-weight: 600;
+        color: var(--primary);
+        margin: 26px 0 12px;
+        padding: 0 0 10px 14px;
+        border-bottom: 1px solid var(--border);
+      }
+      .proj-hero h2::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 3px;
+        bottom: 13px;
+        width: 4px;
+        border-radius: 2px;
+        background: linear-gradient(180deg, var(--accent), var(--primary));
+      }
+      .proj-hero .proj-sub {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+      .proj-hero .legend { margin-top: 8px; }
+
+      .proj-grid {
+        list-style: none;
+        padding: 0;
+        margin: 24px 0 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      @media (max-width: 720px) {
+        .proj-grid { grid-template-columns: 1fr; }
+      }
+
+      li.proj-card {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+      }
+      li.proj-card:hover {
+        background: var(--white);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .proj-media {
+        display: block;
+        aspect-ratio: 16 / 8.6;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        overflow: hidden;
+      }
+      .proj-media img,
+      .proj-media video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 10px;
+        box-sizing: border-box;
+        display: block;
+        transition: transform 0.25s ease;
+      }
+      li.proj-card:hover .proj-media img,
+      li.proj-card:hover .proj-media video { transform: scale(1.03); }
+
+      .proj-body {
+        padding: 16px 18px 18px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .proj-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+      .proj-topic {
+        font-family: var(--font-sans);
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        border-radius: 5px;
+        padding: 0 6px;
+        color: var(--muted);
+        box-shadow: inset 0 0 0 1px var(--border);
+      }
+
+      .proj-title {
+        margin: 8px 0 6px;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.5;
+        color: var(--text);
+      }
+      .proj-authors {
+        margin: 0 0 8px;
+        font-size: 0.84rem;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+      .proj-desc {
+        margin: 0 0 12px;
+        font-size: 0.88rem;
+        line-height: 1.7;
+        color: var(--text-light);
+        flex: 1;
+      }
+      .proj-links { margin: 0; }
+    </style>
+</head>
+
+
+
+
+<body>
+
+<nav class="topnav" role="navigation" aria-label="主导航">
+  <div class="container">
+    <a href="index_cn.htm">主  页</a>
+    <a href="pubs.htm">论  文</a>
+    <a class="active" href="projs_cn.html" aria-current="page">项  目</a>
+    <a href="group_cn.htm">团  队</a>
+    <a class="lang" href="projs.html" lang="en">English</a>
+    <button class="theme-toggle" type="button" aria-label="切换深色模式" title="切换深色模式">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+  </div>
+</nav>
+
+
+<div class="container">
+
+  <header class="proj-hero">
+    <h2>精选科研项目</h2>
+    <p class="proj-sub">本团队与合作者开源的研究系统，涵盖具身智能与机器人操作、自动驾驶、生成模型以及高效多模态基础模型等方向。</p>
+    <p class="legend"><span><sup>#</sup> 共同一作</span><span><sup>*</sup> 通讯作者</span></p>
+  </header>
+
+  <ol class="proj-grid">
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://adarobovlg.github.io/" title="AdaRoboVLG 项目主页">
+      <img src="res/proj/adarobovlg-2.png" alt="AdaRoboVLG：跨机械手的真实场景机器人抓取" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">具身智能</span></div>
+      <h3 class="proj-title">AdaRoboVLG: Adaptive Vision-Language Grasping via Composable Foundation Priors and Generalizable Grasp Synthesis</h3>
+      <p class="proj-authors">Sixu Yan, Shikang Wang, Binhua Huang, Xuanlai Tang, Guohua Fan, Fan Huang, Haoxuan Li, Yongkang Li, Yuhan Li, Bencheng Liao, Zeyu Zhang, Wenyu Liu, Hangxin Liu, Xinggang Wang</p>
+      <p class="proj-desc">任务自适应的视觉-语言-抓取框架，将物理抓取合成与任务理解解耦，通过可组合的基础模型先验实现跨不同机械手的泛化抓取。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2609.04096">arxiv</a> <a href="https://adarobovlg.github.io/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://hustvl.github.io/DreamWAM/" title="DreamWAM 项目主页">
+      <video src="res/proj/dreamwam-2.mp4" poster="res/proj/dreamwam.png" autoplay muted loop playsinline></video>
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">世界动作模型</span></div>
+      <h3 class="proj-title">DreamWAM: Beyond RGB Future Prediction for World Action Models</h3>
+      <p class="proj-authors">Shanglin Yuan#, Weiheng Zhao#, Xin Shi, Haoyi Jiang, Xianda Guo, Liu Liu, Wenyu Liu, Wei Sui, Xinggang Wang*</p>
+      <p class="proj-desc">超越 RGB 的世界动作模型：将未来预测重构为结构化世界建模，从外观、运动、几何、语义四个互补视角表征未来状态，实现稳健的机器人操作。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2608.04996">arxiv</a> <a href="https://github.com/hustvl/DreamWAM">code</a> <a href="https://hustvl.github.io/DreamWAM/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/FasterWAM" title="Faster-WAM 代码">
+      <img src="res/proj/fasterwam.png" alt="Faster-WAM：面向世界动作模型的推理时未来条件框架" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">世界动作模型</span></div>
+      <h3 class="proj-title">Faster-WAM: Efficient Inference-Time Future Conditioning for Robust World Action Models</h3>
+      <p class="proj-authors">Weiheng Zhao, Haoyi Jiang, Xin Shi, Liu Liu, Zhizhong Su, Wei Sui, Fan Huang, Xinggang Wang</p>
+      <p class="proj-desc">世界动作模型在推理时只计算一次未来表征并在动作去噪中选择性复用，大幅降低推理延迟，同时具备稳健的分布外泛化能力。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2608.04404">arxiv</a> <a href="https://github.com/hustvl/FasterWAM">code</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://xiaomi-research.github.io/reworld/" title="ReWorld 项目主页">
+      <img src="res/proj/reworld.png" alt="ReWorld：面向世界动作模型的表示学习框架" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">自动驾驶</span></div>
+      <h3 class="proj-title">ReWorld: Learning Better Representations for World Action Models</h3>
+      <p class="proj-authors">Tianze Xia#, Lijun Zhou#, Kaixin Xiong, Jingfeng Yao, Yu Zhu, Zhenxin Zhu, Haiyang Sun, Bing Wang, Guang Chen, Hangjun Ye, Wenyu Liu, Xinggang Wang*</p>
+      <p class="proj-desc">首个面向自动驾驶世界动作模型的表示学习框架，无需外部编码器与教师模型，仅增加 0.3% 训练开销，显式优化从世界到动作的隐表征通路。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2606.27504">arxiv</a> <a href="https://xiaomi-research.github.io/reworld/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://hustvl.github.io/Moebius/" title="Moebius 项目主页">
+      <img src="res/proj/moebius.png" alt="Moebius：轻量级图像修复流水线" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-eccv">ECCV 2026</span><span class="proj-topic">生成模型</span></div>
+      <h3 class="proj-title">Moebius: 0.2B Lightweight Image Inpainting Framework with 10B-Level Performance</h3>
+      <p class="proj-authors">Kangsheng Duan, Ziyang Xu, Wenyu Liu, Xiaohu Ruan, Xiaoxin Chen, Xinggang Wang</p>
+      <p class="proj-desc">0.2B 轻量级图像修复框架，性能达到 10B 级别模型水平。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2606.19195">arxiv</a> <a href="https://github.com/hustvl/Moebius">code</a> <a href="https://hustvl.github.io/Moebius/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://xiaomi-research.github.io/unidrivevla/" title="UniDriveVLA 项目主页">
+      <img src="res/proj/unidrivevla.png" alt="UniDriveVLA：基于 Mixture-of-Transformers 的自动驾驶架构" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">自动驾驶</span></div>
+      <h3 class="proj-title">UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving</h3>
+      <p class="proj-authors">Yongkang Li, Lijun Zhou, Sixu Yan, Bencheng Liao, Tianyi Yan, Kaixin Xiong, Long Chen, Hongwei Xie, Bing Wang, Guang Chen, Hangjun Ye, Haiyang Sun, Wenyu Liu, Xinggang Wang*</p>
+      <p class="proj-desc">基于 Mixture-of-Transformers 的统一驾驶视觉-语言-动作模型，将驾驶理解、场景感知与动作规划解耦到三个专家网络，通过掩码联合注意力协同工作。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2604.02190">arxiv</a> <a href="https://xiaomi-research.github.io/unidrivevla/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://hgao-cv.github.io/RAD-2/" title="RAD-2 项目主页">
+      <img src="res/proj/rad2.png" alt="RAD-2：闭环规划的生成器-判别器框架" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">自动驾驶</span></div>
+      <h3 class="proj-title">RAD-2: Scaling Reinforcement Learning in a Generator-Discriminator Framework</h3>
+      <p class="proj-authors">Hao Gao, Shaoyu Chen, Yifan Zhu, Yuehao Song, Wenyu Liu, Qian Zhang, Xinggang Wang*</p>
+      <p class="proj-desc">闭环驾驶的生成器-判别器框架：扩散生成器产生多样化候选轨迹，强化学习优化的判别器按长期驾驶质量重排序，碰撞率较主流扩散规划器降低 56%。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2604.15308">arxiv</a> <a href="https://hgao-cv.github.io/RAD-2/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://hgao-cv.github.io/senna2-project/" title="Senna-2 项目主页">
+      <img src="res/proj/senna2.jpg" alt="Senna-2：对齐 VLM 与端到端驾驶策略" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">自动驾驶</span></div>
+      <h3 class="proj-title">Senna-2: Aligning VLM and End-to-End Driving Policy for Consistent Decision Making and Planning</h3>
+      <p class="proj-authors">Yuehao Song, Shaoyu Chen, Hao Gao, Yifan Zhu, Weixiang Yue, Jialv Zou, Bo Jiang, Zihao Lu, Yu Wang, Qian Zhang, Xinggang Wang*</p>
+      <p class="proj-desc">显式对齐 VLM 高层决策与端到端策略低层规划的驾驶模型，通过面向一致性的三阶段训练与 3DGS 环境中的层次化强化学习，显著提升开环与闭环驾驶安全性。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2603.11219">arxiv</a> <a href="https://hgao-cv.github.io/senna2-project/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://xiaomi-research.github.io/drivelaw/" title="DriveLaW 项目主页">
+      <img src="res/proj/drivelaw.png" alt="DriveLaW：在潜在驾驶世界中统一规划与视频生成" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-cvpr">CVPR 2026</span><span class="proj-topic">自动驾驶</span></div>
+      <h3 class="proj-title">DriveLaW: Unifying Planning and Video Generation in a Latent Driving World</h3>
+      <p class="proj-authors">Tianze Xia, Yongkang Li#, Lijun Zhou#, Jingfeng Yao, Kaixin Xiong, Haiyang Sun, Bing Wang, Kun Ma, Guang Chen, Hangjun Ye, Wenyu Liu, Xinggang Wang*</p>
+      <p class="proj-desc">统一视频生成与运动规划的驾驶世界模型：将视频生成器的隐表征直接注入扩散规划器，在 nuScenes 视频预测与 NAVSIM 规划上均达到最先进水平。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2512.23421">arxiv</a> <a href="https://github.com/xiaomi-research/drivelaw">code</a> <a href="https://xiaomi-research.github.io/drivelaw/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/DiffusionVL" title="DiffusionVL 代码">
+      <img src="res/proj/diffusionvl.png" alt="DiffusionVL：将自回归模型转换为扩散视觉语言模型" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-eccv">ECCV 2026</span><span class="proj-topic">多模态大模型</span></div>
+      <h3 class="proj-title">DiffusionVL: Translating Any Autoregressive Models into Diffusion Vision Language Models</h3>
+      <p class="proj-authors">Lunbin Zeng, Jingfeng Yao, Bencheng Liao, Hongyuan Tao, Wenyu Liu, Xinggang Wang</p>
+      <p class="proj-desc">将任意自回归模型转换为扩散式视觉语言模型的框架，兼具自回归预训练的知识优势与扩散并行解码的效率优势。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2512.15713">arxiv</a> <a href="https://github.com/hustvl/DiffusionVL">code</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/MiniMax-AI/VTP" title="VTP 代码">
+      <img src="res/proj/vtp.png" alt="VTP：面向生成的视觉 tokenizer 可扩展预训练" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-eccv">ECCV 2026</span><span class="proj-topic">生成模型</span></div>
+      <h3 class="proj-title">VTP: Towards Scalable Pre-training of Visual Tokenizers for Generation</h3>
+      <p class="proj-authors">Jingfeng Yao, Yuda Song, Yucong Zhou, Xinggang Wang</p>
+      <p class="proj-desc">统一的视觉 tokenizer 预训练框架，联合优化对比学习、自监督与重建目标，揭示生成性能随 tokenizer 预训练算力、参数与数据扩展的新 scaling law。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2512.13687">arxiv</a> <a href="https://github.com/MiniMax-AI/VTP">code</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/InfiniteVL" title="InfiniteVL 代码">
+      <img src="res/proj/infinitevl.png" alt="InfiniteVL：线性注意力与稀疏注意力协同的无限输入视觉语言模型" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2025</span><span class="proj-topic">高效多模态模型</span></div>
+      <h3 class="proj-title">InfiniteVL: Synergizing Linear and Sparse Attention for Highly-Efficient, Unlimited-Input Vision-Language Models</h3>
+      <p class="proj-authors">Hongyuan Tao, Bencheng Liao, Shaoyu Chen, Haoran Yin, Qian Zhang, Wenyu Liu, Xinggang Wang*</p>
+      <p class="proj-desc">高效视觉语言模型：线性注意力维持紧凑的长期记忆，稀疏注意力保障精细视觉感知，支持恒定显存占用的无限输入流式理解。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2512.08829">arxiv</a> <a href="https://github.com/hustvl/InfiniteVL">code</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://hustvl.github.io/4DLangVGGT/" title="4DLangVGGT 项目主页">
+      <img src="res/proj/4dlangvggt.png" alt="4DLangVGGT：四维语言-视觉几何接地 Transformer" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2025</span><span class="proj-topic">四维场景理解</span></div>
+      <h3 class="proj-title">4DLangVGGT: 4D Language-Visual Geometry Grounded Transformer</h3>
+      <p class="proj-authors">Xianfeng Wu, Yajing Bai#, Minghan Li, Xianzu Wu, Xueqi Zhao, Zhongyuan Lai, Wenyu Liu, Xinggang Wang*</p>
+      <p class="proj-desc">首个基于 Transformer 的前馈式四维语言接地框架，在单一架构中联合几何感知（StreamVGGT）与语言对齐（语义桥接解码器），无需逐场景优化即可泛化到动态场景。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2512.05060">arxiv</a> <a href="https://github.com/hustvl/4DLangVGGT">code</a> <a href="https://hustvl.github.io/4DLangVGGT/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://hustvl.github.io/TransLight/" title="TransLight 项目主页">
+      <img src="res/proj/translight.png" alt="TransLight：图像引导的定制化光照控制" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-icml">ICML 2026</span><span class="proj-topic">生成模型</span></div>
+      <h3 class="proj-title">TransLight: Image-Guided Customized Lighting Control with Generative Decoupling</h3>
+      <p class="proj-authors">Zongming Li, Lianghui Zhu, Haocheng Shen, Longjin Ran, Wenyu Liu, Xinggang Wang</p>
+      <p class="proj-desc">图像引导的定制化光照控制：通过生成式解耦将任意参考图像的光照效果迁移到用户内容上，实现无需文本描述的精确重光照。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2508.14814">arxiv</a> <a href="https://hustvl.github.io/TransLight/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://hustvl.github.io/LENS/" title="LENS 项目主页">
+      <img src="res/proj/lens.png" alt="LENS：统一强化推理的万物分割" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-aaai">AAAI 2026</span><span class="proj-topic">图像分割</span></div>
+      <h3 class="proj-title">LENS: Learning to Segment Anything with Unified Reinforced Reasoning</h3>
+      <p class="proj-authors">Lianghui Zhu, Bin Ouyang, Yuxuan Zhang, Tianheng Cheng, Rui Hu, Haocheng Shen, Longjin Ran, Xiaoxin Chen, Li Yu, Wenyu Liu, Xinggang Wang</p>
+      <p class="proj-desc">统一强化推理的万物分割：多模态模型对复杂指代表达进行推理并输出精确分割掩码，全流程以强化学习端到端训练。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2508.14153">arxiv</a> <a href="https://github.com/hustvl/LENS">code</a> <a href="https://hustvl.github.io/LENS/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://xiaomi-research.github.io/recogdrive/" title="ReCogDrive 项目主页">
+      <img src="res/proj/recogdrive.png" alt="ReCogDrive：端到端自动驾驶的强化认知框架" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-iclr">ICLR 2026</span><span class="proj-topic">自动驾驶</span></div>
+      <h3 class="proj-title">ReCogDrive: A Reinforced Cognitive Framework for End-to-End Autonomous Driving</h3>
+      <p class="proj-authors">Yongkang Li#, Kaixin Xiong#, Xiangyu Guo, Fang Li, Sixu Yan, Gangwei Xu, Lijun Zhou, Long Chen, Haiyang Sun, Bing Wang, Kun Ma, Guang Chen, Hangjun Ye, Wenyu Liu, Xinggang Wang*</p>
+      <p class="proj-desc">强化认知驾驶框架：认知增强的视觉语言模型与扩散规划器相结合，并通过 DiffGRPO 强化学习进一步提升轨迹的安全性与舒适性。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2506.08052">arxiv</a> <a href="https://github.com/xiaomi-research/recogdrive">code</a> <a href="https://xiaomi-research.github.io/recogdrive/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://hustvl.github.io/GaussTR/" title="GaussTR 项目主页">
+      <img src="res/proj/gausstr.png" alt="GaussTR：基础模型对齐的高斯 Transformer 自监督三维空间理解" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-cvpr">CVPR 2025</span><span class="proj-topic">三维感知</span></div>
+      <h3 class="proj-title">GaussTR: Foundation Model-Aligned Gaussian Transformer for Self-Supervised 3D Spatial Understanding</h3>
+      <p class="proj-authors">Haoyi Jiang, Liu Liu, Tianheng Cheng, Xinjie Wang, Tianwei Lin, Zhizhong Su, Wenyu Liu, Xinggang Wang</p>
+      <p class="proj-desc">自监督三维空间理解：将基于高斯的三维表征与基础模型特征对齐，无需人工三维标注即可实现开放词汇的三维感知。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2412.13193">arxiv</a> <a href="https://github.com/hustvl/GaussTR">code</a> <a href="https://hustvl.github.io/GaussTR/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/DiffusionDrive" title="DiffusionDrive 代码">
+      <img src="res/proj/diffusiondrive.png" alt="DiffusionDrive：端到端自动驾驶的截断扩散模型" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-cvpr">CVPR 2025</span><span class="proj-topic">自动驾驶</span></div>
+      <h3 class="proj-title">DiffusionDrive: Truncated Diffusion Model for End-to-End Autonomous Driving</h3>
+      <p class="proj-authors">Bencheng Liao, Shaoyu Chen, Haoran Yin, Bo Jiang, Cheng Wang, Sixu Yan, Xinbang Zhang, Xiangyu Li, Ying Zhang, Qian Zhang, Xinggang Wang</p>
+      <p class="proj-desc">面向实时端到端驾驶的截断扩散策略，从锚定高斯先验出发仅需少量去噪步数即可生成多样、高质量的轨迹。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2411.15139">arxiv</a> <a href="https://github.com/hustvl/DiffusionDrive">code</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/Senna" title="Senna 代码">
+      <img src="res/proj/senna.png" alt="Senna：连接大规模视觉语言模型与端到端自动驾驶" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-top">IJCV 2026</span><span class="proj-topic">自动驾驶</span></div>
+      <h3 class="proj-title">Senna: Bridging Large Vision-Language Models and End-to-End Autonomous Driving</h3>
+      <p class="proj-authors">Bo Jiang, Shaoyu Chen, Bencheng Liao, Xingyu Zhang, Wei Yin, Qian Zhang, Chang Huang, Wenyu Liu, Xinggang Wang</p>
+      <p class="proj-desc">连接大规模视觉语言模型与端到端自动驾驶的驾驶 VLM，将高层场景理解、推理与精确轨迹规划融为一体。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2410.22313">arxiv</a> <a href="https://github.com/hustvl/Senna">code</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://hgao-cv.github.io/VADv2/" title="VADv2 项目主页">
+      <img src="res/proj/vadv2.png" alt="VADv2：基于概率规划的端到端自动驾驶" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-iclr">ICLR 2026</span><span class="proj-topic">自动驾驶</span></div>
+      <h3 class="proj-title">VADv2: End-to-End Autonomous Driving via Probabilistic Planning</h3>
+      <p class="proj-authors">Bo Jiang, Shaoyu Chen, Hao Gao, Bencheng Liao, Qian Zhang, Wenyu Liu, Xinggang Wang</p>
+      <p class="proj-desc">端到端矢量化自动驾驶：从大规模驾驶示范中学习动作的概率分布，并采样一个动作控制车辆，无需规则包装即可稳定运行。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2402.13243">arxiv</a> <a href="https://github.com/hustvl/VAD">code</a> <a href="https://hgao-cv.github.io/VADv2/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://wondervictor.github.io/" title="YOLO-World 项目主页">
+      <img src="res/proj/yoloworld.png" alt="YOLO-World：实时开放词汇目标检测" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-cvpr">CVPR 2024</span><span class="proj-topic">开放词汇检测</span></div>
+      <h3 class="proj-title">YOLO-World: Real-Time Open-Vocabulary Object Detection</h3>
+      <p class="proj-authors">Tianheng Cheng, Lin Song, Yixiao Ge, Wenyu Liu, Xinggang Wang, Ying Shan</p>
+      <p class="proj-desc">实时开放词汇目标检测：通过可重参数化的 RepVL-PAN 与区域-文本对比预训练为 YOLO 注入视觉语言能力，LVIS 零样本检测达 35.4 AP / 52 FPS。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2401.17270">arxiv</a> <a href="https://github.com/AILab-CVC/YOLO-World">code</a> <a href="https://wondervictor.github.io/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/Vim" title="Vision Mamba 代码">
+      <img src="res/proj/vim.png" alt="Vision Mamba：双向状态空间模型的高效视觉表征学习" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-icml">ICML 2024</span><span class="proj-topic">视觉表征学习</span></div>
+      <h3 class="proj-title">Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model</h3>
+      <p class="proj-authors">Lianghui Zhu#, Bencheng Liao#, Qian Zhang, Xinlong Wang, Wenyu Liu, Xinggang Wang*</p>
+      <p class="proj-desc">基于双向状态空间模型的通用视觉骨干网络，以线性复杂度、无注意力机制达到 Transformer 级别的表征能力。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2401.09417">arxiv</a> <a href="https://github.com/hustvl/Vim">code</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://guanjunwu.github.io/4dgs/index.html" title="4DGaussians 项目主页">
+      <img src="res/proj/4dgs.jpg" alt="4DGaussians：实时动态场景渲染" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-cvpr">CVPR 2024</span><span class="proj-topic">四维重建</span></div>
+      <h3 class="proj-title">4D Gaussian Splatting for Real-Time Dynamic Scene Rendering</h3>
+      <p class="proj-authors">Guanjun Wu#, Taoran Yi#, Jiemin Fang, Lingxi Xie, Xiaopeng Zhang, Wei Wei, Wenyu Liu, Qi Tian, Xinggang Wang*</p>
+      <p class="proj-desc">用高斯泼溅与紧凑的时空联合表征建模动态场景，实现高质量新视角合成的实时渲染。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2310.08528">arxiv</a> <a href="https://github.com/hustvl/4DGaussians">code</a> <a href="https://guanjunwu.github.io/4dgs/index.html">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/MapTR" title="MapTR 代码">
+      <img src="res/proj/maptr.png" alt="MapTR：在线矢量化高精地图构建" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-top">IJCV 2025</span><span class="proj-topic">自动驾驶</span></div>
+      <h3 class="proj-title">MapTRv2: An End-to-End Framework for Online Vectorized HD Map Construction</h3>
+      <p class="proj-authors">Bencheng Liao, Shaoyu Chen, Yunchi Zhang, Bo Jiang, Qian Zhang, Wenyu Liu, Chang Huang, Xinggang Wang</p>
+      <p class="proj-desc">在线矢量化高精地图构建的端到端框架，将地图元素建模为点集并通过层次化查询设计实现实时结构化地图学习。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2308.05736">arxiv</a> <a href="https://github.com/hustvl/MapTR">code</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/baaivision/EVA" title="EVA 代码">
+      <img src="res/proj/eva.png" alt="EVA：规模化掩码视觉表征学习的极限探索" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-cvpr">CVPR 2023</span><span class="proj-topic">视觉表征学习</span></div>
+      <h3 class="proj-title">EVA: Exploring the Limits of Masked Visual Representation Learning at Scale</h3>
+      <p class="proj-authors">Yuxin Fang#, Wen Wang, Binhui Xie, Quan Sun, Ledell Wu, Xinggang Wang*, Tiejun Huang, Xinlong Wang*, Yue Cao*</p>
+      <p class="proj-desc">将掩码图像建模扩展到十亿参数级视觉 Transformer：仅用掩码图像建模预训练的原始 ViT 即可在大量下游视觉任务上达到最先进水平。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2211.07636">arxiv</a> <a href="https://github.com/baaivision/EVA">code</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/FoundationVision/ByteTrack" title="ByteTrack 代码">
+      <img src="res/proj/bytetrack.jpg" alt="ByteTrack：关联每一个检测框的多目标跟踪" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-eccv">ECCV 2022</span><span class="proj-topic">多目标跟踪</span></div>
+      <h3 class="proj-title">ByteTrack: Multi-Object Tracking by Associating Every Detection Box</h3>
+      <p class="proj-authors">Yifu Zhang, Peize Sun, Yi Jiang, Dongdong Yu, Fucheng Weng, Zehuan Yuan, Ping Luo, Wenyu Liu, Xinggang Wang</p>
+      <p class="proj-desc">简单而高效的多目标跟踪：关联每一个检测框而非仅高分框，从低分检测中找回真实目标并过滤背景，已成为集成进 YOLOv8 等框架的标准跟踪器。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2110.06864">arxiv</a> <a href="https://github.com/FoundationVision/ByteTrack">code</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/ifzhang/FairMOT" title="FairMOT 代码">
+      <img src="res/proj/fairmot.png" alt="FairMOT：多目标跟踪中检测与重识别的公平性" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-top">IJCV 2021</span><span class="proj-topic">多目标跟踪</span></div>
+      <h3 class="proj-title">FairMOT: On the Fairness of Detection and Re-Identification in Multiple Object Tracking</h3>
+      <p class="proj-authors">Yifu Zhang#, Chunyu Wang, Xinggang Wang*, Wenjun Zeng, Wenyu Liu</p>
+      <p class="proj-desc">一站式多目标跟踪器：在同构网络中公平地平衡检测与重识别两个任务，解决了将重识别作为次要任务所带来的固有偏差。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2004.01888">arxiv</a> <a href="https://github.com/ifzhang/FairMOT">code</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/speedinghzl/CCNet" title="CCNet 代码">
+      <img src="res/proj/ccnet.png" alt="CCNet：语义分割的十字交叉注意力" loading="lazy">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-top">TPAMI 2023</span><span class="proj-topic">语义分割</span></div>
+      <h3 class="proj-title">CCNet: Criss-Cross Attention for Semantic Segmentation</h3>
+      <p class="proj-authors">Zilong Huang#, Xinggang Wang#*, Yunchao Wei, Lichao Huang, Humphrey Shi, Wenyu Liu, Thomas Huang</p>
+      <p class="proj-desc">十字交叉注意力以稀疏的十字路径替代稠密注意力捕获全图上下文，是分割领域广泛使用的高效长程依赖模块，并被 AlphaFold 采用。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/1811.11721">arxiv</a> <a href="https://github.com/speedinghzl/CCNet">code</a></p>
+    </div>
+  </li>
+
+  </ol>
+
+
+</div>
+
+	<footer class="bottombar" role="contentinfo"><a href="https://github.com/xwcv/xwcv.github.io">xwcv theme</a> · © 2026 王兴刚 · 最近更新：2026年9月</footer>
+
+</body></html>

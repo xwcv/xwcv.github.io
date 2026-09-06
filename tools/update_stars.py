@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Fetch GitHub star counts for the code repos linked from pubs.htm and
-write res/stars.json, which res/site.js uses to render a "star" badge next
-to each code link.
+projs.html and write res/stars.json, which res/site.js uses to render a
+"star" badge next to each code link.
 
 Repos are extracted by taking the first two path segments of every
-https://github.com/<owner>/<repo> link in pubs.htm (a few links point into
-subdirectories of a repo). Each unique repo is queried once via the GitHub
-REST API.
+https://github.com/<owner>/<repo> link in those pages (a few links point
+into subdirectories of a repo). Each unique repo is queried once via the
+GitHub REST API.
 
 The GITHUB_TOKEN env var is used when present (the scheduled workflow passes
 the built-in Actions token). Without a token the API allows only 60
@@ -28,7 +28,7 @@ import urllib.error
 import urllib.request
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
-PUBS = os.path.join(ROOT, "pubs.htm")
+PAGES = [os.path.join(ROOT, "pubs.htm"), os.path.join(ROOT, "projs.html")]
 OUT = os.path.join(ROOT, "res", "stars.json")
 API_URL = "https://api.github.com/repos/"
 
@@ -38,13 +38,14 @@ REPO_RE = re.compile(r"https://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)")
 
 
 def find_repos():
-    with open(PUBS, encoding="utf-8") as f:
-        html = f.read()
     repos = []
-    for owner, repo in REPO_RE.findall(html):
-        full = owner + "/" + repo
-        if full not in repos:
-            repos.append(full)
+    for page in PAGES:
+        with open(page, encoding="utf-8") as f:
+            html = f.read()
+        for owner, repo in REPO_RE.findall(html):
+            full = owner + "/" + repo
+            if full not in repos:
+                repos.append(full)
     return repos
 
 
@@ -65,7 +66,7 @@ def main():
         sys.exit(1)
 
     repos = find_repos()
-    print("found %d unique repos in pubs.htm" % len(repos))
+    print("found %d unique repos in %s" % (len(repos), ", ".join(os.path.basename(p) for p in PAGES)))
 
     old = {}
     if os.path.exists(OUT):

@@ -386,4 +386,55 @@ document.addEventListener('DOMContentLoaded', function () {
     a.innerHTML = '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>';
     icons.insertBefore(a, icons.firstChild);
   });
+
+  /* 10. Project gallery (homepage): the 2-row card track scrolls natively
+         (touch swipe / trackpad / drag); JS only adds prev/next buttons.
+         Buttons stay hidden when the track does not overflow. */
+  document.querySelectorAll('.gal').forEach(function (gal) {
+    var track = gal.querySelector('.gal-track');
+    if (!track) return;
+    var mk = function (cls, label, path) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'gal-btn ' + cls;
+      b.setAttribute('aria-label', label);
+      b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="' + path + '"/></svg>';
+      gal.appendChild(b);
+      return b;
+    };
+    var prev = mk('gal-prev', 'Previous projects', 'M15 18l-6-6 6-6');
+    var next = mk('gal-next', 'Next projects', 'M9 6l6 6-6 6');
+    var update = function () {
+      var over = track.scrollWidth - track.clientWidth;
+      var has = over > 8;
+      prev.style.display = has ? '' : 'none';
+      next.style.display = has ? '' : 'none';
+      gal.classList.toggle('gal-fit', !has);
+      if (!has) return;
+      var atStart = track.scrollLeft <= 4;
+      var atEnd = track.scrollLeft >= over - 4;
+      prev.disabled = atStart;
+      next.disabled = atEnd;
+      gal.classList.toggle('gal-mid', !atStart && !atEnd);
+      gal.classList.toggle('gal-end', atEnd);
+    };
+    var smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    prev.addEventListener('click', function () {
+      track.scrollBy({ left: -track.clientWidth, behavior: smooth ? 'smooth' : 'auto' });
+    });
+    next.addEventListener('click', function () {
+      track.scrollBy({ left: track.clientWidth, behavior: smooth ? 'smooth' : 'auto' });
+    });
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+
+  /* 10b. Respect reduced-motion: keep autoplay demo videos paused */
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('video[autoplay]').forEach(function (v) {
+      v.removeAttribute('autoplay');
+      v.pause();
+    });
+  }
 });

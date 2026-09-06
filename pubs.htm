@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <script>
       (function () {
         var t = null;
@@ -13,7 +14,6 @@
         document.documentElement.setAttribute('data-theme', t);
       })();
     </script>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
@@ -31,13 +31,16 @@
     <meta property="og:description" content="Research publications by Professor Xinggang Wang in computer vision, deep learning, and artificial intelligence.">
     <meta property="og:image" content="https://xwcv.github.io/res/logo.png">
     <meta property="og:site_name" content="Xinggang Wang - Publications">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:image:alt" content="Xinggang Wang homepage cover">
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://xwcv.github.io/pubs.htm">
-    <meta property="twitter:title" content="Publications - Xinggang Wang">
-    <meta property="twitter:description" content="Research publications by Professor Xinggang Wang in computer vision, deep learning, and artificial intelligence.">
-    <meta property="twitter:image" content="https://xwcv.github.io/res/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://xwcv.github.io/pubs.htm">
+    <meta name="twitter:title" content="Publications - Xinggang Wang">
+    <meta name="twitter:description" content="Research publications by Professor Xinggang Wang in computer vision, deep learning, and artificial intelligence.">
+    <meta name="twitter:image" content="https://xwcv.github.io/res/logo.png">
     
     <!-- Additional SEO Meta Tags -->
     <meta name="language" content="English">
@@ -50,29 +53,34 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="res/logo.png">
+    <link rel="apple-touch-icon" href="res/logo.png">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="res/mystyle.css">
     <script src="res/site.js" defer></script>
     
-    <!-- Structured Data for Publications -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Xinggang Wang",
-      "jobTitle": "Professor",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Huazhong University of Science and Technology"
-      },
+      "@type": "CollectionPage",
+      "name": "Publications - Xinggang Wang",
       "url": "https://xwcv.github.io/pubs.htm",
-      "image": "https://xwcv.github.io/res/logo.png",
-      "sameAs": [
-        "https://scholar.google.com/citations?user=qNCTLV0AAAAJ&hl=en",
-        "https://dblp.org/pid/95/3056.html",
-        "https://orcid.org/0000-0001-6732-7823"
-      ]
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Xinggang Wang",
+        "jobTitle": "Professor",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huazhong University of Science and Technology"
+        },
+        "image": "https://xwcv.github.io/res/logo.png",
+        "sameAs": [
+          "https://scholar.google.com/citations?user=qNCTLV0AAAAJ&hl=en",
+          "https://dblp.org/pid/95/3056.html",
+          "https://orcid.org/0000-0001-6732-7823"
+        ]
+      }
     }
     </script>
 </head>
@@ -97,7 +105,8 @@
 </nav>
 	
 
-<div class="container">
+<main class="container">
+  <h1 class="visually-hidden">Publications - Xinggang Wang</h1>
 
 
     <div  id="I32eb71f3297d4aa684dd7d3571975f66_sys_txt" systemelement="true" class="sys_txt sys_text_widget new-text-widget">
@@ -116,9 +125,9 @@
     <p class="legend"><span><sup>#</sup> equal contribution</span><span><sup>*</sup> corresponding author</span></p>
   <ol>
 
-  <p>Year 2026</p>
+  <li class="year-heading">Year 2026</li>
 
-    <li><p>
+    <li value="1"><p>
     Huangxuan Zhao*, Yaowei Bai, Lei Chen, Jinqiang Ma, ..., Xuefeng Kan*, Chengcheng Zhu*, Bo Du*, Xinggang Wang*, Chuansheng Zheng*. <strong>Generative AI-based low-dose digital subtraction angiography for intra-operative radiation dose reduction: a randomized controlled trial</strong>. <strong>Nature Medicine</strong> (<strong>Nat. Med.</strong>), 2026. <a href="https://doi.org/10.1038/s41591-025-04042-6">DOI: 10.1038/s41591-025-04042-6</a>, <a href="https://github.com/ZrH42/GenDSA-V2">code</a>.
   </p></li>
 
@@ -191,9 +200,9 @@
   </p></li>
  
 
-  <br><p>Year 2025</p>
+  <li class="year-heading">Year 2025</li>
 
-  <li><p>
+  <li value="19"><p>
     Tianheng Cheng, Xinggang Wang, Junchao Liao, Wenyu Liu. <strong>Cross-Layer Attentive Feature Upsampling for Low-latency Semantic Segmentation</strong>. Machine Vision and Applications, 36, 18, 2025. <a href="https://doi.org/10.1007/s00138-024-01631-2">DOI: 10.1007/s00138-024-01631-2</a>.
   </p></li>
 
@@ -306,9 +315,9 @@
 
 
 
-  <br><p>Year 2024</p>
+  <li class="year-heading">Year 2024</li>
 
-  <li><p>
+  <li value="46"><p>
     Yuehao Song, Xinggang Wang*, Jingfeng Yao, Wenyu Liu, Jinglin Zhang, Xiangmin Xu. <strong>ViTGaze: Gaze Following with Interaction Features in Vision Transformers</strong>. <strong>Visual Intelligence</strong>, Volume 2, Number 31, 2024. <a href="https://doi.org/10.1007/s44267-024-00064-9">DOI: 10.1007/s44267-024-00064-9</a>, <a href="https://github.com/hustvl/ViTGaze">code</a>.
   </p></li>
 
@@ -418,10 +427,10 @@
 
 
 
-  <br><p>Year 2023</p>
+  <li class="year-heading">Year 2023</li>
 
   
-  <li><p>Yuxin Fang, Xinggang Wang*, Rui Wu, Wenyu Liu. <strong>What Makes for Hierarchical Vision Transformer?</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>), Volume: 45, Issue: 10, October 2023, DOI: 10.1109/TPAMI.2023.3282019. <a href="https://arxiv.org/abs/2107.02174">pdf</a> </p></li>
+  <li value="72"><p>Yuxin Fang, Xinggang Wang*, Rui Wu, Wenyu Liu. <strong>What Makes for Hierarchical Vision Transformer?</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>), Volume: 45, Issue: 10, October 2023, DOI: 10.1109/TPAMI.2023.3282019. <a href="https://arxiv.org/abs/2107.02174">pdf</a> </p></li>
 
   <li><p>Yifu Zhang, Chunyu Wang, Xinggang Wang, Wenjun Zeng, Wenyu Liu. <strong>VoxelTrack: Multi-Person 3D Human Pose Estimation and Tracking in the Wild</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>), Volume: 45, Issue: 2, 01 February 2023, DOI: 10.1109/TPAMI.2023.3282019. <a href="https://arxiv.org/abs/2108.02452">pdf</a>, <a href="https://github.com/microsoft/voxelpose-pytorch">code</a> </p></li>
 
@@ -496,10 +505,10 @@
 
 
   
-  <br><p>Year 2022</p>
+  <li class="year-heading">Year 2022</li>
 
-  <li><p>
-    Yifu Zhang, Peize Sun, Yi Jiang, Dongdong Yu, Fucheng Weng, Zehuan Yuan, Ping Luo, Wenyu Liu, Xinggang Wang. <strong>ByteTrack: Multi-Object Tracking by Associating Every Detection Box</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2022. <a href="https://arxiv.org/abs/2110.06864">pdf</a>, <a href="https://github.com/ifzhang/ByteTrack">code</a>.</p>
+  <li value="90"><p>
+    Yifu Zhang, Peize Sun, Yi Jiang, Dongdong Yu, Fucheng Weng, Zehuan Yuan, Ping Luo, Wenyu Liu, Xinggang Wang. <strong>ByteTrack: Multi-Object Tracking by Associating Every Detection Box</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2022. <a href="https://arxiv.org/abs/2110.06864">pdf</a>, <a href="https://github.com/FoundationVision/ByteTrack">code</a>.</p>
   </li>
 
 
@@ -570,9 +579,9 @@
 
   
 
-  <br><p>Year 2021</p>
+  <li class="year-heading">Year 2021</li>
 
-  <li><p>Yifu Zhang, Chunyu Wang, Xinggang Wang, Wenjun Zeng, Wenyu Liu. <strong>FairMOT: On the Fairness of Detection and Re-Identification in Multiple Object Tracking</strong>. International Journal of Computer Vision (<strong>IJCV</strong>), 129, pages3069–3087 (2021). <a href="https://link.springer.com/article/10.1007/s11263-021-01513-4">pdf</a>, <a href="https://github.com/ifzhang/FairMOT">code</a>.
+  <li value="106"><p>Yifu Zhang, Chunyu Wang, Xinggang Wang, Wenjun Zeng, Wenyu Liu. <strong>FairMOT: On the Fairness of Detection and Re-Identification in Multiple Object Tracking</strong>. International Journal of Computer Vision (<strong>IJCV</strong>), 129, pages3069–3087 (2021). <a href="https://link.springer.com/article/10.1007/s11263-021-01513-4">pdf</a>, <a href="https://github.com/ifzhang/FairMOT">code</a>.
 
   <li><p>Jingdong Wang, Ke Sun, Tianheng Cheng, Borui Jiang, Chaorui Deng, Yang Zhao, Dong Liu, Yadong Mu, Mingkui Tan, Xinggang Wang, Wenyu Liu, Bin Xiao. <strong>Deep High-Resolution Representation Learning for Visual Recognition</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>),  vol. 43, no. 10, pp. 3349-3364, 1 Oct. 2021, doi: 10.1109/TPAMI.2020.2983686. <a href="https://arxiv.org/pdf/1908.07919.pdf">pdf</a>, <a href="https://github.com/HRNet">code</a>, <a href="bib/wang2020deep.txt">bib</a>
   </p></li>
@@ -636,8 +645,8 @@
   Qixin Hu, Siyan Xu, Xue-wen Chen, Xinggang Wang, Ken Xingze Wang. <strong>Object recognition for remarkably small field-of-view with speckles</strong>. Applied Physics Letters (<strong>APL</strong>), Vol.118, Issue 9, 2021. DOI: 10.1063/5.0040343, <a href="https://aip.scitation.org/doi/10.1063/5.0040343">pdf</a>
   </p></li>
 
-  <br><p>Year 2020</p>
-  <li><p>Tianheng Cheng, Xinggang Wang, Lichao Huang, Wenyu Liu. <strong>Boundary-preserving Mask R-CNN</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2020. <a href="https://arxiv.org/pdf/2007.08921.pdf">pdf</a>, <a href="https://github.com/hustvl/BMaskR-CNN">code</a>, <a href="bib/cheng2020boundary.txt">bib</a>
+  <li class="year-heading">Year 2020</li>
+  <li value="125"><p>Tianheng Cheng, Xinggang Wang, Lichao Huang, Wenyu Liu. <strong>Boundary-preserving Mask R-CNN</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2020. <a href="https://arxiv.org/pdf/2007.08921.pdf">pdf</a>, <a href="https://github.com/hustvl/BMaskR-CNN">code</a>, <a href="bib/cheng2020boundary.txt">bib</a>
   
   <li><p>Jiemin Fang, Yuzhu Sun, Qian Zhang, Yuan Li, Wenyu Liu, Xinggang Wang. <strong>Densely Connected Search Space for More Flexible Neural Architecture Search</strong>. <strong>CVPR</strong>, 2020. <a href="https://arxiv.org/abs/1906.09607">pdf</a>, <a href="https://github.com/JaminFong/DenseNAS">code</a>, <a href="bib/fang2020densely.txt">bib</a> 
   </p></li>
@@ -691,9 +700,9 @@
   <li><p>Peng Tang, Xinggang Wang*, Song Bai, Wei Shen, Xiang Bai, Wenyu Liu, Alan Yuille. <strong>PCL: Proposal Cluster Learning for Weakly Supervised Object Detection</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>), vol. 42, no. 1, pp. 176-191, 1 Jan. 2020, doi: 10.1109/TPAMI.2018.2876304. <a href="https://arxiv.org/pdf/1807.03342.pdf">pdf</a>, <a href="https://github.com/ppengtang/pcl.pytorch">code</a>, <a href="bib/tang2020proposal.txt">bib</a>
   </p></li>
 
-  <br><p>Year 2019</p>
+  <li class="year-heading">Year 2019</li>
 
-  <li><p>Zilong Huang, Xinggang Wang, Lichao Huang, Chang Huang, Yunchao Wei, Wenyu Liu. <strong>CCNet: Criss-Cross Attention for Semantic Segmentation</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2019. <a href="https://arxiv.org/pdf/1811.11721.pdf">pdf</a>, <a href="https://github.com/speedinghzl/CCNet">code</a>, <a href="bib/huang2020ccnet.txt">bib</a>
+  <li value="142"><p>Zilong Huang, Xinggang Wang, Lichao Huang, Chang Huang, Yunchao Wei, Wenyu Liu. <strong>CCNet: Criss-Cross Attention for Semantic Segmentation</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2019. <a href="https://arxiv.org/pdf/1811.11721.pdf">pdf</a>, <a href="https://github.com/speedinghzl/CCNet">code</a>, <a href="bib/huang2020ccnet.txt">bib</a>
   </p></li>
 
   <li><p>
@@ -731,9 +740,9 @@
 
 
   <br>
-  <p>Year 2018</p>
+  <li class="year-heading">Year 2018</li>
 
-  <li><p>
+  <li value="153"><p>
   Peng Tang, Xinggang Wang, Angtian Wang, Yongluan Yan, Wenyu Liu, Junzhou Huang, Alan Yuille. <strong>Weakly Supervised Region Proposal Network and Object Detection</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2018. <a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Peng_Tang_Weakly_Supervised_Region_ECCV_2018_paper.pdf">pdf</a>, <a href="bib/tang2018weakly.txt">bib</a>
   </p></li>
 
@@ -768,8 +777,8 @@
 
 
 
-  <br><p>Year 2017</p>
-  <li><p>
+  <li class="year-heading">Year 2017</li>
+  <li value="161"><p>
   Jianxiang Ma, Anlong Ming, Zilong Huang, Xinggang Wang, Yu Zhou. <strong>Object-Level Proposals</strong>. <strong>ICCV</strong>, 2017. <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Ma_Object-Level_Proposals_ICCV_2017_paper.pdf">pdf</a>, <a href="bib/ma2017object.txt">bib</a>
   </p></li>
 
@@ -799,9 +808,9 @@
   
   <li><p>Peng Tang, Jin Zhang, Xinggang Wang*, Bin Feng, Fabio Roli, Wenyu Liu. <strong>Learning Extremely Shared Middle-level Image Representation for Scene Classification</strong>. Knowledge and Information Systems  <strong>(KIS)</strong>, 52, 509–530 (2017), doi:10.1007/s10115-016-1015-z <a href="https://github.com/hust-tp/ESMIR">code</a></p></li>
 
-  <br><p>Year 2016</p>
+  <li class="year-heading">Year 2016</li>
     
-  <li><p>Baoguang Shi, Xinggang Wang, Pengyuan Lv, Cong Yao, Xiang Bai. <strong>Robust Scene Text Recognition with Automatic Rectification</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2016. <a href="https://arxiv.org/abs/1603.03915">pdf</a>, <a href="bib/shi2016robust.txt">bib</a>
+  <li value="170"><p>Baoguang Shi, Xinggang Wang, Pengyuan Lv, Cong Yao, Xiang Bai. <strong>Robust Scene Text Recognition with Automatic Rectification</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2016. <a href="https://arxiv.org/abs/1603.03915">pdf</a>, <a href="bib/shi2016robust.txt">bib</a>
   </p></li> 
 
    <li><p>Xinggang Wang, Xiong Duan, Xiang Bai*. <strong>Deep sketch feature for cross-domain image retrieval</strong>. <strong>Neurocomputing</strong>, Volume 207, 26 September 2016, Pages 387–397. <a href="https://github.com/XiongDuan/deepsketch">code</a></p></li>
@@ -820,9 +829,9 @@
   </p></li>
 
 
-  <br><p>Year 2015</p>
+  <li class="year-heading">Year 2015</li>
     
-  <li><p>Xinggang Wang#, Zhuotun Zhu#, Cong Yao, Xiang Bai. <strong>Relaxed Multiple-Instance SVM with Application to Object Discovery</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2015. <a href="https://arxiv.org/abs/1510.01027">pdf</a>, <a href="https://github.com/sunformoon/RMI-SVM-ICCV2015">code</a>, <a href="bib/wang2015relaxed.txt">bib</a>
+  <li value="178"><p>Xinggang Wang#, Zhuotun Zhu#, Cong Yao, Xiang Bai. <strong>Relaxed Multiple-Instance SVM with Application to Object Discovery</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2015. <a href="https://arxiv.org/abs/1510.01027">pdf</a>, <a href="https://github.com/sunformoon/RMI-SVM-ICCV2015">code</a>, <a href="bib/wang2015relaxed.txt">bib</a>
   </p></li>  
 
   <li><p>Wei Shen, Xinggang Wang, Yan Wang, Xiang Bai, Zhijiang Zhang. <strong>DeepContour: A Deep Convolutional Feature for Contour Detection</strong>. IEEE Computer Society Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2015, Boston, USA. <a href="https://openaccess.thecvf.com/content_cvpr_2015/papers/Shen_DeepContour_A_Deep_2015_CVPR_paper.pdf">pdf</a>, <a href="https://github.com/shenwei1231/DeepContour">code</a>, <a href="bib/shen2015deepcontour.txt">bib</a>
@@ -834,10 +843,10 @@
   </p></li>
 
 
-  <br><p>Year 2014</p>
+  <li class="year-heading">Year 2014</li>
             
         
-  <li><p> Xiaojie Guo, Xinggang Wang, Liang Yang, Xiaochun Cao and Yi Ma, <strong>Robust Foreground Detection Using Smoothness and Arbitrariness Constraints</strong>, European Conference on Computer Vision (<strong>ECCV</strong>), Zurich, September, 2014. <a href="http://cs.tju.edu.cn/orgs/vision/~xguo/publication/eccv14_guo.pdf">pdf</a>, <a href="bib/guo2014robust.txt">bib</a>
+  <li value="182"><p> Xiaojie Guo, Xinggang Wang, Liang Yang, Xiaochun Cao and Yi Ma, <strong>Robust Foreground Detection Using Smoothness and Arbitrariness Constraints</strong>, European Conference on Computer Vision (<strong>ECCV</strong>), Zurich, September, 2014. <a href="http://cs.tju.edu.cn/orgs/vision/~xguo/publication/eccv14_guo.pdf">pdf</a>, <a href="bib/guo2014robust.txt">bib</a>
   </p></li>
 
   <li> <p>Xiang Bai, Cong Rao, and Xinggang Wang*. <strong>Shape Vocabulary: A Robust and Efficient Shape Representation for Shape Matching</strong>. IEEE Transactions on Image Processing <strong>(TIP)</strong> vol. 23, no. 9, pp. 3935-3949, Sept. 2014, doi: 10.1109/TIP.2014.2336542. <a href="https://www.vlrlab.net/admin/uploads/avatars/Shape_Vocabulary_A_Robust_and_Efficient_Shape_Representation_for_Shape_Matching.pdf">pdf</a>, <a href="bib/bai2014shape.txt">bib</a>
@@ -852,10 +861,10 @@
   </p> </li>
 
 
-  <br><p>Year 2009 - 2013</p>
+  <li class="year-heading">Year 2009 - 2013</li>
 
 
-  <li><p> Xinggang Wang, Baoyuan Wang, Xiang Bai, Wenyu Liu, and Zhuowen Tu, <strong>Max-Margin Multiple Instance Dictionary Learning</strong>, International Conference on Machine Learning (<strong>ICML</strong>), Atlanta, June, 2013. <a href="./pubs/icml2013_wang13d.pdf">pdf</a>, <a href="https://bitbucket.org/xinggangw/mmdl" >code</a>, <a href="bib/wang2013max.txt">bib</a>
+  <li value="183"><p> Xinggang Wang, Baoyuan Wang, Xiang Bai, Wenyu Liu, and Zhuowen Tu, <strong>Max-Margin Multiple Instance Dictionary Learning</strong>, International Conference on Machine Learning (<strong>ICML</strong>), Atlanta, June, 2013. <a href="./pubs/icml2013_wang13d.pdf">pdf</a>, <a href="https://bitbucket.org/xinggangw/mmdl" >code</a>, <a href="bib/wang2013max.txt">bib</a>
     </p></li>
 
   <li> <p>Xinggang Wang, Xiang Bai, Tianyang Ma, Wenyu Liu, Longin Latecki. <strong>Fan Shape Model for Object Detection</strong>. IEEE Computer Society Conference on Computer vision and Pattern Recognition (<strong>CVPR</strong>), 2012. <a href="./pubs/cvpr12.pdf">pdf</a>, 
@@ -950,12 +959,12 @@
   </p></li>
 
   <li><p>
+  Hao Gao, Shaoyu Chen, Yifan Zhu, Yuehao Song, Wenyu Liu, Qian Zhang, Xinggang Wang*. <strong>RAD-2: Scaling Reinforcement Learning in a Generator-Discriminator Framework</strong>. arXiv preprint <a href="https://arxiv.org/abs/2604.15308">arXiv:2604.15308</a> (2026). <a href="https://hgao-cv.github.io/RAD-2/">project page</a>.
+  </p></li><li><p>
   Yongkang Li, Lijun Zhou, Sixu Yan, Bencheng Liao, Tianyi Yan, Kaixin Xiong, Long Chen, Hongwei Xie, Bing Wang, Guang Chen, Hangjun Ye, Haiyang Sun, Wenyu Liu, Xinggang Wang*. <strong>UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving</strong>. arXiv preprint <a href="https://arxiv.org/abs/2604.02190">arXiv:2604.02190</a> (2026). <a href="https://xiaomi-research.github.io/unidrivevla/">project page</a>.
   </p></li>
 
-  <li><p>
-  Hao Gao, Shaoyu Chen, Yifan Zhu, Yuehao Song, Wenyu Liu, Qian Zhang, Xinggang Wang*. <strong>RAD-2: Scaling Reinforcement Learning in a Generator-Discriminator Framework</strong>. arXiv preprint <a href="https://arxiv.org/abs/2604.15308">arXiv:2604.15308</a> (2026). <a href="https://hgao-cv.github.io/RAD-2/">project page</a>.
-  </p></li>
+  
 
   <li><p>
   Yuehao Song, Shaoyu Chen, Hao Gao, Yifan Zhu, Weixiang Yue, Jialv Zou, Bo Jiang, Zihao Lu, Yu Wang, Qian Zhang, Xinggang Wang*. <strong>Senna-2: Aligning VLM and End-to-End Driving Policy for Consistent Decision Making and Planning</strong>. arXiv preprint <a href="https://arxiv.org/abs/2603.11219">arXiv:2603.11219</a> (2026). <a href="https://hgao-cv.github.io/senna2-project/">project page</a>.
@@ -994,8 +1003,8 @@
 
 
 	</div>
-</div>
+</main>
 
-	<footer class="bottombar" role="contentinfo"><a href="https://github.com/xwcv/xwcv.github.io">xwcv theme</a> · © 2026 Xinggang Wang · Last updated: August 2026</footer>
+	<footer class="bottombar" role="contentinfo"><a href="https://github.com/xwcv/xwcv.github.io">xwcv theme</a> · © 2026 Xinggang Wang · Last updated: September 2026</footer>
 
 </body></html>

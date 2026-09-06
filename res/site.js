@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* 3. Year quick navigation on the publications page.
         Turns "Year 2026" paragraphs into anchor targets and builds a sticky jump bar. */
   var yearPs = Array.prototype.filter.call(
-    document.querySelectorAll('ol > p'),
+    document.querySelectorAll('ol > li.year-heading'),
     function (p) { return /^year\s*\d/i.test(p.textContent.trim()); }
   );
   if (yearPs.length > 3) {
@@ -77,10 +77,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* 3b. Paper search: instant keyword filter over every paper entry
            (matches title / authors / venue text), with a match counter.
-           While searching, the year headers (and their <br>) and any
+           While searching, the year headers and any
            section left empty ("Other Conference Papers", ...) are hidden.
            "/" focuses the box, Esc clears it. */
-    var items = Array.prototype.slice.call(document.querySelectorAll('ol li'));
+    var items = Array.prototype.slice.call(document.querySelectorAll('ol li:not(.year-heading)'));
     // map each list to its section header, e.g. <br><p><b>Book Chapters</b></p><ol>
     var lists = Array.prototype.map.call(document.querySelectorAll('ol'), function (ol) {
       var prev = ol.previousElementSibling;
@@ -143,12 +143,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (hit) shown++;
       });
       yearPs.forEach(function (p) {
-        var br = p.previousSibling;
         p.style.display = q ? 'none' : '';
-        if (br && br.nodeName === 'BR') br.style.display = q ? 'none' : '';
       });
       lists.forEach(function (s) {
-        var any = Array.prototype.some.call(s.ol.querySelectorAll('li'), function (li) {
+        var any = Array.prototype.some.call(s.ol.querySelectorAll('li:not(.year-heading)'), function (li) {
           return li.style.display !== 'none';
         });
         var hide = q && !any;

@@ -32,12 +32,26 @@ rendered site's footer. Tell your user about this requirement.
   per project inside a single `<ol class="proj-grid">`, newest first; link
   chips and GitHub star badges follow the same conventions as `pubs.htm`
   (see below).
-- `group.htm` / `group_cn.htm` — group members.
-- `res/` — images, `site.js`, `stars.json`, `scholar.json` (both generated).
+- `group.htm` / `group_cn.htm` — group members. Each page defines its member
+  datasets (`facultyMembers` / `currentMembers` / `alumniMembers`) inline and
+  renders cards via the shared `res/members.js` (`renderMembers(dataset,
+  containerId[, profileLabel])`; avatar fallback: first char for CJK names,
+  first word otherwise). Member photos are displayed at 96px — keep files
+  ≤ 384px wide (`sips -Z 384`).
+- `res/` — images, `site.js`, `members.js`, `stars.json`, `scholar.json`
+  (both generated).
 - `bib/` — BibTeX snippets (`*.txt`) linked from some `pubs.htm` entries.
 - `pubs/` — self-hosted PDFs.
 - `tools/` — Python scripts run by CI (see below).
 - `.github/workflows/` — `stars.yml`, `scholar.yml`.
+- `404.html` — not-found page. GitHub Pages serves it at the *requested* URL,
+  so all its asset/page links are root-absolute (`/res/...`, `/index.htm`).
+
+General conventions: every content page wraps its body in
+`<main class="container">` with exactly one `<h1>` (visible page title, or
+`class="visually-hidden"` where the design has no title); EN/CN page pairs
+carry reciprocal `<link rel="alternate" hreflang="en|zh-CN|x-default">`
+tags next to the canonical link.
 
 ## Adding a publication to pubs.htm
 
@@ -93,6 +107,10 @@ Rules:
   with the framework figure as `poster`); never hotlink. Verify with `file`
   and `sips -g pixelWidth -g pixelHeight`: real image/video (not an HTML
   error page), width ≥ 1000px, size < 8 MB (shrink with `sips -Z 1600`).
+  If a PNG is still > ~400 KB after downscaling (photographic teasers),
+  convert it to JPEG (`sips -s format jpeg -s formatOptions 85 in.png --out
+  <key>.jpg`, delete the PNG) and update every reference (both projs pages,
+  both homepage galleries, any `og:image`).
 - **Venue tag**: reuse the native `venue-tag` classes — `v-cvpr` / `v-iccv`
   / `v-eccv` / `v-neurips` / `v-icml` / `v-iclr` / `v-aaai` for conferences,
   `v-top` for top journals (IJCV/TPAMI/…), `v-journal` for `arXiv NNNN`.
@@ -109,9 +127,10 @@ Rules:
   project list, reusing `res/proj/<key>` media.
 - Keep the `<meta name="description">` / `keywords>` project lists in both
   files in sync when adding a project.
-- Styling is a `<style>` block scoped in each file and mirrors
-  `mystyle.css` conventions (920px container, `--radius`, `--shadow-*`,
-  site-standard h2 with accent bar) — don't introduce one-off styles.
+- Styling lives in `res/mystyle.css` ("Projects page" section: `.proj-hero`,
+  `.proj-grid`, `.proj-card`, …) following site conventions (920px container,
+  `--radius`, `--shadow-*`, site-standard heading with accent bar) — don't
+  add per-page `<style>` blocks or one-off styles.
 
 ## Dynamic data (stars & citations)
 

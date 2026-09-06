@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
   <script>
     (function () {
       var t = null;
@@ -11,7 +12,6 @@
       document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Primary Meta Tags -->
@@ -29,13 +29,16 @@
   <meta property="og:description" content="Research group led by Professor Xinggang Wang at Huazhong University of Science and Technology.">
   <meta property="og:image" content="https://xwcv.github.io/res/logo.png">
   <meta property="og:site_name" content="Xinggang Wang - Research Group">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:image:alt" content="Xinggang Wang homepage cover">
   
   <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://xwcv.github.io/group.htm">
-  <meta property="twitter:title" content="Research Group - Xinggang Wang">
-  <meta property="twitter:description" content="Research group led by Professor Xinggang Wang at Huazhong University of Science and Technology.">
-  <meta property="twitter:image" content="https://xwcv.github.io/res/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://xwcv.github.io/group.htm">
+  <meta name="twitter:title" content="Research Group - Xinggang Wang">
+  <meta name="twitter:description" content="Research group led by Professor Xinggang Wang at Huazhong University of Science and Technology.">
+  <meta name="twitter:image" content="https://xwcv.github.io/res/logo.png">
   
   <!-- Additional SEO Meta Tags -->
   <meta name="language" content="English">
@@ -45,9 +48,13 @@
   
   <!-- Canonical URL -->
   <link rel="canonical" href="https://xwcv.github.io/group.htm">
+  <link rel="alternate" hreflang="en" href="https://xwcv.github.io/group.htm">
+  <link rel="alternate" hreflang="zh-CN" href="https://xwcv.github.io/group_cn.htm">
+  <link rel="alternate" hreflang="x-default" href="https://xwcv.github.io/group.htm">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="res/logo.png">
+  <link rel="apple-touch-icon" href="res/logo.png">
   
   <!-- Stylesheet -->
   <link rel="stylesheet" type="text/css" href="res/mystyle.css">
@@ -86,11 +93,13 @@
     </button>
   </div>
 </nav>
-<div class="container">
+<main class="container">
+  <h1 class="visually-hidden">Group Members - Xinggang Wang</h1>
   <div class="sys_txt">
     <h2>Faculty Members</h2>
     <div class="members-section">
       <div class="members-grid" id="faculty-members"></div>
+      <noscript><p class="noscript-note">Enable JavaScript to view the group member list.</p></noscript>
     </div>
     <h2>Current Students</h2>
     <div class="members-section">
@@ -101,8 +110,9 @@
       <div class="members-grid" id="alumni-members"></div>
     </div>
   </div>
-</div>
-<footer class="bottombar" role="contentinfo"><a href="https://github.com/xwcv/xwcv.github.io">xwcv theme</a> · © 2026 Xinggang Wang · Last updated: August 2026</footer>
+</main>
+<footer class="bottombar" role="contentinfo"><a href="https://github.com/xwcv/xwcv.github.io">xwcv theme</a> · © 2026 Xinggang Wang · Last updated: September 2026</footer>
+<script src="res/members.js"></script>
 <script>
 // ===================== 成员数据结构 =====================
 const facultyMembers = [
@@ -284,56 +294,6 @@ const alumniMembers = [
   
   
 ];
-// ===================== 头像生成函数 =====================
-function getInitials(name) {
-  // 只取英文名（firstname）的首字母
-  const first = name.split(' ')[0];
-  return first[0].toUpperCase();
-}
-function randomColor(str) {
-  // 用字符串生成 hash
-  let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    hash = str.charCodeAt(i) + ((hash << 5) - hash);
-  }
-  // 映射到色环，保证色彩明亮且分布均匀
-  const hue = Math.abs(hash) % 360;
-  const saturation = 65; // %
-  const lightness = 60;  // %
-  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
-}
-function createAvatar(name) {
-  // 只用第一个非空单词作为 first name
-  const first = (name || '').trim().split(/\s+/)[0];
-  const bg = randomColor(first);
-  // SVG 占位符，内容为 first name，字体更大
-  return `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120' preserveAspectRatio='xMidYMid meet'><rect width='100%' height='100%' rx='60' fill='${bg}'/><text x='50%' y='50%' text-anchor='middle' dominant-baseline='middle' dy='.1em' font-size='1.2em' font-family='Arial' fill='white' font-weight='bold'>${first}</text></svg>`;
-}
-// ===================== 渲染成员卡片 =====================
-function renderMembers(members, containerId) {
-  const container = document.getElementById(containerId);
-  container.innerHTML = '';
-  members.forEach(member => {
-    // 真实图片接口：如有真实图片，将 src 换成图片路径
-    const imgSrc = member.photo ? member.photo : createAvatar(member.name);
-
-    // 新增：将 desc 中的 Markdown 链接 [text](url) 转换为 HTML <a> 标签
-    const descWithLinks = (member.desc || '').replace(
-      /\[([^\]]+)\]\(([^)]+)\)/g,
-      '<a href="$2" target="_blank" style="font-weight: 600;">$1</a>'
-    );
-
-    const card = document.createElement('div');
-    card.className = 'member-card';
-    card.innerHTML = `
-      <img class="member-photo" src="${imgSrc}" alt="${member.name}" loading="lazy">
-      <div class="member-name">${member.name}</div>
-      <div class="member-desc">${descWithLinks}</div>
-      ${member.link ? `<div class="member-link"><a href="${member.link}" target="_blank">Profile</a></div>` : ''}
-    `;
-    container.appendChild(card);
-  });
-}
 
 renderMembers(facultyMembers, 'faculty-members');
 renderMembers(currentMembers, 'current-members');

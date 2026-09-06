@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <script>
       (function () {
         var t = null;
@@ -11,7 +12,6 @@
         document.documentElement.setAttribute('data-theme', t);
       })();
     </script>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
@@ -29,13 +29,16 @@
     <meta property="og:description" content="Professor Xinggang Wang is a leading researcher in computer vision, deep learning, and artificial intelligence at Huazhong University of Science and Technology.">
     <meta property="og:image" content="https://xwcv.github.io/res/logo.png">
     <meta property="og:site_name" content="Xinggang Wang - Academic Homepage">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:image:alt" content="Xinggang Wang homepage cover">
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://xwcv.github.io/">
-    <meta property="twitter:title" content="Xinggang Wang - Professor of Computer Vision & AI">
-    <meta property="twitter:description" content="Professor Xinggang Wang is a leading researcher in computer vision, deep learning, and artificial intelligence at Huazhong University of Science and Technology.">
-    <meta property="twitter:image" content="https://xwcv.github.io/res/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://xwcv.github.io/">
+    <meta name="twitter:title" content="Xinggang Wang - Professor of Computer Vision & AI">
+    <meta name="twitter:description" content="Professor Xinggang Wang is a leading researcher in computer vision, deep learning, and artificial intelligence at Huazhong University of Science and Technology.">
+    <meta name="twitter:image" content="https://xwcv.github.io/res/logo.png">
     
     <!-- Additional SEO Meta Tags -->
     <meta name="language" content="English">
@@ -45,9 +48,13 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://xwcv.github.io/">
+    <link rel="alternate" hreflang="en" href="https://xwcv.github.io/">
+    <link rel="alternate" hreflang="zh-CN" href="https://xwcv.github.io/index_cn.htm">
+    <link rel="alternate" hreflang="x-default" href="https://xwcv.github.io/">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="res/logo.png">
+    <link rel="apple-touch-icon" href="res/logo.png">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="res/mystyle.css">
@@ -139,122 +146,133 @@
     <section aria-labelledby="projs-heading">
         <h2 id="projs-heading"><strong>Selected Projects</strong></h2>
         <div class="gal">
-        <div class="gal-track">
+        <div class="gal-track" tabindex="0" role="region" aria-label="Selected projects gallery, scroll horizontally">
             <a class="gal-card" href="https://adarobovlg.github.io/">
-                <span class="gal-media"><img src="./res/proj/adarobovlg-2.png" alt="AdaRoboVLG: adaptive vision-language grasping across robotic hands" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/adarobovlg-2.jpg" alt="AdaRoboVLG: adaptive vision-language grasping across robotic hands" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">AdaRoboVLG</span><span class="gal-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="gal-topic">Embodied AI</span></span></span>
             </a>
             <a class="gal-card" href="https://hustvl.github.io/DreamWAM/">
-                <span class="gal-media"><video src="./res/proj/dreamwam-2.mp4" poster="./res/proj/dreamwam.png" autoplay muted loop playsinline></video></span>
+                <span class="gal-media"><video src="./res/proj/dreamwam-2.mp4" poster="./res/proj/dreamwam.png" autoplay muted loop playsinline aria-label="DreamWAM demo video"></video></span>
                 <span class="gal-body"><span class="gal-name">DreamWAM</span><span class="gal-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="gal-topic">World Action Model</span></span></span>
             </a>
             <a class="gal-card" href="https://github.com/hustvl/FasterWAM">
-                <span class="gal-media"><img src="./res/proj/fasterwam.png" alt="Faster-WAM: efficient inference-time future conditioning" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/fasterwam.png" alt="Faster-WAM: efficient inference-time future conditioning" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">Faster-WAM</span><span class="gal-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="gal-topic">World Action Model</span></span></span>
             </a>
             <a class="gal-card" href="https://xiaomi-research.github.io/reworld/">
-                <span class="gal-media"><img src="./res/proj/reworld.png" alt="ReWorld: representation learning for world action models" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/reworld.jpg" alt="ReWorld: representation learning for world action models" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">ReWorld</span><span class="gal-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="gal-topic">Autonomous Driving</span></span></span>
             </a>
             <a class="gal-card" href="https://hustvl.github.io/Moebius/">
-                <span class="gal-media"><img src="./res/proj/moebius.png" alt="Moebius: lightweight image inpainting framework" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/moebius.jpg" alt="Moebius: lightweight image inpainting framework" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">Moebius</span><span class="gal-meta"><span class="venue-tag v-eccv">ECCV 2026</span><span class="gal-topic">Generative Model</span></span></span>
             </a>
-            <a class="gal-card" href="https://xiaomi-research.github.io/unidrivevla/">
-                <span class="gal-media"><img src="./res/proj/unidrivevla.png" alt="UniDriveVLA: unified driving vision-language-action model" loading="lazy"></span>
-                <span class="gal-body"><span class="gal-name">UniDriveVLA</span><span class="gal-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="gal-topic">Autonomous Driving</span></span></span>
-            </a>
             <a class="gal-card" href="https://hgao-cv.github.io/RAD-2/">
-                <span class="gal-media"><img src="./res/proj/rad2.png" alt="RAD-2: generator-discriminator framework for closed-loop planning" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/rad2.jpg" alt="RAD-2: generator-discriminator framework for closed-loop planning" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">RAD-2</span><span class="gal-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="gal-topic">Autonomous Driving</span></span></span>
             </a>
+            <a class="gal-card" href="https://xiaomi-research.github.io/unidrivevla/">
+                <span class="gal-media"><img src="./res/proj/unidrivevla.png" alt="UniDriveVLA: unified driving vision-language-action model" loading="lazy" decoding="async"></span>
+                <span class="gal-body"><span class="gal-name">UniDriveVLA</span><span class="gal-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="gal-topic">Autonomous Driving</span></span></span>
+            </a>
             <a class="gal-card" href="https://hgao-cv.github.io/senna2-project/">
-                <span class="gal-media"><img src="./res/proj/senna2.jpg" alt="Senna-2: aligning VLM and end-to-end driving policy" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/senna2.jpg" alt="Senna-2: aligning VLM and end-to-end driving policy" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">Senna-2</span><span class="gal-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="gal-topic">Autonomous Driving</span></span></span>
             </a>
             <a class="gal-card" href="https://xiaomi-research.github.io/drivelaw/">
-                <span class="gal-media"><img src="./res/proj/drivelaw.png" alt="DriveLaW: unifying planning and video generation" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/drivelaw.png" alt="DriveLaW: unifying planning and video generation" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">DriveLaW</span><span class="gal-meta"><span class="venue-tag v-cvpr">CVPR 2026</span><span class="gal-topic">Autonomous Driving</span></span></span>
             </a>
             <a class="gal-card" href="https://github.com/hustvl/DiffusionVL">
-                <span class="gal-media"><img src="./res/proj/diffusionvl.png" alt="DiffusionVL: diffusion vision-language models" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/diffusionvl.png" alt="DiffusionVL: diffusion vision-language models" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">DiffusionVL</span><span class="gal-meta"><span class="venue-tag v-eccv">ECCV 2026</span><span class="gal-topic">Multimodal LLM</span></span></span>
             </a>
             <a class="gal-card" href="https://github.com/MiniMax-AI/VTP">
-                <span class="gal-media"><img src="./res/proj/vtp.png" alt="VTP: scalable pre-training of visual tokenizers" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/vtp.jpg" alt="VTP: scalable pre-training of visual tokenizers" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">VTP</span><span class="gal-meta"><span class="venue-tag v-eccv">ECCV 2026</span><span class="gal-topic">Generative Model</span></span></span>
             </a>
             <a class="gal-card" href="https://github.com/hustvl/InfiniteVL">
-                <span class="gal-media"><img src="./res/proj/infinitevl.png" alt="InfiniteVL: unlimited-input vision-language model" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/infinitevl.jpg" alt="InfiniteVL: unlimited-input vision-language model" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">InfiniteVL</span><span class="gal-meta"><span class="venue-tag v-journal">arXiv 2025</span><span class="gal-topic">Efficient VLM</span></span></span>
             </a>
             <a class="gal-card" href="https://hustvl.github.io/4DLangVGGT/">
-                <span class="gal-media"><img src="./res/proj/4dlangvggt.png" alt="4DLangVGGT: 4D language-visual geometry grounded transformer" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/4dlangvggt.png" alt="4DLangVGGT: 4D language-visual geometry grounded transformer" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">4DLangVGGT</span><span class="gal-meta"><span class="venue-tag v-journal">arXiv 2025</span><span class="gal-topic">4D Scene Understanding</span></span></span>
             </a>
             <a class="gal-card" href="https://hustvl.github.io/TransLight/">
-                <span class="gal-media"><img src="./res/proj/translight.png" alt="TransLight: image-guided customized lighting control" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/translight.jpg" alt="TransLight: image-guided customized lighting control" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">TransLight</span><span class="gal-meta"><span class="venue-tag v-icml">ICML 2026</span><span class="gal-topic">Generative Model</span></span></span>
             </a>
             <a class="gal-card" href="https://hustvl.github.io/LENS/">
-                <span class="gal-media"><img src="./res/proj/lens.png" alt="LENS: segment anything with unified reinforced reasoning" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/lens.jpg" alt="LENS: segment anything with unified reinforced reasoning" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">LENS</span><span class="gal-meta"><span class="venue-tag v-aaai">AAAI 2026</span><span class="gal-topic">Segmentation</span></span></span>
             </a>
             <a class="gal-card" href="https://xiaomi-research.github.io/recogdrive/">
-                <span class="gal-media"><img src="./res/proj/recogdrive.png" alt="ReCogDrive: reinforced cognitive framework for autonomous driving" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/recogdrive.jpg" alt="ReCogDrive: reinforced cognitive framework for autonomous driving" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">ReCogDrive</span><span class="gal-meta"><span class="venue-tag v-iclr">ICLR 2026</span><span class="gal-topic">Autonomous Driving</span></span></span>
             </a>
             <a class="gal-card" href="https://hustvl.github.io/GaussTR/">
-                <span class="gal-media"><img src="./res/proj/gausstr.png" alt="GaussTR: foundation model-aligned Gaussian transformer" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/gausstr.jpg" alt="GaussTR: foundation model-aligned Gaussian transformer" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">GaussTR</span><span class="gal-meta"><span class="venue-tag v-cvpr">CVPR 2025</span><span class="gal-topic">3D Perception</span></span></span>
             </a>
             <a class="gal-card" href="https://github.com/hustvl/DiffusionDrive">
-                <span class="gal-media"><img src="./res/proj/diffusiondrive.png" alt="DiffusionDrive: truncated diffusion model for end-to-end driving" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/diffusiondrive.png" alt="DiffusionDrive: truncated diffusion model for end-to-end driving" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">DiffusionDrive</span><span class="gal-meta"><span class="venue-tag v-cvpr">CVPR 2025</span><span class="gal-topic">Autonomous Driving</span></span></span>
             </a>
             <a class="gal-card" href="https://github.com/hustvl/Senna">
-                <span class="gal-media"><img src="./res/proj/senna.png" alt="Senna: bridging large VLMs and end-to-end driving" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/senna.png" alt="Senna: bridging large VLMs and end-to-end driving" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">Senna</span><span class="gal-meta"><span class="venue-tag v-top">IJCV 2026</span><span class="gal-topic">Autonomous Driving</span></span></span>
             </a>
             <a class="gal-card" href="https://hgao-cv.github.io/VADv2/">
-                <span class="gal-media"><img src="./res/proj/vadv2.png" alt="VADv2: end-to-end autonomous driving via probabilistic planning" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/vadv2.png" alt="VADv2: end-to-end autonomous driving via probabilistic planning" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">VADv2</span><span class="gal-meta"><span class="venue-tag v-iclr">ICLR 2026</span><span class="gal-topic">Autonomous Driving</span></span></span>
             </a>
             <a class="gal-card" href="https://wondervictor.github.io/">
-                <span class="gal-media"><img src="./res/proj/yoloworld.png" alt="YOLO-World: real-time open-vocabulary object detection" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/yoloworld.png" alt="YOLO-World: real-time open-vocabulary object detection" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">YOLO-World</span><span class="gal-meta"><span class="venue-tag v-cvpr">CVPR 2024</span><span class="gal-topic">Open-Vocabulary Detection</span></span></span>
             </a>
             <a class="gal-card" href="https://github.com/hustvl/Vim">
-                <span class="gal-media"><img src="./res/proj/vim.png" alt="Vision Mamba: bidirectional state space model for vision" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/vim.png" alt="Vision Mamba: bidirectional state space model for vision" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">Vision Mamba</span><span class="gal-meta"><span class="venue-tag v-icml">ICML 2024</span><span class="gal-topic">Visual Representation</span></span></span>
             </a>
             <a class="gal-card" href="https://guanjunwu.github.io/4dgs/index.html">
-                <span class="gal-media"><img src="./res/proj/4dgs.jpg" alt="4DGaussians: real-time dynamic scene rendering" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/4dgs.jpg" alt="4DGaussians: real-time dynamic scene rendering" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">4DGaussians</span><span class="gal-meta"><span class="venue-tag v-cvpr">CVPR 2024</span><span class="gal-topic">4D Reconstruction</span></span></span>
             </a>
             <a class="gal-card" href="https://github.com/hustvl/MapTR">
-                <span class="gal-media"><img src="./res/proj/maptr.png" alt="MapTR: online vectorized HD map construction" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/maptr.jpg" alt="MapTR: online vectorized HD map construction" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">MapTR</span><span class="gal-meta"><span class="venue-tag v-top">IJCV 2025</span><span class="gal-topic">Autonomous Driving</span></span></span>
             </a>
             <a class="gal-card" href="https://github.com/baaivision/EVA">
-                <span class="gal-media"><img src="./res/proj/eva.png" alt="EVA: masked visual representation learning at scale" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/eva.png" alt="EVA: masked visual representation learning at scale" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">EVA</span><span class="gal-meta"><span class="venue-tag v-cvpr">CVPR 2023</span><span class="gal-topic">Visual Representation</span></span></span>
             </a>
             <a class="gal-card" href="https://github.com/FoundationVision/ByteTrack">
-                <span class="gal-media"><img src="./res/proj/bytetrack.jpg" alt="ByteTrack: multi-object tracking by associating every detection box" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/bytetrack.jpg" alt="ByteTrack: multi-object tracking by associating every detection box" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">ByteTrack</span><span class="gal-meta"><span class="venue-tag v-eccv">ECCV 2022</span><span class="gal-topic">Multi-Object Tracking</span></span></span>
             </a>
             <a class="gal-card" href="https://github.com/ifzhang/FairMOT">
-                <span class="gal-media"><img src="./res/proj/fairmot.png" alt="FairMOT: fairness of detection and re-identification in MOT" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/fairmot.jpg" alt="FairMOT: fairness of detection and re-identification in MOT" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">FairMOT</span><span class="gal-meta"><span class="venue-tag v-top">IJCV 2021</span><span class="gal-topic">Multi-Object Tracking</span></span></span>
             </a>
             <a class="gal-card" href="https://github.com/speedinghzl/CCNet">
-                <span class="gal-media"><img src="./res/proj/ccnet.png" alt="CCNet: criss-cross attention for semantic segmentation" loading="lazy"></span>
+                <span class="gal-media"><img src="./res/proj/ccnet.png" alt="CCNet: criss-cross attention for semantic segmentation" loading="lazy" decoding="async"></span>
                 <span class="gal-body"><span class="gal-name">CCNet</span><span class="gal-meta"><span class="venue-tag v-top">TPAMI 2023</span><span class="gal-topic">Semantic Segmentation</span></span></span>
             </a>
         </div>
         <p class="gal-more"><a href="projs.html">All projects →</a></p>
         </div>
+    </section>
+
+    <section aria-labelledby="media-heading">
+        <h2 id="media-heading"><strong>Media Coverage</strong></h2>
+        <ul>
+            <li><p>"<a href="https://www.qbitai.com/2026/04/403515.html">The Second Half of Foundation Model Architectures (大模型架构的下半场)</a>", QbitAI</p></li>
+            <li><p>"<a href="https://cj.sina.com.cn/articles/view/1686203097/64816ad9027018zzq?froms=ggmp">Freeing Multimodal AI Models from "Memory Loss" (让多模态AI模型告别"记忆力衰退")</a>", Sina Tech</p></li>
+            <li><p>"<a href="pubs/stdaily2022.pdf">Venturing into Frontier Fields: He Made Computers "Sharp-Minded and Clear-Sighted" (勇闯前沿领域 他让计算机"脑聪目明")</a>", Science and Technology Daily</p></li>
+            <li><p>"<a href="https://mp.weixin.qq.com/s/8u6mlfpOupVIdqvoklCQmQ">CVMJ Announces 2021 Best Paper Awards (CVMJ公布2021年度最佳论文奖)</a>", Graphics &amp; Geometry Computing</p></li>
+            <li><p>"<a href="https://medium.com/syncedreview/new-sota-on-instance-segmentation-mask-scoring-r-cnn-tops-mask-r-cnn-on-coco-84362d252bdf">New SOTA on Instance Segmentation: Mask Scoring R-CNN Tops Mask R-CNN on COCO</a>", Medium</p></li>
+        </ul>
     </section>
 
     <section aria-labelledby="papers-heading">
@@ -312,6 +330,21 @@
         </ul>
     </section>
 
+    <section aria-labelledby="funding-heading">
+        <h2 id="funding-heading"><strong>Research Funding</strong></h2>
+        <ul>
+            <li><p>NSFC Joint Fund Key Project (U25B2067), Self-Learning Mechanisms for Multimodal State-Space Foundation Models in Open Environments, 2026.01 - 2029.12</p></li>
+            <li><p>National Key R&amp;D Program of China (2022YFB4500602), Natural Human-Computer Interaction with Multi-Channel Fusion, 2022.10 - 2025.09</p></li>
+            <li><p>NSFC 62276108, Large-Scale Weakly-Supervised Object Detection and Segmentation in Open Scenes, 2022.01 - 2026.12</p></li>
+            <li><p>NSFC 61876212, Weakly-Supervised Image Understanding via Visual Relationship Learning, 2019.01 - 2022.12</p></li>
+            <li><p>Major Project of Hubei Provincial Technology Innovation Program, 2017.07 - 2019.12</p></li>
+            <li><p>HUST-Horizon Robotics Joint Research Center for Computer Vision, 2017 - 2020</p></li>
+            <li><p>CCF-Tencent Rhino-Bird Research Fund, 2017</p></li>
+            <li><p>NSFC 61503145, Image Representation Based on Discriminative Codebooks, 2016.01 - 2018.12</p></li>
+            <li><p>Young Elite Scientists Sponsorship Program by CAST (No. YESS 20150077), 2015 - 2017</p></li>
+        </ul>
+    </section>
+
     <section aria-labelledby="bio-heading">
         <h2 id="bio-heading"><strong>Short Bio</strong></h2>
         <p>
@@ -322,7 +355,7 @@
     </section>
 </main>
 
-<footer class="bottombar" role="contentinfo"><a href="https://github.com/xwcv/xwcv.github.io">xwcv theme</a> · © 2026 Xinggang Wang · Last updated: August 2026</footer>
+<footer class="bottombar" role="contentinfo"><a href="https://github.com/xwcv/xwcv.github.io">xwcv theme</a> · © 2026 Xinggang Wang · Last updated: September 2026</footer>
 
 </body>
 </html>

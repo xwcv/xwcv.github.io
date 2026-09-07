@@ -660,6 +660,11 @@ a.res-chip:hover {
     margin: 14px 0 4px;
 }
 
+/* top-level search boxes (pubs.html / projs.html) follow the section rhythm */
+main > .pubs-search {
+    margin: 0 0 24px;
+}
+
 .pubs-search svg {
     position: absolute;
     left: 11px;

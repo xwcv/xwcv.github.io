@@ -129,7 +129,11 @@ document.addEventListener('DOMContentLoaded', function () {
     count.className = 'pubs-search-count';
     box.appendChild(input);
     box.appendChild(count);
-    firstOl.parentNode.insertBefore(box, nav);
+    // top-level placement (like the projects page): the search scope is the
+    // whole page, not just the first section, so the box lives in <main>
+    // right above the first section instead of inside it
+    var firstSection = firstOl.closest('section') || firstOl.parentNode;
+    firstSection.parentNode.insertBefore(box, firstSection);
     var empty = document.createElement('p');
     empty.className = 'pubs-no-results';
     empty.textContent = 'No matching papers.';

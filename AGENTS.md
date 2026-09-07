@@ -85,6 +85,11 @@ Rules that the dynamic features depend on:
   `res/stars.json` and appends `★ N` to the chip.
 - Optional: add a BibTeX snippet to `bib/<key>.txt` and link it as `bib`.
 - Optional: self-host the PDF under `pubs/` and link it as `./pubs/<file>.pdf`.
+- `res/site.js` auto-injects a keyword search box at the top of `<main>`
+  (above the first `<section>`, since it filters every section on the page,
+  not just "Major Journal & Conference Papers") and the sticky year-nav
+  inside the first section — keep the `<ol>` / `li.year-heading` structure
+  intact for both to work.
 
 ## Adding a project to projs.html / projs_cn.html
 

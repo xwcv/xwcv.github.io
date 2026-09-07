@@ -41,7 +41,10 @@ rendered site's footer. Tell your user about this requirement.
   renders cards via the shared `res/members.js` (`renderMembers(dataset,
   containerId[, profileLabel])`; avatar fallback: first char for CJK names,
   first word otherwise). Member photos are displayed at 96px — keep files
-  ≤ 384px wide (`sips -Z 384`).
+  ≤ 384px wide (`sips -Z 384`). `res/site.js` auto-injects a keyword search
+  box at the top of `<main>` (filters `.member-card` by name/description,
+  hides sections left empty) — it runs after `members.js` has rendered, so
+  keep the render calls as plain end-of-body scripts.
 - `res/` — images, `site.js`, `members.js`, `stars.json`, `scholar.json`
   (both generated).
 - `bib/` — BibTeX snippets (`*.txt`) linked from some `pubs.html` entries.

@@ -224,6 +224,69 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* 3d. Member search on the group pages: instant keyword filter over the
+         member cards (matches name / description text), with a match counter.
+         Sections left empty while searching are hidden. Same placement as the
+         pubs/projs boxes: top of <main>, above the first section.
+         "/" focuses the box, Esc clears it. Runs on DOMContentLoaded, after
+         members.js has rendered the cards. */
+  var memberCards = Array.prototype.slice.call(document.querySelectorAll('.member-card'));
+  if (memberCards.length) {
+    var mzh = /^zh/i.test(document.documentElement.lang || '');
+    var mSections = [];
+    memberCards.forEach(function (card) {
+      var sec = card.closest('section');
+      if (sec && mSections.indexOf(sec) === -1) mSections.push(sec);
+    });
+    var mbox = document.createElement('div');
+    mbox.className = 'pubs-search';
+    mbox.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>';
+    var minput = document.createElement('input');
+    minput.type = 'search';
+    minput.placeholder = mzh ? '搜索成员：姓名、研究方向 ...  ( / )' : 'Search members by name, research interest ...  ( / )';
+    minput.setAttribute('aria-label', mzh ? '搜索成员' : 'Search members');
+    var mcount = document.createElement('span');
+    mcount.className = 'pubs-search-count';
+    mbox.appendChild(minput);
+    mbox.appendChild(mcount);
+    var mFirstSection = mSections[0];
+    mFirstSection.parentNode.insertBefore(mbox, mFirstSection);
+    var mempty = document.createElement('p');
+    mempty.className = 'pubs-no-results';
+    mempty.textContent = mzh ? '没有匹配的成员。' : 'No matching members.';
+    mempty.style.display = 'none';
+    mFirstSection.parentNode.insertBefore(mempty, mFirstSection);
+    minput.addEventListener('input', function () {
+      var q = minput.value.trim().toLowerCase();
+      var shown = 0;
+      memberCards.forEach(function (card) {
+        var hit = !q || card.textContent.toLowerCase().indexOf(q) !== -1;
+        card.style.display = hit ? '' : 'none';
+        markMatches(card, hit ? q : '');
+        if (hit) shown++;
+      });
+      mSections.forEach(function (sec) {
+        var any = Array.prototype.some.call(sec.querySelectorAll('.member-card'), function (card) {
+          return card.style.display !== 'none';
+        });
+        sec.style.display = q && !any ? 'none' : '';
+      });
+      mempty.style.display = q && !shown ? '' : 'none';
+      mcount.textContent = q ? shown + ' / ' + memberCards.length : '';
+    });
+    document.addEventListener('keydown', function (e) {
+      var tag = document.activeElement && document.activeElement.tagName;
+      if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') {
+        e.preventDefault();
+        minput.focus();
+      } else if (e.key === 'Escape' && document.activeElement === minput) {
+        minput.value = '';
+        minput.dispatchEvent(new Event('input'));
+        minput.blur();
+      }
+    });
+  }
+
   /* 4. Google Scholar stats: refresh the hard-coded numbers from res/scholar.json
         (written by the scheduled GitHub Action). Fails silently, keeping the
         hard-coded values, when the file is missing or unreachable.

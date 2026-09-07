@@ -139,7 +139,8 @@ Rules:
   <key>.jpg`, delete the PNG) and update every reference (both projs pages,
   both homepage galleries, any `og:image`).
 - **Venue tag**: reuse the native `venue-tag` classes — `v-cvpr` / `v-iccv`
-  / `v-eccv` / `v-neurips` / `v-icml` / `v-iclr` / `v-aaai` for conferences,
+  / `v-eccv` / `v-neurips` / `v-icml` / `v-iclr` / `v-aaai` / `v-corl` for
+  conferences,
   `v-top` for top journals (IJCV/TPAMI/…), `v-journal` for `arXiv NNNN`.
   Add one `<span class="proj-topic">` for the area (e.g. Autonomous
   Driving / 自动驾驶, Embodied AI / 具身智能).

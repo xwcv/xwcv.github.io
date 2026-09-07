@@ -19,8 +19,8 @@
     <!-- Primary Meta Tags -->
     <title>科研项目 - 王兴刚 | 计算机视觉与人工智能</title>
     <meta name="title" content="科研项目 - 王兴刚 | 计算机视觉与人工智能">
-    <meta name="description" content="王兴刚教授团队的开源科研项目，涵盖机器人操作、自动驾驶、生成模型与高效多模态基础模型，包括 InfiniteVL、DreamWAM、Faster-WAM、Moebius、AdaRoboVLG、UniDriveVLA、DriveLaW、ReWorld、ReCogDrive、RAD-2、VTP、DiffusionVL、Senna、Senna-2、DiffusionDrive、VADv2、MapTR、YOLO-World、4DGaussians、ByteTrack、FairMOT、EVA、Vim、TransLight、4DLangVGGT、GaussTR、LENS、CCNet。">
-    <meta name="keywords" content="王兴刚 项目, 计算机视觉, 机器人, 自动驾驶, 世界动作模型, 视觉语言模型, DreamWAM, Faster-WAM, InfiniteVL, Moebius, AdaRoboVLG, UniDriveVLA, DriveLaW, ReWorld, ReCogDrive, RAD-2, VTP, DiffusionVL, Senna, Senna-2, DiffusionDrive, VADv2, MapTR, YOLO-World, 4DGaussians, ByteTrack, FairMOT, EVA, Vim, Vision Mamba, TransLight, 4DLangVGGT, GaussTR, LENS, CCNet">
+    <meta name="description" content="王兴刚教授团队的开源科研项目，涵盖机器人操作、自动驾驶、生成模型与高效多模态基础模型，包括 InfiniteVL、DreamWAM、Faster-WAM、Moebius、MotionVLA、MoDA、AdaRoboVLG、UniDriveVLA、DriveLaW、ReWorld、ReCogDrive、RAD-2、VTP、DiffusionVL、Senna、Senna-2、VGT、DiffusionDrive、VADv2、MapTR、YOLO-World、4DGaussians、ByteTrack、FairMOT、EVA、EVA-X、Vim、TransLight、4DLangVGGT、GaussTR、LENS、CCNet。">
+    <meta name="keywords" content="王兴刚 项目, 计算机视觉, 机器人, 自动驾驶, 世界动作模型, 视觉语言模型, DreamWAM, Faster-WAM, InfiniteVL, Moebius, MotionVLA, MoDA, AdaRoboVLG, UniDriveVLA, DriveLaW, ReWorld, ReCogDrive, RAD-2, VTP, DiffusionVL, Senna, Senna-2, VGT, DiffusionDrive, VADv2, MapTR, YOLO-World, 4DGaussians, ByteTrack, FairMOT, EVA, EVA-X, Vim, Vision Mamba, TransLight, 4DLangVGGT, GaussTR, LENS, CCNet">
     <meta name="author" content="Xinggang Wang">
     <meta name="robots" content="index, follow">
 
@@ -181,6 +181,19 @@
   </li>
 
   <li class="proj-card">
+    <a class="proj-media" href="https://hustvl.github.io/MotionVLA/" title="MotionVLA 项目主页" aria-label="MotionVLA 项目主页（演示视频）">
+      <video src="res/proj/motionvla.mp4" poster="res/proj/motionvla.png" autoplay muted loop playsinline></video>
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-corl">CoRL 2026</span><span class="proj-topic">具身智能</span></div>
+      <h3 class="proj-title">MotionVLA: Injecting Geometric Motion into Vision-Language-Action Model</h3>
+      <p class="proj-authors">Shanglin Yuan, Weiheng Zhao, Xianda Guo, Wei Sui, Li Yu, Wenyu Liu, Xinggang Wang</p>
+      <p class="proj-desc">将严格过去帧的几何运动压缩为紧凑、可查询的轨迹场 token 注入 VLA，为策略提供时间连续的运动历史，提升长时程操作能力。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2606.08288">arxiv</a> <a href="https://github.com/hustvl/MotionVLA">code</a> <a href="https://hustvl.github.io/MotionVLA/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
     <a class="proj-media" href="https://hgao-cv.github.io/RAD-2/" title="RAD-2 项目主页">
       <img src="res/proj/rad2.jpg" alt="RAD-2：闭环规划的生成器-判别器框架" loading="lazy" decoding="async">
     </a>
@@ -203,6 +216,19 @@
       <p class="proj-authors">Yongkang Li, Lijun Zhou, Sixu Yan, Bencheng Liao, Tianyi Yan, Kaixin Xiong, Long Chen, Hongwei Xie, Bing Wang, Guang Chen, Hangjun Ye, Haiyang Sun, Wenyu Liu, Xinggang Wang*</p>
       <p class="proj-desc">基于 Mixture-of-Transformers 的统一驾驶视觉-语言-动作模型，将驾驶理解、场景感知与动作规划解耦到三个专家网络，通过掩码联合注意力协同工作。</p>
       <p class="proj-links"><a href="https://arxiv.org/abs/2604.02190">arxiv</a> <a href="https://xiaomi-research.github.io/unidrivevla/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/MoDA" title="MoDA 代码仓库">
+      <img src="res/proj/moda.png" alt="MoDA：混合深度注意力架构与可见性关系" loading="lazy" decoding="async">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">高效 LLM</span></div>
+      <h3 class="proj-title">MoDA: Mixture-of-Depths Attention</h3>
+      <p class="proj-authors">Lianghui Zhu, Yuxin Fang, Bencheng Liao, Shijie Wang, Tianheng Cheng, Zilong Huang, Chen Chen, Lai Wei, Yutao Zeng, Ya Wang, Yi Lin, Yu Li, Xinggang Wang*</p>
+      <p class="proj-desc">深度扩展注意力原语：每个注意力头同时关注当前层序列 KV 与前序层的深度 KV，配套硬件高效的 Triton kernel，在 64K 序列长度下达到 FlashAttention-2 的 97.3% 效率。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2603.15619">arxiv</a> <a href="https://github.com/hustvl/MoDA">code</a></p>
     </div>
   </li>
 
@@ -281,6 +307,19 @@
       <p class="proj-authors">Xianfeng Wu, Yajing Bai#, Minghan Li, Xianzu Wu, Xueqi Zhao, Zhongyuan Lai, Wenyu Liu, Xinggang Wang*</p>
       <p class="proj-desc">首个基于 Transformer 的前馈式四维语言接地框架，在单一架构中联合几何感知（StreamVGGT）与语言对齐（语义桥接解码器），无需逐场景优化即可泛化到动态场景。</p>
       <p class="proj-links"><a href="https://arxiv.org/abs/2512.05060">arxiv</a> <a href="https://github.com/hustvl/4DLangVGGT">code</a> <a href="https://hustvl.github.io/4DLangVGGT/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/VGT" title="VGT 代码仓库">
+      <img src="res/proj/vgt.png" alt="VGT：将预训练 VLM 转变为图像生成模型的视觉生成调优流程" loading="lazy" decoding="async">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2025</span><span class="proj-topic">生成模型</span></div>
+      <h3 class="proj-title">VGT: Visual Generation Tuning</h3>
+      <p class="proj-authors">Jiahao Guo#, Sinan Du#, Jingfeng Yao, Wenyu Liu, Bo Li, Haoxiang Cao, Kun Gai, Chun Yuan, Kai Wu, Xinggang Wang*</p>
+      <p class="proj-desc">通过对齐 VLM 语义编码器与像素解码器（VGT-AE）并调优轻量流匹配头（VGT-AR），让任意预训练 VLM 获得视觉生成能力——GenEval 0.82、DPG-Bench 81.28，收敛提速 20 倍。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2511.23469">arxiv</a> <a href="https://github.com/hustvl/VGT">code</a></p>
     </div>
   </li>
 
@@ -372,6 +411,19 @@
       <p class="proj-authors">Bo Jiang, Shaoyu Chen, Hao Gao, Bencheng Liao, Qian Zhang, Wenyu Liu, Xinggang Wang</p>
       <p class="proj-desc">端到端矢量化自动驾驶：从大规模驾驶示范中学习动作的概率分布，并采样一个动作控制车辆，无需规则包装即可稳定运行。</p>
       <p class="proj-links"><a href="https://arxiv.org/abs/2402.13243">arxiv</a> <a href="https://github.com/hustvl/VAD">code</a> <a href="https://hgao-cv.github.io/VADv2/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/EVA-X" title="EVA-X 代码仓库">
+      <img src="res/proj/evax.png" alt="EVA-X：面向胸部 X 光基础模型的自监督预训练流程" loading="lazy" decoding="async">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-top">npj Digital Medicine 2025</span><span class="proj-topic">医学影像</span></div>
+      <h3 class="proj-title">EVA-X: A Foundation Model for General Chest X-ray Analysis with Self-Supervised Learning</h3>
+      <p class="proj-authors">Jingfeng Yao, Xinggang Wang*, Yuehao Song, Huangxuan Zhao, Jun Ma, Yajie Chen, Wenyu Liu, Bo Wang*</p>
+      <p class="proj-desc">首个同时捕捉语义与几何信息的 X 光自监督 ViT 基础模型，覆盖 20 余种胸部疾病，在 11 项以上检测任务中取得领先结果，并具备出色的少样本学习能力。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2405.05237">arxiv</a> <a href="https://github.com/hustvl/EVA-X">code</a> <a href="https://www.nature.com/articles/s41746-025-02032-z">pdf</a></p>
     </div>
   </li>
 

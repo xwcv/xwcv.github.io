@@ -402,6 +402,7 @@ body {
 .v-icml { --vc: #c2410c; }
 .v-iclr { --vc: #be185d; }
 .v-aaai { --vc: #dc2626; }
+.v-corl { --vc: #0891b2; }
 .v-journal { --vc: #475569; }
 
 /* top journals (Nature/Cell portfolio, TPAMI, IJCV): gold with a hairline ring */
@@ -1306,6 +1307,7 @@ sup, sub {
 [data-theme="dark"] .v-icml { --vc: #fb923c; }
 [data-theme="dark"] .v-iclr { --vc: #f472b6; }
 [data-theme="dark"] .v-aaai { --vc: #f87171; }
+[data-theme="dark"] .v-corl { --vc: #22d3ee; }
 [data-theme="dark"] .v-journal { --vc: #94a3b8; }
 
 [data-theme="dark"] .v-top {

@@ -149,7 +149,8 @@ Rules:
 - The homepages (`index.html` / `index_cn.html`) have a "Selected Projects" /
   "精选项目" gallery: ALL projs projects as compact `.gal-card` covers in a
   2-row × 4-column swipeable track (styles: `.gal-*` in `res/xwcv.css`;
-  prev/next buttons added by `res/site.js`, native swipe works without JS),
+  prev/next buttons and dot pagination added by `res/site.js`, native swipe
+  works without JS),
   plus an "All projects →" link. Keep both homepages in sync with the full
   project list, reusing `res/proj/<key>` media.
 - Keep the `<meta name="description">` / `keywords>` project lists in both

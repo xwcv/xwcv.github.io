@@ -280,11 +280,21 @@ body {
 }
 
 /* Profile link chips at the top of the publications page */
+.pubs-links {
+    /* balance the card: 18px above the chips (24px padding - 6px margin),
+       so keep the same 18px below them instead of 12px + 24px */
+    padding-bottom: 18px;
+}
+
 .profile-links {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 12px !important;
+}
+
+.pubs-links .profile-links {
+    margin-bottom: 0 !important;
 }
 
 .profile-links a {
@@ -1017,6 +1027,34 @@ li sup {
     right: 36px;
 }
 
+/* Dot pagination (added by site.js; hidden without JS or when not scrollable) */
+.gal-dots {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 14px;
+}
+
+.gal-dot {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border: none;
+    border-radius: 999px;
+    background: var(--border);
+    cursor: pointer;
+    transition: width 0.18s ease, background 0.18s ease;
+}
+
+.gal-dot:hover {
+    background: var(--muted, #97a0b3);
+}
+
+.gal-dot.gal-dot-on {
+    width: 20px;
+    background: var(--primary);
+}
+
 .gal-btn svg {
     width: 14px;
     height: 14px;
@@ -1082,6 +1120,11 @@ sup, sub {
 
     main section:not(.profile-section) {
         padding: 18px 20px;
+    }
+
+    .pubs-links {
+        /* match the 12px above the chips (18px padding - 6px margin) */
+        padding-bottom: 12px;
     }
 
     ol {
@@ -1336,7 +1379,7 @@ sup, sub {
     }
 
     .topnav, .bottombar, .year-nav, .back-to-top, .pubs-search,
-    .gal-btn, .pubs-no-results {
+    .gal-btn, .gal-dots, .pubs-no-results {
         display: none;
     }
 

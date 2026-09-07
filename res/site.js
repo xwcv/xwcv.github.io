@@ -536,8 +536,9 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* 10. Project gallery (homepage): the 2-row card track scrolls natively
-         (touch swipe / trackpad / drag); JS only adds prev/next buttons.
-         Buttons stay hidden when the track does not overflow. */
+         (touch swipe / trackpad / drag); JS only adds prev/next buttons and
+         the dot pagination below the track. Both stay hidden when the track
+         does not overflow. */
   document.querySelectorAll('.gal').forEach(function (gal) {
     var track = gal.querySelector('.gal-track');
     if (!track) return;
@@ -552,11 +553,16 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     var prev = mk('gal-prev', 'Previous projects', 'M15 18l-6-6 6-6');
     var next = mk('gal-next', 'Next projects', 'M9 6l6 6-6 6');
+    var dots = document.createElement('div');
+    dots.className = 'gal-dots';
+    gal.appendChild(dots);
+    var pageCount = 0;
     var update = function () {
       var over = track.scrollWidth - track.clientWidth;
       var has = over > 8;
       prev.style.display = has ? '' : 'none';
       next.style.display = has ? '' : 'none';
+      dots.style.display = has ? '' : 'none';
       gal.classList.toggle('gal-fit', !has);
       if (!has) return;
       var atStart = track.scrollLeft <= 4;
@@ -565,8 +571,30 @@ document.addEventListener('DOMContentLoaded', function () {
       next.disabled = atEnd;
       gal.classList.toggle('gal-mid', !atStart && !atEnd);
       gal.classList.toggle('gal-end', atEnd);
+      var pages = Math.round(over / track.clientWidth) + 1;
+      if (pages !== pageCount) {
+        pageCount = pages;
+        dots.textContent = '';
+        for (var i = 0; i < pages; i++) {
+          var d = document.createElement('button');
+          d.type = 'button';
+          d.className = 'gal-dot';
+          d.setAttribute('aria-label', 'Go to projects page ' + (i + 1));
+          (function (n) {
+            d.addEventListener('click', function () {
+              track.scrollTo({ left: n * track.clientWidth, behavior: smooth ? 'smooth' : 'auto' });
+            });
+          })(i);
+          dots.appendChild(d);
+        }
+      }
+      var active = atEnd ? pageCount - 1 : Math.round(track.scrollLeft / track.clientWidth);
+      Array.prototype.forEach.call(dots.children, function (d, i) {
+        d.classList.toggle('gal-dot-on', i === active);
+      });
     };
     var smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    update();
     prev.addEventListener('click', function () {
       track.scrollBy({ left: -track.clientWidth, behavior: smooth ? 'smooth' : 'auto' });
     });
@@ -575,7 +603,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     track.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);
-    update();
   });
 
   /* 10b. Respect reduced-motion: keep autoplay demo videos paused */

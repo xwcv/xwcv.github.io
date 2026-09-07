@@ -35,7 +35,7 @@ jobs:
             # refresh the footer date (and © year) on every page
             EN_DATE=$(date +'%B %Y'); CN_DATE=$(date +'%Y年%-m月'); YEAR=$(date +%Y)
             sed -i -e "s|© [0-9]\{4\} Xinggang Wang · Last updated: [A-Za-z]* [0-9]\{4\}|© $YEAR Xinggang Wang · Last updated: $EN_DATE|" index.html pubs.html projs.html group.html
-            sed -i -e "s|© [0-9]\{4\} 王兴刚 · 最近更新：[0-9]\{4\}年[0-9]\{1,\}月|© $YEAR 王兴刚 · 最近更新：$CN_DATE|" index_cn.html projs_cn.html group_cn.html
+            sed -i -e "s|© [0-9]\{4\} 王兴刚 · 最近更新：[0-9]\{4\}年[0-9]\{1,\}月|© $YEAR 王兴刚 · 最近更新：$CN_DATE|" index_cn.html pubs_cn.html projs_cn.html group_cn.html
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add res/stars.json sitemap.xml index.html pubs.html projs.html group.html index_cn.html projs_cn.html group_cn.html

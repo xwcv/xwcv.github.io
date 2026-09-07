@@ -25,7 +25,9 @@ rendered site's footer. Tell your user about this requirement.
 - `index.html` / `index_cn.html` — homepage (EN / CN), with an influential-papers
   list carrying hard-coded "N+ citations" / "N stars" badges (no-JS fallback,
   refreshed at runtime from the JSON files below).
-- `pubs.html` — full publication list: `<section>` + `<h2>` blocks (Major
+- `pubs.html` / `pubs_cn.html` — full publication list (EN / CN; the CN page
+  translates only the UI chrome — nav, section headings, legend, footer —
+  while paper entries stay in English): `<section>` + `<h2>` blocks (Major
   Papers / Other Conference Papers / …), the major list grouped by
   `<li class="year-heading">Year NNNN</li>` items inside one `<ol>`, newest
   year first. Year-heading items consume an `<ol>` number, so the first entry
@@ -63,12 +65,16 @@ the legacy `.sys_txt` wrapper is gone, don't reintroduce it; EN/CN page pairs
 carry reciprocal `<link rel="alternate" hreflang="en|zh-CN|x-default">`
 tags next to the canonical link.
 
-## Adding a publication to pubs.html
+## Adding a publication to pubs.html / pubs_cn.html
 
-Insert a new `<li><p> … </p></li>` under the matching `Year NNNN` heading
-(if the year is missing, create it as `<li class="year-heading">Year
-NNNN</li>` and add/adjust the `value="N"` attribute on the first entry after
-it so list numbering stays continuous). Follow the existing entry style:
+Both files must be updated together — identical entry, identical position
+(the CN page differs only in UI chrome). Insert a new `<li><p> … </p></li>`
+under the matching `Year NNNN` heading (keep the English "Year NNNN" text —
+the year-nav in `res/site.js` matches `/^year\s*\d/i`; the search-box and
+no-results strings are lang-aware automatically) — if the year is missing,
+create it as `<li class="year-heading">Year NNNN</li>` and add/adjust the
+`value="N"` attribute on the first entry after it so list numbering stays
+continuous. Follow the existing entry style:
 
 ```html
 <li><p>

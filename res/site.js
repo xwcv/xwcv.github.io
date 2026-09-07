@@ -81,9 +81,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function (p) { return /^year\s*\d/i.test(p.textContent.trim()); }
   );
   if (yearPs.length > 3) {
+    var pubsZh = /^zh/i.test(document.documentElement.lang || '');
     var nav = document.createElement('nav');
     nav.className = 'year-nav';
-    nav.setAttribute('aria-label', 'Jump to year');
+    nav.setAttribute('aria-label', pubsZh ? '跳转到年份' : 'Jump to year');
     yearPs.forEach(function (p) {
       var label = p.textContent.trim().replace(/^year\s*/i, '');
       var id = 'year-' + label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -130,8 +131,8 @@ document.addEventListener('DOMContentLoaded', function () {
     box.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>';
     var input = document.createElement('input');
     input.type = 'search';
-    input.placeholder = 'Search papers by title, author, venue ...  ( / )';
-    input.setAttribute('aria-label', 'Search papers');
+    input.placeholder = pubsZh ? '搜索论文：标题、作者、期刊/会议 ...  ( / )' : 'Search papers by title, author, venue ...  ( / )';
+    input.setAttribute('aria-label', pubsZh ? '搜索论文' : 'Search papers');
     var count = document.createElement('span');
     count.className = 'pubs-search-count';
     box.appendChild(input);
@@ -144,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
     firstSection.parentNode.insertBefore(box, firstSection);
     var empty = document.createElement('p');
     empty.className = 'pubs-no-results';
-    empty.textContent = 'No matching papers.';
+    empty.textContent = pubsZh ? '没有匹配的论文。' : 'No matching papers.';
     empty.style.display = 'none';
     // top level too, right after the search box: hiding the first section
     // while searching must not hide the no-results message with it

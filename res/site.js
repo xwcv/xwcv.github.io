@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
   /* 0. Theme toggle: persists choice to localStorage (read by the inline head script) */
   var root = document.documentElement;
   document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+    btn.setAttribute('aria-pressed', root.getAttribute('data-theme') === 'dark' ? 'true' : 'false');
     btn.addEventListener('click', function () {
       var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
+      btn.setAttribute('aria-pressed', next === 'dark' ? 'true' : 'false');
       try { localStorage.setItem('theme', next); } catch (e) {}
     });
   });
@@ -46,7 +48,12 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!q) return;
     var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
     var nodes = [];
-    while (walker.nextNode()) nodes.push(walker.currentNode);
+    while (walker.nextNode()) {
+      var n = walker.currentNode;
+      // skip chip links: painting marks inside the blue res-chips looks wrong
+      if (n.parentElement && n.parentElement.closest('.res-chip')) continue;
+      nodes.push(n);
+    }
     nodes.forEach(function (node) {
       var text = node.nodeValue;
       var lower = text.toLowerCase();
@@ -131,14 +138,17 @@ document.addEventListener('DOMContentLoaded', function () {
     box.appendChild(count);
     // top-level placement (like the projects page): the search scope is the
     // whole page, not just the first section, so the box lives in <main>
-    // right above the first section instead of inside it
+    // between the .pubs-links card and the first papers section, matching
+    // the projects page where the box sits below the hero card
     var firstSection = firstOl.closest('section') || firstOl.parentNode;
     firstSection.parentNode.insertBefore(box, firstSection);
     var empty = document.createElement('p');
     empty.className = 'pubs-no-results';
     empty.textContent = 'No matching papers.';
     empty.style.display = 'none';
-    firstOl.parentNode.insertBefore(empty, firstOl);
+    // top level too, right after the search box: hiding the first section
+    // while searching must not hide the no-results message with it
+    firstSection.parentNode.insertBefore(empty, firstSection);
     input.addEventListener('input', function () {
       var q = input.value.trim().toLowerCase();
       var shown = 0;
@@ -151,20 +161,32 @@ document.addEventListener('DOMContentLoaded', function () {
       yearPs.forEach(function (p) {
         p.style.display = q ? 'none' : '';
       });
+      nav.style.display = q ? 'none' : '';
       lists.forEach(function (s) {
         var any = Array.prototype.some.call(s.ol.querySelectorAll('li:not(.year-heading)'), function (li) {
           return li.style.display !== 'none';
         });
         var hide = q && !any;
-        if (s.header) s.header.style.display = hide ? 'none' : '';
-        if (s.ol !== firstOl) s.ol.style.display = hide ? 'none' : '';
+        var sec = s.ol.closest('section');
+        if (sec) {
+          // hide the whole section card, not just its heading and list
+          sec.style.display = hide ? 'none' : '';
+          // a still-hidden reveal-section can enter the viewport when the
+          // sections above it collapse; reveal it immediately instead of
+          // relying on the IntersectionObserver to notice the layout shift
+          if (!hide && q) sec.classList.add('in');
+        } else {
+          if (s.header) s.header.style.display = hide ? 'none' : '';
+          if (s.ol !== firstOl) s.ol.style.display = hide ? 'none' : '';
+        }
       });
       empty.style.display = q && !shown ? '' : 'none';
       count.textContent = q ? shown + ' / ' + items.length : '';
     });
     document.addEventListener('keydown', function (e) {
+      if (e.metaKey || e.ctrlKey || e.altKey || e.isComposing) return;
       var tag = document.activeElement && document.activeElement.tagName;
-      if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') {
+      if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA' && tag !== 'SELECT') {
         e.preventDefault();
         input.focus();
       } else if (e.key === 'Escape' && document.activeElement === input) {
@@ -212,8 +234,9 @@ document.addEventListener('DOMContentLoaded', function () {
       pcount.textContent = q ? shown + ' / ' + cards.length : '';
     });
     document.addEventListener('keydown', function (e) {
+      if (e.metaKey || e.ctrlKey || e.altKey || e.isComposing) return;
       var tag = document.activeElement && document.activeElement.tagName;
-      if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') {
+      if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA' && tag !== 'SELECT') {
         e.preventDefault();
         pinput.focus();
       } else if (e.key === 'Escape' && document.activeElement === pinput) {
@@ -269,14 +292,19 @@ document.addEventListener('DOMContentLoaded', function () {
         var any = Array.prototype.some.call(sec.querySelectorAll('.member-card'), function (card) {
           return card.style.display !== 'none';
         });
-        sec.style.display = q && !any ? 'none' : '';
+        var hide = q && !any;
+        sec.style.display = hide ? 'none' : '';
+        // same reveal safeguard as the pubs search: a section that jumps
+        // into the viewport during filtering must not stay at opacity 0
+        if (!hide && q) sec.classList.add('in');
       });
       mempty.style.display = q && !shown ? '' : 'none';
       mcount.textContent = q ? shown + ' / ' + memberCards.length : '';
     });
     document.addEventListener('keydown', function (e) {
+      if (e.metaKey || e.ctrlKey || e.altKey || e.isComposing) return;
       var tag = document.activeElement && document.activeElement.tagName;
-      if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') {
+      if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA' && tag !== 'SELECT') {
         e.preventDefault();
         minput.focus();
       } else if (e.key === 'Escape' && document.activeElement === minput) {
@@ -353,34 +381,37 @@ document.addEventListener('DOMContentLoaded', function () {
         scheduled GitHub Action): each code chip on pubs.html becomes a
         GitHub-style "code | ★ N" button, and hard-coded "N stars" links
         on the homepage get their number refreshed. Fails silently when
-        the file is missing or a repo has no count. */
-  fetch('res/stars.json', { cache: 'no-store' })
-    .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (d) {
-      if (!d || !d.stars) return;
-      var fmt = function (n) {
-        if (n < 1000) return String(n);
-        var k = (n / 1000).toFixed(1);
-        return (k.slice(-2) === '.0' ? k.slice(0, -2) : k) + 'k';
-      };
-      document.querySelectorAll('a[href^="https://github.com/"]').forEach(function (a) {
-        var m = /^https:\/\/github\.com\/([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/.exec(a.href);
-        var n = m && d.stars[m[1]];
-        if (n == null) return;
-        if (a.classList.contains('res-chip')) {
-          var s = document.createElement('span');
-          s.className = 'chip-stars';
-          s.textContent = '★ ' + fmt(n);
-          s.title = n.toLocaleString('en-US') + ' GitHub stars';
-          a.appendChild(s);
-        } else if (/^\s*[\d.,]+k?\s+stars?\s*$/i.test(a.textContent)) {
-          // Homepage-style hard-coded "3.9k stars" links: refresh the number
-          var t = a.querySelector('strong') || a;
-          t.textContent = fmt(n) + ' stars';
-        }
-      });
-    })
-    .catch(function () {});
+        the file is missing or a repo has no count. Skipped entirely on
+        pages without any GitHub link (e.g. 404.html). */
+  if (document.querySelector('a[href^="https://github.com/"]')) {
+    fetch('res/stars.json', { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || !d.stars) return;
+        var fmt = function (n) {
+          if (n < 1000) return String(n);
+          var k = (n / 1000).toFixed(1);
+          return (k.slice(-2) === '.0' ? k.slice(0, -2) : k) + 'k';
+        };
+        document.querySelectorAll('a[href^="https://github.com/"]').forEach(function (a) {
+          var m = /^https:\/\/github\.com\/([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/.exec(a.href);
+          var n = m && d.stars[m[1]];
+          if (n == null) return;
+          if (a.classList.contains('res-chip')) {
+            var s = document.createElement('span');
+            s.className = 'chip-stars';
+            s.textContent = '★ ' + fmt(n);
+            s.title = n.toLocaleString('en-US') + ' GitHub stars';
+            a.appendChild(s);
+          } else if (/^\s*[\d.,]+k?\s+stars?\s*$/i.test(a.textContent)) {
+            // Homepage-style hard-coded "3.9k stars" links: refresh the number
+            var t = a.querySelector('strong') || a;
+            t.textContent = fmt(n) + ' stars';
+          }
+        });
+      })
+      .catch(function () {});
+  }
 
   /* 6. Venue tags. Homepage influential-papers list: wrap "CVPR 2024"-style
         venue mentions in colored tags (text inside links is left alone).

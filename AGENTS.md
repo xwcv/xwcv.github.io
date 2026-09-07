@@ -89,10 +89,14 @@ Rules that the dynamic features depend on:
 - Optional: add a BibTeX snippet to `bib/<key>.txt` and link it as `bib`.
 - Optional: self-host the PDF under `pubs/` and link it as `./pubs/<file>.pdf`.
 - `res/site.js` auto-injects a keyword search box at the top of `<main>`
-  (above the first `<section>`, since it filters every section on the page,
-  not just "Major Journal & Conference Papers") and the sticky year-nav
-  inside the first section — keep the `<ol>` / `li.year-heading` structure
-  intact for both to work.
+  (below the `.pubs-links` card and above the first papers section, like the
+  projects box below the hero card, since it filters every section on the
+  page, not just "Major Journal & Conference Papers") and the sticky
+  year-nav inside the first section — keep the `<ol>` / `li.year-heading`
+  structure intact for both to work. While searching, sections left empty
+  are hidden entirely (not just their heading/list), and the "No matching
+  papers." message lives at the top level of `<main>`, right after the
+  search box.
 
 ## Adding a project to projs.html / projs_cn.html
 

@@ -354,12 +354,6 @@ body {
     background: var(--accent-soft);
 }
 
-/* matching tint for the in-text author markers */
-ol sup {
-    color: var(--primary);
-    font-weight: 600;
-}
-
 /* Yearly-citations bar chart (added by site.js from res/scholar.json) */
 .gs-graph {
     display: inline-flex;
@@ -714,7 +708,7 @@ main > .pubs-search {
 }
 
 /* matched keywords while filtering the publication list */
-ol li mark {
+ol li mark, .member-card mark {
     background: var(--amber-soft);
     color: var(--amber);
     border-radius: 3px;
@@ -783,7 +777,6 @@ li sup {
     font-weight: 700;
 }
 
-/* ===== Text Widget (pubs.html / group pages) ===== */
 /* ===== Member Cards (group pages) ===== */
 .members-section {
     margin: 8px 0 26px;
@@ -1255,6 +1248,14 @@ sup, sub {
     color: #0e1319;
 }
 
+[data-theme="dark"] .member-photo {
+    background: var(--bg);
+}
+
+[data-theme="dark"] .scholar-stat {
+    border-color: rgba(229, 165, 88, 0.35);
+}
+
 [data-theme="dark"] .v-cvpr { --vc: #7ea4f0; }
 [data-theme="dark"] .v-iccv { --vc: #2dd4bf; }
 [data-theme="dark"] .v-eccv { --vc: #a78bfa; }
@@ -1334,8 +1335,16 @@ sup, sub {
         background: white;
     }
 
-    .topnav, .bottombar, .year-nav, .back-to-top, .pubs-search {
+    .topnav, .bottombar, .year-nav, .back-to-top, .pubs-search,
+    .gal-btn, .pubs-no-results {
         display: none;
+    }
+
+    /* sections start at opacity 0 until the IntersectionObserver reveals
+       them; force them visible so unscrolled regions are not blank */
+    main section.reveal {
+        opacity: 1 !important;
+        transform: none !important;
     }
 
     .container {

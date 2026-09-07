@@ -1,10 +1,10 @@
 {
   "stars": {
-    "AILab-CVC/YOLO-World": 6541,
+    "AILab-CVC/YOLO-World": 6542,
     "AbrahamYabo/Cascade-Zero123": 70,
     "AlibabaResearch/AdvancedLiterateMachinery": 1836,
     "ChaoLi977/DeepMitosis": 24,
-    "FoundationVision/ByteTrack": 6667,
+    "FoundationVision/ByteTrack": 6669,
     "GreatJiweix/DmmlTiSV": 23,
     "Haijun-Xiong/CLTD": 7,
     "JaminFong/DenseNAS": 292,
@@ -28,13 +28,13 @@
     "ZyoungXu/GenDSA": 20,
     "ZyoungXu/MoSt-DSA": 19,
     "baaivision/EVA": 2693,
-    "baaivision/JudgeLM": 441,
+    "baaivision/JudgeLM": 442,
     "bgshih/aster": 743,
     "caoyiyang1105/tric-motion-codes": 6,
     "dualtransparency/TCLD": 7,
     "huang-laboratory/EMReady": 103,
     "hust-tp/ESMIR": 9,
-    "hustvl/4DGaussians": 3917,
+    "hustvl/4DGaussians": 3919,
     "hustvl/4DLangVGGT": 92,
     "hustvl/AziNorm": 54,
     "hustvl/BCF": 7,
@@ -48,7 +48,7 @@
     "hustvl/DiG": 185,
     "hustvl/DiffusionDrive": 1491,
     "hustvl/DiffusionVL": 161,
-    "hustvl/DreamWAM": 37,
+    "hustvl/DreamWAM": 38,
     "hustvl/Dynamic-2DGS": 181,
     "hustvl/EVA-X": 100,
     "hustvl/EVF-SAM": 508,
@@ -126,11 +126,11 @@
     "sydney0zq/covid-19-detection": 111,
     "wkcn/TinyCLIP": 146,
     "wondervictor/bvt": 1,
-    "xiaomi-research/drivelaw": 142,
+    "xiaomi-research/drivelaw": 146,
     "xiaomi-research/recogdrive": 599,
     "xwcv/xwcv.github.io": 3,
     "yukang2017/RENAS": 20,
     "zjhuang22/maskscoring_rcnn": 1895
   },
-  "updated": "2026-09-06"
+  "updated": "2026-09-07"
 }

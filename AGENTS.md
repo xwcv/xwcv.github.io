@@ -48,7 +48,11 @@ rendered site's footer. Tell your user about this requirement.
   hides sections left empty) — it runs after `members.js` has rendered, so
   keep the render calls as plain end-of-body scripts.
 - `res/` — images, `site.js`, `members.js`, `stars.json`, `scholar.json`
-  (both generated).
+  (both generated). Pages reference the scripts with a cache-busting query
+  (`res/site.js?v=YYYYMMDD`, likewise `members.js`); **bump the version in
+  every page whenever `site.js` or `members.js` changes** — GitHub Pages
+  caches assets, and a stale script against new markup causes silent
+  version-skew bugs.
 - `bib/` — BibTeX snippets (`*.txt`) linked from some `pubs.html` entries.
 - `pubs/` — self-hosted PDFs.
 - `tools/` — Python scripts run by CI (see below).

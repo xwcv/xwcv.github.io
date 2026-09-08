@@ -19,8 +19,8 @@
     <!-- Primary Meta Tags -->
     <title>科研项目 - 王兴刚 | 计算机视觉与人工智能</title>
     <meta name="title" content="科研项目 - 王兴刚 | 计算机视觉与人工智能">
-    <meta name="description" content="王兴刚教授团队的开源科研项目，涵盖机器人操作、自动驾驶、生成模型与高效多模态基础模型，包括 InfiniteVL、DreamWAM、Faster-WAM、Moebius、MotionVLA、MoDA、AdaRoboVLG、UniDriveVLA、DriveLaW、ReWorld、ReCogDrive、RAD-2、VTP、DiffusionVL、Senna、Senna-2、VGT、DiffusionDrive、VADv2、MapTR、YOLO-World、4DGaussians、ByteTrack、FairMOT、EVA、EVA-X、Vim、TransLight、4DLangVGGT、GaussTR、LENS、CCNet。">
-    <meta name="keywords" content="王兴刚 项目, 计算机视觉, 机器人, 自动驾驶, 世界动作模型, 视觉语言模型, DreamWAM, Faster-WAM, InfiniteVL, Moebius, MotionVLA, MoDA, AdaRoboVLG, UniDriveVLA, DriveLaW, ReWorld, ReCogDrive, RAD-2, VTP, DiffusionVL, Senna, Senna-2, VGT, DiffusionDrive, VADv2, MapTR, YOLO-World, 4DGaussians, ByteTrack, FairMOT, EVA, EVA-X, Vim, Vision Mamba, TransLight, 4DLangVGGT, GaussTR, LENS, CCNet">
+    <meta name="description" content="王兴刚教授团队的开源科研项目，涵盖机器人操作、自动驾驶、生成模型与高效多模态基础模型，包括 InfiniteVL、DreamWAM、Faster-WAM、Moebius、MotionVLA、MoDA、AdaRoboVLG、UniDriveVLA、DriveLaW、ReWorld、ReCogDrive、RAD-2、VTP、DiffusionVL、Senna、Senna-2、VGT、DiffusionDrive、VADv2、MapTR、YOLO-World、4DGaussians、ByteTrack、FairMOT、EVA、EVA-X、Vim、TransLight、4DLangVGGT、GaussTR、LENS、ControlAR、OmniMamba、WeakTr、MobileI2V、LightningDiT、GroundingSuite、MIM4D、DiG、CCNet。">
+    <meta name="keywords" content="王兴刚 项目, 计算机视觉, 机器人, 自动驾驶, 世界动作模型, 视觉语言模型, DreamWAM, Faster-WAM, InfiniteVL, Moebius, MotionVLA, MoDA, AdaRoboVLG, UniDriveVLA, DriveLaW, ReWorld, ReCogDrive, RAD-2, VTP, DiffusionVL, Senna, Senna-2, VGT, DiffusionDrive, VADv2, MapTR, YOLO-World, 4DGaussians, ByteTrack, FairMOT, EVA, EVA-X, Vim, Vision Mamba, TransLight, 4DLangVGGT, GaussTR, LENS, ControlAR, OmniMamba, WeakTr, MobileI2V, LightningDiT, GroundingSuite, MIM4D, DiG, CCNet">
     <meta name="author" content="Xinggang Wang">
     <meta name="robots" content="index, follow">
 
@@ -324,6 +324,19 @@
   </li>
 
   <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/MobileI2V" title="MobileI2V 代码仓库">
+      <img src="res/proj/mobilei2v.jpg" alt="MobileI2V：移动端快速高分辨率图生视频" loading="lazy" decoding="async">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2025</span><span class="proj-topic">生成模型</span></div>
+      <h3 class="proj-title">MobileI2V: Fast and High-Resolution Image-to-Video on Mobile Devices</h3>
+      <p class="proj-authors">Shuai Zhang#, Bao Tang#, Siyuan Yu#, Yueting Zhu, Jingfeng Yao, Ya Zou, Shanglin Yuan, Li Yu, Wenyu Liu, Xinggang Wang*</p>
+      <p class="proj-desc">面向移动设备的 0.27B 图生视频模型——比 SVD-XT 小 5.55 倍且画质相当，移动端 2.24 秒生成 720p 视频，A100 上提速 199 倍。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2511.21475">arxiv</a> <a href="https://github.com/hustvl/MobileI2V">code</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
     <a class="proj-media" href="https://hustvl.github.io/TransLight/" title="TransLight 项目主页">
       <img src="res/proj/translight.jpg" alt="TransLight：图像引导的定制化光照控制" loading="lazy" decoding="async">
     </a>
@@ -359,6 +372,45 @@
       <p class="proj-authors">Yongkang Li#, Kaixin Xiong#, Xiangyu Guo, Fang Li, Sixu Yan, Gangwei Xu, Lijun Zhou, Long Chen, Haiyang Sun, Bing Wang, Kun Ma, Guang Chen, Hangjun Ye, Wenyu Liu, Xinggang Wang*</p>
       <p class="proj-desc">强化认知驾驶框架：认知增强的视觉语言模型与扩散规划器相结合，并通过 DiffGRPO 强化学习进一步提升轨迹的安全性与舒适性。</p>
       <p class="proj-links"><a href="https://arxiv.org/abs/2506.08052">arxiv</a> <a href="https://github.com/xiaomi-research/recogdrive">code</a> <a href="https://xiaomi-research.github.io/recogdrive/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/GroundingSuite" title="GroundingSuite 代码仓库">
+      <img src="res/proj/groundingsuite.jpg" alt="GroundingSuite：与 RefCOCO、gRefCOCO、GranD 对比的多粒度像素接地任务" loading="lazy" decoding="async">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-iccv">ICCV 2025</span><span class="proj-topic">图像分割</span><span class="proj-topic">多模态大模型</span></div>
+      <h3 class="proj-title">GroundingSuite: Measuring Complex Multi-Granular Pixel Grounding</h3>
+      <p class="proj-authors">Rui Hu#, Lianghui Zhu#, Yuxuan Zhang, Tianheng Cheng, Lei Liu, Heng Liu, Longjin Ran, Xiaoxin Chen, Wenyu Liu, Xinggang Wang*</p>
+      <p class="proj-desc">综合性的像素接地框架：基于 VLM 的自动标注流水线（比 GLaMM 快 4.5 倍）、956 万条多样指代表达的训练集，以及 3800 条精心构建的评测基准。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2503.10596">arxiv</a> <a href="https://github.com/hustvl/GroundingSuite">code</a> <a href="https://huggingface.co/datasets/hustvl/GSEval">dataset</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/OmniMamba" title="OmniMamba 代码仓库">
+      <img src="res/proj/omnimamba.png" alt="OmniMamba：基于 Mamba-2 的统一多模态理解与生成架构" loading="lazy" decoding="async">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-eccv">ECCV 2026</span><span class="proj-topic">多模态大模型</span><span class="proj-topic">生成模型</span></div>
+      <h3 class="proj-title">OmniMamba: Efficient and Unified Multimodal Understanding and Generation via State Space Models</h3>
+      <p class="proj-authors">Jialv Zou, Bencheng Liao, Qian Zhang, Wenyu Liu, Xinggang Wang*</p>
+      <p class="proj-desc">首个基于线性模型的统一多模态理解与视觉生成模型——仅用 2M 数据训练即具竞争力，长序列生成相比 Transformer 提速最高 119.2 倍、显存降低 63%。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2503.08686">arxiv</a> <a href="https://github.com/hustvl/OmniMamba">code</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/LightningDiT" title="LightningDiT 代码仓库">
+      <img src="res/proj/lightningdit.jpg" alt="LightningDiT：VA-VAE 对齐潜空间扩散系统的 ImageNet-256 生成样本" loading="lazy" decoding="async">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-cvpr">CVPR 2025</span><span class="proj-topic">生成模型</span></div>
+      <h3 class="proj-title">LightningDiT &amp; VA-VAE: Taming the Reconstruction-Generation Dilemma in Latent Diffusion Models</h3>
+      <p class="proj-authors">Jingfeng Yao, Bin Yang, Xinggang Wang</p>
+      <p class="proj-desc">将 VAE 潜空间与视觉基础模型对齐（VA-VAE），配合增强版 DiT 基线（LightningDiT）——ImageNet-256 上 FID 1.35、rFID 0.28，收敛比原版 DiT 快 21.8 倍（64 个 epoch 即达 FID 2.11）。CVPR 2025 Oral。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2501.01423">arxiv</a> <a href="https://github.com/hustvl/LightningDiT">code</a></p>
     </div>
   </li>
 
@@ -402,6 +454,32 @@
   </li>
 
   <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/ControlAR" title="ControlAR 代码仓库">
+      <img src="res/proj/controlar.jpg" alt="ControlAR：自回归模型的可控图像生成" loading="lazy" decoding="async">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-iclr">ICLR 2025</span><span class="proj-topic">生成模型</span></div>
+      <h3 class="proj-title">ControlAR: Controllable Image Generation with Autoregressive Models</h3>
+      <p class="proj-authors">Zongming Li#, Tianheng Cheng#, Shoufa Chen, Peize Sun, Haocheng Shen, Longjin Ran, Xiaoxin Chen, Wenyu Liu, Xinggang Wang*</p>
+      <p class="proj-desc">通过在控制序列上条件解码，为自回归图像生成模型加入空间控制（边缘、深度、分割图）——无需手工特殊 token，支持任意分辨率生成。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2410.02705">arxiv</a> <a href="https://github.com/hustvl/ControlAR">code</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/DiG" title="DiG 代码仓库">
+      <img src="res/proj/dig.jpg" alt="DiG：门控线性注意力扩散模型的高分辨率生成样本" loading="lazy" decoding="async">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-cvpr">CVPR 2025</span><span class="proj-topic">生成模型</span></div>
+      <h3 class="proj-title">DiG: Scalable and Efficient Diffusion Models with Gated Linear Attention</h3>
+      <p class="proj-authors">Lianghui Zhu, Zilong Huang*, Bencheng Liao, Jun Hao Liew, Hanshu Yan, Jiashi Feng, Xinggang Wang*</p>
+      <p class="proj-desc">将门控线性注意力引入扩散骨干网络，参数开销极小——256² 分辨率下超越 DiT，高分辨率下效率优势显著：DiG-S/2 在 1792² 比 DiT-S/2 快 2.5 倍、省 75.7% 显存，DiG-XL/2 在 2048² 比 FlashAttention-2 版 DiT 快 1.8 倍。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2405.18428">arxiv</a> <a href="https://github.com/hustvl/DiG">code</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
     <a class="proj-media" href="https://hgao-cv.github.io/VADv2/" title="VADv2 项目主页">
       <img src="res/proj/vadv2.png" alt="VADv2：基于概率规划的端到端自动驾驶" loading="lazy" decoding="async">
     </a>
@@ -424,6 +502,19 @@
       <p class="proj-authors">Jingfeng Yao, Xinggang Wang*, Yuehao Song, Huangxuan Zhao, Jun Ma, Yajie Chen, Wenyu Liu, Bo Wang*</p>
       <p class="proj-desc">首个同时捕捉语义与几何信息的 X 光自监督 ViT 基础模型，覆盖 20 余种胸部疾病，在 11 项以上检测任务中取得领先结果，并具备出色的少样本学习能力。</p>
       <p class="proj-links"><a href="https://arxiv.org/abs/2405.05237">arxiv</a> <a href="https://github.com/hustvl/EVA-X">code</a> <a href="https://www.nature.com/articles/s41746-025-02032-z">pdf</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/MIM4D" title="MIM4D 代码仓库">
+      <img src="res/proj/mim4d.jpg" alt="MIM4D：多视角视频双重掩码建模与 3D 体渲染监督" loading="lazy" decoding="async">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-top">IJCV 2025</span><span class="proj-topic">自动驾驶</span><span class="proj-topic">3D / 4D 视觉</span></div>
+      <h3 class="proj-title">MIM4D: Masked Modeling with Multi-View Video for Autonomous Driving Representation Learning</h3>
+      <p class="proj-authors">Jialv Zou#, Bencheng Liao#, Qian Zhang, Wenyu Liu, Xinggang Wang*</p>
+      <p class="proj-desc">面向多视角驾驶视频的双重掩码图像建模预训练范式，通过 3D 体素可微渲染监督伪 3D 特征——在 nuScenes 上提升端到端规划（碰撞率降 9%）、BEV 分割（+8.7% IoU）、3D 检测（+3.5% mAP）与高精地图构建（+1.4% mAP)。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2403.08760">arxiv</a> <a href="https://github.com/hustvl/MIM4D">code</a></p>
     </div>
   </li>
 
@@ -463,6 +554,19 @@
       <p class="proj-authors">Guanjun Wu#, Taoran Yi#, Jiemin Fang, Lingxi Xie, Xiaopeng Zhang, Wei Wei, Wenyu Liu, Qi Tian, Xinggang Wang*</p>
       <p class="proj-desc">用高斯泼溅与紧凑的时空联合表征建模动态场景，实现高质量新视角合成的实时渲染。</p>
       <p class="proj-links"><a href="https://arxiv.org/abs/2310.08528">arxiv</a> <a href="https://github.com/hustvl/4DGaussians">code</a> <a href="https://guanjunwu.github.io/4dgs/index.htmll">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://github.com/hustvl/WeakTr" title="WeakTr 代码仓库">
+      <img src="res/proj/weaktr.png" alt="WeakTr：基于纯 ViT 与自适应注意力融合的弱监督语义分割框架" loading="lazy" decoding="async">
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-top">IEEE TIP 2026</span><span class="proj-topic">图像分割</span></div>
+      <h3 class="proj-title">WeakTr: Exploring Plain Vision Transformer for Weakly-Supervised Semantic Segmentation</h3>
+      <p class="proj-authors">Lianghui Zhu#, Yingyue Li#, Jiemin Fang, Yan Liu, Xin Hao, Wenyu Liu, Xinggang Wang*</p>
+      <p class="proj-desc">探索纯 ViT 用于弱监督语义分割：以可学习的注意力头权重自适应融合自注意力图，端到端生成高质量 CAM，并配合梯度裁剪解码器在线重训练——VOC12 上 78.5% mIoU、COCO14 上 51.1% mIoU。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2304.01184">arxiv</a> <a href="https://github.com/hustvl/WeakTr">code</a></p>
     </div>
   </li>
 

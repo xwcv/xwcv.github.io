@@ -718,6 +718,46 @@ main > .pubs-search {
     margin: 18px 0;
 }
 
+/* topic filter chips under the projects search box (added by site.js) */
+.proj-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: -14px 0 24px;
+}
+
+.proj-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--white);
+    font-family: var(--font-sans);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.proj-tag:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.proj-tag.proj-tag-on {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+.proj-tag-n {
+    margin-left: 5px;
+    opacity: 0.65;
+    font-weight: 600;
+}
+
 /* matched keywords while filtering the publication list */
 ol li mark, .member-card mark {
     background: var(--amber-soft);
@@ -1381,7 +1421,7 @@ sup, sub {
     }
 
     .topnav, .bottombar, .year-nav, .back-to-top, .pubs-search,
-    .gal-btn, .gal-dots, .pubs-no-results {
+    .gal-btn, .gal-dots, .pubs-no-results, .proj-tags {
         display: none;
     }
 

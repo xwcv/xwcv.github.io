@@ -200,7 +200,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* 3c. Project search on the projects page: instant keyword filter over the
          project cards (matches title / authors / description / topic), with a
-         match counter. "/" focuses the box, Esc clears it. */
+         match counter, plus a row of topic chips under the box (extracted from
+         the cards' .proj-topic, so EN/CN labels follow the page language);
+         chip and keyword filters are AND-combined. "/" focuses the box,
+         Esc clears it. */
   var projGrid = document.querySelector('ol.proj-grid');
   if (projGrid) {
     var cards = Array.prototype.slice.call(projGrid.querySelectorAll('li.proj-card'));
@@ -222,18 +225,73 @@ document.addEventListener('DOMContentLoaded', function () {
     pempty.textContent = zh ? '没有匹配的项目。' : 'No matching projects.';
     pempty.style.display = 'none';
     projGrid.parentNode.insertBefore(pempty, projGrid);
-    pinput.addEventListener('input', function () {
+
+    // topic chips: one per distinct .proj-topic, most frequent first
+    var topicOf = cards.map(function (card) {
+      var t = card.querySelector('.proj-topic');
+      return t ? t.textContent.trim() : '';
+    });
+    var topics = [];
+    topicOf.forEach(function (t) {
+      if (!t) return;
+      for (var i = 0; i < topics.length; i++) {
+        if (topics[i].name === t) { topics[i].n++; return; }
+      }
+      topics.push({ name: t, n: 1 });
+    });
+    topics.sort(function (a, b) { return b.n - a.n; });
+    var activeTag = null;
+    var chips = [];
+    var apply = function () {
       var q = pinput.value.trim().toLowerCase();
       var shown = 0;
-      cards.forEach(function (card) {
-        var hit = !q || card.textContent.toLowerCase().indexOf(q) !== -1;
+      cards.forEach(function (card, i) {
+        var hit = (!activeTag || topicOf[i] === activeTag) &&
+                  (!q || card.textContent.toLowerCase().indexOf(q) !== -1);
         card.style.display = hit ? '' : 'none';
         markMatches(card, hit ? q : '');
         if (hit) shown++;
       });
-      pempty.style.display = q && !shown ? '' : 'none';
-      pcount.textContent = q ? shown + ' / ' + cards.length : '';
-    });
+      chips.forEach(function (chip) {
+        var on = chip._tag === activeTag;
+        chip.classList.toggle('proj-tag-on', on);
+        chip.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      pempty.style.display = (q || activeTag) && !shown ? '' : 'none';
+      pcount.textContent = (q || activeTag) ? shown + ' / ' + cards.length : '';
+    };
+    if (topics.length > 1) {
+      var tagRow = document.createElement('div');
+      tagRow.className = 'proj-tags';
+      tagRow.setAttribute('role', 'group');
+      tagRow.setAttribute('aria-label', zh ? '按主题筛选项目' : 'Filter projects by topic');
+      var mkChip = function (label, countN, value) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'proj-tag';
+        b._tag = value;
+        b.setAttribute('aria-pressed', 'false');
+        b.textContent = label;
+        if (countN) {
+          var n = document.createElement('span');
+          n.className = 'proj-tag-n';
+          n.textContent = countN;
+          b.appendChild(n);
+        }
+        b.addEventListener('click', function () {
+          activeTag = activeTag === value ? null : value;
+          apply();
+        });
+        tagRow.appendChild(b);
+        chips.push(b);
+      };
+      mkChip(zh ? '全部' : 'All', 0, null);
+      topics.forEach(function (t) { mkChip(t.name, t.n, t.name); });
+      projGrid.parentNode.insertBefore(tagRow, pempty);
+      chips[0].classList.add('proj-tag-on');
+      chips[0].setAttribute('aria-pressed', 'true');
+    }
+    pinput.addEventListener('input', apply);
     document.addEventListener('keydown', function (e) {
       if (e.metaKey || e.ctrlKey || e.altKey || e.isComposing) return;
       var tag = document.activeElement && document.activeElement.tagName;

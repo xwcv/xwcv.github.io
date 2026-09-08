@@ -162,7 +162,10 @@ Rules:
   add per-page `<style>` blocks or one-off styles.
 - `res/site.js` auto-injects a keyword search box above `.proj-grid`
   (filters `li.proj-card` by title/authors/description/topic, `/` to focus,
-  Esc to clear) — just keep the card markup intact.
+  Esc to clear) plus a topic-chip row under the box (one chip per distinct
+  `.proj-topic`, extracted from the cards so EN/CN labels follow the page;
+  chip and keyword filters are AND-combined) — just keep the card markup
+  intact.
 
 ## Dynamic data (stars & citations)
 

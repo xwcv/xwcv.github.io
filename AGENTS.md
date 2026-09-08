@@ -142,8 +142,17 @@ Rules:
   / `v-eccv` / `v-neurips` / `v-icml` / `v-iclr` / `v-aaai` / `v-corl` for
   conferences,
   `v-top` for top journals (IJCV/TPAMI/…), `v-journal` for `arXiv NNNN`.
-  Add one `<span class="proj-topic">` for the area (e.g. Autonomous
-  Driving / 自动驾驶, Embodied AI / 具身智能).
+  Add 1–3 `<span class="proj-topic">` tags for the area. The first tag is
+  the primary tag and is also used as the single `.gal-topic` on the
+  homepage galleries. Tags must come only from this controlled vocabulary
+  (EN / CN): Autonomous Driving / 自动驾驶, Embodied AI / 具身智能,
+  World Model / 世界模型, Generative Model / 生成模型, Multimodal LLM /
+  多模态大模型, Efficient LLM / 高效 LLM, 3D / 4D Vision / 3D / 4D 视觉,
+  Segmentation / 图像分割, Detection & Tracking / 检测与跟踪,
+  Medical Imaging / 医学影像, Visual Representation / 视觉表征.
+  The topic-filter chips on the projects page are generated from these
+  spans by `res/site.js`, so new tags outside the vocabulary need
+  maintainer sign-off.
 - Link chips, author markers (`#` / `*`), and the GitHub star badge follow
   the same rules as pubs.html (see above). Links must sit inside the `<ol>`
   for `site.js` to style them.

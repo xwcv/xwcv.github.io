@@ -226,18 +226,22 @@ document.addEventListener('DOMContentLoaded', function () {
     pempty.style.display = 'none';
     projGrid.parentNode.insertBefore(pempty, projGrid);
 
-    // topic chips: one per distinct .proj-topic, most frequent first
-    var topicOf = cards.map(function (card) {
-      var t = card.querySelector('.proj-topic');
-      return t ? t.textContent.trim() : '';
+    // topic chips: one per distinct .proj-topic (a card may carry up to 3),
+    // most frequent first
+    var topicsOf = cards.map(function (card) {
+      return Array.prototype.map.call(card.querySelectorAll('.proj-topic'), function (t) {
+        return t.textContent.trim();
+      });
     });
     var topics = [];
-    topicOf.forEach(function (t) {
-      if (!t) return;
-      for (var i = 0; i < topics.length; i++) {
-        if (topics[i].name === t) { topics[i].n++; return; }
-      }
-      topics.push({ name: t, n: 1 });
+    topicsOf.forEach(function (ts) {
+      ts.forEach(function (t) {
+        if (!t) return;
+        for (var i = 0; i < topics.length; i++) {
+          if (topics[i].name === t) { topics[i].n++; return; }
+        }
+        topics.push({ name: t, n: 1 });
+      });
     });
     topics.sort(function (a, b) { return b.n - a.n; });
     var activeTag = null;
@@ -246,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var q = pinput.value.trim().toLowerCase();
       var shown = 0;
       cards.forEach(function (card, i) {
-        var hit = (!activeTag || topicOf[i] === activeTag) &&
+        var hit = (!activeTag || topicsOf[i].indexOf(activeTag) !== -1) &&
                   (!q || card.textContent.toLowerCase().indexOf(q) !== -1);
         card.style.display = hit ? '' : 'none';
         markMatches(card, hit ? q : '');

@@ -229,6 +229,9 @@ body.scrolled .topnav {
     grid-area: stats;
     display: flex;
     flex-wrap: wrap;
+    /* pack the rows tight at the top — the default (stretch) scatters the
+       link / numbers / bar-chart lines across the whole grid area */
+    align-content: flex-start;
     align-items: flex-end;
     gap: 6px 28px;
     font-family: var(--font-sans);
@@ -270,7 +273,7 @@ body.scrolled .topnav {
 /* yearly-citation bar chart (appended by site.js) sits under the numbers */
 .scholar-stats .gs-graph {
     flex-basis: 100%;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 /* Icon buttons row in the profile contact block */

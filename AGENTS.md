@@ -22,9 +22,16 @@ rendered site's footer. Tell your user about this requirement.
 
 ## Layout
 
-- `index.html` / `index_cn.html` — homepage (EN / CN), with an influential-papers
-  list carrying hard-coded "N+ citations" / "N stars" badges (no-JS fallback,
-  refreshed at runtime from the JSON files below).
+- `index.html` / `index_cn.html` — homepage (EN / CN). Structure: a bento-style
+  profile card (`.profile-content` grid: `.profile-text` intro cell spanning
+  two rows — name, role pill, affiliation, `.contact-icons[data-u][data-d]`;
+  `.profile-image` photo with a single-hue gradient frame; `.scholar-stats`
+  "big numbers" tile — keep the `gs-citations` / `gs-hindex` ids and the
+  `<strong>` numbers so site.js can refresh them; `.research-interests`
+  full-width tile), then the Selected Projects gallery and an
+  influential-papers list carrying hard-coded "N+ citations" / "N stars"
+  badges (no-JS fallback, refreshed at runtime from the JSON files below).
+  Keep the EN/CN pair structurally in sync.
 - `pubs.html` / `pubs_cn.html` — full publication list (EN / CN; the CN page
   translates only the UI chrome — nav, section headings, legend, footer —
   while paper entries stay in English): `<section>` + `<h2>` blocks (Major
@@ -48,11 +55,15 @@ rendered site's footer. Tell your user about this requirement.
   hides sections left empty) — it runs after `members.js` has rendered, so
   keep the render calls as plain end-of-body scripts.
 - `res/` — images, `site.js`, `members.js`, `stars.json`, `scholar.json`
-  (both generated). Pages reference the scripts with a cache-busting query
-  (`res/site.js?v=YYYYMMDD`, likewise `members.js`); **bump the version in
-  every page whenever `site.js` or `members.js` changes** — GitHub Pages
-  caches assets, and a stale script against new markup causes silent
-  version-skew bugs.
+  (both generated). Pages reference the stylesheet and scripts with a
+  cache-busting query (`res/xwcv.css?v=YYYYMMDD`, `res/site.js?v=YYYYMMDD`,
+  likewise `members.js`); **bump the version in every page whenever any of
+  them changes** — GitHub Pages caches assets, and a stale asset against new
+  markup causes silent version-skew bugs. Site-wide styling tokens (light +
+  dark) live at the top of `res/xwcv.css` (`--grad-hue*` single-hue gradient
+  accents, `--well*` dark media backgrounds, navy-tinted shadows); the
+  scrolled topnav (`body.scrolled`) and the news timeline are styled there
+  too.
 - `bib/` — BibTeX snippets (`*.txt`) linked from some `pubs.html` entries.
 - `pubs/` — self-hosted PDFs.
 - `tools/` — Python scripts run by CI (see below).

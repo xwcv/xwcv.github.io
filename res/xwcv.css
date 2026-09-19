@@ -12,16 +12,22 @@
     --accent-soft: rgba(37, 99, 235, 0.07);
     --amber: #b45309;
     --amber-soft: rgba(217, 119, 6, 0.09);
+    /* single-hue gradient accents (blue → indigo), used sparingly */
+    --grad-hue: linear-gradient(135deg, #2563eb, #4f46e5);
+    --grad-hue-bar: linear-gradient(180deg, #3b82f6, #4f46e5);
+    /* media well behind project/gallery teasers: white on light, black on dark */
+    --well: #ffffff;
     --text: #1f2937;
     --text-light: #4b5563;
     --muted: #6b7280;
     --bg: #f4f6fa;
     --white: #ffffff;
     --border: #e5e9f0;
-    --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
-    --shadow: 0 1px 3px rgba(16, 24, 40, 0.08);
-    --shadow-md: 0 4px 12px rgba(16, 24, 40, 0.08);
-    --shadow-lg: 0 8px 24px rgba(16, 24, 40, 0.12);
+    /* shadows carry a hint of the brand navy instead of pure black */
+    --shadow-sm: 0 1px 2px rgba(22, 48, 92, 0.05);
+    --shadow: 0 1px 3px rgba(22, 48, 92, 0.08);
+    --shadow-md: 0 4px 12px rgba(22, 48, 92, 0.09);
+    --shadow-lg: 0 8px 24px rgba(22, 48, 92, 0.14);
     --radius: 12px;
     --nav-h: 56px;
     --font-serif: Georgia, Cambria, "Times New Roman", "Songti SC", "STSong", "SimSun", serif;
@@ -89,6 +95,14 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* scrolled state (class toggled by site.js): the bar turns more opaque
+   and picks up a deeper shadow so it visibly lifts off the page */
+body.scrolled .topnav {
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: var(--shadow-md);
 }
 
 .topnav .container {
@@ -120,7 +134,7 @@ body {
 
 .topnav a.active {
     color: var(--white);
-    background: var(--primary);
+    background: var(--grad-hue);
 }
 
 .topnav a.lang {
@@ -149,20 +163,25 @@ body {
 }
 
 .profile-content {
-    display: flex;
-    gap: 32px;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 292px;
+    grid-template-areas:
+        "intro photo"
+        "intro stats"
+        "interests interests";
+    gap: 24px 32px;
+    align-items: start;
 }
 
 .profile-text {
-    flex: 1;
+    grid-area: intro;
     min-width: 0;
 }
 
 .profile-text h1 {
-    font-size: 2rem;
+    font-size: 2.1rem;
     font-weight: 700;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
     color: var(--primary);
     margin: 0 0 8px 0;
     font-family: var(--font-sans);
@@ -181,7 +200,7 @@ body {
     margin: 0 0 18px 0;
 }
 
-.affiliation, .contact, .research-interests {
+.affiliation, .contact {
     margin-bottom: 14px;
 }
 
@@ -192,43 +211,66 @@ body {
     overflow-wrap: anywhere;
 }
 
+.research-interests {
+    grid-area: interests;
+}
+
 .research-interests p {
     margin: 0;
     font-size: 14px;
     background: var(--accent-soft);
     border-left: 3px solid var(--accent);
-    border-radius: 0 8px 8px 0;
-    padding: 10px 14px;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
 }
 
-/* Google Scholar stats in the profile section */
+/* Google Scholar stats in the profile section: bento "big numbers" tile */
 .scholar-stats {
+    grid-area: stats;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 14px;
+    align-items: flex-end;
+    gap: 6px 28px;
     font-family: var(--font-sans);
-    font-size: 13px;
 }
 
 .scholar-stats .scholar-link {
+    flex-basis: 100%;
+    font-size: 12.5px;
     font-weight: 600;
+    color: var(--muted);
+}
+
+.scholar-stats .scholar-link:hover {
     color: var(--primary);
-    margin-right: 2px;
 }
 
 .scholar-stat {
-    color: var(--text-light);
-    background: var(--amber-soft);
-    border: 1px solid rgba(217, 119, 6, 0.28);
-    border-radius: 999px;
-    padding: 1px 11px;
-    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+}
+
+.scholar-stat small {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
 }
 
 .scholar-stat strong {
-    color: var(--amber);
+    font-size: 2.05rem;
+    font-weight: 750;
+    letter-spacing: -0.01em;
+    color: var(--primary);
+    font-variant-numeric: tabular-nums;
+}
+
+/* yearly-citation bar chart (appended by site.js) sits under the numbers */
+.scholar-stats .gs-graph {
+    flex-basis: 100%;
+    margin-top: 8px;
 }
 
 /* Icon buttons row in the profile contact block */
@@ -281,9 +323,12 @@ body {
 
 /* Profile link chips at the top of the publications page */
 .pubs-links {
-    /* balance the card: 18px above the chips (24px padding - 6px margin),
-       so keep the same 18px below them instead of 12px + 24px */
+    /* pin both paddings to 18px and zero the <p> margins so the chips sit
+       dead center of the card (the section's default 24px padding plus the
+       -6px top margin on section > p would skew the rhythm) */
+    padding-top: 18px;
     padding-bottom: 18px;
+    text-align: center;
 }
 
 .profile-links {
@@ -294,7 +339,8 @@ body {
 }
 
 .pubs-links .profile-links {
-    margin-bottom: 0 !important;
+    justify-content: center;
+    margin: 0 !important;
 }
 
 .profile-links a {
@@ -425,7 +471,9 @@ main section.reveal.in {
 }
 
 .profile-image {
+    grid-area: photo;
     flex-shrink: 0;
+    justify-self: end;
 }
 
 .profile-image img {
@@ -460,6 +508,7 @@ section h2 {
     position: relative;
     font-size: 1.18rem;
     font-weight: 600;
+    letter-spacing: -0.01em;
     color: var(--primary);
     margin: 0 0 16px 0;
     padding: 0 0 10px 14px;
@@ -476,7 +525,7 @@ section h2::before {
     bottom: 14px;
     width: 4px;
     border-radius: 2px;
-    background: linear-gradient(180deg, var(--accent), var(--primary));
+    background: var(--grad-hue-bar);
 }
 
 section h1 strong,
@@ -508,7 +557,7 @@ ul li {
 }
 
 ul li:hover {
-    background: var(--accent-soft);
+    background: rgba(37, 99, 235, 0.04);
 }
 
 ul li::before {
@@ -546,7 +595,7 @@ ol li {
 }
 
 ol li:hover {
-    background: var(--accent-soft);
+    background: rgba(37, 99, 235, 0.04);
 }
 
 ol li::marker {
@@ -980,7 +1029,7 @@ li sup {
 .gal-media {
     display: block;
     aspect-ratio: 16 / 10;
-    background: var(--bg);
+    background: var(--well);
     border-bottom: 1px solid var(--border);
     overflow: hidden;
 }
@@ -1136,13 +1185,30 @@ sup, sub {
     }
 
     .profile-content {
-        flex-direction: column-reverse;
-        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "photo"
+            "intro"
+            "stats"
+            "interests";
+        gap: 18px;
         text-align: center;
-        gap: 20px;
+    }
+
+    .profile-image {
+        justify-self: center;
     }
 
     .scholar-stats {
+        justify-content: center;
+        justify-self: center;
+    }
+
+    .scholar-stats .scholar-link {
+        text-align: center;
+    }
+
+    .scholar-stats .gs-graph {
         justify-content: center;
     }
 
@@ -1161,11 +1227,6 @@ sup, sub {
 
     main section:not(.profile-section) {
         padding: 18px 20px;
-    }
-
-    .pubs-links {
-        /* match the 12px above the chips (18px padding - 6px margin) */
-        padding-bottom: 12px;
     }
 
     ol {
@@ -1260,6 +1321,9 @@ sup, sub {
     --accent-soft: rgba(126, 164, 240, 0.13);
     --amber: #e5a558;
     --amber-soft: rgba(229, 165, 88, 0.13);
+    --grad-hue: linear-gradient(135deg, #3b82f6, #8b7cf6);
+    --grad-hue-bar: linear-gradient(180deg, #7ea4f0, #a78bfa);
+    --well: #000000;
     --text: #e5e9f0;
     --text-light: #b4bdc9;
     --muted: #8b95a6;
@@ -1274,6 +1338,11 @@ sup, sub {
 
 [data-theme="dark"] .topnav {
     background: rgba(14, 19, 25, 0.88);
+}
+
+:root[data-theme="dark"] body.scrolled .topnav {
+    background: rgba(14, 19, 25, 0.96);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 [data-theme="dark"] .topnav a:hover {
@@ -1334,10 +1403,6 @@ sup, sub {
 
 [data-theme="dark"] .member-photo {
     background: var(--bg);
-}
-
-[data-theme="dark"] .scholar-stat {
-    border-color: rgba(229, 165, 88, 0.35);
 }
 
 [data-theme="dark"] .v-cvpr { --vc: #7ea4f0; }
@@ -1414,6 +1479,9 @@ sup, sub {
         --bg: #ffffff;
         --white: #ffffff;
         --border: #e5e9f0;
+        --grad-hue: var(--primary);
+        --grad-hue-bar: var(--primary);
+        --well: #ffffff;
     }
 
     body {
@@ -1515,7 +1583,7 @@ li.proj-card:hover {
 .proj-media {
     display: block;
     aspect-ratio: 16 / 8.6;
-    background: var(--bg);
+    background: var(--well);
     border-bottom: 1px solid var(--border);
     overflow: hidden;
 }

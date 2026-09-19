@@ -18,6 +18,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  /* 0b. Scrolled state: the sticky topnav turns more opaque and gains a
+         deeper shadow once the page is scrolled (styles: body.scrolled) */
+  var scrolledTick = function () {
+    document.body.classList.toggle('scrolled', window.scrollY > 8);
+  };
+  window.addEventListener('scroll', scrolledTick, { passive: true });
+  scrolledTick();
+
   /* 1. Citation badges: "4000+ citations" -> pill; "3.9k stars" -> star pill
         (the star glyph comes from CSS, the number is refreshed in step 5) */
   document.querySelectorAll('a').forEach(function (a) {

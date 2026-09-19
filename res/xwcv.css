@@ -213,6 +213,7 @@ body.scrolled .topnav {
     font-size: 2.1rem;
     font-weight: 700;
     letter-spacing: -0.02em;
+    line-height: 1.2;
     color: var(--primary);
     margin: 0 0 8px 0;
     font-family: var(--font-sans);
@@ -228,6 +229,7 @@ body.scrolled .topnav {
     background: var(--primary);
     padding: 3px 14px;
     border-radius: 999px;
+    line-height: 1.5;
     margin: 0;
 }
 

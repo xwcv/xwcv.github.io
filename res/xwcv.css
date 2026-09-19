@@ -166,12 +166,34 @@ body.scrolled .topnav {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 292px;
     grid-template-areas:
-        "intro photo"
-        "affil photo"
-        "icons stats"
+        "main side"
         "interests interests";
-    gap: 22px 32px;
+    gap: 24px 32px;
     align-items: start;
+}
+
+/* left-hand column of the bento: name, affiliation, contact icons flowing
+   as one tight stack (flex gap keeps the rhythm even when the right column
+   is taller). On mobile .profile-main becomes display:contents so the three
+   blocks turn back into independent grid cells */
+.profile-main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+/* right-hand column of the bento: portrait on top, Scholar stats below.
+   On mobile .profile-side becomes display:contents so the two tiles turn
+   back into independent grid cells (photo beside the name, stats full width) */
+.profile-side {
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    min-width: 0;
 }
 
 .profile-text {
@@ -1204,6 +1226,14 @@ sup, sub {
         gap: 14px 16px;
         align-items: center;
         text-align: left;
+    }
+
+    .profile-side {
+        display: contents;
+    }
+
+    .profile-main {
+        display: contents;
     }
 
     .profile-image {

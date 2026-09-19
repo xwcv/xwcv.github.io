@@ -23,15 +23,18 @@ rendered site's footer. Tell your user about this requirement.
 ## Layout
 
 - `index.html` / `index_cn.html` — homepage (EN / CN). Structure: a bento-style
-  profile card (`.profile-content` grid: `.profile-text` intro cell spanning
-  two rows — name, role pill, affiliation, `.contact-icons[data-u][data-d]`;
-  `.profile-image` photo with a single-hue gradient frame; `.scholar-stats`
-  "big numbers" tile — keep the `gs-citations` / `gs-hindex` ids and the
-  `<strong>` numbers so site.js can refresh them; `.research-interests`
-  full-width tile), then the Selected Projects gallery and an
-  influential-papers list carrying hard-coded "N+ citations" / "N stars"
-  badges (no-JS fallback, refreshed at runtime from the JSON files below).
-  Keep the EN/CN pair structurally in sync.
+  profile card (`.profile-content` grid with two columns + a full-width
+  `.research-interests` tile). The left column is `.profile-main` (flex stack:
+  `.profile-text` name + role pill, `.affiliation`, `.contact` with
+  `.contact-icons[data-u][data-d]`); the right column is `.profile-side`
+  (flex stack: `.profile-image` portrait, `.scholar-stats` "big numbers" tile
+  — keep the `gs-citations` / `gs-hindex` ids and the `<strong>` numbers so
+  site.js can refresh them). On mobile (`≤720px`) both wrappers switch to
+  `display: contents` so the six blocks reflow as: photo beside the name,
+  then affiliation / icons / stats / interests full width. Then the Selected
+  Projects gallery and an influential-papers list carrying hard-coded
+  "N+ citations" / "N stars" badges (no-JS fallback, refreshed at runtime
+  from the JSON files below). Keep the EN/CN pair structurally in sync.
 - `pubs.html` / `pubs_cn.html` — full publication list (EN / CN; the CN page
   translates only the UI chrome — nav, section headings, legend, footer —
   while paper entries stay in English): `<section>` + `<h2>` blocks (Major

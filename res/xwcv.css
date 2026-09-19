@@ -167,15 +167,24 @@ body.scrolled .topnav {
     grid-template-columns: minmax(0, 1fr) 292px;
     grid-template-areas:
         "intro photo"
-        "intro stats"
+        "affil photo"
+        "icons stats"
         "interests interests";
-    gap: 24px 32px;
+    gap: 22px 32px;
     align-items: start;
 }
 
 .profile-text {
     grid-area: intro;
     min-width: 0;
+}
+
+.affiliation {
+    grid-area: affil;
+}
+
+.contact {
+    grid-area: icons;
 }
 
 .profile-text h1 {
@@ -197,11 +206,7 @@ body.scrolled .topnav {
     background: var(--primary);
     padding: 3px 14px;
     border-radius: 999px;
-    margin: 0 0 18px 0;
-}
-
-.affiliation, .contact {
-    margin-bottom: 14px;
+    margin: 0;
 }
 
 .affiliation p, .contact p {
@@ -1188,23 +1193,43 @@ sup, sub {
     }
 
     .profile-content {
-        grid-template-columns: 1fr;
+        /* compact identity row: avatar beside name/role, details below */
+        grid-template-columns: 96px minmax(0, 1fr);
         grid-template-areas:
-            "photo"
-            "intro"
-            "stats"
-            "interests";
-        gap: 18px;
-        text-align: center;
+            "photo intro"
+            "affil affil"
+            "icons icons"
+            "stats stats"
+            "interests interests";
+        gap: 14px 16px;
+        align-items: center;
+        text-align: left;
     }
 
     .profile-image {
-        justify-self: center;
+        justify-self: start;
+    }
+
+    .profile-image img {
+        width: 96px;
+        height: 96px;
+    }
+
+    .profile-text h1 {
+        font-size: 1.4rem;
+    }
+
+    .profile-text h2 {
+        margin-bottom: 0;
+    }
+
+    .contact-icons {
+        justify-content: flex-start;
     }
 
     .scholar-stats {
+        justify-self: stretch;
         justify-content: center;
-        justify-self: center;
     }
 
     .scholar-stats .scholar-link {
@@ -1215,17 +1240,8 @@ sup, sub {
         justify-content: center;
     }
 
-    .contact-icons {
-        justify-content: center;
-    }
-
-    .profile-text h1 {
-        font-size: 1.6rem;
-    }
-
-    .profile-image img {
-        width: 120px;
-        height: 120px;
+    .scholar-stat strong {
+        font-size: 1.75rem;
     }
 
     main section:not(.profile-section) {

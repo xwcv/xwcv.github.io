@@ -297,11 +297,6 @@ body.scrolled .topnav {
     font-variant-numeric: tabular-nums;
 }
 
-/* yearly-citation bar chart (appended by site.js) sits under the numbers */
-.scholar-stats .gs-graph {
-    flex-basis: 100%;
-    margin-top: 6px;
-}
 
 /* Icon buttons row in the profile contact block */
 .contact-icons {
@@ -440,21 +435,8 @@ body.scrolled .topnav {
     background: var(--accent-soft);
 }
 
-/* Yearly-citations bar chart (added by site.js from res/scholar.json) */
-.gs-graph {
-    display: inline-flex;
-    align-items: flex-end;
-}
-
-.gs-graph rect {
-    fill: var(--accent);
-    opacity: 0.75;
-}
-
-.gs-graph rect:last-of-type {
-    fill: var(--amber);
-    opacity: 1;
-}
+/* Yearly-citations bar chart removed — the bento stats tile shows the two
+   headline numbers only */
 
 /* Venue tags on the influential-papers list (added by site.js) */
 .venue-tag {
@@ -1264,10 +1246,6 @@ sup, sub {
 
     .scholar-stats .scholar-link {
         text-align: center;
-    }
-
-    .scholar-stats .gs-graph {
-        justify-content: center;
     }
 
     .scholar-stat strong {

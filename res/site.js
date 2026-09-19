@@ -418,23 +418,6 @@ document.addEventListener('DOMContentLoaded', function () {
         };
         if (gsCit && d.citations) countUp(gsCit, d.citations);
         if (gsH && d.hindex) countUp(gsH, d.hindex);
-        if (d.years) {
-          // yearly-citation bar chart next to the totals
-          var stats = document.querySelector('.scholar-stats');
-          if (stats && !stats.querySelector('.gs-graph')) {
-            var years = Object.keys(d.years).sort();
-            var max = Math.max.apply(null, years.map(function (y) { return d.years[y]; }));
-            var H = 30;
-            var svg = '<svg class="gs-graph" width="' + (years.length * 8 - 2) + '" height="' + H
-              + '" role="img" aria-label="Citations per year">';
-            years.forEach(function (y, i) {
-              var h = Math.max(2, Math.round(d.years[y] / max * (H - 4)));
-              svg += '<rect x="' + i * 8 + '" y="' + (H - h) + '" width="6" height="' + h + '" rx="1.5">'
-                + '<title>' + y + ': ' + Number(d.years[y]).toLocaleString('en-US') + ' citations</title></rect>';
-            });
-            stats.insertAdjacentHTML('beforeend', svg + '</svg>');
-          }
-        }
         if (d.papers) {
           document.querySelectorAll('a[href*="citation_for_view="]').forEach(function (a) {
             var m = /citation_for_view=[^&:]+:([\w-]+)/.exec(a.href);

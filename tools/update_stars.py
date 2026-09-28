@@ -28,7 +28,9 @@ import urllib.error
 import urllib.request
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
-PAGES = [os.path.join(ROOT, "pubs.html"), os.path.join(ROOT, "projs.html")]
+# homepages carry hard-coded star badges and gal-card repo links too, so
+# their repos must be tracked as well
+PAGES = [os.path.join(ROOT, p) for p in ("pubs.html", "projs.html", "index.html", "index_cn.html")]
 OUT = os.path.join(ROOT, "res", "stars.json")
 API_URL = "https://api.github.com/repos/"
 
@@ -39,12 +41,14 @@ REPO_RE = re.compile(r"https://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)")
 
 def find_repos():
     repos = []
+    seen = set()
     for page in PAGES:
         with open(page, encoding="utf-8") as f:
             html = f.read()
         for owner, repo in REPO_RE.findall(html):
             full = owner + "/" + repo
-            if full not in repos:
+            if full.lower() not in seen:
+                seen.add(full.lower())
                 repos.append(full)
     return repos
 
@@ -76,7 +80,10 @@ def main():
         except Exception:
             pass
 
-    stars = dict(old)
+    # seed with previous counts (case-insensitively matched) for repos that
+    # are still linked; keys for repos no longer linked anywhere are pruned
+    old_ci = {k.lower(): v for k, v in old.items()}
+    stars = {full: old_ci[full.lower()] for full in repos if full.lower() in old_ci}
     fetched = 0
     for full in repos:
         for attempt in range(3):
@@ -85,6 +92,10 @@ def main():
                 fetched += 1
                 break
             except urllib.error.HTTPError as e:
+                if e.code in (403, 500, 502, 503, 504) and attempt < 2:
+                    # transient (rate limit / server error): retry
+                    time.sleep(1 + attempt)
+                    continue
                 # e.g. 404 for a repo that is not public yet: keep the old value
                 print("skipped %s: HTTP %s" % (full, e.code))
                 break

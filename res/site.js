@@ -26,13 +26,48 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', scrolledTick, { passive: true });
   scrolledTick();
 
+  /* 0c. Deferred videos: <video data-src> only receives its src when it
+         approaches the viewport, then plays while visible and pauses when
+         scrolled away — keeps megabytes of demo mp4 off the initial load.
+         Without JS (or IntersectionObserver) the poster still renders;
+         honors prefers-reduced-motion by staying paused. */
+  var lazyVideos = Array.prototype.slice.call(document.querySelectorAll('video[data-src]'));
+  if (lazyVideos.length) {
+    var stillMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var loadVideo = function (v) {
+      if (!v.getAttribute('src')) v.src = v.getAttribute('data-src');
+    };
+    if ('IntersectionObserver' in window) {
+      var vio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          var v = en.target;
+          if (en.isIntersecting) {
+            loadVideo(v);
+            if (!stillMotion) {
+              var p = v.play();
+              if (p && p.catch) p.catch(function () {});
+            }
+          } else {
+            v.pause();
+          }
+        });
+      }, { rootMargin: '240px' });
+      lazyVideos.forEach(function (v) { vio.observe(v); });
+    } else {
+      lazyVideos.forEach(function (v) {
+        loadVideo(v);
+        if (!stillMotion) v.play();
+      });
+    }
+  }
+
   /* 1. Citation badges: "4000+ citations" -> pill; "3.9k stars" -> star pill
         (the star glyph comes from CSS, the number is refreshed in step 5) */
   document.querySelectorAll('a').forEach(function (a) {
     var t = a.textContent.trim();
     if (/^[\d,]+\+?\s*citations?$/i.test(t)) {
       a.classList.add('cite-badge');
-      a.innerHTML = a.innerHTML.replace(/^([\d,]+\+?)/, '<strong>$1</strong>');
+      a.innerHTML = a.innerHTML.replace(/^(\s*)([\d,]+\+?)/, '$1<strong>$2</strong>');
     } else if (/^[\d.,]+k?\s+stars?$/i.test(t)) {
       a.classList.add('star-badge');
     }
@@ -105,18 +140,23 @@ document.addEventListener('DOMContentLoaded', function () {
     var firstOl = yearPs[0].parentNode;
     firstOl.parentNode.insertBefore(nav, firstOl);
 
-    // scrollspy: highlight the pill of the year currently in view
+    // scrollspy: highlight the pill of the year currently in view. Clicks set
+    // it directly too — on short viewports a jumped-to heading can land below
+    // the observer band and would otherwise leave a stale pill.
+    var navLinks = {};
+    Array.prototype.forEach.call(nav.querySelectorAll('a'), function (a) {
+      navLinks[a.getAttribute('href').slice(1)] = a;
+    });
+    var setActiveYear = function (id) {
+      for (var k in navLinks) navLinks[k].classList.toggle('active', k === id);
+    };
+    Array.prototype.forEach.call(nav.querySelectorAll('a'), function (a) {
+      a.addEventListener('click', function () { setActiveYear(a.getAttribute('href').slice(1)); });
+    });
     if ('IntersectionObserver' in window) {
-      var navLinks = {};
-      Array.prototype.forEach.call(nav.querySelectorAll('a'), function (a) {
-        navLinks[a.getAttribute('href').slice(1)] = a;
-      });
       var spy = new IntersectionObserver(function (entries) {
         entries.forEach(function (en) {
-          if (!en.isIntersecting) return;
-          for (var id in navLinks) navLinks[id].classList.remove('active');
-          var link = navLinks[en.target.id];
-          if (link) link.classList.add('active');
+          if (en.isIntersecting) setActiveYear(en.target.id);
         });
       }, { rootMargin: '-80px 0px -70% 0px' });
       yearPs.forEach(function (p) { spy.observe(p); });
@@ -165,6 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var a = document.createElement('a');
         a.href = '#' + p.id;
         a.textContent = p.textContent.trim().replace(/^year\s*/i, '');
+        a.addEventListener('click', function () { setActiveYear(p.id); });
         menuYears.appendChild(a);
       });
       menu.appendChild(menuYears);
@@ -187,7 +228,13 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!menu.hidden && !menu.contains(e.target)) closeMenu();
       });
       document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && !menu.hidden) { closeMenu(); menuBtn.focus(); }
+        if (e.isComposing) return;
+        if (e.key === 'Escape' && !menu.hidden) {
+          closeMenu();
+          /* only pull focus back when it was inside the menu — don't steal
+             it from the search inputs, which have their own Esc handler */
+          if (menu.contains(document.activeElement)) menuBtn.focus();
+        }
       });
       menu.addEventListener('click', function (e) {
         if (e.target.closest('a')) closeMenu();
@@ -404,6 +451,9 @@ document.addEventListener('DOMContentLoaded', function () {
       var sec = card.closest('section');
       if (sec && mSections.indexOf(sec) === -1) mSections.push(sec);
     });
+    /* cards outside any <section> would leave mSections empty; bail out
+       rather than throw and abort every later enhancement */
+    if (!mSections.length) return;
     var mbox = document.createElement('div');
     mbox.className = 'pubs-search';
     mbox.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>';
@@ -467,7 +517,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var gsCit = document.getElementById('gs-citations');
   var gsH = document.getElementById('gs-hindex');
   if (gsCit || gsH) {
-    fetch('res/scholar.json', { cache: 'no-store' })
+    fetch('/res/scholar.json', { cache: 'no-store' })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (d) {
         if (!d) return;
@@ -495,7 +545,8 @@ document.addEventListener('DOMContentLoaded', function () {
             var m = /citation_for_view=[^&:]+:([\w-]+)/.exec(a.href);
             var n = m && d.papers[m[1]];
             if (n) {
-              a.innerHTML = '<strong>' + (Math.floor(n / 100) * 100).toLocaleString('en-US') + '+</strong> citations';
+              var fl = n >= 100 ? Math.floor(n / 100) * 100 : n;
+              a.innerHTML = '<strong>' + fl.toLocaleString('en-US') + '+</strong> citations';
             }
           });
         }
@@ -510,10 +561,13 @@ document.addEventListener('DOMContentLoaded', function () {
         the file is missing or a repo has no count. Skipped entirely on
         pages without any GitHub link (e.g. 404.html). */
   if (document.querySelector('a[href^="https://github.com/"]')) {
-    fetch('res/stars.json', { cache: 'no-store' })
+    fetch('/res/stars.json', { cache: 'no-store' })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (d) {
         if (!d || !d.stars) return;
+        // case-insensitive lookup: link casing can drift between pages
+        var starMap = {};
+        Object.keys(d.stars).forEach(function (k) { starMap[k.toLowerCase()] = d.stars[k]; });
         var fmt = function (n) {
           if (n < 1000) return String(n);
           var k = (n / 1000).toFixed(1);
@@ -521,7 +575,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
         document.querySelectorAll('a[href^="https://github.com/"]').forEach(function (a) {
           var m = /^https:\/\/github\.com\/([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/.exec(a.href);
-          var n = m && d.stars[m[1]];
+          var n = m && starMap[m[1].toLowerCase()];
           if (n == null) return;
           if (a.classList.contains('res-chip')) {
             var s = document.createElement('span');
@@ -707,7 +761,7 @@ document.addEventListener('DOMContentLoaded', function () {
           d.setAttribute('aria-label', 'Go to projects page ' + (i + 1));
           (function (n) {
             d.addEventListener('click', function () {
-              track.scrollTo({ left: n * track.clientWidth, behavior: smooth ? 'smooth' : 'auto' });
+              scrollToX(n * track.clientWidth);
             });
           })(i);
           dots.appendChild(d);
@@ -719,12 +773,20 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     };
     var smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    /* WebKit < 15.4 doesn't support the options-dictionary overload of
+       scrollTo/scrollBy (the object coerces to NaN, making the call a no-op
+       or a jump to 0); fall back to assigning scrollLeft there. */
+    var optScroll = 'scrollBehavior' in document.documentElement.style;
+    var scrollToX = function (x) {
+      if (optScroll) track.scrollTo({ left: x, behavior: smooth ? 'smooth' : 'auto' });
+      else track.scrollLeft = x;
+    };
     update();
     prev.addEventListener('click', function () {
-      track.scrollBy({ left: -track.clientWidth, behavior: smooth ? 'smooth' : 'auto' });
+      scrollToX(track.scrollLeft - track.clientWidth);
     });
     next.addEventListener('click', function () {
-      track.scrollBy({ left: track.clientWidth, behavior: smooth ? 'smooth' : 'auto' });
+      scrollToX(track.scrollLeft + track.clientWidth);
     });
     track.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);

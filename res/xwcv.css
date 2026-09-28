@@ -351,10 +351,12 @@ body.scrolled .topnav {
 }
 
 /* Profile link chips at the top of the publications page */
-.pubs-links {
+main section.pubs-links:not(.profile-section) {
     /* pin both paddings to 18px and zero the <p> margins so the chips sit
        dead center of the card (the section's default 24px padding plus the
-       -6px top margin on section > p would skew the rhythm) */
+       -6px top margin on section > p would skew the rhythm). The doubled
+       class + :not lifts specificity above the generic section-card rule,
+       which would otherwise win on source order. */
     padding-top: 18px;
     padding-bottom: 18px;
     text-align: center;
@@ -1397,6 +1399,13 @@ sup, sub {
         font-size: 13px;
     }
 
+    /* the wrapped nav takes two rows (~96px); sticky offsets and scroll
+       margins keyed to --nav-h must follow or the year-nav slides behind
+       the blurred bar and anchor targets land hidden underneath it */
+    :root {
+        --nav-h: 96px;
+    }
+
     .member-card {
         width: 100%;
         max-width: 300px;
@@ -1485,6 +1494,12 @@ sup, sub {
     background: rgba(126, 164, 240, 0.12);
 }
 
+/* lang-pill hover washes with --white, which is the nav background in dark
+   mode — use the accent tint so the feedback stays visible */
+[data-theme="dark"] .topnav a.lang:hover {
+    background: var(--accent-soft);
+}
+
 [data-theme="dark"] .topnav a.active {
     color: #0e1319;
     background: var(--primary);
@@ -1544,6 +1559,12 @@ sup, sub {
 
 [data-theme="dark"] .member-photo {
     background: var(--bg);
+}
+
+/* the light 4% blue hover tint is invisible on the dark background */
+[data-theme="dark"] ul li:hover,
+[data-theme="dark"] ol li:hover {
+    background: rgba(126, 164, 240, 0.08);
 }
 
 [data-theme="dark"] .v-cvpr { --vc: #7ea4f0; }
@@ -1632,6 +1653,18 @@ sup, sub {
     .topnav, .bottombar, .year-nav, .back-to-top, .pubs-search,
     .gal-btn, .gal-dots, .pubs-no-results, .proj-tags {
         display: none;
+    }
+
+    /* un-clip the project gallery: print every card in a static grid
+       instead of the masked horizontal swipe track */
+    .gal-track {
+        overflow: visible;
+        grid-auto-flow: row;
+        grid-template-rows: none;
+        grid-auto-columns: auto;
+        grid-template-columns: repeat(4, 1fr);
+        -webkit-mask-image: none;
+        mask-image: none;
     }
 
     /* sections start at opacity 0 until the IntersectionObserver reveals

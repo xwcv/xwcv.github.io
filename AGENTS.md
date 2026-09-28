@@ -166,7 +166,10 @@ Rules:
 - **Card media** lives in `res/proj/<key>.<ext>` (`<key>` = lowercase project
   name). Download the most representative asset from the project's official
   page/repo (teaser or framework figure, demo GIF, or a demo `<video>` mp4
-  with the framework figure as `poster`); never hotlink. Verify with `file`
+  with the framework figure as `poster`); never hotlink. Videos must use
+  `data-src` instead of `src` and must NOT carry `autoplay` — `res/site.js`
+  lazily assigns the src near the viewport and plays/pauses on visibility
+  (the poster is the no-JS fallback). Verify with `file`
   and `sips -g pixelWidth -g pixelHeight`: real image/video (not an HTML
   error page), width ≥ 1000px, size < 8 MB (shrink with `sips -Z 1600`).
   If a PNG is still > ~400 KB after downscaling (photographic teasers),

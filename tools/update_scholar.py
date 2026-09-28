@@ -109,10 +109,10 @@ def main():
         except Exception:
             pass
 
-    # Sanity check: citations should never drop; h-index may legitimately
-    # fluctuate by 1 (Scholar merges/recounts), so only flag a larger drop —
-    # a much smaller number means a bad fetch.
-    if (citations < int(old.get("citations", 0))
+    # Sanity check: big drops mean a bad fetch. Scholar totals do legitimately
+    # shrink (duplicate merges, removed records), so allow a 2% dip on
+    # citations; h-index may fluctuate by 1 — only flag a larger drop.
+    if (citations < int(old.get("citations", 0)) * 0.98
             or hindex < int(old.get("hindex", 0)) - 1):
         print("parsed values (%d, %d) lower than existing, skipping" % (citations, hindex))
         sys.exit(1)

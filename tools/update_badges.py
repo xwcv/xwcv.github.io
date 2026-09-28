@@ -32,22 +32,25 @@ def fmt_stars(n):
     return (k[:-2] if k.endswith(".0") else k) + "k"
 
 
-CITE_RE = re.compile(r'(citation_for_view=[^"]*:([\w-]+)"[^>]*>)[\d,]+\+ citations')
-STAR_RE = re.compile(r'(<a href="https://github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)[^"]*"><strong>)[\d.,]+k? stars</strong>')
+CITE_RE = re.compile(r'(citation_for_view=[^"&]*:([\w-]+)[^"]*"[^>]*>)[\d,]+\+ citations')
+STAR_RE = re.compile(r'(<a [^>]*href="https://github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)[^"]*"[^>]*>\s*<strong>)[\d.,]+k? stars</strong>')
 
 
 def sync(path, papers, stars):
     with open(path, encoding="utf-8", newline="") as f:
         text = f.read()
 
+    stars_ci = {k.lower(): v for k, v in stars.items()}
+
     def cite_sub(m):
         n = papers.get(m.group(2))
         if not n:
             return m.group(0)
-        return m.group(1) + format(n // 100 * 100, ",") + "+ citations"
+        floored = n // 100 * 100 if n >= 100 else n
+        return m.group(1) + format(floored, ",") + "+ citations"
 
     def star_sub(m):
-        n = stars.get(m.group(2))
+        n = stars_ci.get(m.group(2).lower())
         if n is None:
             return m.group(0)
         return m.group(1) + fmt_stars(n) + " stars</strong>"

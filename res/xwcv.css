@@ -15,8 +15,9 @@
     /* single-hue gradient accents (blue → indigo), used sparingly */
     --grad-hue: linear-gradient(135deg, #2563eb, #4f46e5);
     --grad-hue-bar: linear-gradient(180deg, #3b82f6, #4f46e5);
-    /* media well behind project/gallery teasers: white on light, black on dark */
-    --well: #ffffff;
+    /* media well behind project/gallery teasers: faint blue-gray tint on
+       light (pure white reads as an empty hole), near-black on dark */
+    --well: linear-gradient(180deg, #fcfdff 0%, #eff4fb 100%);
     --text: #1f2937;
     --text-light: #4b5563;
     --muted: #6b7280;
@@ -135,6 +136,7 @@ body.scrolled .topnav {
 .topnav a.active {
     color: var(--white);
     background: var(--grad-hue);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.28);
 }
 
 .topnav a.lang {
@@ -517,8 +519,9 @@ main section:not(.profile-section) {
     padding: 24px 28px;
 }
 
-section h1,
-section h2 {
+/* scoped to content cards only — the profile bento has its own h1/h2 styles */
+main section:not(.profile-section) h1,
+main section:not(.profile-section) h2 {
     position: relative;
     font-size: 1.18rem;
     font-weight: 600;
@@ -530,8 +533,8 @@ section h2 {
     font-family: var(--font-sans);
 }
 
-section h1::before,
-section h2::before {
+main section:not(.profile-section) h1::before,
+main section:not(.profile-section) h2::before {
     content: "";
     position: absolute;
     left: 0;
@@ -542,8 +545,8 @@ section h2::before {
     background: var(--grad-hue-bar);
 }
 
-section h1 strong,
-section h2 strong {
+main section:not(.profile-section) h1 strong,
+main section:not(.profile-section) h2 strong {
     font-weight: 600;
 }
 
@@ -1053,7 +1056,7 @@ li sup {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 8px;
+    padding: 6px;
     box-sizing: border-box;
     display: block;
 }
@@ -1352,7 +1355,7 @@ sup, sub {
     --amber-soft: rgba(229, 165, 88, 0.13);
     --grad-hue: linear-gradient(135deg, #3b82f6, #8b7cf6);
     --grad-hue-bar: linear-gradient(180deg, #7ea4f0, #a78bfa);
-    --well: #000000;
+    --well: #0a0f16;
     --text: #e5e9f0;
     --text-light: #b4bdc9;
     --muted: #8b95a6;
@@ -1381,6 +1384,7 @@ sup, sub {
 [data-theme="dark"] .topnav a.active {
     color: #0e1319;
     background: var(--primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 [data-theme="dark"] .profile-section {
@@ -1621,7 +1625,7 @@ li.proj-card:hover {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 10px;
+    padding: 8px;
     box-sizing: border-box;
     display: block;
     transition: transform 0.25s ease;

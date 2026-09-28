@@ -78,7 +78,9 @@ General conventions: every content page wraps its body in
 `<main class="container">` with exactly one `<h1>` (visible page title, or
 `class="visually-hidden"` where the design has no title); content is grouped
 into `<section>` cards (styled by `main section:not(.profile-section)`) with
-accent-bar headings (`section h1/h2`, one shared rule in `res/xwcv.css`) —
+accent-bar headings (`main section:not(.profile-section) h1/h2`, one shared
+rule in `res/xwcv.css` — deliberately scoped away from `.profile-section`,
+whose bento card styles its own `h1`/`h2`) —
 the legacy `.sys_txt` wrapper is gone, don't reintroduce it; EN/CN page pairs
 carry reciprocal `<link rel="alternate" hreflang="en|zh-CN|x-default">`
 tags next to the canonical link.
@@ -112,6 +114,17 @@ Rules that the dynamic features depend on:
   `res/stars.json` and appends `★ N` to the chip.
 - Optional: add a BibTeX snippet to `bib/<key>.txt` and link it as `bib`.
 - Optional: self-host the PDF under `pubs/` and link it as `./pubs/<file>.pdf`.
+- **Cross-page sync with projs**: whenever a pubs entry corresponds to a card
+  in `projs.html` / `projs_cn.html` (same paper title), keep the two in sync —
+  this cuts both ways:
+  - Adding a paper to pubs that is already a project card: update the card's
+    venue tag from `<span class="venue-tag v-journal">arXiv NNNN</span>` to the
+    published venue (e.g. `<span class="venue-tag v-neurips">NeurIPS 2026</span>`),
+    in both projs pages AND the matching `.gal-card` on `index.html` /
+    `index_cn.html`; also align author markers (`#` / `*`) between the pubs
+    entry and the card's `.proj-authors`.
+  - Adding a new project card for an already-published paper: use the real
+    venue tag from the start instead of `arXiv NNNN`.
 - `res/site.js` auto-injects a keyword search box at the top of `<main>`
   (below the `.pubs-links` card and above the first papers section, like the
   projects box below the hero card, since it filters every section on the

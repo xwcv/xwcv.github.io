@@ -125,7 +125,11 @@ Rules that the dynamic features depend on:
     entry and the card's `.proj-authors`.
   - Adding a new project card for an already-published paper: use the real
     venue tag from the start instead of `arXiv NNNN`.
-- `res/site.js` auto-injects a keyword search box at the top of `<main>`
+- `res/site.js` auto-injects an "On this page" / "本页内容" pill into the
+  `.topnav` on the publications pages (click-to-open panel listing section
+  anchors — taken from `main section h2[id]`, so labels follow the page
+  language — plus the year links; Esc / outside click / picking a link closes
+  it), a keyword search box at the top of `<main>`
   (below the `.pubs-links` card and above the first papers section, like the
   projects box below the hero card, since it filters every section on the
   page, not just "Major Journal & Conference Papers") and the sticky

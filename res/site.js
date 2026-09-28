@@ -122,7 +122,79 @@ document.addEventListener('DOMContentLoaded', function () {
       yearPs.forEach(function (p) { spy.observe(p); });
     }
 
-    /* 3b. Paper search: instant keyword filter over every paper entry
+    /* 3b. "On this page" jump menu in the topnav (publications page): a
+           click-to-open pill listing section and year anchors, so the long
+           page is navigable before the sticky year-nav scrolls into view.
+           Esc / outside click / picking a link closes it. */
+    var topnavInner = document.querySelector('.topnav .container');
+    var sectionHeads = Array.prototype.filter.call(
+      document.querySelectorAll('main section h2[id]'),
+      function (h) { return h.textContent.trim().length > 0; }
+    );
+    if (topnavInner && sectionHeads.length) {
+      var menuBtn = document.createElement('button');
+      menuBtn.type = 'button';
+      menuBtn.className = 'page-menu-btn';
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.setAttribute('aria-controls', 'page-menu');
+      menuBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="14" y2="17"/></svg><span>'
+        + (pubsZh ? '本页内容' : 'On this page') + '</span>';
+
+      var menu = document.createElement('div');
+      menu.className = 'page-menu-panel';
+      menu.id = 'page-menu';
+      menu.hidden = true;
+
+      var addMenuLabel = function (text) {
+        var s = document.createElement('span');
+        s.className = 'page-menu-label';
+        s.textContent = text;
+        menu.appendChild(s);
+      };
+      addMenuLabel(pubsZh ? '分区' : 'Sections');
+      sectionHeads.forEach(function (h) {
+        var a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.textContent = h.textContent.trim();
+        menu.appendChild(a);
+      });
+      addMenuLabel(pubsZh ? '年份' : 'Years');
+      var menuYears = document.createElement('div');
+      menuYears.className = 'page-menu-years';
+      yearPs.forEach(function (p) {
+        var a = document.createElement('a');
+        a.href = '#' + p.id;
+        a.textContent = p.textContent.trim().replace(/^year\s*/i, '');
+        menuYears.appendChild(a);
+      });
+      menu.appendChild(menuYears);
+
+      var langLink = topnavInner.querySelector('a.lang');
+      topnavInner.insertBefore(menuBtn, langLink || null);
+      document.querySelector('.topnav').appendChild(menu);
+
+      var closeMenu = function () {
+        menu.hidden = true;
+        menuBtn.setAttribute('aria-expanded', 'false');
+      };
+      menuBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var opening = menu.hidden;
+        menu.hidden = !opening;
+        menuBtn.setAttribute('aria-expanded', String(opening));
+      });
+      document.addEventListener('click', function (e) {
+        if (!menu.hidden && !menu.contains(e.target)) closeMenu();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !menu.hidden) { closeMenu(); menuBtn.focus(); }
+      });
+      menu.addEventListener('click', function (e) {
+        if (e.target.closest('a')) closeMenu();
+      });
+    }
+
+    /* 3c. Paper search: instant keyword filter over every paper entry
            (matches title / authors / venue text), with a match counter.
            While searching, the year headers and any
            section left empty ("Other Conference Papers", ...) are hidden.

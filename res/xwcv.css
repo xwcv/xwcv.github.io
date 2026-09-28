@@ -875,6 +875,110 @@ ol li mark, .member-card mark {
     border-color: var(--primary);
 }
 
+/* ===== "On this page" jump menu (added by site.js on the publications page) ===== */
+.page-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: transparent;
+    font-family: var(--font-sans);
+    font-size: 12.5px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.page-menu-btn:hover,
+.page-menu-btn[aria-expanded="true"] {
+    color: var(--primary);
+    border-color: var(--primary);
+    background: var(--accent-soft);
+}
+
+.page-menu-btn svg {
+    width: 13px;
+    height: 13px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.page-menu-panel {
+    position: absolute;
+    top: calc(100% + 6px);
+    /* align the panel's right edge with the 920px container's content edge */
+    right: max(16px, calc((100% - 920px) / 2 + 24px));
+    z-index: 110;
+    min-width: 220px;
+    max-width: calc(100vw - 32px);
+    max-height: 70vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.96);
+    -webkit-backdrop-filter: blur(10px) saturate(1.5);
+    backdrop-filter: blur(10px) saturate(1.5);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+}
+
+.page-menu-panel[hidden] {
+    display: none;
+}
+
+.page-menu-label {
+    padding: 6px 10px 3px;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+/* specificity note: must come after (and thus override) the generic
+   .topnav a rules, since the panel lives inside .topnav */
+.page-menu-panel a {
+    padding: 6px 10px;
+    border-radius: 8px;
+    border-bottom: none;
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.page-menu-panel a:hover {
+    color: var(--primary);
+    background: rgba(22, 48, 92, 0.07);
+    border-bottom: none;
+}
+
+.page-menu-years {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 2px 6px 6px;
+}
+
+.page-menu-years a {
+    padding: 2px 9px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* anchor offset so the sticky nav doesn't cover jumped-to section headings */
+main section h2[id] {
+    scroll-margin-top: calc(var(--nav-h) + 16px);
+}
+
 /* ===== Links ===== */
 a {
     color: var(--accent);
@@ -1397,6 +1501,10 @@ sup, sub {
 
 [data-theme="dark"] .year-nav {
     background: rgba(23, 30, 40, 0.94);
+}
+
+[data-theme="dark"] .page-menu-panel {
+    background: rgba(23, 30, 40, 0.97);
 }
 
 [data-theme="dark"] .year-nav a:hover {

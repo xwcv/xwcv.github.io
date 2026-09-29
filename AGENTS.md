@@ -109,6 +109,9 @@ continuous. Follow the existing entry style:
 Rules that the dynamic features depend on:
 
 - Author markers: `#` = equal contribution, `*` = corresponding author.
+- Award annotations (Best Paper / Most Cited / …) use
+  `<span class="award-badge">` with the inline medal SVG (see any existing
+  award entry) — a gold pill, works without JS, dark-mode aware.
 - Resource links must use one of the whitelisted chip labels (≤ 32 chars,
   matched case-insensitively): `pdf`, `code`, `arxiv`, `bib`, `project page`,
   `project`, `video`, `website`, `dataset`, `demo`, `supplementary`, `slides`.

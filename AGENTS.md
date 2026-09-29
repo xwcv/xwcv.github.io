@@ -158,7 +158,8 @@ Rules that the dynamic features depend on:
 - `res/site.js` auto-injects an "On this page" / "本页内容" pill into the
   `.topnav` on the publications pages (click-to-open panel listing section
   anchors — taken from `main section h2[id]`, so labels follow the page
-  language — plus the year links; Esc / outside click / picking a link closes
+  language; years deliberately NOT included — the sticky year-nav covers
+  them; Esc / outside click / picking a link closes
   it), a keyword search box at the top of `<main>`
   (below the `.pubs-links` card and above the first papers section, like the
   projects box below the hero card, since it filters every section on the

@@ -1134,16 +1134,6 @@ ol li mark, .member-card mark {
     display: none;
 }
 
-.page-menu-label {
-    padding: 6px 10px 3px;
-    font-family: var(--font-sans);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--muted);
-}
-
 /* specificity note: must come after (and thus override) the generic
    .topnav a rules, since the panel lives inside .topnav */
 .page-menu-panel a {
@@ -1158,22 +1148,6 @@ ol li mark, .member-card mark {
     color: var(--primary);
     background: rgba(22, 48, 92, 0.07);
     border-bottom: none;
-}
-
-.page-menu-years {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    padding: 2px 6px 6px;
-}
-
-.page-menu-years a {
-    padding: 2px 9px;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    background: var(--bg);
-    font-size: 12px;
-    font-weight: 600;
 }
 
 /* anchor offset so the sticky nav doesn't cover jumped-to section headings */

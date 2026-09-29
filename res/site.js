@@ -213,8 +213,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /* 3b. "On this page" jump menu in the topnav (publications page): a
-           click-to-open pill listing section and year anchors, so the long
-           page is navigable before the sticky year-nav scrolls into view.
+           click-to-open pill listing the section anchors (Major / Other /
+           Book Chapters / …) — the year jumps stay in the sticky year-nav,
+           which remains visible while scrolling the list.
            Esc / outside click / picking a link closes it. */
     var topnavInner = document.querySelector('.topnav .container');
     var sectionHeads = Array.prototype.filter.call(
@@ -235,30 +236,15 @@ document.addEventListener('DOMContentLoaded', function () {
       menu.id = 'page-menu';
       menu.hidden = true;
 
-      var addMenuLabel = function (text) {
-        var s = document.createElement('span');
-        s.className = 'page-menu-label';
-        s.textContent = text;
-        menu.appendChild(s);
-      };
-      addMenuLabel(pubsZh ? '分区' : 'Sections');
+      /* sections only — year jumps live in the sticky year-nav below, which
+         stays visible while scrolling the list (with scrollspy); putting
+         years here too would just duplicate it */
       sectionHeads.forEach(function (h) {
         var a = document.createElement('a');
         a.href = '#' + h.id;
         a.textContent = h.textContent.trim();
         menu.appendChild(a);
       });
-      addMenuLabel(pubsZh ? '年份' : 'Years');
-      var menuYears = document.createElement('div');
-      menuYears.className = 'page-menu-years';
-      yearPs.forEach(function (p) {
-        var a = document.createElement('a');
-        a.href = '#' + p.id;
-        a.textContent = p.textContent.trim().replace(/^year\s*/i, '');
-        a.addEventListener('click', function () { setActiveYear(p.id); });
-        menuYears.appendChild(a);
-      });
-      menu.appendChild(menuYears);
 
       var langLink = topnavInner.querySelector('a.lang');
       topnavInner.insertBefore(menuBtn, langLink || null);

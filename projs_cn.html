@@ -19,8 +19,8 @@
     <!-- Primary Meta Tags -->
     <title>科研项目 - 王兴刚 | 计算机视觉与人工智能</title>
     <meta name="title" content="科研项目 - 王兴刚 | 计算机视觉与人工智能">
-    <meta name="description" content="王兴刚教授团队的开源科研项目，涵盖机器人操作、自动驾驶、生成模型与高效多模态基础模型，包括 StableVQ、Bridge3D、InfiniteVL、DreamWAM、Faster-WAM、EOVSAM、Moebius、MotionVLA、MoDA、AdaRoboVLG、UniDriveVLA、DriveLaW、ReWorld、ReCogDrive、RAD-2、VTP、DiffusionVL、Senna、Senna-2、VGT、DiffusionDrive、VADv2、MapTR、YOLO-World、4DGaussians、ByteTrack、FairMOT、EVA、EVA-X、Vim、TransLight、4DLangVGGT、GaussTR、LENS、ControlAR、OmniMamba、WeakTr、MobileI2V、LightningDiT、GroundingSuite、MIM4D、DiG、CCNet。">
-    <meta name="keywords" content="王兴刚 项目, 计算机视觉, 机器人, 自动驾驶, 世界动作模型, 视觉语言模型, StableVQ, Bridge3D, DreamWAM, Faster-WAM, EOVSAM, InfiniteVL, Moebius, MotionVLA, MoDA, AdaRoboVLG, UniDriveVLA, DriveLaW, ReWorld, ReCogDrive, RAD-2, VTP, DiffusionVL, Senna, Senna-2, VGT, DiffusionDrive, VADv2, MapTR, YOLO-World, 4DGaussians, ByteTrack, FairMOT, EVA, EVA-X, Vim, Vision Mamba, TransLight, 4DLangVGGT, GaussTR, LENS, ControlAR, OmniMamba, WeakTr, MobileI2V, LightningDiT, GroundingSuite, MIM4D, DiG, CCNet">
+    <meta name="description" content="王兴刚教授团队的开源科研项目，涵盖机器人操作、自动驾驶、生成模型与高效多模态基础模型，包括 StableVQ、Bridge3D、InfiniteVL、DreamWAM、Faster-WAM、EOVSAM、Moebius、MotionVLA、MoDA、OmniTrack、AdaRoboVLG、UniDriveVLA、DriveLaW、ReWorld、ReCogDrive、RAD-2、VTP、DiffusionVL、Senna、Senna-2、VGT、DiffusionDrive、VADv2、MapTR、YOLO-World、4DGaussians、ByteTrack、FairMOT、EVA、EVA-X、Vim、TransLight、4DLangVGGT、GaussTR、LENS、ControlAR、OmniMamba、WeakTr、MobileI2V、LightningDiT、GroundingSuite、MIM4D、DiG、CCNet。">
+    <meta name="keywords" content="王兴刚 项目, 计算机视觉, 机器人, 自动驾驶, 世界动作模型, 视觉语言模型, StableVQ, Bridge3D, DreamWAM, Faster-WAM, EOVSAM, InfiniteVL, Moebius, MotionVLA, MoDA, OmniTrack, AdaRoboVLG, UniDriveVLA, DriveLaW, ReWorld, ReCogDrive, RAD-2, VTP, DiffusionVL, Senna, Senna-2, VGT, DiffusionDrive, VADv2, MapTR, YOLO-World, 4DGaussians, ByteTrack, FairMOT, EVA, EVA-X, Vim, Vision Mamba, TransLight, 4DLangVGGT, GaussTR, LENS, ControlAR, OmniMamba, WeakTr, MobileI2V, LightningDiT, GroundingSuite, MIM4D, DiG, CCNet">
     <meta name="author" content="Xinggang Wang">
     <meta name="robots" content="index, follow">
 
@@ -281,6 +281,19 @@
       <p class="proj-authors">Yuehao Song, Shaoyu Chen, Hao Gao, Yifan Zhu, Weixiang Yue, Jialv Zou, Bo Jiang, Zihao Lu, Yu Wang, Qian Zhang, Xinggang Wang*</p>
       <p class="proj-desc">显式对齐 VLM 高层决策与端到端策略低层规划的驾驶模型，通过面向一致性的三阶段训练与 3DGS 环境中的层次化强化学习，显著提升开环与闭环驾驶安全性。</p>
       <p class="proj-links"><a href="https://arxiv.org/abs/2603.11219">pdf</a> <a href="https://hgao-cv.github.io/senna2-project/">project page</a></p>
+    </div>
+  </li>
+
+  <li class="proj-card">
+    <a class="proj-media" href="https://omnitrack-humanoid.github.io/" title="OmniTrack 项目主页" aria-label="OmniTrack 项目主页（演示视频）">
+      <video data-src="res/proj/omnitrack.mp4" poster="res/proj/omnitrack.jpg" muted loop playsinline></video>
+    </a>
+    <div class="proj-body">
+      <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">具身智能</span></div>
+      <h3 class="proj-title">OmniTrack: General Motion Tracking via Physics-Consistent Reference</h3>
+      <p class="proj-authors">Peiyuan Zhi#, Yunshen Wang#, Tengyu Liu, Sixu Yan, Wenyu Liu, Xinggang Wang*, Baoxiong Jia*, Siyuan Huang*</p>
+      <p class="proj-desc">两阶段人形机器人运动跟踪框架，将物理可行性与通用跟踪解耦：特权通用策略先生成严格满足机器人动力学的参考运动，控制策略再学习跟踪这些可行运动——真机实现长达一小时的稳定跟踪，包括空翻、侧手翻等复杂杂技动作。</p>
+      <p class="proj-links"><a href="https://arxiv.org/abs/2602.23832">pdf</a> <a href="https://github.com/OmniTrack-Humanoid/OmniTrack">code</a> <a href="https://omnitrack-humanoid.github.io/">project page</a> <a href="https://youtu.be/5u93K6YZV3g">video</a></p>
     </div>
   </li>
 

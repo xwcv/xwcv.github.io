@@ -114,6 +114,27 @@ Rules that the dynamic features depend on:
   `res/stars.json` and appends `★ N` to the chip.
 - Optional: add a BibTeX snippet to `bib/<key>.txt` and link it as `bib`.
 - Optional: self-host the PDF under `pubs/` and link it as `./pubs/<file>.pdf`.
+- **In-page dedup — a paper's state changes, its identity doesn't**: this page
+  is multi-section (Major list / Other Conference Papers / Book Chapters /
+  Misc / Technical Reports), and papers typically appear FIRST under
+  Technical Reports as arXiv preprints, then get accepted later. Adding the
+  accepted version to the major list WITHOUT removing the staging entry
+  creates a duplicate (this has happened: InfiniteVL). So, when adding or
+  updating an entry:
+  1. Before inserting, search BOTH pubs files for the paper across ALL
+     sections — by title, arXiv id, and DOI:
+     `grep -i 'title-fragment\|arxiv.org/abs/<id>' pubs.html pubs_cn.html`
+  2. If the paper already exists in Technical Reports / Misc / Other
+     Conference Papers, **promote, don't copy**: remove the staging entry in
+     both files, and merge any extra links/info it carries (pdf, challenge
+     results) into the new major-list entry.
+  3. Intentional duplicates are allowed: a conference paper and its journal
+     extension are separate entries (e.g. CCNet ICCV 2019 + TPAMI 2023) —
+     same title is fine when the venue genuinely differs.
+  4. After any add/remove in the major list, re-verify the `value="N"`
+     anchor chain: anchor(year) = anchor(prev year) + papers(prev year),
+     identically in both files (the year-heading `<li>` consumes one `<ol>`
+     number which the next anchor reuses).
 - **Cross-page sync with projs**: whenever a pubs entry corresponds to a card
   in `projs.html` / `projs_cn.html` (same paper title), keep the two in sync —
   this cuts both ways:

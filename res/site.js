@@ -701,17 +701,67 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* 9. Email: the address is split across data attributes on the
-        contact-icons row so the static HTML never contains it whole. JS
-        prepends an envelope mailto icon; without JS no email is shown. */
+  /* 9. Email: addresses are split across data attributes on the
+        contact-icons row so the static HTML never contains them whole.
+        data-u / data-d hold comma-separated user/domain lists (position
+        implies the label: first = work, second = personal). JS prepends ONE
+        envelope button; clicking it opens a small popover listing the
+        addresses. Esc / outside click closes it. Without JS no email is
+        shown. */
   document.querySelectorAll('.contact-icons[data-u][data-d]').forEach(function (icons) {
-    var addr = icons.getAttribute('data-u') + '@' + icons.getAttribute('data-d');
-    var a = document.createElement('a');
-    a.href = 'mailto:' + addr;
-    a.title = 'Email';
-    a.setAttribute('aria-label', 'Email');
-    a.innerHTML = '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>';
-    icons.insertBefore(a, icons.firstChild);
+    var us = icons.getAttribute('data-u').split(',');
+    var ds = icons.getAttribute('data-d').split(',');
+    var zh = /^zh/i.test(document.documentElement.lang || '');
+    var labels = zh ? ['工作', '个人'] : ['work', 'personal'];
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'email-btn';
+    btn.title = 'Email';
+    btn.setAttribute('aria-label', 'Email');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>';
+    var pop = document.createElement('div');
+    pop.className = 'email-pop';
+    pop.hidden = true;
+    for (var i = 0; i < ds.length; i++) {
+      var addr = us[i].trim() + '@' + ds[i].trim();
+      var a = document.createElement('a');
+      a.href = 'mailto:' + addr;
+      var lab = document.createElement('span');
+      lab.className = 'email-label';
+      lab.textContent = labels[i] || labels[0];
+      var ad = document.createElement('span');
+      ad.className = 'email-addr';
+      ad.textContent = addr;
+      a.appendChild(lab);
+      a.appendChild(ad);
+      pop.appendChild(a);
+    }
+    var closePop = function () {
+      pop.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+    };
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var opening = pop.hidden;
+      pop.hidden = !opening;
+      btn.setAttribute('aria-expanded', String(opening));
+    });
+    document.addEventListener('click', function (e) {
+      if (!pop.hidden && !pop.contains(e.target)) closePop();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.isComposing) return;
+      if (e.key === 'Escape' && !pop.hidden) {
+        closePop();
+        if (pop.contains(document.activeElement)) btn.focus();
+      }
+    });
+    pop.addEventListener('click', function (e) {
+      if (e.target.closest('a')) closePop();
+    });
+    icons.insertBefore(btn, icons.firstChild);
+    icons.appendChild(pop);
   });
 
   /* 10. Project gallery (homepage): the 2-row card track scrolls natively

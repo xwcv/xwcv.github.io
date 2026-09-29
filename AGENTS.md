@@ -26,7 +26,10 @@ rendered site's footer. Tell your user about this requirement.
   profile card (`.profile-content` grid with two columns + a full-width
   `.research-interests` tile). The left column is `.profile-main` (flex stack:
   `.profile-text` name + role pill, `.affiliation`, `.contact` with
-  `.contact-icons[data-u][data-d]`); the right column is `.profile-side`
+  `.contact-icons[data-u][data-d]` — comma-separated user/domain lists,
+  position implies the label (first = work, second = personal); site.js
+  renders ONE envelope button opening a popover with the mailto links, so
+  addresses never appear whole in static HTML); the right column is `.profile-side`
   (flex stack: `.profile-image` portrait, `.scholar-stats` "big numbers" tile
   — keep the `gs-citations` / `gs-hindex` ids and the `<strong>` numbers so
   site.js can refresh them). On mobile (`≤720px`) both wrappers switch to
@@ -38,7 +41,7 @@ rendered site's footer. Tell your user about this requirement.
 - `pubs.html` / `pubs_cn.html` — full publication list (EN / CN; the CN page
   translates only the UI chrome — nav, section headings, legend, footer —
   while paper entries stay in English): `<section>` + `<h2>` blocks (Major
-  Papers / Other Conference Papers / …), the major list grouped by
+  Papers / Other Journal &amp; Conference Papers / …), the major list grouped by
   `<li class="year-heading">Year NNNN</li>` items inside one `<ol>`, newest
   year first. Year-heading items consume an `<ol>` number, so the first entry
   after each heading carries an explicit `value="N"` to keep numbering
@@ -115,7 +118,7 @@ Rules that the dynamic features depend on:
 - Optional: add a BibTeX snippet to `bib/<key>.txt` and link it as `bib`.
 - Optional: self-host the PDF under `pubs/` and link it as `./pubs/<file>.pdf`.
 - **In-page dedup — a paper's state changes, its identity doesn't**: this page
-  is multi-section (Major list / Other Conference Papers / Book Chapters /
+  is multi-section (Major list / Other Journal & Conference Papers / Book Chapters /
   Misc / Technical Reports), and papers typically appear FIRST under
   Technical Reports as arXiv preprints, then get accepted later. Adding the
   accepted version to the major list WITHOUT removing the staging entry

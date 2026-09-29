@@ -308,9 +308,13 @@ body.scrolled .topnav {
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 10px !important;
+    /* positioning context for the email popover */
+    position: relative;
 }
 
-.contact-icons a {
+/* direct children only — the email popover's mailto links live deeper */
+.contact-icons > a,
+.contact-icons .email-btn {
     width: 32px;
     height: 32px;
     display: inline-flex;
@@ -325,10 +329,14 @@ body.scrolled .topnav {
     font-weight: 700;
     letter-spacing: 0.02em;
     box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    padding: 0;
     transition: color 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
-.contact-icons a:hover {
+.contact-icons > a:hover,
+.contact-icons .email-btn:hover,
+.contact-icons .email-btn[aria-expanded="true"] {
     color: var(--primary);
     border-color: var(--primary);
     transform: translateY(-1px);
@@ -348,6 +356,57 @@ body.scrolled .topnav {
 .contact-icons svg.fill {
     fill: currentColor;
     stroke: none;
+}
+
+/* Email popover (added by site.js): one envelope button opens the list of
+   addresses, each row a mailto link labelled work / personal */
+.email-pop {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 120;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+}
+
+.email-pop[hidden] {
+    display: none;
+}
+
+.email-pop a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 7px 10px;
+    border-radius: 8px;
+    border-bottom: none;
+    color: var(--text);
+}
+
+.email-pop a:hover {
+    background: var(--accent-soft);
+    border-bottom: none;
+}
+
+.email-label {
+    min-width: 56px;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.email-addr {
+    font-family: var(--font-sans);
+    font-size: 13px;
 }
 
 /* Profile link chips at the top of the publications page */

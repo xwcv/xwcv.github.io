@@ -88,9 +88,9 @@ body {
 
 /* ===== Navigation ===== */
 .topnav {
-    background: rgba(255, 255, 255, 0.88);
-    -webkit-backdrop-filter: blur(10px) saturate(1.5);
-    backdrop-filter: blur(10px) saturate(1.5);
+    background: rgba(255, 255, 255, 0.72);
+    -webkit-backdrop-filter: blur(14px) saturate(1.5);
+    backdrop-filter: blur(14px) saturate(1.5);
     border-bottom: 1px solid var(--border);
     box-shadow: var(--shadow-sm);
     position: sticky;
@@ -102,7 +102,7 @@ body {
 /* scrolled state (class toggled by site.js): the bar turns more opaque
    and picks up a deeper shadow so it visibly lifts off the page */
 body.scrolled .topnav {
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.86);
     box-shadow: var(--shadow-md);
 }
 
@@ -973,9 +973,10 @@ ol li mark, .member-card mark {
     gap: 6px;
     padding: 10px 12px;
     margin: 6px 0 22px;
-    background: rgba(255, 255, 255, 0.94);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    /* floating layer: translucent like the topnav, papers blur through it */
+    background: rgba(255, 255, 255, 0.78);
+    -webkit-backdrop-filter: blur(14px) saturate(1.5);
+    backdrop-filter: blur(14px) saturate(1.5);
     border: 1px solid var(--border);
     border-radius: 10px;
     box-shadow: var(--shadow-sm);
@@ -1611,11 +1612,11 @@ sup, sub {
 }
 
 [data-theme="dark"] .topnav {
-    background: rgba(14, 19, 25, 0.88);
+    background: rgba(14, 19, 25, 0.72);
 }
 
 :root[data-theme="dark"] body.scrolled .topnav {
-    background: rgba(14, 19, 25, 0.96);
+    background: rgba(14, 19, 25, 0.86);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
@@ -1644,7 +1645,7 @@ sup, sub {
 }
 
 [data-theme="dark"] .year-nav {
-    background: rgba(23, 30, 40, 0.94);
+    background: rgba(23, 30, 40, 0.78);
 }
 
 [data-theme="dark"] .page-menu-panel {

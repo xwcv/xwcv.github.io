@@ -81,6 +81,48 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  /* 2b. Cite button: every local bib chip (bib/<key>.txt) gets a companion
+         "cite" button that fetches the snippet once and copies it to the
+         clipboard — no more opening the txt to select-all. */
+  document.querySelectorAll('a.res-chip').forEach(function (a) {
+    if (a.textContent.trim().toLowerCase() !== 'bib') return;
+    var href = a.getAttribute('href');
+    if (!/^(\.\/)?bib\/.+\.txt$/i.test(href)) return;
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'res-chip cite-chip';
+    b.textContent = 'cite';
+    b.title = document.documentElement.lang.indexOf('zh') === 0 ? '复制 BibTeX' : 'Copy BibTeX';
+    var cache = null;
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var done = function () {
+        b.classList.add('copied');
+        setTimeout(function () { b.classList.remove('copied'); }, 1400);
+      };
+      var copy = function (text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, done);
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); } catch (e2) {}
+          document.body.removeChild(ta);
+          done();
+        }
+      };
+      if (cache) { copy(cache); return; }
+      fetch(href).then(function (r) { return r.ok ? r.text() : null; })
+        .then(function (t) { if (t) { cache = t; copy(t); } })
+        .catch(function () {});
+    });
+    a.insertAdjacentElement('afterend', b);
+  });
+
   /* Wrap every occurrence of q in <mark> inside the element's text nodes
      (used by the publication and project search boxes). */
   var markMatches = function (el, q) {

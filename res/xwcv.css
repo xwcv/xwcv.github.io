@@ -73,6 +73,12 @@ body {
     background: rgba(37, 99, 235, 0.18);
 }
 
+/* Chinese pages: Song-style serif is thin on screens; use the sans stack for
+   body text (headings are already sans) */
+html[lang^="zh"] body {
+    font-family: var(--font-sans);
+}
+
 :focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
@@ -369,7 +375,10 @@ body.scrolled .topnav {
     display: flex;
     flex-direction: column;
     padding: 6px;
-    background: var(--white);
+    /* floating layer: translucent + blurred like the topnav */
+    background: rgba(255, 255, 255, 0.86);
+    -webkit-backdrop-filter: blur(14px) saturate(1.5);
+    backdrop-filter: blur(14px) saturate(1.5);
     border: 1px solid var(--border);
     border-radius: 12px;
     box-shadow: var(--shadow-lg);
@@ -734,10 +743,11 @@ ol {
 }
 
 ol li {
-    margin-bottom: 12px;
-    padding: 2px 6px 2px 4px;
+    margin-bottom: 14px;
+    padding: 3px 8px 3px 6px;
     border-radius: 6px;
-    line-height: 1.65;
+    /* slightly airier than the base 1.75: long author lists scan better */
+    line-height: 1.7;
     overflow-wrap: break-word;
     transition: background-color 0.15s;
 }
@@ -831,7 +841,7 @@ a.res-chip:hover .chip-stars {
     border-left-color: rgba(255, 255, 255, 0.45);
 }
 
-a.res-chip {
+.res-chip {
     display: inline-block;
     font-family: var(--font-sans);
     font-size: 0.78em;
@@ -847,10 +857,27 @@ a.res-chip {
     transition: color 0.2s, background 0.2s;
 }
 
-a.res-chip:hover {
+/* the cite companion button matches chip styling but is a <button> */
+button.res-chip {
+    cursor: pointer;
+}
+
+button.res-chip.copied {
+    color: #15803d;
+    border-color: rgba(21, 128, 61, 0.4);
+    background: rgba(21, 128, 61, 0.08);
+}
+
+.res-chip:hover {
     color: var(--white);
     background: var(--accent);
     border-color: var(--accent);
+}
+
+button.res-chip.copied:hover {
+    color: #15803d;
+    background: rgba(21, 128, 61, 0.12);
+    border-color: rgba(21, 128, 61, 0.4);
 }
 
 /* ===== Paper search box (added by site.js) ===== */
@@ -1052,9 +1079,9 @@ ol li mark, .member-card mark {
     display: flex;
     flex-direction: column;
     padding: 8px;
-    background: rgba(255, 255, 255, 0.96);
-    -webkit-backdrop-filter: blur(10px) saturate(1.5);
-    backdrop-filter: blur(10px) saturate(1.5);
+    background: rgba(255, 255, 255, 0.86);
+    -webkit-backdrop-filter: blur(14px) saturate(1.5);
+    backdrop-filter: blur(14px) saturate(1.5);
     border: 1px solid var(--border);
     border-radius: 12px;
     box-shadow: var(--shadow-lg);
@@ -1122,6 +1149,24 @@ a {
 a:hover {
     color: var(--primary);
     border-bottom-color: var(--primary);
+}
+
+/* Plain text links in content get an animated underline that slides in from
+   the left. Chip/badge/card links keep their own hover treatment. */
+main a:not(.res-chip):not(.cite-badge):not(.star-badge):not(.gal-card):not(.proj-media),
+.bottombar a {
+    border-bottom: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.25s ease, color 0.2s;
+}
+
+main a:not(.res-chip):not(.cite-badge):not(.star-badge):not(.gal-card):not(.proj-media):hover,
+.bottombar a:hover {
+    border-bottom: none;
+    background-size: 100% 1px;
 }
 
 /* Author-mark superscripts (# student, * corresponding) */
@@ -1295,6 +1340,13 @@ li sup {
     padding: 6px;
     box-sizing: border-box;
     display: block;
+    /* match the projects-page cards: gentle zoom on hover */
+    transition: transform 0.25s ease;
+}
+
+a.gal-card:hover .gal-media img,
+a.gal-card:hover .gal-media video {
+    transform: scale(1.03);
 }
 
 .gal-body {
@@ -1649,7 +1701,11 @@ sup, sub {
 }
 
 [data-theme="dark"] .page-menu-panel {
-    background: rgba(23, 30, 40, 0.97);
+    background: rgba(23, 30, 40, 0.9);
+}
+
+[data-theme="dark"] .email-pop {
+    background: rgba(23, 30, 40, 0.9);
 }
 
 [data-theme="dark"] .year-nav a:hover {
@@ -1685,6 +1741,13 @@ sup, sub {
 
 [data-theme="dark"] a.res-chip:hover {
     color: #0e1319;
+}
+
+[data-theme="dark"] button.res-chip.copied,
+[data-theme="dark"] button.res-chip.copied:hover {
+    color: #4ade80;
+    border-color: rgba(74, 222, 128, 0.4);
+    background: rgba(74, 222, 128, 0.10);
 }
 
 [data-theme="dark"] .member-photo {

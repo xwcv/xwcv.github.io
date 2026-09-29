@@ -24,14 +24,17 @@ jobs:
       - name: Sync badge numbers on the homepages
         run: python3 tools/update_badges.py
 
+      - name: Regenerate the og share card with fresh numbers
+        run: python3 tools/update_ogcard.py
+
       - name: Commit and push if changed
         run: |
-          if git diff --quiet res/scholar.json index.html index_cn.html; then
+          if git diff --quiet res/scholar.json index.html index_cn.html && git diff --quiet res/og-card.png; then
             echo "no change"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add res/scholar.json index.html index_cn.html
+            git add res/scholar.json index.html index_cn.html res/og-card.png
             git commit -m "Update Google Scholar stats"
             git push
           fi

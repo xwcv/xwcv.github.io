@@ -857,27 +857,70 @@ a.res-chip:hover .chip-stars {
     transition: color 0.2s, background 0.2s;
 }
 
-/* the cite companion button matches chip styling but is a <button> */
-button.res-chip {
-    cursor: pointer;
-}
-
-button.res-chip.copied {
-    color: #15803d;
-    border-color: rgba(21, 128, 61, 0.4);
-    background: rgba(21, 128, 61, 0.08);
-}
-
 .res-chip:hover {
     color: var(--white);
     background: var(--accent);
     border-color: var(--accent);
 }
 
-button.res-chip.copied:hover {
+/* split bib chip (built by site.js): the wrapper carries the chip visuals,
+   "bib" links to the txt, the icon button copies it — same split look as
+   the "code | ★ N" chips (.chip-stars) */
+.res-chip-split {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.res-chip-split a {
+    color: inherit;
+    border-bottom: none;
+    background: none;
+    padding: 0 5px 0 7px;
+}
+
+.res-chip-split .chip-copy {
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    border-left: 1px solid rgba(37, 99, 235, 0.25);
+    background: none;
+    padding: 0 7px 0 6px;
+    margin-left: 4px;
+    color: var(--amber);
+    cursor: pointer;
+    align-self: stretch;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.res-chip-split .chip-copy svg {
+    width: 11px;
+    height: 11px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.res-chip-split .chip-copy .icon-check {
+    display: none;
+}
+
+.res-chip-split .chip-copy.copied .icon-copy {
+    display: none;
+}
+
+.res-chip-split .chip-copy.copied .icon-check {
+    display: block;
     color: #15803d;
-    background: rgba(21, 128, 61, 0.12);
-    border-color: rgba(21, 128, 61, 0.4);
+}
+
+.res-chip-split:hover a,
+.res-chip-split:hover .chip-copy {
+    color: var(--white);
+    border-left-color: rgba(255, 255, 255, 0.45);
 }
 
 /* ===== Paper search box (added by site.js) ===== */
@@ -1153,7 +1196,7 @@ a:hover {
 
 /* Plain text links in content get an animated underline that slides in from
    the left. Chip/badge/card links keep their own hover treatment. */
-main a:not(.res-chip):not(.cite-badge):not(.star-badge):not(.gal-card):not(.proj-media),
+main a:not(.res-chip):not(.cite-badge):not(.star-badge):not(.gal-card):not(.proj-media):not(.res-chip-split *),
 .bottombar a {
     border-bottom: none;
     background-image: linear-gradient(currentColor, currentColor);
@@ -1163,7 +1206,7 @@ main a:not(.res-chip):not(.cite-badge):not(.star-badge):not(.gal-card):not(.proj
     transition: background-size 0.25s ease, color 0.2s;
 }
 
-main a:not(.res-chip):not(.cite-badge):not(.star-badge):not(.gal-card):not(.proj-media):hover,
+main a:not(.res-chip):not(.cite-badge):not(.star-badge):not(.gal-card):not(.proj-media):not(.res-chip-split *):hover,
 .bottombar a:hover {
     border-bottom: none;
     background-size: 100% 1px;
@@ -1743,11 +1786,18 @@ sup, sub {
     color: #0e1319;
 }
 
-[data-theme="dark"] button.res-chip.copied,
-[data-theme="dark"] button.res-chip.copied:hover {
+[data-theme="dark"] .res-chip-split .chip-copy {
+    border-left-color: rgba(126, 164, 240, 0.3);
+}
+
+[data-theme="dark"] .res-chip-split:hover a,
+[data-theme="dark"] .res-chip-split:hover .chip-copy {
+    color: #0e1319;
+    border-left-color: rgba(14, 19, 25, 0.4);
+}
+
+[data-theme="dark"] .res-chip-split .chip-copy.copied .icon-check {
     color: #4ade80;
-    border-color: rgba(74, 222, 128, 0.4);
-    background: rgba(74, 222, 128, 0.10);
 }
 
 [data-theme="dark"] .member-photo {

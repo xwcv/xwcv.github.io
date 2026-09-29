@@ -120,8 +120,8 @@ Rules that the dynamic features depend on:
   `https://github.com/<owner>/<repo>` — `res/site.js` looks up that repo in
   `res/stars.json` and appends `★ N` to the chip.
 - Optional: add a BibTeX snippet to `bib/<key>.txt` and link it as `bib`
-  (`res/site.js` then adds a companion "cite" button that copies the snippet
-  to the clipboard on click — no markup needed).
+  (`res/site.js` turns the chip into a split `bib | ⧉` chip — left segment
+  opens the txt, the icon copies the snippet to the clipboard).
 - Optional: self-host the PDF under `pubs/` and link it as `./pubs/<file>.pdf`.
 - **In-page dedup — a paper's state changes, its identity doesn't**: this page
   is multi-section (Major list / Other Journal & Conference Papers / Book Chapters /

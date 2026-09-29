@@ -28,7 +28,8 @@ rendered site's footer. Tell your user about this requirement.
   `.profile-text` name + role pill, `.affiliation`, `.contact` with
   `.contact-icons[data-u][data-d]` — comma-separated user/domain lists,
   position implies the label (first = work, second = personal); site.js
-  renders ONE envelope button opening a popover with the mailto links, so
+  renders ONE envelope button opening a popover whose rows copy the address
+  to the clipboard (no mailto launch), so
   addresses never appear whole in static HTML); the right column is `.profile-side`
   (flex stack: `.profile-image` portrait, `.scholar-stats` "big numbers" tile
   — keep the `gs-citations` / `gs-hindex` ids and the `<strong>` numbers so

@@ -359,7 +359,7 @@ body.scrolled .topnav {
 }
 
 /* Email popover (added by site.js): one envelope button opens the list of
-   addresses, each row a mailto link labelled work / personal */
+   addresses; each row is a copy-to-clipboard button labelled work/personal */
 .email-pop {
     position: absolute;
     top: calc(100% + 8px);
@@ -379,19 +379,55 @@ body.scrolled .topnav {
     display: none;
 }
 
-.email-pop a {
+.email-row {
     display: flex;
     align-items: center;
     gap: 12px;
+    width: 100%;
     padding: 7px 10px;
+    border: none;
     border-radius: 8px;
-    border-bottom: none;
+    background: none;
     color: var(--text);
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-sans);
+    font-size: 13px;
 }
 
-.email-pop a:hover {
+.email-row:hover {
     background: var(--accent-soft);
-    border-bottom: none;
+}
+
+.email-copy {
+    margin-left: auto;
+    width: 14px;
+    height: 14px;
+    color: var(--muted);
+    flex-shrink: 0;
+}
+
+.email-copy svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.email-row .icon-check {
+    display: none;
+}
+
+.email-row.copied .icon-copy {
+    display: none;
+}
+
+.email-row.copied .icon-check {
+    display: block;
+    color: #15803d;
 }
 
 .email-label {

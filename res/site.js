@@ -725,17 +725,48 @@ document.addEventListener('DOMContentLoaded', function () {
     pop.hidden = true;
     for (var i = 0; i < ds.length; i++) {
       var addr = us[i].trim() + '@' + ds[i].trim();
-      var a = document.createElement('a');
-      a.href = 'mailto:' + addr;
+      /* whole row copies the address — no surprise mailto launches */
+      var row = document.createElement('button');
+      row.type = 'button';
+      row.className = 'email-row';
+      row.setAttribute('aria-label', (zh ? '复制邮箱 ' : 'Copy email ') + addr);
       var lab = document.createElement('span');
       lab.className = 'email-label';
       lab.textContent = labels[i] || labels[0];
       var ad = document.createElement('span');
       ad.className = 'email-addr';
       ad.textContent = addr;
-      a.appendChild(lab);
-      a.appendChild(ad);
-      pop.appendChild(a);
+      var cp = document.createElement('span');
+      cp.className = 'email-copy';
+      cp.innerHTML = '<svg class="icon-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>'
+        + '<svg class="icon-check" viewBox="0 0 24 24"><path d="M4 12.5 9.5 18 20 6.5"/></svg>';
+      row.appendChild(lab);
+      row.appendChild(ad);
+      row.appendChild(cp);
+      (function (addr, row) {
+        row.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var done = function () {
+            row.classList.add('copied');
+            setTimeout(function () { row.classList.remove('copied'); }, 1400);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(addr).then(done, done);
+          } else {
+            /* insecure-context fallback: old-school textarea copy */
+            var ta = document.createElement('textarea');
+            ta.value = addr;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); } catch (e2) {}
+            document.body.removeChild(ta);
+            done();
+          }
+        });
+      })(addr, row);
+      pop.appendChild(row);
     }
     var closePop = function () {
       pop.hidden = true;
@@ -756,9 +787,6 @@ document.addEventListener('DOMContentLoaded', function () {
         closePop();
         if (pop.contains(document.activeElement)) btn.focus();
       }
-    });
-    pop.addEventListener('click', function (e) {
-      if (e.target.closest('a')) closePop();
     });
     icons.insertBefore(btn, icons.firstChild);
     icons.appendChild(pop);

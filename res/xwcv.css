@@ -1115,11 +1115,16 @@ ol li mark, .member-card mark {
     stroke-linecap: round;
 }
 
+.page-menu-wrap {
+    position: relative;
+    display: inline-flex;
+}
+
 .page-menu-panel {
     position: absolute;
     top: calc(100% + 6px);
-    /* align the panel's right edge with the 920px container's content edge */
-    right: max(16px, calc((100% - 920px) / 2 + 24px));
+    /* hangs directly under the button (the wrap is the positioning context) */
+    left: 0;
     z-index: 110;
     min-width: 220px;
     max-width: calc(100vw - 32px);
@@ -1148,6 +1153,7 @@ ol li mark, .member-card mark {
     border-bottom: none;
     font-size: 13px;
     color: var(--text-light);
+    white-space: nowrap;
 }
 
 .page-menu-panel a:hover {

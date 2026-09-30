@@ -246,9 +246,14 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.appendChild(a);
       });
 
+      /* the panel hangs directly under the button: wrap both in a relatively
+         positioned container inside the nav row */
+      var wrap = document.createElement('span');
+      wrap.className = 'page-menu-wrap';
       var langLink = topnavInner.querySelector('a.lang');
-      topnavInner.insertBefore(menuBtn, langLink || null);
-      document.querySelector('.topnav').appendChild(menu);
+      topnavInner.insertBefore(wrap, langLink || null);
+      wrap.appendChild(menuBtn);
+      wrap.appendChild(menu);
 
       var closeMenu = function () {
         menu.hidden = true;

@@ -225,6 +225,16 @@ Rules:
 - Link chips, author markers (`#` / `*`), and the GitHub star badge follow
   the same rules as pubs.html (see above). Links must sit inside the `<ol>`
   for `site.js` to style them.
+- **pubs sync (every project is a paper)**: a new project card almost always
+  has a corresponding paper that must also exist in pubs.html / pubs_cn.html
+  — formally published → the major list under its year; arXiv-only → the
+  Technical Reports section (strictly date-descending by arXiv id), in the
+  `arXiv preprint <a>arXiv:XXXX</a> (year)` style. First run the in-page
+  dedup check (see the pubs rules): match by title AND by arXiv id, and
+  remember the pubs title may lack the project-name prefix (e.g. the VTP
+  card vs. "Towards Scalable Pre-training …"). Also note projs titles may
+  differ in case/prefix from the paper title — when unsure, match by arXiv
+  id, never guess.
 - The homepages (`index.html` / `index_cn.html`) have a "Selected Projects" /
   "精选项目" gallery: ALL projs projects as compact `.gal-card` covers in a
   2-row × 4-column swipeable track (styles: `.gal-*` in `res/xwcv.css`;

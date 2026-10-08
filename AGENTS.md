@@ -23,19 +23,25 @@ rendered site's footer. Tell your user about this requirement.
 ## Layout
 
 - `index.html` / `index_cn.html` — homepage (EN / CN). Structure: a bento-style
-  profile card (`.profile-content` grid with two columns + a full-width
-  `.research-interests` tile). The left column is `.profile-main` (flex stack:
+  profile card (`.profile-content` grid with 3:1 columns
+  (3fr : 1fr — the ratio that keeps the English research-interests tile at
+  exactly 2 lines; both columns stretched to equal height, the side column
+  pins the Scholar tile to the bottom via `justify-content: space-between`); the
+  `.research-interests` tile is the last item INSIDE the left column). The
+  left column is `.profile-main` (flex stack:
   `.profile-text` name + role pill, `.affiliation`, `.contact` with
   `.contact-icons[data-u][data-d]` — comma-separated user/domain lists,
   position implies the label (first = work, second = personal); site.js
   renders ONE envelope button opening a popover whose rows copy the address
   to the clipboard (no mailto launch), so
-  addresses never appear whole in static HTML); the right column is `.profile-side`
+  addresses never appear whole in static HTML — and finally
+  `.research-interests`); the right column is `.profile-side`
   (flex stack: `.profile-image` portrait, `.scholar-stats` "big numbers" tile
   — keep the `gs-citations` / `gs-hindex` ids and the `<strong>` numbers so
   site.js can refresh them). On mobile (`≤720px`) both wrappers switch to
   `display: contents` so the six blocks reflow as: photo beside the name,
-  then affiliation / icons / stats / interests full width. Then the Selected
+  then affiliation / icons / stats / interests full width (the tile keeps
+  `grid-area: interests` for exactly this). Then the Selected
   Projects gallery and an influential-papers list carrying hard-coded
   "N+ citations" / "N stars" badges (no-JS fallback, refreshed at runtime
   from the JSON files below). Keep the EN/CN pair structurally in sync.

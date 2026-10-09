@@ -24,6 +24,10 @@ jobs:
       - name: Sync badge numbers on the homepages
         run: python3 tools/update_badges.py
 
+      - name: Site consistency checks (non-blocking)
+        continue-on-error: true
+        run: python3 tools/check_site.py
+
       - name: Commit and push if changed
         run: |
           if git diff --quiet res/stars.json; then

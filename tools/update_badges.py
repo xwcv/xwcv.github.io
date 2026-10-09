@@ -8,6 +8,8 @@ stay as fresh as the client-side refresh makes them at runtime.
 - star badges: "<a href=https://github.com/OWNER/REPO><strong>N stars</strong>"
   gets N replaced with the live count from stars.json, formatted like
   res/site.js does ("1.5k")
+- the two Scholar "big numbers" tiles on the homepages
+  (<strong id="gs-citations"> / <strong id="gs-hindex">) get the totals
 
 Only the two homepages carry such badges. Files keep their original line
 endings; a file is rewritten only when a number actually changed.
@@ -34,9 +36,11 @@ def fmt_stars(n):
 
 CITE_RE = re.compile(r'(citation_for_view=[^"&]*:([\w-]+)[^"]*"[^>]*>)[\d,]+\+ citations')
 STAR_RE = re.compile(r'(<a [^>]*href="https://github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)[^"]*"[^>]*>\s*<strong>)[\d.,]+k? stars</strong>')
+TOTAL_RE = re.compile(r'(<strong id="gs-citations">)[\d,]+(</strong>)')
+HINDEX_RE = re.compile(r'(<strong id="gs-hindex">)\d+(</strong>)')
 
 
-def sync(path, papers, stars):
+def sync(path, papers, stars, scholar):
     with open(path, encoding="utf-8", newline="") as f:
         text = f.read()
 
@@ -57,6 +61,11 @@ def sync(path, papers, stars):
 
     new = CITE_RE.sub(cite_sub, text)
     new = STAR_RE.sub(star_sub, new)
+    # the Scholar "big numbers" tile (no-JS fallback for the count-up)
+    if scholar.get("citations"):
+        new = TOTAL_RE.sub(r"\g<1>%s\g<2>" % format(int(scholar["citations"]), ","), new)
+    if scholar.get("hindex"):
+        new = HINDEX_RE.sub(r"\g<1>%d\g<2>" % int(scholar["hindex"]), new)
     if new != text:
         with open(path, "w", encoding="utf-8", newline="") as f:
             f.write(new)
@@ -65,11 +74,12 @@ def sync(path, papers, stars):
 
 
 def main():
-    papers = load("scholar.json").get("papers", {})
+    scholar = load("scholar.json")
+    papers = scholar.get("papers", {})
     stars = load("stars.json").get("stars", {})
     for page in PAGES:
         path = os.path.join(ROOT, page)
-        changed = sync(path, papers, stars)
+        changed = sync(path, papers, stars, scholar)
         print("%s: %s" % (page, "updated" if changed else "already in sync"))
 
 

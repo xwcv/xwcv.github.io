@@ -924,6 +924,12 @@ a.res-chip:hover .chip-stars {
     color: #15803d;
 }
 
+/* failed copy (permission denied etc.): red flash instead of a fake check */
+.chip-copy.copy-failed,
+.email-row.copy-failed .email-copy {
+    color: #dc2626;
+}
+
 .res-chip-split:hover a,
 .res-chip-split:hover .chip-copy {
     color: var(--white);
@@ -1616,6 +1622,34 @@ sup, sub {
        the blurred bar and anchor targets land hidden underneath it */
     :root {
         --nav-h: 96px;
+    }
+
+    /* mobile: tighten the sticky year pills, and let the project topic chips
+       scroll sideways instead of wrapping into a tall stack */
+    .year-nav {
+        padding: 6px 8px;
+        margin: 4px 0 14px;
+    }
+
+    .year-nav a {
+        padding: 1px 9px;
+        font-size: 11.5px;
+    }
+
+    .proj-tags {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 2px;
+    }
+
+    .proj-tags::-webkit-scrollbar {
+        display: none;
+    }
+
+    .proj-tag {
+        flex-shrink: 0;
     }
 
     .member-card {

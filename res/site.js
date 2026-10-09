@@ -105,13 +105,15 @@ document.addEventListener('DOMContentLoaded', function () {
     var cache = null;
     copy.addEventListener('click', function (e) {
       e.stopPropagation();
-      var done = function () {
-        copy.classList.add('copied');
-        setTimeout(function () { copy.classList.remove('copied'); }, 1400);
+      var flash = function (cls) {
+        copy.classList.add(cls);
+        setTimeout(function () { copy.classList.remove(cls); }, 1400);
       };
+      var done = function () { flash('copied'); };
+      var fail = function () { flash('copy-failed'); };
       var write = function (text) {
         if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).then(done, done);
+          navigator.clipboard.writeText(text).then(done, fail);
         } else {
           var ta = document.createElement('textarea');
           ta.value = text;
@@ -119,9 +121,10 @@ document.addEventListener('DOMContentLoaded', function () {
           ta.style.opacity = '0';
           document.body.appendChild(ta);
           ta.select();
-          try { document.execCommand('copy'); } catch (e2) {}
+          var ok = false;
+          try { ok = document.execCommand('copy'); } catch (e2) {}
           document.body.removeChild(ta);
-          done();
+          ok ? done() : fail();
         }
       };
       if (cache) { write(cache); return; }
@@ -787,12 +790,14 @@ document.addEventListener('DOMContentLoaded', function () {
       (function (addr, row) {
         row.addEventListener('click', function (e) {
           e.stopPropagation();
-          var done = function () {
-            row.classList.add('copied');
-            setTimeout(function () { row.classList.remove('copied'); }, 1400);
+          var flash = function (cls) {
+            row.classList.add(cls);
+            setTimeout(function () { row.classList.remove(cls); }, 1400);
           };
+          var done = function () { flash('copied'); };
+          var fail = function () { flash('copy-failed'); };
           if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(addr).then(done, done);
+            navigator.clipboard.writeText(addr).then(done, fail);
           } else {
             /* insecure-context fallback: old-school textarea copy */
             var ta = document.createElement('textarea');
@@ -801,9 +806,10 @@ document.addEventListener('DOMContentLoaded', function () {
             ta.style.opacity = '0';
             document.body.appendChild(ta);
             ta.select();
-            try { document.execCommand('copy'); } catch (e2) {}
+            var ok = false;
+            try { ok = document.execCommand('copy'); } catch (e2) {}
             document.body.removeChild(ta);
-            done();
+            ok ? done() : fail();
           }
         });
       })(addr, row);

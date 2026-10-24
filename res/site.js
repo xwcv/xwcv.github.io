@@ -6,6 +6,20 @@
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
+  var siteZh = /^zh/i.test(document.documentElement.lang || '');
+  var liveStatus = document.createElement('div');
+  liveStatus.className = 'visually-hidden';
+  liveStatus.setAttribute('role', 'status');
+  liveStatus.setAttribute('aria-live', 'polite');
+  liveStatus.setAttribute('aria-atomic', 'true');
+  document.body.appendChild(liveStatus);
+  var announceTimer = null;
+  var announce = function (message) {
+    window.clearTimeout(announceTimer);
+    if (liveStatus.textContent === message) liveStatus.textContent = '';
+    announceTimer = window.setTimeout(function () { liveStatus.textContent = message; }, 30);
+  };
+
   /* 0. Theme toggle: persists choice to localStorage (read by the inline head script) */
   var root = document.documentElement;
   document.querySelectorAll('.theme-toggle').forEach(function (btn) {
@@ -26,39 +40,91 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', scrolledTick, { passive: true });
   scrolledTick();
 
-  /* 0c. Deferred videos: <video data-src> only receives its src when it
-         approaches the viewport, then plays while visible and pauses when
-         scrolled away — keeps megabytes of demo mp4 off the initial load.
-         Without JS (or IntersectionObserver) the poster still renders;
-         honors prefers-reduced-motion by staying paused. */
+  /* Wrapped mobile navigation can be shorter or taller than the CSS fallback;
+     keep sticky offsets and anchor scroll margins tied to its actual height. */
+  var navBox = document.querySelector('.topnav');
+  var syncNavHeight = function () {
+    if (navBox) root.style.setProperty('--nav-h', navBox.offsetHeight + 'px');
+  };
+  syncNavHeight();
+  window.addEventListener('resize', syncNavHeight);
+  window.addEventListener('load', syncNavHeight);
+  if ('requestAnimationFrame' in window) requestAnimationFrame(syncNavHeight);
+
+  /* 0c. Deferred videos: load demo mp4s only near the viewport. One global
+         control pauses every demo without putting buttons inside card links;
+         manual pause and the reduced-motion preference survive scrolling. */
+  var motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   var lazyVideos = Array.prototype.slice.call(document.querySelectorAll('video[data-src]'));
   if (lazyVideos.length) {
-    var stillMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var demosPaused = motionQuery.matches;
     var loadVideo = function (v) {
       if (!v.getAttribute('src')) v.src = v.getAttribute('data-src');
     };
+    var playVideo = function (v) {
+      if (demosPaused) return;
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    };
+    var syncVideo = function (v) {
+      if (v._nearViewport && !demosPaused) {
+        loadVideo(v);
+        playVideo(v);
+      } else {
+        v.pause();
+      }
+    };
+    var motionHost = document.querySelector('.gal') || document.querySelector('.proj-hero');
+    var motionBtn = null;
+    var updateMotionButton = function () {
+      if (!motionBtn) return;
+      var label = demosPaused
+        ? (siteZh ? '播放演示' : 'Play demos')
+        : (siteZh ? '暂停演示' : 'Pause demos');
+      motionBtn.title = label;
+      motionBtn.setAttribute('aria-label', label);
+      motionBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+        + (demosPaused ? '<path d="M8 5v14l11-7z"/>' : '<path d="M8 5v14M16 5v14"/>')
+        + '</svg><span>' + label + '</span>';
+    };
+    if (motionHost) {
+      motionBtn = document.createElement('button');
+      motionBtn.type = 'button';
+      motionBtn.className = motionHost.classList.contains('gal') ? 'gal-btn gal-motion' : 'motion-toggle';
+      motionBtn.addEventListener('click', function () {
+        demosPaused = !demosPaused;
+        lazyVideos.forEach(syncVideo);
+        updateMotionButton();
+        announce(demosPaused
+          ? (siteZh ? '演示已暂停。' : 'Demos paused.')
+          : (siteZh ? '演示已播放。' : 'Demos playing.'));
+      });
+      motionHost.appendChild(motionBtn);
+      updateMotionButton();
+    }
     if ('IntersectionObserver' in window) {
       var vio = new IntersectionObserver(function (entries) {
         entries.forEach(function (en) {
           var v = en.target;
-          if (en.isIntersecting) {
-            loadVideo(v);
-            if (!stillMotion) {
-              var p = v.play();
-              if (p && p.catch) p.catch(function () {});
-            }
-          } else {
-            v.pause();
-          }
+          v._nearViewport = en.isIntersecting;
+          syncVideo(v);
         });
       }, { rootMargin: '240px' });
       lazyVideos.forEach(function (v) { vio.observe(v); });
     } else {
       lazyVideos.forEach(function (v) {
-        loadVideo(v);
-        if (!stillMotion) v.play();
+        v._nearViewport = true;
+        syncVideo(v);
       });
     }
+    var onMotionChange = function (e) {
+      if (!e.matches) return;
+      demosPaused = true;
+      lazyVideos.forEach(function (v) { v.pause(); });
+      updateMotionButton();
+    };
+    if (motionQuery.addEventListener) motionQuery.addEventListener('change', onMotionChange);
+    else motionQuery.addListener(onMotionChange);
   }
 
   /* 1. Citation badges: "4000+ citations" -> pill; "3.9k stars" -> star pill
@@ -109,8 +175,14 @@ document.addEventListener('DOMContentLoaded', function () {
         copy.classList.add(cls);
         setTimeout(function () { copy.classList.remove(cls); }, 1400);
       };
-      var done = function () { flash('copied'); };
-      var fail = function () { flash('copy-failed'); };
+      var done = function () {
+        flash('copied');
+        announce(zh ? '已复制 BibTeX。' : 'BibTeX copied.');
+      };
+      var fail = function () {
+        flash('copy-failed');
+        announce(zh ? 'BibTeX 复制失败，请重试。' : 'Could not copy BibTeX. Please try again.');
+      };
       var write = function (text) {
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(text).then(done, fail);
@@ -128,9 +200,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       };
       if (cache) { write(cache); return; }
-      fetch(href).then(function (r) { return r.ok ? r.text() : null; })
-        .then(function (t) { if (t) { cache = t; write(t); } })
-        .catch(function () {});
+      fetch(href).then(function (r) {
+        if (!r.ok) throw new Error('BibTeX request failed');
+        return r.text();
+      }).then(function (t) {
+        if (!t || !t.trim()) { fail(); return; }
+        cache = t;
+        write(t);
+      }).catch(fail);
     });
   });
 
@@ -200,12 +277,26 @@ document.addEventListener('DOMContentLoaded', function () {
     Array.prototype.forEach.call(nav.querySelectorAll('a'), function (a) {
       navLinks[a.getAttribute('href').slice(1)] = a;
     });
+    var activeYear = null;
     var setActiveYear = function (id) {
-      for (var k in navLinks) navLinks[k].classList.toggle('active', k === id);
+      if (!navLinks[id] || activeYear === id) return;
+      activeYear = id;
+      for (var k in navLinks) {
+        var on = k === id;
+        navLinks[k].classList.toggle('active', on);
+        if (on) navLinks[k].setAttribute('aria-current', 'location');
+        else navLinks[k].removeAttribute('aria-current');
+      }
+      var current = navLinks[id];
+      if (nav.scrollWidth > nav.clientWidth + 1) {
+        var left = current.offsetLeft - (nav.clientWidth - current.offsetWidth) / 2;
+        nav.scrollLeft = Math.max(0, Math.min(left, nav.scrollWidth - nav.clientWidth));
+      }
     };
     Array.prototype.forEach.call(nav.querySelectorAll('a'), function (a) {
       a.addEventListener('click', function () { setActiveYear(a.getAttribute('href').slice(1)); });
     });
+    setActiveYear(yearPs[0].id);
     if ('IntersectionObserver' in window) {
       var spy = new IntersectionObserver(function (entries) {
         entries.forEach(function (en) {
@@ -354,6 +445,13 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       empty.style.display = q && !shown ? '' : 'none';
       count.textContent = q ? shown + ' / ' + items.length : '';
+      if (q) {
+        announce(shown
+          ? (pubsZh ? '找到 ' + shown + ' 篇论文。' : shown + (shown === 1 ? ' paper' : ' papers') + ' found.')
+          : empty.textContent);
+      } else {
+        announce('');
+      }
     });
     document.addEventListener('keydown', function (e) {
       if (e.metaKey || e.ctrlKey || e.altKey || e.isComposing) return;
@@ -434,6 +532,13 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       pempty.style.display = (q || activeTag) && !shown ? '' : 'none';
       pcount.textContent = (q || activeTag) ? shown + ' / ' + cards.length : '';
+      if (q || activeTag) {
+        announce(shown
+          ? (zh ? '找到 ' + shown + ' 个项目。' : shown + (shown === 1 ? ' project' : ' projects') + ' found.')
+          : pempty.textContent);
+      } else {
+        announce('');
+      }
     };
     if (topics.length > 1) {
       var tagRow = document.createElement('div');
@@ -537,6 +642,13 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       mempty.style.display = q && !shown ? '' : 'none';
       mcount.textContent = q ? shown + ' / ' + memberCards.length : '';
+      if (q) {
+        announce(shown
+          ? (mzh ? '找到 ' + shown + ' 位成员。' : shown + (shown === 1 ? ' member' : ' members') + ' found.')
+          : mempty.textContent);
+      } else {
+        announce('');
+      }
     });
     document.addEventListener('keydown', function (e) {
       if (e.metaKey || e.ctrlKey || e.altKey || e.isComposing) return;
@@ -706,10 +818,10 @@ document.addEventListener('DOMContentLoaded', function () {
     st.classList.add('venue-tag', cls);
   });
 
-  /* 7. Subtle reveal-on-scroll for page sections. Skipped entirely when the
-        user prefers reduced motion, and never applied without JS support. */
-  if ('IntersectionObserver' in window
-      && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  /* 7. Subtle reveal-on-scroll for below-fold sections. Content already in
+        the first viewport stays immediately readable; reduced motion skips
+        the effect entirely, as does a lack of IntersectionObserver support. */
+  if ('IntersectionObserver' in window && !motionQuery.matches) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (en.isIntersecting) {
@@ -719,6 +831,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }, { rootMargin: '0px 0px -8% 0px' });
     Array.prototype.forEach.call(document.querySelectorAll('main section'), function (sec, i) {
+      if (sec.getBoundingClientRect().top < window.innerHeight) return;
       sec.classList.add('reveal');
       sec.style.transitionDelay = Math.min(i * 60, 240) + 'ms';
       io.observe(sec);
@@ -730,8 +843,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var top = document.createElement('button');
     top.className = 'back-to-top';
     top.type = 'button';
-    top.title = 'Back to top';
-    top.setAttribute('aria-label', 'Back to top');
+    top.title = siteZh ? '返回顶部' : 'Back to top';
+    top.setAttribute('aria-label', siteZh ? '返回顶部' : 'Back to top');
     top.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
     document.body.appendChild(top);
     var onScroll = function () {
@@ -752,21 +865,24 @@ document.addEventListener('DOMContentLoaded', function () {
         envelope button; clicking it opens a small popover listing the
         addresses. Esc / outside click closes it. Without JS no email is
         shown. */
+  var emailPopId = 0;
   document.querySelectorAll('.contact-icons[data-u][data-d]').forEach(function (icons) {
     var us = icons.getAttribute('data-u').split(',');
     var ds = icons.getAttribute('data-d').split(',');
-    var zh = /^zh/i.test(document.documentElement.lang || '');
+    var zh = siteZh;
     var labels = zh ? ['工作', '个人'] : ['work', 'personal'];
     var btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'email-btn';
-    btn.title = 'Email';
-    btn.setAttribute('aria-label', 'Email');
+    btn.title = zh ? '邮箱' : 'Email';
+    btn.setAttribute('aria-label', zh ? '邮箱' : 'Email');
     btn.setAttribute('aria-expanded', 'false');
     btn.innerHTML = '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>';
     var pop = document.createElement('div');
     pop.className = 'email-pop';
+    pop.id = 'email-pop-' + (++emailPopId);
     pop.hidden = true;
+    btn.setAttribute('aria-controls', pop.id);
     for (var i = 0; i < ds.length; i++) {
       var addr = us[i].trim() + '@' + ds[i].trim();
       /* whole row copies the address — no surprise mailto launches */
@@ -794,8 +910,14 @@ document.addEventListener('DOMContentLoaded', function () {
             row.classList.add(cls);
             setTimeout(function () { row.classList.remove(cls); }, 1400);
           };
-          var done = function () { flash('copied'); };
-          var fail = function () { flash('copy-failed'); };
+          var done = function () {
+            flash('copied');
+            announce((zh ? '已复制邮箱：' : 'Email copied: ') + addr);
+          };
+          var fail = function () {
+            flash('copy-failed');
+            announce(zh ? '邮箱复制失败，请重试。' : 'Could not copy the email address. Please try again.');
+          };
           if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(addr).then(done, fail);
           } else {
@@ -836,7 +958,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
     icons.insertBefore(btn, icons.firstChild);
-    icons.appendChild(pop);
+    icons.insertBefore(pop, btn.nextSibling);
   });
 
   /* 10. Project gallery (homepage): the 2-row card track scrolls natively
@@ -855,10 +977,12 @@ document.addEventListener('DOMContentLoaded', function () {
       gal.appendChild(b);
       return b;
     };
-    var prev = mk('gal-prev', 'Previous projects', 'M15 18l-6-6 6-6');
-    var next = mk('gal-next', 'Next projects', 'M9 6l6 6-6 6');
+    var prev = mk('gal-prev', siteZh ? '上一页项目' : 'Previous projects', 'M15 18l-6-6 6-6');
+    var next = mk('gal-next', siteZh ? '下一页项目' : 'Next projects', 'M9 6l6 6-6 6');
     var dots = document.createElement('div');
     dots.className = 'gal-dots';
+    dots.setAttribute('role', 'group');
+    dots.setAttribute('aria-label', siteZh ? '项目分页' : 'Project pages');
     gal.appendChild(dots);
     var pageCount = 0;
     var update = function () {
@@ -883,7 +1007,7 @@ document.addEventListener('DOMContentLoaded', function () {
           var d = document.createElement('button');
           d.type = 'button';
           d.className = 'gal-dot';
-          d.setAttribute('aria-label', 'Go to projects page ' + (i + 1));
+          d.setAttribute('aria-label', siteZh ? '转到第 ' + (i + 1) + ' 页项目' : 'Go to projects page ' + (i + 1));
           (function (n) {
             d.addEventListener('click', function () {
               scrollToX(n * track.clientWidth);
@@ -895,6 +1019,8 @@ document.addEventListener('DOMContentLoaded', function () {
       var active = atEnd ? pageCount - 1 : Math.round(track.scrollLeft / track.clientWidth);
       Array.prototype.forEach.call(dots.children, function (d, i) {
         d.classList.toggle('gal-dot-on', i === active);
+        if (i === active) d.setAttribute('aria-current', 'page');
+        else d.removeAttribute('aria-current');
       });
     };
     var smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;

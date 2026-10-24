@@ -98,6 +98,10 @@ the legacy `.sys_txt` wrapper is gone, don't reintroduce it; EN/CN page pairs
 carry reciprocal `<link rel="alternate" hreflang="en|zh-CN|x-default">`
 tags next to the canonical link.
 
+`res/site.js` applies reveal-on-scroll only to sections below the initial
+viewport. Above-the-fold sections must stay immediately readable; do not add
+the transparent `reveal` state to them and then reveal them on a timer.
+
 ## Adding a publication to pubs.html / pubs_cn.html
 
 Both files must be updated together — identical entry, identical position
@@ -212,7 +216,10 @@ Rules:
   with the framework figure as `poster`); never hotlink. Videos must use
   `data-src` instead of `src` and must NOT carry `autoplay` — `res/site.js`
   lazily assigns the src near the viewport and plays/pauses on visibility
-  (the poster is the no-JS fallback). Verify with `file`
+  (the poster is the no-JS fallback). A shared play/pause control is added to
+  the homepage gallery controls and the projects-page hero; manual pause and
+  `prefers-reduced-motion` must prevent automatic playback (unless the user
+  explicitly presses play), including after visibility changes. Verify with `file`
   and `sips -g pixelWidth -g pixelHeight`: real image/video (not an HTML
   error page), width ≥ 1000px, size < 8 MB (shrink with `sips -Z 1600`).
   If a PNG is still > ~400 KB after downscaling (photographic teasers),

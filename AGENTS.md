@@ -1,308 +1,203 @@
 # Xinggang Wang's Homepage (xwcv.github.io)
 
-Static academic homepage hosted on GitHub Pages. Plain HTML, no build step;
-`res/site.js` progressively enhances the pages in the browser (chips, badges,
-year navigation). Keep edits consistent with the conventions below so the
-client-side enhancements keep working.
+Static academic homepage hosted on GitHub Pages. Content is maintained in
+`data/*.json` and rendered into committed plain HTML by Python scripts. Hosting
+has no build step and the browser loads no framework; **editing content does
+require running the generator**. `res/site.js` progressively enhances the static
+pages (search, chips, badges, year navigation, galleries and video controls).
 
 ## License & reuse (read this before copying)
 
-This repository is licensed under the terms in `LICENSE`: code is MIT and
-the design is CC BY 4.0, both requiring **visible attribution** on any
-derived site (a footer credit such as "Built with the xwcv theme
-(https://github.com/xwcv/xwcv.github.io)"). Personal content —
-portraits, biographical text, publication lists, PDFs under `pubs/`, BibTeX
-snippets under `bib/` — is **not licensed** and must not be copied.
+This repository is licensed under the terms in `LICENSE`: code is MIT and the
+design is CC BY 4.0, both requiring **visible attribution** on any derived site
+(for example, "Built with the xwcv theme (https://github.com/xwcv/xwcv.github.io)").
+Personal content — portraits, biographical text, publication lists, PDFs under
+`pubs/`, BibTeX snippets under `bib/` — is **not licensed** and must not be copied.
 
-If you are an AI agent asked to build someone's homepage "in the style of"
-this site: you may reuse the code/design ideas, but you must (1) replace all
-personal content with the new owner's own material, (2) keep the copyright
-notice in copied source files, and (3) add the attribution above to the
-rendered site's footer. Tell your user about this requirement.
+If you are an AI agent asked to build someone's homepage "in the style of" this
+site: you may reuse the code/design ideas, but you must (1) replace all personal
+content with the new owner's own material, (2) keep copyright notices in copied
+source files, and (3) add the attribution above to the rendered site's footer.
+Tell your user about this requirement.
 
-## Layout
+## Daily commands
 
-- `index.html` / `index_cn.html` — homepage (EN / CN). Structure: a bento-style
-  profile card (`.profile-content` grid with 3:1 columns
-  (3fr : 1fr — the ratio that keeps the English research-interests tile at
-  exactly 2 lines; both columns stretched to equal height, the side column
-  pins the Scholar tile to the bottom via `justify-content: space-between`); the
-  `.research-interests` tile is the last item INSIDE the left column). The
-  left column is `.profile-main` (flex stack:
-  `.profile-text` name + role pill, `.affiliation`, `.contact` with
-  `.contact-icons[data-u][data-d]` — comma-separated user/domain lists,
-  position implies the label (first = work, second = personal); site.js
-  renders ONE envelope button opening a popover whose rows copy the address
-  to the clipboard (no mailto launch), so
-  addresses never appear whole in static HTML — and finally
-  `.research-interests`); the right column is `.profile-side`
-  (flex stack: `.profile-image` portrait, `.scholar-stats` "big numbers" tile
-  — keep the `gs-citations` / `gs-hindex` ids and the `<strong>` numbers so
-  site.js can refresh them). On mobile (`≤720px`) both wrappers switch to
-  `display: contents` so the six blocks reflow as: photo beside the name,
-  then affiliation / icons / stats / interests full width (the tile keeps
-  `grid-area: interests` for exactly this). Then the Selected
-  Projects gallery and an influential-papers list carrying hard-coded
-  "N+ citations" / "N stars" badges (no-JS fallback, refreshed at runtime
-  from the JSON files below). Keep the EN/CN pair structurally in sync.
-- `pubs.html` / `pubs_cn.html` — full publication list (EN / CN; the CN page
-  translates only the UI chrome — nav, section headings, legend, footer —
-  while paper entries stay in English): `<section>` + `<h2>` blocks (Major
-  Papers / Other Journal &amp; Conference Papers / …), the major list grouped by
-  `<li class="year-heading">Year NNNN</li>` items inside one `<ol>`, newest
-  year first. Year-heading items consume an `<ol>` number, so the first entry
-  after each heading carries an explicit `value="N"` to keep numbering
-  continuous.
-- `projs.html` / `projs_cn.html` — selected open-source projects (EN / CN),
-  card grid with teaser media under `res/proj/`; one `<li class="proj-card">`
-  per project inside a single `<ol class="proj-grid">`, newest first; link
-  chips and GitHub star badges follow the same conventions as `pubs.html`
-  (see below).
-- `group.html` / `group_cn.html` — group members. Each page defines its member
-  datasets (`facultyMembers` / `currentMembers` / `alumniMembers`) inline and
-  renders cards via the shared `res/members.js` (`renderMembers(dataset,
-  containerId[, profileLabel])`; avatar fallback: first char for CJK names,
-  first word otherwise). Member photos are displayed at 96px — keep files
-  ≤ 384px wide (`sips -Z 384`). `res/site.js` auto-injects a keyword search
-  box at the top of `<main>` (filters `.member-card` by name/description,
-  hides sections left empty) — it runs after `members.js` has rendered, so
-  keep the render calls as plain end-of-body scripts.
-- `res/` — images, `site.js`, `members.js`, `stars.json`, `scholar.json`
-  (both generated). Pages reference the stylesheet and scripts with a
-  cache-busting query (`res/xwcv.css?v=YYYYMMDD`, `res/site.js?v=YYYYMMDD`,
-  likewise `members.js`); **bump the version in every page whenever any of
-  them changes** — GitHub Pages caches assets, and a stale asset against new
-  markup causes silent version-skew bugs. Site-wide styling tokens (light +
-  dark) live at the top of `res/xwcv.css` (`--grad-hue*` single-hue gradient
-  accents, `--well*` dark media backgrounds, navy-tinted shadows); the
-  scrolled topnav (`body.scrolled`) and the news timeline are styled there
-  too.
-- `bib/` — BibTeX snippets (`*.txt`) linked from some `pubs.html` entries.
-- `pubs/` — self-hosted PDFs.
-- `tools/` — Python scripts run by CI (see below). `tools/check_site.py` is
-  the consistency checker (EN/CN pubs parity, duplicate titles, local link
-  resolution, projs↔pubs venue sync); both workflows run it as a
-  non-blocking step — run it after any content edit.
-- `.github/workflows/` — `stars.yml`, `scholar.yml`.
-- `404.html` — not-found page. GitHub Pages serves it at the *requested* URL,
-  so all its asset/page links are root-absolute (`/res/...`, `/index.html`).
-
-General conventions: every content page wraps its body in
-`<main class="container">` with exactly one `<h1>` (visible page title, or
-`class="visually-hidden"` where the design has no title); content is grouped
-into `<section>` cards (styled by `main section:not(.profile-section)`) with
-accent-bar headings (`main section:not(.profile-section) h1/h2`, one shared
-rule in `res/xwcv.css` — deliberately scoped away from `.profile-section`,
-whose bento card styles its own `h1`/`h2`) —
-the legacy `.sys_txt` wrapper is gone, don't reintroduce it; EN/CN page pairs
-carry reciprocal `<link rel="alternate" hreflang="en|zh-CN|x-default">`
-tags next to the canonical link.
-
-`res/site.js` applies reveal-on-scroll only to sections below the initial
-viewport. Above-the-fold sections must stay immediately readable; do not add
-the transparent `reveal` state to them and then reveal them on a timer.
-
-## Adding a publication to pubs.html / pubs_cn.html
-
-Both files must be updated together — identical entry, identical position
-(the CN page differs only in UI chrome). Insert a new `<li><p> … </p></li>`
-under the matching `Year NNNN` heading (keep the English "Year NNNN" text —
-the year-nav in `res/site.js` matches `/^year\s*\d/i`; the search-box and
-no-results strings are lang-aware automatically) — if the year is missing,
-create it as `<li class="year-heading">Year NNNN</li>` and add/adjust the
-`value="N"` attribute on the first entry after it so list numbering stays
-continuous. Follow the existing entry style:
-
-```html
-<li><p>
-  First Author, Second Author, ..., Xinggang Wang. <strong>Paper Title</strong>. Venue Full Name (<strong>ABBR</strong>), Year. <a href="...">pdf</a>, <a href="https://github.com/owner/repo">code</a>.
-</p></li>
+```bash
+python3 tools/build_site.py          # regenerate changed static files
+python3 tools/build_site.py --check  # fail if committed output is stale
+python3 tools/check_site.py          # full content/link/metadata checks
+node --check res/site.js
 ```
 
-Rules that the dynamic features depend on:
+`tools/build_site.py` is idempotent. Run it twice before reviewing a large
+change: the second run should make no changes. `tools/check_site.py` validates
+all 241 current papers and 47 current projects, EN/CN parity, duplicate paper
+exceptions, Major numbering, Technical Reports order, project venue sync,
+external homepage links, local resources/anchors, canonical/hreflang, sitemap,
+asset versions and deferred-video markup. CI runs generation and checks as
+**blocking** steps on push/PR and before scheduled data-update commits.
 
-- Author markers: `#` = equal contribution, `*` = corresponding author.
-  (The homepage influential-papers list is the exception: there `▲` marks
-  the PI's students and `#` is not used — legend lives under the section
-  heading.)
-- Award annotations (Best Paper / Most Cited / …) use
-  `<span class="award-badge">` with the inline medal SVG (see any existing
-  award entry) — a gold pill, works without JS, dark-mode aware.
-- Resource links must use one of the whitelisted chip labels (≤ 32 chars,
-  matched case-insensitively): `pdf`, `code`, `arxiv`, `bib`, `project page`,
-  `project`, `video`, `website`, `dataset`, `demo`, `supplementary`, `slides`.
-  Any other link text renders as plain text without chip styling.
-- The **star badge** only works when the `code` link href is
-  `https://github.com/<owner>/<repo>` — `res/site.js` looks up that repo in
-  `res/stars.json` and appends `★ N` to the chip.
-- Optional: add a BibTeX snippet to `bib/<key>.txt` and link it as `bib`
-  (`res/site.js` turns the chip into a split `bib | ⧉` chip — left segment
-  opens the txt, the icon copies the snippet to the clipboard).
-- Optional: self-host the PDF under `pubs/` and link it as `./pubs/<file>.pdf`.
-- **In-page dedup — a paper's state changes, its identity doesn't**: this page
-  is multi-section (Major list / Other Journal & Conference Papers / Book Chapters /
-  Misc / Technical Reports), and papers typically appear FIRST under
-  Technical Reports as arXiv preprints, then get accepted later. Adding the
-  accepted version to the major list WITHOUT removing the staging entry
-  creates a duplicate (this has happened: InfiniteVL). So, when adding or
-  updating an entry:
-  1. Before inserting, search BOTH pubs files for the paper across ALL
-     sections — by title, arXiv id, and DOI:
-     `grep -i 'title-fragment\|arxiv.org/abs/<id>' pubs.html pubs_cn.html`
-  2. If the paper already exists in Technical Reports / Misc / Other
-     Conference Papers, **promote, don't copy**: remove the staging entry in
-     both files, and merge any extra links/info it carries (pdf, challenge
-     results) into the new major-list entry.
-  3. Intentional duplicates are allowed: a conference paper and its journal
-     extension are separate entries (e.g. CCNet ICCV 2019 + TPAMI 2023) —
-     same title is fine when the venue genuinely differs.
-  4. After any add/remove in the major list, re-verify the `value="N"`
-     anchor chain: anchor(year) = anchor(prev year) + papers(prev year),
-     identically in both files (the year-heading `<li>` consumes one `<ol>`
-     number which the next anchor reuses).
-- **Cross-page sync with projs**: whenever a pubs entry corresponds to a card
-  in `projs.html` / `projs_cn.html` (same paper title), keep the two in sync —
-  this cuts both ways:
-  - Adding a paper to pubs that is already a project card: update the card's
-    venue tag from `<span class="venue-tag v-journal">arXiv NNNN</span>` to the
-    published venue (e.g. `<span class="venue-tag v-neurips">NeurIPS 2026</span>`),
-    in both projs pages AND the matching `.gal-card` on `index.html` /
-    `index_cn.html`; also align author markers (`#` / `*`) between the pubs
-    entry and the card's `.proj-authors`.
-  - Adding a new project card for an already-published paper: use the real
-    venue tag from the start instead of `arXiv NNNN`.
-- `res/site.js` auto-injects an "On this page" / "本页内容" pill into the
-  `.topnav` on the publications pages (click-to-open panel listing section
-  anchors — taken from `main section h2[id]`, so labels follow the page
-  language; years deliberately NOT included — the sticky year-nav covers
-  them; Esc / outside click / picking a link closes
-  it), a keyword search box at the top of `<main>`
-  (below the `.pubs-links` card and above the first papers section, like the
-  projects box below the hero card, since it filters every section on the
-  page, not just "Major Journal & Conference Papers") and the sticky
-  year-nav inside the first section — keep the `<ol>` / `li.year-heading`
-  structure intact for both to work. While searching, sections left empty
-  are hidden entirely (not just their heading/list), and the "No matching
-  papers." message lives at the top level of `<main>`, right after the
-  search box.
+## Data model and generated output
 
-## Adding a project to projs.html / projs_cn.html
+- `data/papers.json` — ordered paper records. Each has a stable unique `id`,
+  `section` (`major` / `other` / `book` / `misc` / `tech`), `year_group` for the
+  Major list, controlled `topics`, and the original `li_html` used to render the
+  paper row. Keeping the raw row preserves old whitespace, `<b>`, `<sup>`,
+  award SVG and punctuation. Titles, authors, years, venue labels, arXiv IDs and
+  links are derived by `tools/sitegen.py`; do not hand-maintain duplicate copies.
+- `data/projects.json` — ordered project records. Each has a stable `id`, an
+  explicit `pub_id`, external `href`, full ordered `links`, localized
+  `description_en/cn`, and `media`. Optional `title_html`, `authors_html`,
+  `short_name`, `venue` / `venue_class` are display overrides for real legacy
+  differences, not fields to copy mechanically into every project. Venue is
+  otherwise derived from the linked paper. Project links are intentionally
+  independent from pubs links: PDF variants, datasets and official sites may
+  differ between the two presentations.
+- `data/site.json` — shared CSS/JS cache versions. Bump the relevant version
+  whenever that asset changes; the generator applies it to every page including
+  404. `members.js` has its own version in the group shells.
 
-Both files must be updated together — same card, same position (newest
-first by arXiv/venue date), English text in `projs.html`, Chinese UI text
-and Chinese one-line descriptions in `projs_cn.html` (paper titles and
-author lists stay in English). Card skeleton:
+`tools/sitegen.py` handles content indexing and shared rendering;
+`tools/pagegen.py` handles navigation, metadata and sitemap. Existing HTML files
+act as **page shells**: the generator replaces only known dynamic regions,
+preserving the profile, news, awards, services, badges and other personal content
+outside them. Generated output is committed so GitHub Pages never runs Python.
 
-```html
-<li class="proj-card">
-  <a class="proj-media" href="<project page or repo>">
-    <img src="res/proj/<key>.png" alt="..." loading="lazy">
-  </a>
-  <div class="proj-body">
-    <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">Autonomous Driving</span></div>
-    <h3 class="proj-title">Paper Title</h3>
-    <p class="proj-authors">First Author, ..., Xinggang Wang*</p>
-    <p class="proj-desc">One-sentence summary.</p>
-    <p class="proj-links"><a href="...">arxiv</a> <a href="https://github.com/owner/repo">code</a> <a href="...">project page</a></p>
-  </div>
-</li>
-```
+Do not hand-edit generated paper rows, project cards, homepage galleries,
+navigation or sitemap. Edit data or the generator instead. Shell changes outside
+dynamic regions are allowed, but must be followed by `build_site.py --check`.
 
-Rules:
+## Page map and global conventions
 
-- **Card media** lives in `res/proj/<key>.<ext>` (`<key>` = lowercase project
-  name). Download the most representative asset from the project's official
-  page/repo (teaser or framework figure, demo GIF, or a demo `<video>` mp4
-  with the framework figure as `poster`); never hotlink. Videos must use
-  `data-src` instead of `src` and must NOT carry `autoplay` — `res/site.js`
-  lazily assigns the src near the viewport and plays/pauses on visibility
-  (the poster is the no-JS fallback). A shared play/pause control is added to
-  the homepage gallery controls and the projects-page hero; manual pause and
-  `prefers-reduced-motion` must prevent automatic playback (unless the user
-  explicitly presses play), including after visibility changes. Verify with `file`
-  and `sips -g pixelWidth -g pixelHeight`: real image/video (not an HTML
-  error page), width ≥ 1000px, size < 8 MB (shrink with `sips -Z 1600`).
-  If a PNG is still > ~400 KB after downscaling (photographic teasers),
-  convert it to JPEG (`sips -s format jpeg -s formatOptions 85 in.png --out
-  <key>.jpg`, delete the PNG) and update every reference (both projs pages,
-  both homepage galleries, any `og:image`).
-- **Venue tag**: reuse the native `venue-tag` classes — `v-cvpr` / `v-iccv`
-  / `v-eccv` / `v-neurips` / `v-icml` / `v-iclr` / `v-aaai` / `v-corl` for
-  conferences,
-  `v-top` for top journals (IJCV/TPAMI/…), `v-journal` for `arXiv NNNN`.
-  Add 1–3 `<span class="proj-topic">` tags for the area. The first tag is
-  the primary tag and is also used as the single `.gal-topic` on the
-  homepage galleries. Tags must come only from this controlled vocabulary
-  (EN / CN): Autonomous Driving / 自动驾驶, Embodied AI / 具身智能,
-  World Model / 世界模型, Generative Model / 生成模型, Multimodal LLM /
-  多模态大模型, Efficient LLM / 高效 LLM, 3D / 4D Vision / 3D / 4D 视觉,
-  Segmentation / 图像分割, Detection & Tracking / 检测与跟踪,
-  Medical Imaging / 医学影像, Visual Representation / 视觉表征.
-  The topic-filter chips on the projects page are generated from these
-  spans by `res/site.js`, so new tags outside the vocabulary need
-  maintainer sign-off.
-- Link chips, author markers (`#` / `*`), and the GitHub star badge follow
-  the same rules as pubs.html (see above). Links must sit inside the `<ol>`
-  for `site.js` to style them.
-- **pubs sync (every project is a paper)**: a new project card almost always
-  has a corresponding paper that must also exist in pubs.html / pubs_cn.html
-  — formally published → the major list under its year; arXiv-only → the
-  Technical Reports section (strictly date-descending by arXiv id), in the
-  `arXiv preprint <a>arXiv:XXXX</a> (year)` style. First run the in-page
-  dedup check (see the pubs rules): match by title AND by arXiv id, and
-  remember the pubs title may lack the project-name prefix (e.g. the VTP
-  card vs. "Towards Scalable Pre-training …"). Also note projs titles may
-  differ in case/prefix from the paper title — when unsure, match by arXiv
-  id, never guess.
-- The homepages (`index.html` / `index_cn.html`) have a "Selected Projects" /
-  "精选项目" gallery: ALL projs projects as compact `.gal-card` covers in a
-  2-row × 4-column swipeable track (styles: `.gal-*` in `res/xwcv.css`;
-  prev/next buttons and dot pagination added by `res/site.js`, native swipe
-  works without JS),
-  plus an "All projects →" link. Keep both homepages in sync with the full
-  project list, reusing `res/proj/<key>` media.
-- Keep the `<meta name="description">` / `keywords>` project lists in both
-  files in sync when adding a project.
-- Styling lives in `res/xwcv.css` ("Projects page" section: `.proj-hero`,
-  `.proj-grid`, `.proj-card`, …) following site conventions (920px container,
-  `--radius`, `--shadow-*`, site-standard heading with accent bar) — don't
-  add per-page `<style>` blocks or one-off styles.
-- `res/site.js` auto-injects a keyword search box above `.proj-grid`
-  (filters `li.proj-card` by title/authors/description/topic, `/` to focus,
-  Esc to clear) plus a topic-chip row under the box (one chip per distinct
-  `.proj-topic`, extracted from the cards so EN/CN labels follow the page;
-  chip and keyword filters are AND-combined) — just keep the card markup
-  intact.
+- `index.html` / `index_cn.html` — profile, all 47 projects in the gallery,
+  influential papers, news, services and awards.
+- `pubs.html` / `pubs_cn.html` — 241 current papers in five paper sections.
+  The Major list has 175 entries plus 14 year headings; other counts are 41
+  Other, 1 Book Chapter, 1 Misc and 23 Technical Reports. CN translates UI
+  chrome; paper rows stay in English.
+- `projs.html` / `projs_cn.html` — all 47 project cards with keyword/topic
+  filtering and generated SEO project lists. **Projects intentionally have no
+  local standalone pages**: cards and galleries use official external links to
+  avoid unnecessary maintenance and dozens of small pages.
+- `group.html` / `group_cn.html` — hand-maintained EN/CN member datasets,
+  rendered by `res/members.js`. Keep photos ≤384px wide.
+- `404.html` — not-found page; all asset/page links remain root-absolute.
 
-## Dynamic data (stars & citations)
+Every indexable page has exactly one `<main class="container">`, one `<h1>`, a
+clean canonical URL, reciprocal `en` / `zh-CN` / `x-default` alternates and
+matching OG/Twitter URLs. `sitemap.xml` includes every indexable static EN/CN
+page and excludes 404. Existing lastmod values are preserved by the generator
+unless an automated workflow refreshes them; do not hand-edit them.
 
-- `res/stars.json` — GitHub star counts for every repo linked from
-  `pubs.html` and `projs.html`. Written by `tools/update_stars.py`, run
-  weekly (Mon 04:23 UTC) by `.github/workflows/stars.yml`, also via
-  `workflow_dispatch`.
-  **A newly added repo shows no star badge until the next run.** To refresh
-  immediately: `gh workflow run stars.yml` (the workflow commits and pushes
-  itself). Running the script locally requires `GITHUB_TOKEN`
-  (unauthenticated API quota is too small and the script refuses to run).
-- `res/scholar.json` — citation counts keyed by Google Scholar cluster id.
-  Written by `tools/update_scholar.py`, run Mon & Thu by `scholar.yml` via
-  SerpAPI (needs the `SERPAPI_API_KEY` secret).
-- `tools/update_badges.py` — syncs the hard-coded badge numbers on
-  `index.html` / `index_cn.html` with the two JSON files, including the two
-  Scholar "big numbers" tiles (`gs-citations` / `gs-hindex`) (run by both
-  workflows after updating the JSON).
-- `res/og-card.png` — 1200×630 social share card, regenerated by
-  `tools/update_ogcard.py` (template: `tools/ogcard_template.html`, rendered
-  via headless Chrome) whenever the scholar numbers change; run by
-  `scholar.yml`. `res/.og-card-state` records the last-rendered numbers —
-  keep it committed. Edit the template, never the PNG.
-- The stars workflow also refreshes the footer "Last updated" dates and
-  `sitemap.xml` lastmod whenever `res/stars.json` changes — don't hand-edit
-  those.
+## Add or promote a publication
 
-## Homepage badges
+1. Search `data/papers.json` across **all sections** by title, arXiv ID and DOI.
+   A preprint becoming a published paper is the same record: change its section
+   and main-row HTML, **do not copy it**. Keep its stable ID and any project
+   `pub_id` unchanged. A real conference/journal extension may be a separate
+   record; register intentional duplicate titles in `DUP_EXTENSIONS` in
+   `tools/check_site.py`.
+2. Insert or move the record in the desired order and set `section`,
+   `year_group`, `topics` and `li_html`. Use a new stable, readable ID only for
+   a genuinely new paper; never reuse another paper's ID. IDs and project links
+   are explicit, never inferred by title similarity.
+3. Follow the existing main-row style: authors with `#` = equal contribution
+   and `*` = corresponding author, `<strong>` or legacy `<b>` around the title,
+   full venue with `<strong>ABBR</strong>`, then resource links. Award badges
+   keep their inline medal SVG. Preserve inline `<sup>` in titles.
+4. Resource labels are limited to `pdf`, `code`, `arxiv`, `bib`, `project page`,
+   `project`, `video`, `website`, `dataset`, `demo`, `supplementary`, `slides`.
+   GitHub star badges require `https://github.com/<owner>/<repo>` as the code
+   href. Add local BibTeX under `bib/` and PDFs under `pubs/` when needed.
+5. Major year headings and `value="N"` anchors are generated automatically.
+   Technical Reports are generated in strict arXiv-ID descending order. Do not
+   manually renumber or sort output.
+6. Run the generator and checks. The same record now drives publications,
+   project venue/author defaults, homepage gallery and sitemap.
 
-"N+ citations" links on the homepages are keyed by the cluster id in their
-`citation_for_view=...:<CLUSTER>` href — keep that href intact so the number
-can be refreshed. Only papers in the Scholar profile's top-20 list get live
-counts.
+## Add or update a project
+
+1. Ensure the corresponding paper record exists first (Major when formally
+   published, Technical Reports when arXiv-only), then set the project's
+   `pub_id` explicitly. This is the synchronization boundary: venue and paper
+   details derive from it.
+2. Add the project record in date-descending display order. Provide external
+   `href`, full ordered links, EN/CN one-line descriptions and localized media
+   alt/aria text. Keep title/author overrides only when the project display
+   intentionally differs from the paper; otherwise omit them. `short_name` is
+   needed only when the default title prefix is not the desired gallery name.
+3. Project links keep their own complete ordered array and original labels,
+   including `project page` for the official external site. Card covers and
+   homepage galleries use the external `href`; do not add a local standalone
+   project route. The first paper topic is the homepage gallery's primary topic.
+4. Media lives in `res/proj/<key>.<ext>`, never hotlinked. Download an official
+   teaser/framework image or demo video with a local poster. Verify with `file`
+   and `sips -g pixelWidth -g pixelHeight`: real media, width ≥1000px, size
+   <8MB; downscale with `sips -Z 1600`. Convert large photographic PNGs to JPEG
+   quality 85. Videos in generated HTML always use `data-src`, local `poster`,
+   no `src` and no `autoplay`.
+5. Run the generator and checks. Project cards, homepage gallery, SEO lists and
+   sitemap are updated together.
+
+### Controlled topics
+
+Project/paper topic slugs must come from this EN/CN vocabulary:
+
+- `autonomous-driving` — Autonomous Driving / 自动驾驶
+- `embodied-ai` — Embodied AI / 具身智能
+- `world-model` — World Model / 世界模型
+- `generative-model` — Generative Model / 生成模型
+- `multimodal-llm` — Multimodal LLM / 多模态大模型
+- `efficient-llm` — Efficient LLM / 高效 LLM
+- `3d-4d-vision` — 3D / 4D Vision / 3D / 4D 视觉
+- `segmentation` — Segmentation / 图像分割
+- `detection-tracking` — Detection & Tracking / 检测与跟踪
+- `medical-imaging` — Medical Imaging / 医学影像
+- `visual-representation` — Visual Representation / 视觉表征
+
+New topic tags require maintainer sign-off. Paper topics are synchronization
+metadata; papers without a topic simply carry an empty topic list.
+
+## Browser and layout invariants
+
+- The homepage profile keeps `.profile-content` at **3fr : 1fr**, equal-height
+  columns, and the English research-interests tile at exactly two lines. Keep
+  `gs-citations` / `gs-hindex` and the portrait/stats structure. On mobile the
+  wrappers use `display: contents` for the established reflow. The Scholar
+  tile's background is a pseudo-element and must not add layout height.
+- The homepage gallery always contains **all** projects, never just a curated
+  subset. Keep the 2-row swipeable track and its external links.
+- Keep `ol > li.year-heading` and `main section h2[id]` for the publications
+  year navigation and page menu. Paper rows remain plain static HTML; do not
+  add paper-level interactive controls without explicit maintainer approval.
+- `res/site.js` keeps first-viewport sections immediately readable and reveals
+  only below-fold sections. A shared video pause control respects manual pause
+  and runtime reduced-motion changes. Do not nest play buttons inside card links.
+- `res/site.js` also handles one-envelope email copying, accessible copy/search
+  announcements, year scrollspy, 24px gallery pagination targets and dynamic
+  nav-height offsets. Preserve those behaviors when changing markup.
+
+## Dynamic data and automation
+
+- `res/stars.json` is generated weekly by `tools/update_stars.py`; new repos
+  show badges after the next workflow run. `gh workflow run stars.yml` refreshes
+  it manually (workflow commits and pushes). Local execution needs GITHUB_TOKEN.
+- `res/scholar.json` is generated by `tools/update_scholar.py` via SerpAPI.
+  Only the Scholar top-20 papers have live citation counts. Homepage badge links
+  keep their `citation_for_view=...:<CLUSTER>` hrefs.
+- `tools/update_badges.py` updates homepage fallback numbers before the static
+  generator runs. `res/og-card.png` is regenerated by `tools/update_ogcard.py`;
+  edit its template, never the PNG directly.
+- `.github/workflows/stars.yml` and `scholar.yml` regenerate and validate before
+  committing all changed generated files. Footer dates and sitemap lastmod are
+  automated, not hand-maintained. `.github/workflows/check.yml` blocks stale
+  output, broken content/link/metadata invariants and JavaScript syntax errors.
+
+## Required verification for significant changes
+
+Run the daily commands, then exercise real pages in Chromium: EN/CN, light/dark,
+320/390/520/720/1280px, keyboard, publication/project search, external project
+links, video pause/reduced motion and print. Confirm no horizontal overflow, no
+missing local resources, unchanged profile geometry, and a second generator run
+produces no diff. Do not treat a small regex count or a successful import as
+full-site verification.

@@ -1,0 +1,2200 @@
+[
+  {
+    "id": "infinitevl-synergizing-linear-and-sparse-attention-for-highly-ef",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li value=\"1\"><p>\n    Hongyuan Tao, Bencheng Liao, Shaoyu Chen, Haoran Yin, Qian Zhang, Wenyu Liu, Xinggang Wang*. <strong>InfiniteVL: Synergizing Linear and Sparse Attention for Highly-Efficient, Unlimited-Input Vision-Language Models</strong>. Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>) 2026. <a href=\"https://arxiv.org/abs/2512.08829\">arxiv</a>, <a href=\"https://github.com/hustvl/InfiniteVL\">code</a>.\n  </p></li>",
+    "topics": [
+      "multimodal-llm"
+    ]
+  },
+  {
+    "id": "stablevq-practical-guidelines-for-stable-vector-quantized-tokeni",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Bao Tang#, Jiahao Guo#, Haoxiang Cao#, Wenyu Liu, Changqian Yu*, Kun Gai, Xinggang Wang*. <strong>StableVQ: Practical Guidelines for Stable Vector-Quantized Tokenizer Training</strong>. Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>) 2026. <a href=\"https://tt-day.github.io/StableVQ/\">project page</a>, <a href=\"https://arxiv.org/abs/2609.26774\">arxiv</a>.\n  </p></li>",
+    "topics": [
+      "generative-model"
+    ]
+  },
+  {
+    "id": "generative-ai-based-low-dose-digital-subtraction-angiography-for",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Huangxuan Zhao*, Yaowei Bai, Lei Chen, Jinqiang Ma, ..., Xuefeng Kan*, Chengcheng Zhu*, Bo Du*, Xinggang Wang*, Chuansheng Zheng*. <strong>Generative AI-based low-dose digital subtraction angiography for intra-operative radiation dose reduction: a randomized controlled trial</strong>. <strong>Nature Medicine</strong> (<strong>Nat. Med.</strong>), 2026. <a href=\"https://doi.org/10.1038/s41591-025-04042-6\">DOI: 10.1038/s41591-025-04042-6</a>, <a href=\"https://github.com/ZrH42/GenDSA-V2\">code</a>.\n  </p></li>",
+    "topics": [
+      "generative-model",
+      "medical-imaging"
+    ]
+  },
+  {
+    "id": "emready2-improvement-of-cryo-em-and-cryo-et-maps-by-local-qualit",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Hong Cao#, Yueting Zhu#, Tao Li, Ji Chen, Jiahua He, Xinggang Wang*, Sheng-You Huang*. <strong>EMReady2: improvement of cryo-EM and cryo-ET maps by local quality-aware deep learning with Mamba</strong>. <strong>Nature Communications</strong> (<strong>Nat. Commun.</strong>), 2026. <a href=\"https://doi.org/10.1038/s41467-026-71794-1\">DOI: 10.1038/s41467-026-71794-1</a>, <a href=\"https://github.com/huang-laboratory/EMReady\">code</a>.\n  </p></li>",
+    "topics": [
+      "efficient-llm",
+      "medical-imaging"
+    ]
+  },
+  {
+    "id": "weaktr-exploring-plain-vision-transformer-for-weakly-supervised",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Lianghui Zhu, Yingyue Li, Jiemin Fang, Yan Liu, Xin Hao, Wenyu Liu, Xinggang Wang. <strong>WeakTr: Exploring Plain Vision Transformer for Weakly-Supervised Semantic Segmentation</strong>. IEEE Transactions on Image Processing (<strong>IEEE TIP</strong>), vol. 35, pp. 4425-4439, 2026. <a href=\"https://arxiv.org/abs/2304.01184\">pdf</a>, <a href=\"https://github.com/hustvl/WeakTr\">code</a>.\n  </p></li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "snap-snap-taking-two-images-to-reconstruct-3d-human-gaussians-in",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Jia Lu, Taoran Yi, Jiemin Fang, Chen Yang, Chuiyun Wu, Wei Shen, Wenyu Liu, Qi Tian, Xinggang Wang. <strong>Snap-Snap: Taking Two Images to Reconstruct 3D Human Gaussians in Milliseconds</strong>. IEEE Transactions on Circuits and Systems for Video Technology (<strong>IEEE TCSVT</strong>), 2026, doi: 10.1109/TCSVT.2026.3701298. <a href=\"https://arxiv.org/abs/2508.14892\">pdf</a>, <a href=\"https://hustvl.github.io/Snap-Snap/\">project page</a>, <a href=\"https://github.com/hustvl/Snap-Snap\">code</a>.\n  </p></li>",
+    "topics": [
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "senna-bridging-large-vision-language-models-and-end-to-end-auton",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Bo Jiang, Shaoyu Chen, Bencheng Liao, Xingyu Zhang, Wei Yin, Qian Zhang, Chang Huang, Wenyu Liu, Xinggang Wang. <strong>Senna: Bridging Large Vision-Language Models and End-to-End Autonomous Driving</strong>. International Journal of Computer Vision (<strong>IJCV</strong>), 2026. <a href=\"https://arxiv.org/abs/2410.22313\">pdf</a>, <a href=\"https://github.com/hustvl/Senna\">code</a>.\n  </p></li>",
+    "topics": [
+      "autonomous-driving",
+      "multimodal-llm"
+    ]
+  },
+  {
+    "id": "vadv2-end-to-end-autonomous-driving-via-probabilistic-planning",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Bo Jiang, Shaoyu Chen, Hao Gao, Bencheng Liao, Qian Zhang, Wenyu Liu, Xinggang Wang. <strong>VADv2: End-to-End Autonomous Driving via Probabilistic Planning</strong>. International Conference on Learning Representations (<strong>ICLR</strong>) 2026. <a href=\"https://openreview.net/pdf?id=0a4dA6eUHN\">pdf</a>, <a href=\"https://github.com/hustvl/VAD\">code</a>.\n  </p></li>",
+    "topics": [
+      "autonomous-driving"
+    ]
+  },
+  {
+    "id": "recogdrive-a-reinforced-cognitive-framework-for-end-to-end-auton",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Yongkang Li, Kaixin Xiong, Xiangyu Guo, Fang Li, Sixu Yan, Gangwei Xu, Lijun Zhou, Long Chen, Haiyang Sun, Bing Wang, Kun Ma, Guang Chen, Hangjun Ye, Wenyu Liu, Xinggang Wang. <strong>ReCogDrive: A Reinforced Cognitive Framework for End-to-End Autonomous Driving</strong>. International Conference on Learning Representations (<strong>ICLR</strong>) 2026. <a href=\"https://openreview.net/pdf?id=JoXwhGbuMi\">pdf</a>, <a href=\"https://github.com/xiaomi-research/recogdrive\">code</a>.\n  </p></li>",
+    "topics": [
+      "autonomous-driving",
+      "multimodal-llm"
+    ]
+  },
+  {
+    "id": "tric-motion-tri-domain-causal-modeling-grounded-text-to-motion-g",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Yiyang Cao, Yunze Deng, Ziyu Lin, Bin Feng, Xinggang Wang, Wenyu Liu, DanDan Zheng, Jingdong Chen. <strong>TriC-Motion: Tri-Domain Causal Modeling Grounded Text-to-Motion Generation</strong>. International Conference on Learning Representations (<strong>ICLR</strong>) 2026. <a href=\"https://openreview.net/pdf?id=ROh4oDPVpD\">pdf</a>, <a href=\"https://github.com/caoyiyang1105/tric-motion-codes\">code</a>.\n  </p></li>",
+    "topics": [
+      "generative-model"
+    ]
+  },
+  {
+    "id": "molsight-optical-chemical-structure-recognition-with-smiles-pret",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Wenrui Zhang, Xinggang Wang, Bin Feng, Wenyu Liu. <strong>MolSight: Optical Chemical Structure Recognition with SMILES Pretraining, Multi-Granularity Learning and Reinforcement Learning</strong>. AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>) 2026. <a href=\"https://arxiv.org/abs/2511.17300\">pdf</a>, <a href=\"https://github.com/hustvl/MolSight\">code</a>.\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "turbo-vaed-fast-and-stable-transfer-of-video-vaes-to-mobile-devi",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Ya Zou, Jingfeng Yao, Siyuan Yu, Shuai Zhang, Wenyu Liu, Xinggang Wang. <strong>Turbo-VAED: Fast and Stable Transfer of Video-VAEs to Mobile Devices</strong>. AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>) 2026. <a href=\"https://arxiv.org/abs/2508.09136\">pdf</a>, <a href=\"https://github.com/hustvl/Turbo-VAED\">code</a>.\n  </p></li>",
+    "topics": [
+      "generative-model"
+    ]
+  },
+  {
+    "id": "lens-learning-to-segment-anything-with-unified-reinforced-reason",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Lianghui Zhu, Bin Ouyang, Yuxuan Zhang, Tianheng Cheng, Rui Hu, Haocheng Shen, Longjin Ran, Xiaoxin Chen, Li Yu, Wenyu Liu, Xinggang Wang. <strong>LENS: Learning to Segment Anything with Unified Reinforced Reasoning</strong>. AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>) 2026 <strong>(Oral)</strong>. <a href=\"https://arxiv.org/abs/2508.14153\">arxiv</a>, <a href=\"https://github.com/hustvl/LENS\">code</a>, <a href=\"https://hustvl.github.io/LENS/\">project page</a>.\n  </p></li>",
+    "topics": [
+      "segmentation",
+      "multimodal-llm"
+    ]
+  },
+  {
+    "id": "towards-scalable-pre-training-of-visual-tokenizers-for-generatio",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Jingfeng Yao, Yuda Song, Yucong Zhou, Xinggang Wang. <strong>Towards Scalable Pre-training of Visual Tokenizers for Generation</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2026. <a href=\"https://arxiv.org/abs/2512.13687\">pdf</a>, <a href=\"https://github.com/MiniMax-AI/VTP\">code</a>.\n  </p></li>",
+    "topics": [
+      "generative-model"
+    ]
+  },
+  {
+    "id": "diffusionvl-translating-any-autoregressive-models-into-diffusion",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Lunbin Zeng, Jingfeng Yao, Bencheng Liao, Hongyuan Tao, Wenyu Liu, Xinggang Wang. <strong>DiffusionVL: Translating Any Autoregressive Models into Diffusion Vision Language Models</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2026. <a href=\"https://arxiv.org/abs/2512.15713\">pdf</a>, <a href=\"https://github.com/hustvl/DiffusionVL\">code</a>.\n  </p></li>",
+    "topics": [
+      "multimodal-llm"
+    ]
+  },
+  {
+    "id": "moebius-0-2b-lightweight-image-inpainting-framework-with-10b-lev",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Kangsheng Duan, Ziyang Xu, Wenyu Liu, Xiaohu Ruan, Xiaoxin Chen, Xinggang Wang. <strong>Moebius: 0.2B Lightweight Image Inpainting Framework with 10B-Level Performance</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2026. <a href=\"https://arxiv.org/abs/2606.19195\">pdf</a>, <a href=\"https://github.com/hustvl/Moebius\">code</a>, <a href=\"https://hustvl.github.io/Moebius/\">project page</a>.\n  </p></li>",
+    "topics": [
+      "generative-model"
+    ]
+  },
+  {
+    "id": "omnimamba-efficient-and-unified-multimodal-understanding-and-gen",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Jialv Zou, Bencheng Liao, Qian Zhang, Wenyu Liu, Xinggang Wang. <strong>OmniMamba: Efficient and Unified Multimodal Understanding and Generation via State Space Models</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2026. <a href=\"https://arxiv.org/abs/2503.08686\">pdf</a>, <a href=\"https://github.com/hustvl/OmniMamba\">code</a>.\n  </p></li>",
+    "topics": [
+      "multimodal-llm",
+      "generative-model"
+    ]
+  },
+  {
+    "id": "drivelaw-unifying-planning-and-video-generation-in-a-latent-driv",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Tianze Xia, Yongkang Li, Lijun Zhou, Jingfeng Yao, Kaixin Xiong, Haiyang Sun, Bing Wang, Kun Ma, Guang Chen, Hangjun Ye, Wenyu Liu, Xinggang Wang. <strong>DriveLaW: Unifying Planning and Video Generation in a Latent Driving World</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2026. <a href=\"https://arxiv.org/abs/2512.23421\">pdf</a>, <a href=\"https://github.com/xiaomi-research/drivelaw\">code</a>.\n  </p></li>",
+    "topics": [
+      "autonomous-driving",
+      "world-model"
+    ]
+  },
+  {
+    "id": "uni3r-unified-3d-reconstruction-and-semantic-understanding-via-g",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Xiangyu Sun, Haoyi Jiang, Liu Liu, Seungtae Nam, Gyeongjin Kang, Xinjie Wang, Wei Sui, Zhizhong Su, Wenyu Liu, Xinggang Wang, Eunbyung Park. <strong>Uni3R: Unified 3D Reconstruction and Semantic Understanding via Generalizable Gaussian Splatting from Unposed Multi-View Images</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2026 (<strong>Highlight</strong>). <a href=\"https://horizonrobotics.github.io/robot_lab/uni3R/\">project page</a>, <a href=\"https://github.com/HorizonRobotics/Uni3R\">code</a>.\n  </p></li>",
+    "topics": [
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "translight-image-guided-customized-lighting-control-with-generat",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Zongming Li, Lianghui Zhu, Haocheng Shen, Longjin Ran, Wenyu Liu, Xinggang Wang. <strong>TransLight: Image-Guided Customized Lighting Control with Generative Decoupling</strong>. International Conference on Machine Learning (<strong>ICML</strong>) 2026. <a href=\"https://arxiv.org/abs/2508.14814\">pdf</a>, <a href=\"https://icml.cc/virtual/2026/poster/60533\">project page</a>.\n  </p></li>",
+    "topics": [
+      "generative-model"
+    ]
+  },
+  {
+    "id": "motionvla-injecting-geometric-motion-into-vision-language-action",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Shanglin Yuan, Weiheng Zhao, Xianda Guo, Wei Sui, Li Yu, Wenyu Liu, Xinggang Wang. <strong>MotionVLA: Injecting Geometric Motion into Vision-Language-Action Model</strong>. Conference on Robot Learning (<strong>CoRL</strong>) 2026. <a href=\"https://arxiv.org/abs/2606.08288\">pdf</a>, <a href=\"https://github.com/hustvl/MotionVLA\">code</a>, <a href=\"https://hustvl.github.io/MotionVLA/\">project page</a>.\n  </p></li>",
+    "topics": [
+      "embodied-ai"
+    ]
+  },
+  {
+    "id": "evf-sam-early-vision-language-fusion-for-text-prompted-segment-a",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Yuxuan Zhang, Tianheng Cheng, Lianghui Zhu, Rui Hu, Lei Liu, Heng Liu, Longjin Ran, Xiaoxin Chen, Wenyu Liu, Xinggang Wang. <strong>EVF-SAM: Early Vision-Language Fusion for Text-Prompted Segment Anything Model</strong>. Image and Vision Computing, Volume 173, 106028, 2026. <a href=\"https://arxiv.org/abs/2406.20076\">pdf</a>, <a href=\"https://github.com/hustvl/EVF-SAM\">code</a>.\n  </p></li>",
+    "topics": [
+      "multimodal-llm",
+      "segmentation"
+    ]
+  },
+  {
+    "id": "xs-vid-a-large-scale-benchmark-for-small-object-detection-and-tr",
+    "section": "major",
+    "year_group": "2026",
+    "li_html": "<li><p>\n    Jiahao Guo, Ziyang Xu, Lianjun Wu, Fei Gao, Wenyu Liu, Xinggang Wang*. <strong>XS-VID: A Large-Scale Benchmark for Small Object Detection and Tracking in Videos</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>), 2026, DOI: 10.1109/TPAMI.2026.3741044. <a href=\"https://arxiv.org/abs/2407.18137\">pdf</a>, <a href=\"https://github.com/gjhhust/XS-VID\">code</a>, <a href=\"https://gjhhust.github.io/XS-VID/\">project page</a>.\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "m2diffuser-diffusion-based-trajectory-optimization-for-mobile-ma",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li value=\"24\"><p>\n      Sixu Yan, Zeyu Zhang, Muzhi Han, Zaijin Wang, Qi Xie, Zhitian Li, Zhehan Li, Hangxin Liu*, Xinggang Wang*, Song-Chun Zhu. <strong>M<sup>2</sup>Diffuser: Diffusion-based Trajectory Optimization for Mobile Manipulation in 3D Scenes</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>), 2025. <a href=\"https://doi.org/10.1109/TPAMI.2025.3553454\">DOI: 10.1109/TPAMI.2025.3553454</a>, <a href=\"https://arxiv.org/pdf/2410.11402\">pdf</a>, <a href=\"https://github.com/m2diffuser/M2Diffuser\">code</a>.\n    </p></li>",
+    "topics": [
+      "autonomous-driving",
+      "embodied-ai",
+      "generative-model",
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "maptrv2-an-end-to-end-framework-for-online-vectorized-hd-map-con",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Bencheng Liao, Shaoyu Chen, Yunchi Zhang, Bo Jiang, Qian Zhang, Wenyu Liu, Chang Huang, Xinggang Wang. <strong>MapTRv2: An End-to-End Framework for Online Vectorized HD Map Construction</strong>.  International Journal of Computer Vision (<strong>IJCV</strong>) Volume 133, pages 1352–1374, (2025). <a href=\"https://doi.org/10.1007/s11263-024-02235-z\">DOI: 10.1007/s11263-024-02235-z</a>, <a href=\"https://arxiv.org/abs/2308.05736\">pdf</a>, <a href=\"https://github.com/hustvl/MapTR\">code</a>.\n  </p></li>",
+    "topics": [
+      "autonomous-driving",
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "mim4d-masked-modeling-with-multi-view-video-for-autonomous-drivi",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Jialv Zou, Bencheng Liao, Qian Zhang, Wenyu Liu, Xinggang Wang*. <strong>MIM4D: Masked Modeling with Multi-View Video for Autonomous Driving Representation Learning</strong>. International Journal of Computer Vision (<strong>IJCV</strong>) Volume 133, pages 6074–6087, (2025). <a href=\"https://doi.org/10.1007/s11263-025-02464-w\">DOI: 10.1007/s11263-025-02464-w</a>, <a href=\"https://github.com/hustvl/MIM4D\">code</a>.\n  </p></li>",
+    "topics": [
+      "autonomous-driving",
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "weakclip-adapting-clip-for-weakly-supervised-semantic-segmentati",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Lianghui Zhu, Xinggang Wang, Jiapei Feng, Tianheng Cheng, Yingyue Li, Bo Jiang, Dingwen Zhang, Junwei Han. <strong>WeakCLIP: Adapting CLIP for Weakly-Supervised Semantic Segmentation</strong>. International Journal of Computer Vision (<strong>IJCV</strong>) Volume 133, pages 1085–1105, (2025). <a href=\"https://doi.org/10.1007/s11263-024-02224-2\">DOI: 10.1007/s11263-024-02224-2</a>, <a href=\"./pubs/weakclip-final.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/WeakCLIP\">code</a>.\n  </p></li>",
+    "topics": [
+      "multimodal-llm",
+      "segmentation"
+    ]
+  },
+  {
+    "id": "rad-training-an-end-to-end-driving-policy-via-large-scale-3dgs-b",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Hao Gao, Shaoyu Chen, Bo Jiang, Bencheng Liao, Yiang Shi, Xiaoyang Guo, Yuechuan Pu, Haoran Yin, Xiangyu Li, Xinbang Zhang, Ying Zhang, Wenyu Liu, Qian Zhang, Xinggang Wang. <strong>RAD: Training an End-to-End Driving Policy via Large-Scale 3DGS-based Reinforcement Learning</strong>. Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>) 2025. <a href=\"https://arxiv.org/abs/2502.13144\">pdf</a>, <a href=\"https://hgao-cv.github.io/RAD/\">website</a>.\n  </p></li>",
+    "topics": [
+      "autonomous-driving"
+    ]
+  },
+  {
+    "id": "genesis-multimodal-driving-scene-generation-with-spatio-temporal",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Xiangyu Guo, Zhanqian Wu, Kaixin Xiong, Ziyang Xu, Lijun Zhou, Gangwei Xu, Shaoqing Xu, Haiyang Sun, Bing Wang, Guang Chen, Hangjun Ye, Wenyu Liu, Xinggang Wang. <strong>Genesis: Multimodal Driving Scene Generation with Spatio-Temporal and Cross-Modal Consistency</strong>. Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>) 2025. <a href=\"https://arxiv.org/abs/2506.07497\">pdf</a>.\n  </p></li>",
+    "topics": [
+      "autonomous-driving",
+      "generative-model",
+      "multimodal-llm"
+    ]
+  },
+  {
+    "id": "superclip-clip-with-simple-classification-supervision",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Weiheng Zhao, Zilong Huang, Jiashi Feng, Xinggang Wang. <strong>SuperCLIP: CLIP with Simple Classification Supervision</strong>. Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>) 2025. <a href=\"https://neurips.cc/virtual/2025/poster/119115\">pdf</a>, <a href=\"https://github.com/hustvl/SuperCLIP\">code</a>.\n  </p></li>",
+    "topics": [
+      "multimodal-llm",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "dynamic-2d-gaussians-geometrically-accurate-radiance-fields-for",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Shuai Zhang, Guanjun Wu, Zhoufeng Xie, Xinggang Wang, Bin Feng, Wenyu Liu. <strong>Dynamic 2D Gaussians: Geometrically Accurate Radiance Fields for Dynamic Objects</strong>. ACM International Conference on Multimedia (<strong>ACM MM</strong>) 2025, pages 8144–8153. <a href=\"https://doi.org/10.1145/3746027.3755328\">DOI: 10.1145/3746027.3755328</a>, <a href=\"https://arxiv.org/pdf/2409.14072\">pdf</a>, <a href=\"https://github.com/hustvl/Dynamic-2DGS\">code</a>, <a href=\"bib/zhang2025dynamic2dgs.txt\">bib</a>.\n  </p></li>",
+    "topics": [
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "matvlm-hybrid-mamba-transformer-for-efficient-vision-language-mo",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Yingyue Li, Bencheng Liao, Wenyu Liu, Xinggang Wang. <strong>MaTVLM: Hybrid Mamba-Transformer for Efficient Vision-Language Modeling</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2025. <a href=\"https://github.com/hustvl/MaTVLM\">code</a>, <a href=\"https://arxiv.org/pdf/2503.13440\">pdf</a>.\n  </p></li>",
+    "topics": [
+      "multimodal-llm",
+      "efficient-llm",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "groundingsuite-measuring-complex-multi-granular-pixel-grounding",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Rui Hu, Lianghui Zhu, Yuxuan Zhang, Tianheng Cheng, Lei Liu, Heng Liu, Longjin Ran, Xiaoxin Chen, Wenyu Liu, Xinggang Wang. <strong>GroundingSuite: Measuring Complex Multi-Granular Pixel Grounding</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2025. <a href=\"https://github.com/hustvl/GroundingSuite\">code</a>, <a href=\"https://arxiv.org/pdf/2503.10596\">pdf</a>.\n  </p></li>",
+    "topics": [
+      "segmentation",
+      "multimodal-llm"
+    ]
+  },
+  {
+    "id": "diffusiondrive-truncated-diffusion-model-for-end-to-end-autonomo",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Bencheng Liao, Shaoyu Chen, Haoran Yin, Bo Jiang, Cheng Wang, Sixu Yan, Xinbang Zhang, Xiangyu Li, Ying Zhang, Qian Zhang, Xinggang Wang. <strong>DiffusionDrive: Truncated Diffusion Model for End-to-End Autonomous Driving</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2025. <a href=\"https://arxiv.org/abs/2411.15139\">pdf</a>, <a href=\"https://github.com/hustvl/DiffusionDrive\">code</a>.\n  </p></li>",
+    "topics": [
+      "autonomous-driving"
+    ]
+  },
+  {
+    "id": "mask-adapter-the-devil-is-in-the-masks-for-open-vocabulary-segme",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Yongkang Li, Tianheng Cheng, Bin Feng, Wenyu Liu, Xinggang Wang. <strong>Mask-Adapter: The Devil is in the Masks for Open-Vocabulary Segmentation</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2025, <strong>highlight paper</strong>. <a href=\"https://arxiv.org/abs/2412.04533\">pdf</a>, <a href=\"https://github.com/hustvl/MaskAdapter\">code</a>.\n  </p></li>",
+    "topics": [
+      "multimodal-llm",
+      "segmentation"
+    ]
+  },
+  {
+    "id": "reconstruction-vs-generation-taming-optimization-dilemma-in-late",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Jingfeng Yao, Bin Yang, Xinggang Wang. <strong>Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2025, <strong>oral paper</strong>. <a href=\"https://arxiv.org/abs/2501.01423\">pdf</a>, <a href=\"https://github.com/hustvl/LightningDiT\">code</a>.\n  </p></li>",
+    "topics": [
+      "generative-model"
+    ]
+  },
+  {
+    "id": "gausstr-foundation-model-aligned-gaussian-transformer-for-self-s",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Haoyi Jiang, Liu Liu, Tianheng Cheng, Xinjie Wang, Tianwei Lin, Zhizhong Su, Wenyu Liu, Xinggang Wang. <strong>GaussTR: Foundation Model-Aligned Gaussian Transformer for Self-Supervised 3D Spatial Understanding</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2025. <a href=\"https://arxiv.org/abs/2412.13193\">pdf</a>, <a href=\"https://github.com/hustvl/GaussTR\">code</a>.\n  </p></li>",
+    "topics": [
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "dig-scalable-and-efficient-diffusion-models-with-gated-linear-at",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Lianghui Zhu, Zilong Huang, Bencheng Liao, Jun Hao Liew, Hanshu Yan, Jiashi Feng, Xinggang Wang. <strong>DiG: Scalable and Efficient Diffusion Models with Gated Linear Attention</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2025. <a href=\"https://arxiv.org/abs/2405.18428\">pdf</a>, <a href=\"https://github.com/hustvl/DiG\">code</a>.\n  </p></li>",
+    "topics": [
+      "generative-model"
+    ]
+  },
+  {
+    "id": "vig-linear-complexity-visual-sequence-learning-with-gated-linear",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Bencheng Liao, Xinggang Wang, Lianghui Zhu, Qian Zhang, Chang Huang. <strong>ViG: Linear-complexity Visual Sequence Learning with Gated Linear Attention</strong>. AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>) 2025. <a href=\"https://arxiv.org/abs/2405.18425\">pdf</a>, <a href=\"https://github.com/hustvl/ViG\">code</a>.\n  </p></li>",
+    "topics": [
+      "efficient-llm",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "garamost-parallel-multi-granularity-motion-and-structural-modeli",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Ziyang Xu, Huangxuan Zhao, Wenyu Liu, Xinggang Wang. <strong>GaraMoSt: Parallel Multi-Granularity Motion and Structural Modeling for Efficient Multi-Frame Interpolation in DSA Images</strong>. AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>) 2025. <a href=\"https://arxiv.org/abs/2412.14118\">pdf</a>, <a href=\"https://github.com/ZyoungXu/GaraMoSt\">code</a>.\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "controlar-controllable-image-generation-with-autoregressive-mode",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Zongming Li, Tianheng Cheng, Shoufa Chen, Peize Sun, Haocheng Shen, Longjin Ran, Xiaoxin Chen, Wenyu Liu, Xinggang Wang. <strong>ControlAR: Controllable Image Generation with Autoregressive Models</strong>. International Conference on Learning Representations (<strong>ICLR</strong>) 2025. <a href=\"https://openreview.net/pdf?id=BWuBDdXVnH\">pdf</a>, <a href=\"https://github.com/hustvl/ControlAR\">code</a>.\n  </p></li>",
+    "topics": [
+      "generative-model"
+    ]
+  },
+  {
+    "id": "judgelm-fine-tuned-large-language-models-are-scalable-judges",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Lianghui Zhu, Xinggang Wang, Xinlong Wang. <strong>JudgeLM: Fine-tuned Large Language Models are Scalable Judges</strong>. International Conference on Learning Representations (<strong>ICLR</strong>) 2025 Spotlight. <a href=\"https://openreview.net/pdf?id=xsELpEPn4A\">pdf</a>, <a href=\"https://github.com/baaivision/JudgeLM\">code</a>.\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "m3-bench-benchmarking-whole-body-motion-generation-for-mobile-ma",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Zeyu Zhang, Sixu Yan, Muzhi Han, Zaijin Wang, Xinggang Wang, Song-Chun Zhu, Hangxin Liu. <strong>M<sup>3</sup> Bench: Benchmarking Whole-Body Motion Generation for Mobile Manipulation in 3D Scenes</strong>. IEEE Robotics and Automation Letters (<strong>RA-L</strong>), 2025. <a href=\"https://github.com/TooSchoolForCool/M3Bench\">code</a>.\n  </p></li>",
+    "topics": [
+      "embodied-ai",
+      "generative-model",
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "large-scale-pretrained-frame-generative-model-enables-real-time",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Huangxuan Zhao#, Ziyang Xu#, Lei Chen#, Linxia Wu#, Ziwei Cui, ..., Wenyu Liu, Xuefeng Kan*, Ruisheng Su*, Weihua Zhang*, Xinggang Wang*, Chuansheng Zheng*. <strong>Large-scale pretrained frame generative model enables real-time low-dose DSA imaging: An AI system development and multi-center validation study</strong>. <strong>Med</strong>, Volume 6, Number 1, 2025. <a href=\"https://doi.org/10.1016/j.medj.2024.07.025\">DOI: 10.1016/j.medj.2024.07.025</a>, <a href=\"https://github.com/ZyoungXu/GenDSA\">code</a>.\n  </p></li>",
+    "topics": [
+      "generative-model",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "eva-x-a-foundation-model-for-general-chest-x-ray-analysis-with-s",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Jingfeng Yao, Xinggang Wang, Yuehao Song, Huangxuan Zhao, Jun Ma, Yajie Chen, Wenyu Liu &amp; Bo Wang. <strong>EVA-X: a foundation model for general chest x-ray analysis with self-supervised learning</strong>. <strong>npj Digital Medicine</strong> (<strong>NPJ Digit. Med.</strong>) volume 8, Article number: 678 (2025), Published: 17 November 2025. <a href=\"https://www.nature.com/articles/s41746-025-02032-z\">PDF</a>, <a href=\"https://github.com/hustvl/EVA-X\">Code</a>.\n  </p></li>",
+    "topics": [
+      "medical-imaging"
+    ]
+  },
+  {
+    "id": "sparsetrack-multi-object-tracking-by-performing-scene-decomposit",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Zelin Liu, Xinggang Wang*, Cheng Wang, Wenyu Liu, Xiang Bai. <strong>SparseTrack: Multi-Object Tracking by Performing Scene Decomposition Based on Pseudo-Depth</strong>. IEEE Transactions on Circuits and Systems for Video Technology (<strong>IEEE TCSVT</strong>), Volume 35, Issue 5, pages 4870–4882, 2025. <a href=\"https://doi.org/10.1109/TCSVT.2024.3524670\">DOI: 10.1109/TCSVT.2024.3524670</a>, <a href=\"https://arxiv.org/abs/2306.05238\">pdf</a>, <a href=\"https://github.com/hustvl/SparseTrack\">code</a>.\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "togs-gaussian-splatting-with-temporal-opacity-offset-for-real-ti",
+    "section": "major",
+    "year_group": "2025",
+    "li_html": "<li><p>\n    Shuai Zhang, Huangxuan Zhao, Zhenghong Zhou, Guanjun Wu, Chuansheng Zheng, Xinggang Wang, Wenyu Liu. <strong>TOGS: Gaussian Splatting With Temporal Opacity Offset for Real-Time 4D DSA Rendering</strong>. IEEE Journal of Biomedical and Health Informatics (<strong>IEEE JBHI</strong>), Volume 29, Number 9, pages 6793–6805, 2025. <a href=\"https://doi.org/10.1109/JBHI.2025.3575613\">DOI: 10.1109/JBHI.2025.3575613</a>, <a href=\"https://arxiv.org/abs/2403.19586\">pdf</a>, <a href=\"https://github.com/hustvl/TOGS\">code</a>, <a href=\"bib/zhang2025togs.txt\">bib</a>.\n  </p></li>",
+    "topics": [
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "vitgaze-gaze-following-with-interaction-features-in-vision-trans",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li value=\"48\"><p>\n    Yuehao Song, Xinggang Wang*, Jingfeng Yao, Wenyu Liu, Jinglin Zhang, Xiangmin Xu. <strong>ViTGaze: Gaze Following with Interaction Features in Vision Transformers</strong>. <strong>Visual Intelligence</strong>, Volume 2, Number 31, 2024. <a href=\"https://doi.org/10.1007/s44267-024-00064-9\">DOI: 10.1007/s44267-024-00064-9</a>, <a href=\"https://github.com/hustvl/ViTGaze\">code</a>.\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "eva-02-a-visual-representation-for-neon-genesis",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Yuxin Fang, Quan Sun, Xinggang Wang, Tiejun Huang, Xinlong Wang, Yue Cao. <strong>EVA-02: A visual representation for neon genesis</strong>. <strong>Image and Vision Computing</strong>, Volume 149, 2024, 105171. <a href=\"https://www.sciencedirect.com/science/article/pii/S0262885624002762\">DOI: 10.1016/j.imavis.2024.105171</a>, <a href=\"https://arxiv.org/abs/2303.11331\">pdf</a>, <a href=\"https://github.com/baaivision/EVA/tree/master/EVA-02\">code</a>.\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "fasterdit-towards-faster-diffusion-transformers-training-without",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Jingfeng Yao, Cheng Wang, Wenyu Liu, Xinggang Wang*. <strong>FasterDiT: Towards Faster Diffusion Transformers Training without Architecture Modification</strong>. Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>) 2024. <a href=\"https://openreview.net/pdf?id=cqRgoDFaGN\">pdf</a>, <a href=\"https://github.com/hustvl/LightningDiT\">code</a>.\n  </p></li>",
+    "topics": [
+      "generative-model",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "lane-graph-as-path-continuity-preserving-path-wise-modeling-for",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Bencheng Liao, Shaoyu Chen, Bo Jiang, Tianheng Cheng, Qian Zhang, Wenyu Liu, Chang Huang, Xinggang Wang*. <strong>Lane Graph as Path: Continuity-preserving Path-wise Modeling for Online Lane Graph Construction</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2024. <a href=\"https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06068.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/LaneGAP\">code</a>.\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "occupancy-as-set-of-points",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Yiang Shi, Tianheng Cheng, Qian Zhang, Wenyu Liu, Xinggang Wang*. <strong>Occupancy as Set of Points</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2024. <a href=\"https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07801.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/osp\">code</a>.\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "co-student-collaborating-strong-and-weak-students-for-sparsely-a",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Lianjun Wu, Jiangxiao Han, Zengqiang Zheng, Xinggang Wang*. <strong>Co-Student: Collaborating Strong and Weak Students for Sparsely Annotated Object Detection</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2024. <a href=\"https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06407.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/CoStudent\">code</a>.\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "cascade-zero123-one-image-to-highly-consistent-3d-with-self-prom",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Yabo Chen, Jiemin Fang, Yuyang Huang, Taoran Yi, Xiaopeng Zhang, Lingxi Xie, Xinggang Wang, Wenrui Dai, Hongkai Xiong, Qi Tian. <strong>Cascade-Zero123: One Image to Highly Consistent 3D with Self-Prompted Nearby Views</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2024. <a href=\"https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05774.pdf\">pdf</a>, <a href=\"https://github.com/AbrahamYabo/Cascade-Zero123\">code</a>.\n  </p></li>",
+    "topics": [
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "visual-text-generation-in-the-wild",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Yuanzhi Zhu, Jiawei Liu, Feiyu Gao, Wenyu Liu, Xinggang Wang, Peng Wang, Fei Huang, Cong Yao, Zhibo Yang. <strong>Visual Text Generation in the Wild</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2024. <a href=\"https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06951.pdf\">pdf</a>, <a href=\"https://github.com/AlibabaResearch/AdvancedLiterateMachinery/tree/main/OCR/SceneVTG\">code</a>.\n  </p></li>",
+    "topics": [
+      "generative-model"
+    ]
+  },
+  {
+    "id": "towards-dual-transparent-liquid-level-estimation-in-biomedical-l",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Xiayu Wang, Ke Ma, Ruiyun Zhong, Xinggang Wang, Yi Fang, Yang Xiao, Tian Xia. <strong>Towards Dual Transparent Liquid Level Estimation in Biomedical Lab: Dataset, Methods and Practice</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2024. <a href=\"https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08206.pdf\">pdf</a>, <a href=\"https://github.com/dualtransparency/TCLD\">code</a>.\n  </p></li>",
+    "topics": [
+      "medical-imaging"
+    ]
+  },
+  {
+    "id": "causality-inspired-discriminative-feature-learning-in-triple-dom",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Haijun Xiong, Bin Feng, Xinggang Wang, Wenyu Liu. <strong>Causality-inspired Discriminative Feature Learning in Triple Domains for Gait Recognition</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2024. <a href=\"https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07107.pdf\">pdf</a>, <a href=\"https://github.com/Haijun-Xiong/CLTD\">code</a>.\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "weaksam-segment-anything-meets-weakly-supervised-instance-level",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Lianghui Zhu, Junwei Zhou, Yan Liu, Xin Hao, Wenyu Liu, Xinggang Wang*. <strong>WeakSAM: Segment Anything Meets Weakly-supervised Instance-level Recognition</strong>. ACM International Conference on Multimedia (<strong>ACM MM</strong>) 2024. <a href=\"https://arxiv.org/abs/2402.14812\">pdf</a>, <a href=\"https://github.com/hustvl/WeakSAM\">code</a>.\n  </p></li>",
+    "topics": [
+      "segmentation",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "most-dsa-modeling-motion-and-structural-interactions-for-direct",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Ziyang Xu, Huangxuan Zhao, Ziwei Cui, Wenyu Liu, Chuansheng Zheng, Xinggang Wang. <strong>MoSt-DSA: Modeling Motion and Structural Interactions for Direct Multi-Frame Interpolation in DSA Images</strong>. European Conference on Artificial Intelligence (<strong>ECAI</strong>) 2024. <a href=\"https://arxiv.org/abs/2407.07078\">pdf</a>, <a href=\"https://github.com/ZyoungXu/MoSt-DSA\">code</a>.\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "openinst-a-simple-query-based-method-for-open-world-instance-seg",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Cheng Wang, Guoli Wang, Qian Zhang, Peng Guo, Wenyu Liu, Xinggang Wang. <strong>Openinst: A simple query-based method for open-world instance segmentation</strong>. <strong>Pattern Recognition</strong>, Volume 153, September 2024, 110570. <a href=\"https://arxiv.org/abs/2303.15859\">pdf</a>, <a href=\"https://github.com/hustvl/OpenInst\">code</a>.\n  </p></li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "vision-mamba-efficient-visual-representation-learning-with-bidir",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Lianghui Zhu, Bencheng Liao, Qian Zhang, Xinlong Wang, Wenyu Liu, Xinggang Wang*. <strong>Vision mamba: Efficient visual representation learning with bidirectional state space model</strong>. International Conference on Machine Learning (<strong>ICML</strong>) 2024. <a href=\"https://arxiv.org/abs/2401.09417\">pdf</a>, <a href=\"https://github.com/hustvl/Vim\">code</a>.\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "4d-gaussian-splatting-for-real-time-dynamic-scene-rendering",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Guanjun Wu, Taoran Yi, Jiemin Fang, Lingxi Xie, Xiaopeng Zhang, Wei Wei, Wenyu Liu, Qi Tian, Xinggang Wang*. <strong>4d gaussian splatting for real-time dynamic scene rendering</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2024. <a href=\"https://arxiv.org/abs/2310.08528\">pdf</a>, <a href=\"https://github.com/hustvl/4DGaussians\">code</a>.\n  </p></li>",
+    "topics": [
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "gaussiandreamer-fast-generation-from-text-to-3d-gaussian-splatti",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Taoran Yi, Jiemin Fang, Guanjun Wu, Lingxi Xie, Xiaopeng Zhang, Wenyu Liu, Qi Tian, Xinggang Wang*. <strong>Gaussiandreamer: Fast generation from text to 3d gaussian splatting with point cloud priors</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2024. <a href=\"https://arxiv.org/abs/2310.08529\">pdf</a>, <a href=\"https://github.com/hustvl/GaussianDreamer\">code</a>.\n  </p></li>",
+    "topics": [
+      "generative-model",
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "symphonize-3d-semantic-scene-completion-with-contextual-instance",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Haoyi Jiang, Tianheng Cheng, Naiyu Gao, Haoyang Zhang, Wenyu Liu, Xinggang Wang. <strong>Symphonize 3d semantic scene completion with contextual instance queries</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2024. <a href=\"https://arxiv.org/abs/2306.15670\">pdf</a>, <a href=\"https://github.com/hustvl/Symphonies\">code</a>.\n  </p></li>",
+    "topics": [
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "yolo-world-real-time-open-vocabulary-object-detection",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Tianheng Cheng, Lin Song, Yixiao Ge, Wenyu Liu, Xinggang Wang, Ying Shan. <strong>YOLO-World: Real-Time Open-Vocabulary Object Detection</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2024. <a href=\"https://arxiv.org/abs/2401.17270\">pdf</a>, <a href=\"https://github.com/AILab-CVC/YOLO-World\">code</a>.\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "mobileinst-video-instance-segmentation-on-the-mobile",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Renhong Zhang, Tianheng Cheng, Shusheng Yang, Haoyi Jiang, Shuai Zhang, Jiancheng Lyu, Xin Li, Xiaowen Ying, Dashan Gao, Wenyu Liu, Xinggang Wang*. <strong>Mobileinst: Video instance segmentation on the mobile</strong>. AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>) 2024. <a href=\"https://arxiv.org/abs/2303.17594\">pdf</a>.\n  </p></li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "vitmatte-boosting-image-matting-with-pre-trained-plain-vision-tr",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Jingfeng Yao, Xinggang Wang*, Shusheng Yang, Baoyuan Wang. <strong>ViTMatte: Boosting image matting with pre-trained plain vision transformers</strong>. <strong>Information Fusion</strong>, Volume 103, March 2024, 102091, DOI: 10.1016/j.inffus.2023.102091. <a href=\"https://arxiv.org/abs/2305.15272\">pdf</a>, <a href=\"https://github.com/hustvl/ViTMatte\">code</a>.\n  </p></li>",
+    "topics": [
+      "generative-model",
+      "segmentation",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "fast-high-dynamic-range-radiance-fields-for-dynamic-scenes",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Guanjun Wu, Taoran Yi, Jiemin Fang, Wenyu Liu, Xinggang Wang. <strong>Fast High Dynamic Range Radiance Fields for Dynamic Scenes</strong>. International Conference on 3D Vision (<strong>3DV</strong>) 2024, pp. 862-872. <a href=\"https://arxiv.org/abs/2401.06052\">pdf</a>, <a href=\"https://github.com/hustvl/HDR-HexPlane\">code</a>.\n  </p></li>",
+    "topics": [
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "matte-anything-interactive-natural-image-matting-with-segment-an",
+    "section": "major",
+    "year_group": "2024",
+    "li_html": "<li><p>\n    Jingfeng Yao, Xinggang Wang, Lang Ye, Wenyu Liu. <strong>Matte anything: Interactive natural image matting with segment anything model</strong>. <strong>Image and Vision Computing</strong>, Volume 147, July 2024, 105067. <a href=\"https://arxiv.org/abs/2306.04121\">pdf</a>, <a href=\"https://github.com/hustvl/Matte-Anything\">code</a>.\n  </p></li>",
+    "topics": [
+      "generative-model",
+      "segmentation"
+    ]
+  },
+  {
+    "id": "what-makes-for-hierarchical-vision-transformer",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li value=\"70\"><p>Yuxin Fang, Xinggang Wang*, Rui Wu, Wenyu Liu. <strong>What Makes for Hierarchical Vision Transformer?</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>), Volume: 45, Issue: 10, October 2023, DOI: 10.1109/TPAMI.2023.3282019. <a href=\"https://arxiv.org/abs/2107.02174\">pdf</a> </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "voxeltrack-multi-person-3d-human-pose-estimation-and-tracking-in",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>Yifu Zhang, Chunyu Wang, Xinggang Wang, Wenjun Zeng, Wenyu Liu. <strong>VoxelTrack: Multi-Person 3D Human Pose Estimation and Tracking in the Wild</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>), Volume: 45, Issue: 2, 01 February 2023, DOI: 10.1109/TPAMI.2023.3282019. <a href=\"https://arxiv.org/abs/2108.02452\">pdf</a>, <a href=\"https://github.com/microsoft/voxelpose-pytorch\">code</a> </p></li>",
+    "topics": [
+      "3d-4d-vision",
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "circuit-as-set-of-points",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>\n    Jialv Zou, Xinggang Wang*, Jiahao Guo, Wenyu Liu, Qian Zhang, Chang Huang. <strong>Circuit as Set of Points</strong>. Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>) 2023. <a href=\"https://arxiv.org/abs/\">pdf</a>, <a href=\"https://github.com/hustvl/\">code</a>.\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "vad-vectorized-scene-representation-for-efficient-autonomous-dri",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>\n    Bo Jiang, Shaoyu Chen, Qing Xu, Bencheng Liao, Jiajie Chen, Helong Zhou, Qian Zhang, Wenyu Liu, Chang Huang, Xinggang Wang*. <strong>VAD: Vectorized Scene Representation for Efficient Autonomous Driving</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2023. <a href=\"https://arxiv.org/abs/2303.12077\">pdf</a>, <a href=\"https://github.com/hustvl/VAD\">code</a>.\n  </p></li>",
+    "topics": [
+      "autonomous-driving",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "unleashing-vanilla-vision-transformer-with-masked-image-modeling",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>\n    Yuxin Fang, Shusheng Yang, Shijie Wang, Yixiao Ge, Ying Shan, Xinggang Wang*. <strong>Unleashing Vanilla Vision Transformer with Masked Image Modeling for Object Detection</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2023. <a href=\"https://openaccess.thecvf.com/content/ICCV2023/papers/Wang_Query6DoF_Learning_Sparse_Queries_as_Implicit_Shape_Prior_for_Category-Level_ICCV_2023_paper.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/MIMDet\">code</a>.\n  </p></li>",
+    "topics": [
+      "segmentation",
+      "detection-tracking",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "query6dof-learning-sparse-queries-as-implicit-shape-prior-for-ca",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>\n    Ruiqi Wang, Xinggang Wang, Te Li, Rong Yang, Minhong Wan, Wenyu Liu. <strong>Query6DoF: Learning Sparse Queries as Implicit Shape Prior for Category-Level 6DoF Pose Estimation</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2023. <a href=\"https://arxiv.org/abs/2204.02964\">pdf</a>, <a href=\"https://github.com/hustvl/Query6DoF\">code</a>.\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "tinyclip-clip-distillation-via-affinity-mimicking-and-weight-inh",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>\n    Kan Wu, Houwen Peng, Zhenghong Zhou, Bin Xiao, Mengchen Liu, Lu Yuan, Hong Xuan, Michael Valenzuela, Xi (Stephen) Chen, Xinggang Wang, Hongyang Chao, Han Hu. <strong>TinyCLIP: CLIP Distillation via Affinity Mimicking and Weight Inheritance</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2023. <a href=\"https://arxiv.org/abs/2309.12314\">pdf</a>, <a href=\"https://github.com/wkcn/TinyCLIP\">code</a>.\n  </p></li>",
+    "topics": [
+      "multimodal-llm",
+      "efficient-llm"
+    ]
+  },
+  {
+    "id": "condition-adaptive-graph-convolution-learning-for-skeleton-based",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>\n    Xiaohu Huang, Xinggang Wang, Zhidianqiu Jin, Bo Yang, Botao He, Bin Feng, Wenyu Liu. <strong>Condition-Adaptive Graph Convolution Learning for Skeleton-Based Gait Recognition</strong>. IEEE Transactions on Image Processing (<strong>IEEE TIP</strong>), vol. 32, pp. 4773-4784, 2023, doi: 10.1109/TIP.2023.3305822. <a href=\"https://arxiv.org/abs/2308.06707\">pdf</a>\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "ccnet-criss-cross-attention-for-semantic-segmentation-2023",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>\n    Zilong Huang#, Xinggang Wang#*, Yunchao Wei, Lichao Huang, Humphrey Shi, Wenyu Liu, Thomas Huang. <strong>CCNet: Criss-Cross Attention for Semantic Segmentation</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>), vol. 45, no. 6, pp. 6896-6908, 1 June 2023, doi: 10.1109/TPAMI.2020.3007032. <a href=\"https://arxiv.org/pdf/1811.11721.pdf\">pdf</a>, <a href=\"https://github.com/speedinghzl/CCNet\">code</a>, <a href=\"bib/ccnetpami.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "tinydet-accurately-detecting-small-objects-within-1-gflops",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>\n    Shaoyu Chen, Tianheng Cheng, Jiemin Fang, Qian Zhang, Yuan Li, Wenyu Liu, Xinggang Wang*. <strong>TinyDet: accurately detecting small objects within 1 GFLOPs</strong>. Science China Information Sciences (<strong>SCIS</strong>) 66, 119102, 2023, https://doi.org/10.1007/s11432-021-3504-4. <a href=\"https://link.springer.com/article/10.1007/s11432-021-3504-4#citeas\">pdf</a>, <a href=\"https://github.com/hustvl/TinyDet\">code</a>.\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "eva-exploring-the-limits-of-masked-visual-representation-learnin",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>\n    Yuxin Fang, Wen Wang, Binhui Xie, Quan Sun, Ledell Wu, Xinggang Wang, Tiejun Huang, Xinlong Wang, Yue Cao. <strong>EVA: Exploring the Limits of Masked Visual Representation Learning at Scale</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2023 (<strong>Highlight paper, accept rate 2.5%</strong>). <a href=\"https://arxiv.org/abs/2211.07636\">pdf</a>, <a href=\"https://github.com/baaivision/EVA\">code</a>.\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "exploring-high-quality-pseudo-masks-for-weakly-supervised-instan",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>\n    Tianheng Cheng, Xinggang Wang*, Shaoyu Chen, Qian Zhang, Wenyu Liu. <strong>Exploring High-Quality Pseudo Masks for Weakly Supervised Instance Segmentation</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2023. <a href=\"https://arxiv.org/abs/2210.05174\">pdf</a>, <a href=\"https://github.com/hustvl/BoxTeacher\">code</a>.\n  </p></li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "rils-masked-visual-reconstruction-in-language-semantic-space",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>\n    Shusheng Yang, Yixiao Ge, Kun Yi, Dian Li, Ying Shan, Xiaohu Qie, Xinggang Wang*. <strong>RILS: Masked Visual Reconstruction in Language Semantic Space</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2023. <a href=\"https://arxiv.org/abs/2301.06958\">pdf</a>, <a href=\"https://github.com/hustvl/RILS\">code</a>.\n  </p></li>",
+    "topics": [
+      "3d-4d-vision",
+      "segmentation"
+    ]
+  },
+  {
+    "id": "pd-quant-post-training-quantization-based-on-prediction-differen",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>\n    Jiawei Liu, Lin Niu, Zhihang Yuan, Dawei Yang, Xinggang Wang, Wenyu Liu. <strong>PD-Quant: Post-Training Quantization based on Prediction Difference Metric</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2023. <a href=\"https://proceedings.mlr.press/v205/liu23a/liu23a.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/PD-Quant\">code</a>.\n  </p></li>",
+    "topics": [
+      "efficient-llm"
+    ]
+  },
+  {
+    "id": "maptr-structured-modeling-and-learning-for-online-vectorized-hd",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>\n    Bencheng Liao, Shaoyu Chen, Xinggang Wang*, Tianheng Cheng, Qian Zhang, Wenyu Liu, Chang Huang. <strong>MapTR: Structured Modeling and Learning for Online Vectorized HD Map Construction</strong>. International Conference on Learning Representations (<strong>ICLR</strong>) 2023 (Spotlight). <a href=\"https://arxiv.org/abs/2208.14437\">pdf</a>, <a href=\"https://github.com/hustvl/MapTR\">code</a>.\n  </p></li>",
+    "topics": [
+      "autonomous-driving"
+    ]
+  },
+  {
+    "id": "corrupted-image-modeling-for-self-supervised-visual-pre-training",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>\n    Yuxin Fang, Li Dong, Hangbo Bao, Xinggang Wang, Furu Wei.  <strong>Corrupted Image Modeling for Self-Supervised Visual Pre-Training</strong>. International Conference on Learning Representations (<strong>ICLR</strong>) 2023 (Spotlight). <a href=\"https://arxiv.org/abs/2202.03382\">pdf</a>, <a href=\"https://aka.ms/beit-cim\">code</a>.\n    </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "graph-contrastive-learning-for-skeleton-based-action-recognition",
+    "section": "major",
+    "year_group": "2023",
+    "li_html": "<li><p>\n    Xiaohu Huang, Hao Zhou, Bin Feng, Xinggang Wang, Wenyu Liu, Jian Wang, Haocheng Feng, Junyu Han, Errui Ding, Jingdong Wang. <strong>Graph Contrastive Learning for Skeleton-based Action Recognition</strong>. International Conference on Learning Representations (<strong>ICLR</strong>) 2023. <a href=\"https://openreview.net/pdf?id=PLUXnnxUdr4\">PDF</a>, <a href=\"https://github.com/OliverHxh/SkeletonGCL\">code</a>.\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "bytetrack-multi-object-tracking-by-associating-every-detection-b",
+    "section": "major",
+    "year_group": "2022",
+    "li_html": "<li value=\"87\"><p>\n    Yifu Zhang, Peize Sun, Yi Jiang, Dongdong Yu, Fucheng Weng, Zehuan Yuan, Ping Luo, Wenyu Liu, Xinggang Wang. <strong>ByteTrack: Multi-Object Tracking by Associating Every Detection Box</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2022. <a href=\"https://arxiv.org/abs/2110.06864\">pdf</a>, <a href=\"https://github.com/FoundationVision/ByteTrack\">code</a>.</p>\n  </li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "sparse-instance-activation-for-real-time-instance-segmentation",
+    "section": "major",
+    "year_group": "2022",
+    "li_html": "<li><p>\n    Tianheng Cheng, Xinggang Wang*, Shaoyu Chen, Wenqiang Zhang, Qian Zhang, Chang Huang, Zhaoxiang Zhang, Wenyu Liu. <strong>Sparse Instance Activation for Real-Time Instance Segmentation</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2022. <a href=\"https://arxiv.org/pdf/2203.12827.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/SparseInst\">code</a>.</p>\n  </li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "azinorm-exploiting-the-radial-symmetry-of-point-cloud-for-azimut",
+    "section": "major",
+    "year_group": "2022",
+    "li_html": "<li><p>\n    Shaoyu Chen, Xinggang Wang*, Tianheng Cheng, Wenqiang Zhang, Qian Zhang, Chang Huang, Wenyu Liu. <strong>AziNorm: Exploiting the Radial Symmetry of Point Cloud for Azimuth-Normalized 3D Perception</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2022. <a href=\"https://arxiv.org/pdf/2203.13090.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/AziNorm\">code</a>, <a href=\"bib/chen2022azinorm.txt\">bib</a>.</p>\n  </li>",
+    "topics": [
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "msg-transformer-exchanging-local-spatial-information-by-manipula",
+    "section": "major",
+    "year_group": "2022",
+    "li_html": "<li><p>\n    Jiemin Fang, Lingxi Xie, Xinggang Wang*, Xiaopeng Zhang, Wenyu Liu, Qi Tian. <strong>MSG-Transformer: Exchanging Local Spatial Information by Manipulating Messenger Tokens</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2022. <a href=\"https://arxiv.org/abs/2105.15168\">pdf</a>, <a href=\"https://github.com/hustvl/MSG-Transformer\">code</a>, <a href=\"bib/fang2022msgt.txt\">bib</a>.</p>\n  </li>",
+    "topics": [
+      "3d-4d-vision",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "temporally-efficient-vision-transformer-for-video-instance-segme",
+    "section": "major",
+    "year_group": "2022",
+    "li_html": "<li><p>\n    Shusheng Yang, Xinggang Wang*, Yu Li, Yuxin Fang, Jiemin Fang, Wenyu Liu, Xun Zhao, Ying Shan. <strong>Temporally Efficient Vision Transformer for Video Instance Segmentation</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2022. <a href=\"https://github.com/hustvl/TeViT\">code</a>, <a href=\"bib/yang2022tevit.txt\">bib</a>.</p>\n  </li>",
+    "topics": [
+      "efficient-llm",
+      "segmentation",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "topformer-token-pyramid-transformer-for-mobile-semantic-segmenta",
+    "section": "major",
+    "year_group": "2022",
+    "li_html": "<li><p>\n    Wenqiang Zhang, Zilong Huang, Guozhong Luo, Tao Chen, Xinggang Wang*, Wenyu Liu*, Gang Yu, Chunhua Shen. <strong>TopFormer: Token Pyramid Transformer for Mobile Semantic Segmentation</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2022. <a href=\"bib/zhang2022topformer.txt\">bib</a>.</p>\n  </li>",
+    "topics": [
+      "segmentation",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "vision-based-uneven-bev-representation-learning-with-polar-raste",
+    "section": "major",
+    "year_group": "2022",
+    "li_html": "<li><p>\n    Zhi Liu, Shaoyu Chen, Xiaojie Guo, Xinggang Wang, Tianheng Cheng, Hongmei Zhu, Qian Zhang, Wenyu Liu, Yi Zhang. <strong>Vision-based uneven bev representation learning with polar rasterization and surface estimation</strong>. Conference on Robot Learning (<strong>CoRL</strong>) 2022. <a href=\"https://arxiv.org/abs/2207.01878\">pdf</a>, <a href=\"https://github.com/SuperZ-Liu/PolarBEV\">code</a>.\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "alignseg-feature-aligned-segmentation-networks",
+    "section": "major",
+    "year_group": "2022",
+    "li_html": "<li><p>\n    Zilong Huang, Yunchao Wei, Xinggang Wang*, Wenyu Liu, Thomas S. Huang, Honghui Shi. <strong>AlignSeg: Feature-Aligned Segmentation Networks</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>), vol. 44, no. 1, pp. 550-557, 1 Jan. 2022, doi: 10.1109/TPAMI.2021.3062772. <a href=\"https://arxiv.org/abs/2003.00872\">pdf</a>, <a href=\"https://github.com/speedinghzl/AlignSeg\">code</a>, <a href=\"bib/pami_alignseg.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "yolop-you-only-look-once-for-panoptic-driving-perception",
+    "section": "major",
+    "year_group": "2022",
+    "li_html": "<li><p>\n    Dong Wu, Manwen Liao, Weitian Zhang, Xinggang Wang, Xiang Bai, Wenqing Cheng, Wenyu Liu. <strong>YOLOP: You Only Look Once for Panoptic Driving Perception</strong>. Machine Intelligence Research, 19(6): 550-562 (2022). <span class=\"award-badge\" title=\"Machine Intelligence Research, 2022\"><svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"15.5\" r=\"4.5\"/><path d=\"M8.8 11.8 6 3.5h4.2L12 7.6l1.8-4.1H18l-2.8 8.3\"/></svg>Most Cited Paper Award</span> <a href=\"https://arxiv.org/abs/2108.11250\">pdf</a>, <a href=\"https://github.com/hustvl/YOLOP\">code</a>, <a href=\"bib/yolop.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "autonomous-driving",
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "occluded-video-instance-segmentation-a-benchmark",
+    "section": "major",
+    "year_group": "2022",
+    "li_html": "<li><p>\n    Jiyang Qi, Yan Gao, Yao Hu, Xinggang Wang, Xiaoyu Liu, Xiang Bai, Serge J. Belongie, Alan L. Yuille, Philip H. S. Torr, Song Bai. <strong>Occluded Video Instance Segmentation: A Benchmark</strong>. International Journal of Computer Vision (<strong>IJCV</strong>), vol. 130, no. 8, pp. 2022-2039, 2022. <a href=\"https://songbai.site/ovis/\">project page</a>.\n  </p>\n  </li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "fast-dynamic-radiance-fields-with-time-aware-neural-voxels",
+    "section": "major",
+    "year_group": "2022",
+    "li_html": "<li><p>\n    Jiemin Fang, Taoran Yi, Xinggang Wang*, Lingxi Xie, Xiaopeng Zhang, Wenyu Liu, Matthias Nießner, Qi Tian. <strong>Fast Dynamic Radiance Fields with Time-Aware Neural Voxels</strong>. <strong>SIGGRAPH Asia</strong> 2022, Article 11, pp. 1-9.  <a href=\"https://arxiv.org/pdf/2205.15285.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/TiNeuVox\">code</a>, <a href=\"bib/tinuevox.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "self-supervised-learning-enables-3d-digital-subtraction-angiogra",
+    "section": "major",
+    "year_group": "2022",
+    "li_html": "<li><p>\n    Huangxuan Zhao, Zhenghong Zhou, Feihong Wu, Dongqiao Xiang, Hui Zhao, Wei Zhang, Lin Li, Zhong Li, Jia Huang, Hongyao Hu, Chengbo Liu, Tao Wang, Wenyu Liu, Jinqiang Ma*, Fan Yang*, Xinggang Wang*, Chuansheng Zheng*. <strong>Self-supervised learning enables 3D digital subtraction angiography reconstruction from ultra-sparse 2D projection views: A multicenter study</strong>, <strong>Cell Reports Medicine</strong> (<strong>Cell Rep. Med.</strong>), Volume 3, Issue 10, 2022, 100775, ISSN 2666-3791. <a href=\"bib/zhao2022cellrm.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "3d-4d-vision",
+      "medical-imaging",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "multi-object-tracking-by-marginal-inference",
+    "section": "major",
+    "year_group": "2022",
+    "li_html": "<li><p>\n    Yifu Zhang, Chunyu Wang, Xinggang Wang, Wenjun Zeng, Wenyu Liu. <strong>Multi-object Tracking by Marginal Inference</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2022, pp. 22-40. <a href=\"https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136820020.pdf\">PDF</a>.\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "aiatrack-attention-in-attention-for-transformer-visual-tracking",
+    "section": "major",
+    "year_group": "2022",
+    "li_html": "<li><p>\n    Shenyuan Gao, Chunluan Zhou, Chao Ma, Xinggang Wang, Junsong Yuan. <strong>AiATrack: Attention in Attention for Transformer Visual Tracking</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2022, pp. 146-164. <a href=\"https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136820141.pdf\">PDF</a>, <a href=\"https://github.com/Little-Podi/AiATrack\">code</a>.\n  </p></li>",
+    "topics": [
+      "detection-tracking",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "bag-of-instances-aggregation-boosts-self-supervised-distillation",
+    "section": "major",
+    "year_group": "2022",
+    "li_html": "<li><p>\n    Haohang Xu, Jiemin Fang, Xiaopeng Zhang, Lingxi Xie, Xinggang Wang, Wenrui Dai, Hongkai Xiong, Qi Tian. <strong>Bag of Instances Aggregation Boosts Self-supervised Distillation</strong>. International Conference on Learning Representations (<strong>ICLR</strong>) 2022.\n  </p></li>",
+    "topics": [
+      "efficient-llm",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "fairmot-on-the-fairness-of-detection-and-re-identification-in-mu",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li value=\"102\"><p>Yifu Zhang, Chunyu Wang, Xinggang Wang, Wenjun Zeng, Wenyu Liu. <strong>FairMOT: On the Fairness of Detection and Re-Identification in Multiple Object Tracking</strong>. International Journal of Computer Vision (<strong>IJCV</strong>), 129, pages3069–3087 (2021). <a href=\"https://link.springer.com/article/10.1007/s11263-021-01513-4\">pdf</a>, <a href=\"https://github.com/ifzhang/FairMOT\">code</a>.\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "efficientpose-efficient-human-pose-estimation-with-neural-archit",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li><p>Wenqiang Zhang, Jiemin Fang, Xinggang Wang*, Wenyu Liu. <strong>EfficientPose: Efficient Human Pose Estimation with Neural Architecture Search</strong>. Computational Visual Media (<strong>CVMJ</strong>), volume 7, pages 335–347 (2021). <span class=\"award-badge\" title=\"Computational Visual Media, 2021\"><svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"15.5\" r=\"4.5\"/><path d=\"M8.8 11.8 6 3.5h4.2L12 7.6l1.8-4.1H18l-2.8 8.3\"/></svg>Best Paper Award</span> <a href=\"https://arxiv.org/abs/2012.07086\">pdf</a>, <a href=\"https://github.com/hustvl/EfficientPose\">code</a>, <a href=\"bib/cvmj_pose.txt\">bib</a>\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "deep-high-resolution-representation-learning-for-visual-recognit",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li><p>Jingdong Wang, Ke Sun, Tianheng Cheng, Borui Jiang, Chaorui Deng, Yang Zhao, Dong Liu, Yadong Mu, Mingkui Tan, Xinggang Wang, Wenyu Liu, Bin Xiao. <strong>Deep High-Resolution Representation Learning for Visual Recognition</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>),  vol. 43, no. 10, pp. 3349-3364, 1 Oct. 2021, doi: 10.1109/TPAMI.2020.2983686. <a href=\"https://arxiv.org/pdf/1908.07919.pdf\">pdf</a>, <a href=\"https://github.com/HRNet\">code</a>, <a href=\"bib/wang2020deep.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "occluded-video-instance-segmentation-dataset-and-challenge",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li><p>Jiyang Qi, Yan Gao, Yao Hu, Xinggang Wang, Xiaoyu Liu, Xiang Bai, Serge Belongie, Alan Yuille, Philip Torr, Song Bai. <strong>Occluded Video Instance Segmentation: Dataset and Challenge</strong>. Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>) Datasets and Benchmarks Track, 2021.\n  </p></li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "you-only-look-at-one-sequence-rethinking-transformer-in-vision-t",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li><p>Yuxin Fang#, Bencheng Liao#, Xinggang Wang*, Jiemin Fang, Jiyang Qi, Rui Wu, Jianwei Niu, Wenyu Liu. <strong>You Only Look at One Sequence: Rethinking Transformer in Vision through Object Detection</strong>. Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>), 2021. <a href=\"https://arxiv.org/abs/2106.00666\">pdf</a>, <a href=\"https://github.com/hustvl/YOLOS\">code</a>, <a href=\"bib/fang2021yolos.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "fna-fast-network-adaptation-via-parameter-remapping-and-architec",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li><p>Jiemin Fang#, Yuzhu Sun#, Qian Zhang, Kangjian Peng, Yuan Li, Wenyu Liu, Xinggang Wang*. <strong>FNA++: Fast Network Adaptation via Parameter Remapping and Architecture Search</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>), vol. 43, no. 9, pp. 2990-3004, 1 Sept. 2021, doi: 10.1109/TPAMI.2020.3044416. <a href=\"https://arxiv.org/abs/2006.12986\">pdf</a>, <a href=\"https://github.com/JaminFong/FNA\">code</a>, <a href=\"bib/fang2020fna.txt\">bib</a>\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "eat-nas-elastic-architecture-transfer-for-accelerating-large-sca",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li><p>Jiemin Fang, Yukang Chen, Xinbang Zhang, Qian Zhang, Chang Huang, Gaofeng Meng, Wenyu Liu, Xinggang Wang*. <strong>EAT-NAS: Elastic Architecture Transfer for Accelerating Large-scale Neural Architecture Search</strong>.  Science China Information Sciences (<strong>SCIS</strong>), Volume 64, Issue 9: 192106 (2021) https://doi.org/10.1007/s11432-020-3112-8. <a href=\"https://arxiv.org/abs/1901.05884\">pdf</a>, <a href=\"https://github.com/JaminFong/EAT-NAS\">code</a>, <a href=\"bib/scis_eatnas.txt\">bib</a>\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "learning-to-focus-cascaded-feature-matching-network-for-few-shot",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li><p>Mengting Chen, Xinggang Wang, Heng Luo, Yifeng Geng and Wenyu Liu*. <strong>Learning to Focus: Cascaded Feature Matching Network for Few-shot Image Recognition</strong>. Science China Information Sciences (<strong>SCIS</strong>), 64, 192105 (2021). https://doi.org/10.1007/s11432-020-2973-7. <a href=\"https://arxiv.org/abs/2101.05018\">pdf</a>, <a href=\"bib/scis_cfmn.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "instances-as-queries",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li><p>\n    Yuxin Fang#, Shusheng Yang#, Xinggang Wang*, Yu Li, Chen Fang, Ying Shan, Bin Feng, Wenyu Liu. <strong>Instances as Queries</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2021. <a href=\"https://arxiv.org/abs/2105.01928\">pdf</a>, <a href=\"https://github.com/hustvl/QueryInst\">code</a>.\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "crossover-learning-for-fast-online-video-instance-segmentation",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li><p>\n    Shusheng Yang#, Yuxin Fang#, Xinggang Wang*, Yu Li, Chen Fang, Ying Shan, Bin Feng, Wenyu Liu. <strong>Crossover Learning for Fast Online Video Instance Segmentation</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2021. <a href=\"https://arxiv.org/abs/2104.05970\">pdf</a>, <a href=\"https://github.com/hustvl/CrossVIS\">code</a>.\n  </p></li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "hierarchical-aggregation-for-3d-instance-segmentation",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li><p>\n    Shaoyu Chen, Jiemin Fang, Qian Zhang, Wenyu Liu, Xinggang Wang*. <strong>Hierarchical Aggregation for 3D Instance Segmentation</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2021. <a href=\"https://github.com/hustvl/HAIS\">code</a>.\n  </p></li>",
+    "topics": [
+      "3d-4d-vision",
+      "segmentation"
+    ]
+  },
+  {
+    "id": "context-sensitive-temporal-feature-learning-for-gait-recognition",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li><p>\n    Xiaohu Huang, Duowang Zhu, Hao Wang, Xinggang Wang, Bo Yang, Botao He, Wenyu Liu, Bin Feng. <strong>Context-Sensitive Temporal Feature Learning for Gait Recognition</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2021. <a href=\"https://github.com/OliverHxh/CSTL\">code</a>.\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "weakly-supervised-instance-segmentation-via-class-agnostic-learn",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li><p>\n    Xinggang Wang, Jiapei Feng, Bin Hu, Qi Ding, Longjin Ran, Xiaoxin Chen, Wenyu Liu. <strong>Weakly-supervised Instance Segmentation via Class-agnostic Learning with Salient Images</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2021. <a href=\"https://arxiv.org/pdf/2104.01526.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/BoxCaseg\">code</a>.</p>\n  </li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "human-de-occlusion-invisible-perception-and-recovery-for-humans",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li><p>\n    Qiang Zhou, Shiyin Wang, Yitong Wang, Zilong Huang, Xinggang Wang*. <strong>Human De-occlusion: Invisible Perception and Recovery for Humans</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2021. <a href=\"https://arxiv.org/pdf/2103.11597v1.pdf\">pdf</a>, <a href=\"https://sydney0zq.github.io/ahp/\">dataset</a>.</p>\n  </li>",
+    "topics": []
+  },
+  {
+    "id": "deep-graph-cut-network-for-weakly-supervised-semantic-segmentati",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li><p>Jiapei Feng, Xinggang Wang*, Wenyu Liu. <strong>Deep Graph Cut Network for Weakly-supervised Semantic Segmentation</strong>. Science China Information Sciences (<strong>SCIS</strong>), Volume 64, Issue 3: 130105 (2021) https://doi.org/10.1007/s11432-020-3065-4, <a href=\"pubs/scis-dgcn.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/DGCN\">code</a>, <a href=\"bib/scis_dgcn.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "learning-generalizable-deep-feature-using-triplet-batch-center-l",
+    "section": "major",
+    "year_group": "2021",
+    "li_html": "<li><p>Bin Hu#, Jiwei Xu#, Xinggang Wang*. <strong>Learning Generalizable Deep Feature using Triplet-Batch-Center Loss for Person Re-identification</strong>. Science China Information Sciences (<strong>SCIS</strong>) 64, 120111 (2021). https://doi.org/10.1007/s11432-019-2943-6, <a href=\"http://engine.scichina.com/doi/10.1007/s11432-019-2943-6\">pdf</a>, <a href=\"https://github.com/hustvl/tbcl\">code</a>, <a href=\"bib/scis_tbcl.txt\">bib</a></p>\n  </li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "boundary-preserving-mask-r-cnn",
+    "section": "major",
+    "year_group": "2020",
+    "li_html": "<li value=\"118\"><p>Tianheng Cheng, Xinggang Wang, Lichao Huang, Wenyu Liu. <strong>Boundary-preserving Mask R-CNN</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2020. <a href=\"https://arxiv.org/pdf/2007.08921.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/BMaskR-CNN\">code</a>, <a href=\"bib/cheng2020boundary.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "segmentation",
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "iou-aware-single-stage-object-detector-for-accurate-localization",
+    "section": "major",
+    "year_group": "2020",
+    "li_html": "<li><p>Shengkai Wu, Xiaoping Li, Xinggang Wang. <strong>IoU-aware single-stage object detector for accurate localization.</strong> Image and Vision Computing (<strong>IMAVIS</strong>) (2020): 103911. <a href=\"https://arxiv.org/pdf/1912.05992.pdf\">pdf</a>, <a href=\"https://github.com/ShengkaiWu/IoU-aware-single-stage-object-detector\">code</a>, <a href=\"bib/wu2020iou.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "densely-connected-search-space-for-more-flexible-neural-architec",
+    "section": "major",
+    "year_group": "2020",
+    "li_html": "<li><p>Jiemin Fang, Yuzhu Sun, Qian Zhang, Yuan Li, Wenyu Liu, Xinggang Wang. <strong>Densely Connected Search Space for More Flexible Neural Architecture Search</strong>. <strong>CVPR</strong>, 2020. <a href=\"https://arxiv.org/abs/1906.09607\">pdf</a>, <a href=\"https://github.com/JaminFong/DenseNAS\">code</a>, <a href=\"bib/fang2020densely.txt\">bib</a>\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "fast-neural-network-adaptation-via-parameter-remapping-and-archi",
+    "section": "major",
+    "year_group": "2020",
+    "li_html": "<li><p>Jiemin Fang#, Yuzhu Sun#, Kangjian Peng#, Qian Zhang, Yuan Li, Wenyu Liu, Xinggang Wang. <strong>Fast Neural Network Adaptation via Parameter Remapping and Architecture Search</strong>. International Conference on Learning Representations (<strong>ICLR</strong>) 2020. <a href=\"https://openreview.net/pdf?id=rklTmyBKPH\">pdf</a>, <a href=\"https://github.com/JaminFong/FNA\">code</a>, <a href=\"bib/fang2019fast.txt\">bib</a>\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "diversity-transfer-network-for-few-shot-learning",
+    "section": "major",
+    "year_group": "2020",
+    "li_html": "<li><p>Mengting Chen#, Yuxin Fang#, Xinggang Wang, Heng Luo, Yifeng Geng, Xinyu Zhang, Chang Huang, Wenyu Liu, Bo Wang. <strong>Diversity Transfer Network for Few-Shot Learning</strong>. AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>) 2020. <strong>Oral presentation.</strong> <a href=\"https://arxiv.org/pdf/1912.13182.pdf\">pdf</a>, <a href=\"https://github.com/Yuxin-CV/DTN\">code</a>, <a href=\"bib/chen2020diversity.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "a-weakly-supervised-framework-for-covid-19-classification-and-le",
+    "section": "major",
+    "year_group": "2020",
+    "li_html": "<li><p>Xinggang Wang#, Xianbo Deng#, Qing Fu#, Qiang Zhou#, Jiapei Feng, Hui Ma, Wenyu Liu, Chuansheng Zheng. <strong>A Weakly-supervised Framework for COVID-19 Classification and Lesion Localization from Chest CT</strong>. IEEE Transactions on Medical Imaging (<strong>IEEE TMI</strong>), vol. 39, no. 8, pp. 2615-2625, Aug. 2020, doi: 10.1109/TMI.2020.2995965. <a href=\"https://doi.org/10.1109/TMI.2020.2995965\">pdf</a>, <a href=\"https://github.com/sydney0zq/covid-19-detection\">code</a>, <a href=\"bib/wang2020weakly.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "segmentation",
+      "medical-imaging",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "cascaded-boundary-network-for-high-quality-temporal-action-propo",
+    "section": "major",
+    "year_group": "2020",
+    "li_html": "<li><p>\n    Liang Xu, Xinggang Wang, Wenyu Liu, Bin Feng, <b>Cascaded Boundary Network for High-Quality Temporal Action Proposal Generation</b>, in IEEE Transactions on Circuits and Systems for Video Technology (<strong>IEEE TCSVT</strong>), vol. 30, no. 10, pp. 3702-3713, Oct. 2020, doi: 10.1109/TCSVT.2019.2944430. <a href=\"bib/xu2020cascaded.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "generative-model"
+    ]
+  },
+  {
+    "id": "maskmitosis-a-deep-learning-framework-for-fully-supervised-weakl",
+    "section": "major",
+    "year_group": "2020",
+    "li_html": "<li><p>Meriem Sebai, Xinggang Wang, Tianjiang Wang. <strong>MaskMitosis: a deep learning framework for fully supervised, weakly supervised, and unsupervised mitosis detection in histopathology images</strong>, Med Biol Eng Comput 58, 1603–1623 (2020). https://doi.org/10.1007/s11517-020-02175-z, <a href=\"https://github.com/MeriemSebai/MaskMitosis\">code</a>, <a href=\"bib/sebai2020maskmitosis.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "segmentation",
+      "detection-tracking",
+      "medical-imaging",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "learning-from-synthetic-images-via-active-pseudo-labeling",
+    "section": "major",
+    "year_group": "2020",
+    "li_html": "<li><p>Liangchen Song, Yonghao Xu, Lefei Zhang, Bo Du, Qian Zhang, Xinggang Wang. <strong>Learning from Synthetic Images via Active Pseudo-Labeling</strong>. IEEE Transactions on Image Processing (<strong>IEEE TIP</strong>), vol. 29, pp. 6452-6465, 2020, doi: 10.1109/TIP.2020.2989100. <a href=\"https://github.com/LcDog/APL\">code</a>, <a href=\"bib/song2020learning.txt\">bib</a>\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "defect-image-sample-generation-with-gan-for-improving-defect-rec",
+    "section": "major",
+    "year_group": "2020",
+    "li_html": "<li><p> Shuanlong Niu, Bin Li, Xinggang Wang, Hui Lin. <strong>Defect Image Sample Generation with GAN for Improving Defect Recognition</strong>. IEEE Transactions on Automation Science and Engineering (<strong>IEEE TASE</strong>), vol. 17, no. 3, pp. 1611-1622, July 2020, doi: 10.1109/TASE.2020.2967415. <a href=\"bib/niu2020defect.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "generative-model",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "unsupervised-domain-adaptive-re-identification-theory-and-practi",
+    "section": "major",
+    "year_group": "2020",
+    "li_html": "<li><p>Liangchen Song, Cheng Wang, Lefei Zhang, Bo Du, Qian Zhang, Chang Huang, Xinggang Wang. <strong>Unsupervised Domain Adaptive Re-Identification: Theory and Practice</strong>. <strong>Pattern Recognition</strong>, Volume 102, June 2020, 107173. <a href=\"https://arxiv.org/abs/1807.11334\">pdf</a>, <a href=\"https://github.com/LcDog/DomainAdaptiveReID\">code</a>, <a href=\"bib/song2020unsupervised.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "semantic-image-segmentation-by-scale-adaptive-networks",
+    "section": "major",
+    "year_group": "2020",
+    "li_html": "<li><p>Zilong Huang, Chunyu Wang, Xinggang Wang*, Wenyu Liu, Jingdong Wang. <strong>Semantic Image Segmentation by Scale-Adaptive Networks</strong>.  IEEE Transactions on Image Processing (<strong>IEEE TIP</strong>), vol. 29, pp. 2066-2077, 2020, doi: 10.1109/TIP.2019.2941644.  <a href=\"pubs/san_tip.pdf\">pdf</a>, <a href=\"https://github.com/speedinghzl/Scale-Adaptive-Network\">code</a>, <a href=\"bib/huang2019semantic.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "pose-anchor-a-single-stage-hand-keypoint-detection-network",
+    "section": "major",
+    "year_group": "2020",
+    "li_html": "<li><p>Yuan Li, Xinggang Wang, Wenyu Liu, Bin Feng*. <strong>Pose Anchor: A Single-stage Hand Keypoint Detection Network</strong>.  IEEE Transactions on Circuits and Systems for Video Technology (<strong>IEEE TCSVT</strong>), vol. 30, no. 7, pp. 2104-2113, July 2020, doi: 10.1109/TCSVT.2019.2912620. <a href=\"https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8695062\">pdf</a>, <a href=\"bib/li2020pose.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "object-detection-in-videos-by-high-quality-object-linking",
+    "section": "major",
+    "year_group": "2020",
+    "li_html": "<li><p>Peng Tang, Chunyu Wang, Xinggang Wang, Wenyu Liu*, Wenjun Zeng, Jingdong Wang. <strong>Object Detection in Videos by High Quality Object Linking</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>), vol. 42, no. 5, pp. 1272-1278, 1 May 2020, doi: 10.1109/TPAMI.2019.2910529. <a href=\"https://arxiv.org/pdf/1801.09823.pdf\">pdf</a>, <a href=\"bib/tang2020object.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "pcl-proposal-cluster-learning-for-weakly-supervised-object-detec",
+    "section": "major",
+    "year_group": "2020",
+    "li_html": "<li><p>Peng Tang, Xinggang Wang*, Song Bai, Wei Shen, Xiang Bai, Wenyu Liu, Alan Yuille. <strong>PCL: Proposal Cluster Learning for Weakly Supervised Object Detection</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>), vol. 42, no. 1, pp. 176-191, 1 Jan. 2020, doi: 10.1109/TPAMI.2018.2876304. <a href=\"https://arxiv.org/pdf/1807.03342.pdf\">pdf</a>, <a href=\"https://github.com/ppengtang/pcl.pytorch\">code</a>, <a href=\"bib/tang2020proposal.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "ccnet-criss-cross-attention-for-semantic-segmentation-2019",
+    "section": "major",
+    "year_group": "2019",
+    "li_html": "<li value=\"133\"><p>Zilong Huang, Xinggang Wang, Lichao Huang, Chang Huang, Yunchao Wei, Wenyu Liu. <strong>CCNet: Criss-Cross Attention for Semantic Segmentation</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2019. <a href=\"https://arxiv.org/pdf/1811.11721.pdf\">pdf</a>, <a href=\"https://github.com/speedinghzl/CCNet\">code</a>, <a href=\"bib/huang2020ccnet.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "segmentation",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "mask-scoring-r-cnn",
+    "section": "major",
+    "year_group": "2019",
+    "li_html": "<li><p>\n  Zhaojin Huang, Lichao Huang, Yongchao Gong, Chang Huang, Xinggang Wang. <strong>Mask Scoring R-CNN</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2019. <strong>Oral (5.6% acceptance rate)</strong> <a href=\"https://openaccess.thecvf.com/content_CVPR_2019/papers/Huang_Mask_Scoring_R-CNN_CVPR_2019_paper.pdf\">pdf</a>, <a href=\"https://github.com/zjhuang22/maskscoring_rcnn\">code</a>, <a href=\"bib/huang2019mask.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "segmentation",
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "renas-reinforced-evolutionary-neural-architecture-search",
+    "section": "major",
+    "year_group": "2019",
+    "li_html": "<li><p>\n  Yukang Chen, Gaofeng Meng, Qian Zhang, Shiming Xiang, Chang Huang, Lisen Mu, Xinggang Wang. <strong>RENAS: Reinforced Evolutionary Neural Architecture Search</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2019. <a href=\"https://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_RENAS_Reinforced_Evolutionary_Neural_Architecture_Search_CVPR_2019_paper.pdf\">pdf</a>, <a href=\"https://github.com/yukang2017/RENAS\">code</a>, <a href=\"bib/chen2019renas.txt\">bib</a>\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "direct-object-recognition-without-line-of-sight-using-optical-co",
+    "section": "major",
+    "year_group": "2019",
+    "li_html": "<li><p>\n  Xin Lei, Liangyu He, Ken Xingze Wang, Xinggang Wang, Yixuan Tan, Yihan Du, Shanhui Fan, Zongfu Yu. <strong>Direct Object Recognition Without Line-of-sight Using Optical Coherence</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2019. <a href=\"https://openaccess.thecvf.com/content_CVPR_2019/papers/Lei_Direct_Object_Recognition_Without_Line-Of-Sight_Using_Optical_Coherence_CVPR_2019_paper.pdf\">pdf</a>, <a href=\"bib/lei2019direct.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "detect-or-track-towards-cost-effective-video-object-detection-tr",
+    "section": "major",
+    "year_group": "2019",
+    "li_html": "<li><p>\n  Hao Luo, Wenxuan Xie, Xinggang Wang, Wenjun Zeng. <strong>Detect or Track: Towards Cost-Effective Video Object Detection/Tracking</strong>. AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>) 2019. <a href=\"https://arxiv.org/abs/1811.05340\">pdf</a>, <a href=\"bib/luo2019detect.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "bag-similarity-network-for-deep-multi-instance-learning",
+    "section": "major",
+    "year_group": "2019",
+    "li_html": "<li><p>Xinggang Wang, Yongluan Yan, Peng Tang, Wenyu Liu*, Xiaojie Guo. <strong>Bag similarity network for deep multi-instance learning</strong>.  Information Sciences (<strong>InfSci</strong>), Volume 504, December 2019, Pages 578-588, Doi: 10.1016/j.ins.2019.07.071. <a href=\"pubs/bsn.pdf\">pdf</a>, <a href=\"bib/wang2019bag.txt\">bib</a>\n   </p></li>",
+    "topics": []
+  },
+  {
+    "id": "weakly-supervised-mitosis-detection-in-breast-histopathology-ima",
+    "section": "major",
+    "year_group": "2019",
+    "li_html": "<li><p>Chao Li, Xinggang Wang, Wenyu Liu*, Longin Latecki, Bo Wang, Junzhou Huang. <strong>Weakly Supervised Mitosis Detection in Breast Histopathology Images using Concentric Loss</strong>. <strong>Medical Image Analysis</strong>. Volume 53, Pages 165-178 (2019) <a href=\"./pubs/segmitosis.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/SegMitos_mitosis_detection\">code</a>, <a href=\"bib/li2019weakly.txt\">bib</a>\n   </p></li>",
+    "topics": [
+      "detection-tracking",
+      "medical-imaging"
+    ]
+  },
+  {
+    "id": "deep-fishernet-for-image-classification",
+    "section": "major",
+    "year_group": "2019",
+    "li_html": "<li><p>Peng Tang, Xinggang Wang*, Baoguang Shi, Xiang Bai, Wenyu Liu, Zhuowen Tu. <strong>Deep FisherNet for Image Classification</strong>. IEEE Transactions on Neural Networks and Learning Systems (<strong>IEEE TNNLS</strong>) vol. 30, no. 7, pp. 2244-2250, July 2019, doi: 10.1109/TNNLS.2018.2874657. <a href=\"https://arxiv.org/abs/1608.00182\">pdf</a>, <a href=\"bib/tang2018deep.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "aster-an-attentional-scene-text-recognizer-with-flexible-rectifi",
+    "section": "major",
+    "year_group": "2019",
+    "li_html": "<li><p>Baoguang Shi, Mingkun Yang, Xinggang Wang, Pengyuan Lyu, Cong Yao, Xiang Bai*. <strong>ASTER: An attentional scene text recognizer with flexible rectification</strong>. IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>IEEE TPAMI</strong>) vol. 41, no. 9, pp. 2035-2048, 1 Sept. 2019, doi: 10.1109/TPAMI.2018.2848939. <a href=\"http://122.205.5.5:8071/UpLoadFiles/Papers/ASTER_PAMI18.pdf\">pdf</a>, <a href=\"https://github.com/bgshih/aster\">code</a>, <a href=\"bib/shi2018aster.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "weakly-supervised-region-proposal-network-and-object-detection",
+    "section": "major",
+    "year_group": "2018",
+    "li_html": "<li value=\"142\"><p>\n  Peng Tang, Xinggang Wang, Angtian Wang, Yongluan Yan, Wenyu Liu, Junzhou Huang, Alan Yuille. <strong>Weakly Supervised Region Proposal Network and Object Detection</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2018. <a href=\"https://openaccess.thecvf.com/content_ECCV_2018/papers/Peng_Tang_Weakly_Supervised_Region_ECCV_2018_paper.pdf\">pdf</a>, <a href=\"bib/tang2018weakly.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "mancs-a-multi-task-attentional-network-with-curriculum-sampling",
+    "section": "major",
+    "year_group": "2018",
+    "li_html": "<li><p>\n  Cheng Wang, Qian Zhang, Chang Huang, Wenyu Liu, Xinggang Wang*. <strong>Mancs: A Multi-task Attentional Network with Curriculum Sampling for Person Re-identification</strong>. European Conference on Computer Vision (<strong>ECCV</strong>) 2018. <a href=\"https://openaccess.thecvf.com/content_ECCV_2018/papers/Cheng_Wang_Mancs_A_Multi-task_ECCV_2018_paper.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/mancs\">code</a>, <a href=\"bib/wang2018mancs.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "weakly-supervised-semantic-segmentation-network-with-deep-seeded",
+    "section": "major",
+    "year_group": "2018",
+    "li_html": "<li><p>\n  Zilong Huang, Xinggang Wang*, Jiasi Wang, Wenyu Liu, Jingdong Wang. <strong>Weakly-Supervised Semantic Segmentation Network with Deep Seeded Region Growing</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2018. <a href=\"./pubs/cvpr18-dsrg.pdf\">pdf</a>, <a href=\"https://github.com/speedinghzl/dsrg\">code</a>, <a href=\"bib/huang2018weakly.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "revisiting-multiple-instance-neural-networks",
+    "section": "major",
+    "year_group": "2018",
+    "li_html": "<li><p>Xinggang Wang*, Yongluan Yan, Peng Tang, Xiang Bai*, Wenyu Liu. <strong>Revisiting Multiple Instance Neural Networks</strong>. <strong>Pattern Recognition</strong>, Volume 74, February 2018, Pages 15-24, Doi: 10.1016/j.patcog.2017.08.026. <a href=\"https://arxiv.org/pdf/1610.02501.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/MINNs\">code</a>, <a href=\"bib/wang2018revisiting.txt\">bib</a>\n  </p>\n  </li>",
+    "topics": []
+  },
+  {
+    "id": "deep-multi-instance-learning-with-dynamic-pooling",
+    "section": "major",
+    "year_group": "2018",
+    "li_html": "<li><p>\n  Yongluan Yan, Xinggang Wang, Xiaojie Guo, Jiemin Fang, Wenyu Liu, Junzhou Huang. <strong>Deep Multi-instance Learning with Dynamic Pooling</strong>. <strong>ACML</strong>, 2018. <a href=\"https://proceedings.mlr.press/v95/yan18a/yan18a.pdf\">pdf</a>, <a href=\"bib/yan2018deep.txt\">bib</a>\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "deep-attention-network-for-joint-hand-gesture-localization-and-r",
+    "section": "major",
+    "year_group": "2018",
+    "li_html": "<li><p> Yuan Li, Xinggang Wang, Wenyu Liu, Bin Feng*. <strong>Deep attention network for joint hand gesture localization and recognition using static RGB-D images</strong>. <strong>Information Sciences</strong>. Volume 441, May 2018, Pages 66-78. <a href=\"./pubs/attention_gesture.pdf\">pdf</a>, <a href=\"bib/li2018deep.txt\">bib</a>\n  </p>\n  </li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "deepmitosis-mitosis-detection-via-deep-detection-verification-an",
+    "section": "major",
+    "year_group": "2018",
+    "li_html": "<li><p>Chao Li, Xinggang Wang*, Wenyu Liu, Longin Latecki. <strong>DeepMitosis: Mitosis detection via deep detection, verification and segmentation networks</strong>. <strong>Medical Image Analysis</strong>. Volume 45, Pages 121-133, (2018) <a href=\"./pubs/MD.pdf\">pdf</a>, <a href=\"https://github.com/ChaoLi977/DeepMitosis\">code</a>, <a href=\"bib/li2018deepmitosis.txt\">bib</a>\n  </p>\n  </li>",
+    "topics": [
+      "segmentation",
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "object-level-proposals",
+    "section": "major",
+    "year_group": "2017",
+    "li_html": "<li value=\"149\"><p>\n  Jianxiang Ma, Anlong Ming, Zilong Huang, Xinggang Wang, Yu Zhou. <strong>Object-Level Proposals</strong>. <strong>ICCV</strong>, 2017. <a href=\"https://openaccess.thecvf.com/content_ICCV_2017/papers/Ma_Object-Level_Proposals_ICCV_2017_paper.pdf\">pdf</a>, <a href=\"bib/ma2017object.txt\">bib</a>\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "multiple-instance-detection-network-with-online-instance-classif",
+    "section": "major",
+    "year_group": "2017",
+    "li_html": "<li><p>Peng Tang, Xinggang Wang, Xiang Bai, and Wenyu Liu. <strong>Multiple Instance Detection Network with Online Instance Classifier Refinement</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2017. <a href=\"https://arxiv.org/abs/1704.00138\">pdf</a>, <a href=\"https://github.com/ppengtang/oicr\">code</a>, <a href=\"bib/tang2017multiple.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "textboxes-a-fast-text-detector-with-a-single-deep-neural-network",
+    "section": "major",
+    "year_group": "2017",
+    "li_html": "<li><p>Minghui Liao, Baoguang Shi, Xiang Bai, Xinggang Wang, Wenyu Liu. <strong>TextBoxes: A Fast Text Detector with a Single Deep Neural Network</strong>. AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>) 2017. <a href=\"https://arxiv.org/abs/1611.06779\">pdf</a>, <a href=\"https://github.com/MhLiao/TextBoxes\">code</a>, <a href=\"bib/liao2017textboxes.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "searching-for-prostate-cancer-by-fully-automated-magnetic-resona",
+    "section": "major",
+    "year_group": "2017",
+    "li_html": "<li><p>Xinggang Wang, Wei Yang, Jeffrey Weinreb, Juan Han, Qiubai Li, Xiangchuang Kong, Yongluan Yan, Zan Ke, Bo Luo, Tao Liu, Liang Wang*. <strong>Searching for prostate cancer by fully automated magnetic resonance imaging classification: deep learning versus non-deep learning</strong>. <strong>Scientific Reports</strong>, volume 7, Article number: 15415 (2017), doi:10.1038/s41598-017-15720-y. <a href=\"https://www.nature.com/articles/s41598-017-15720-y.pdf\">pdf</a>, <a href=\"bib/wang2017searching.txt\">bib</a>\n  </p>\n  </li>",
+    "topics": [
+      "medical-imaging",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "deep-patch-learning-for-weakly-supervised-object-classification",
+    "section": "major",
+    "year_group": "2017",
+    "li_html": "<li><p>Peng Tang, Xinggang Wang*,  Zilong Huang, Xiang Bai, Wenyu Liu. <strong>Deep Patch Learning for Weakly Supervised Object Classification and Discovery</strong>. <strong>Pattern Recognition</strong>, Volume 71, Pages 446-459, 2017. <a href=\"https://arxiv.org/pdf/1705.02429.pdf\">pdf</a> <a href=\"https://github.com/ppengtang/dpl\">code</a>, <a href=\"bib/tang2017deep.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "learning-multi-instance-deep-discriminative-patterns-for-image-c",
+    "section": "major",
+    "year_group": "2017",
+    "li_html": "<li><p>Peng Tang, Xinggang Wang, Bin Feng, Wenyu Liu*. <strong>Learning Multi-instance Deep Discriminative Patterns for Image Classification</strong>. IEEE Transactions on Image Processing (<strong>IEEE TIP</strong>), vol. 26, no. 7, pp. 3385-3396, July 2017.</p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "depth-projection-map-based-bag-of-contour-fragments-for-robust-h",
+    "section": "major",
+    "year_group": "2017",
+    "li_html": "<li><p>Bin Feng, Fangzi He, Xinggang Wang, Yongjiang Wu, Hao Wang, Sihua Yi, Wenyu Liu. <strong>Depth-Projection-Map-Based Bag of Contour Fragments for Robust Hand Gesture Recognition</strong>. IEEE Transactions on Human-Machine Systems (<strong>THMS</strong>) 47(4): 511-523 (2017)\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "learning-extremely-shared-middle-level-image-representation-for",
+    "section": "major",
+    "year_group": "2017",
+    "li_html": "<li><p>Peng Tang, Jin Zhang, Xinggang Wang*, Bin Feng, Fabio Roli, Wenyu Liu. <strong>Learning Extremely Shared Middle-level Image Representation for Scene Classification</strong>. Knowledge and Information Systems  <strong>(KIS)</strong>, 52, 509–530 (2017), doi:10.1007/s10115-016-1015-z <a href=\"https://github.com/hust-tp/ESMIR\">code</a></p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "robust-scene-text-recognition-with-automatic-rectification",
+    "section": "major",
+    "year_group": "2016",
+    "li_html": "<li value=\"157\"><p>Baoguang Shi, Xinggang Wang, Pengyuan Lv, Cong Yao, Xiang Bai. <strong>Robust Scene Text Recognition with Automatic Rectification</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2016. <a href=\"https://arxiv.org/abs/1603.03915\">pdf</a>, <a href=\"bib/shi2016robust.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "online-similarity-learning-for-visual-tracking",
+    "section": "major",
+    "year_group": "2016",
+    "li_html": "<li><p>Sihua Yi, Nan Jiang, Bin Feng, Xinggang Wang, Wenyu Liu. <strong>Online similarity learning for visual tracking</strong>. <strong>Information Sciences</strong>, 364-365: 33-50 (2016)</p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "unsupervised-local-deep-feature-for-image-recognition",
+    "section": "major",
+    "year_group": "2016",
+    "li_html": "<li><p>Yang Wang, Xinggang Wang*, Wenyu Liu. <strong>Unsupervised Local Deep Feature for Image Recognition</strong>. <strong>Information Sciences</strong> (2016), Volume 351, 10 July 2016, Pages 67–75, 10.1016/j.ins.2016.02.044. <a href=\"bib/wang2016unsupervised.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "relaxed-multiple-instance-svm-with-application-to-object-discove",
+    "section": "major",
+    "year_group": "2015",
+    "li_html": "<li value=\"160\"><p>Xinggang Wang#, Zhuotun Zhu#, Cong Yao, Xiang Bai. <strong>Relaxed Multiple-Instance SVM with Application to Object Discovery</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>) 2015. <a href=\"https://arxiv.org/abs/1510.01027\">pdf</a>, <a href=\"https://github.com/sunformoon/RMI-SVM-ICCV2015\">code</a>, <a href=\"bib/wang2015relaxed.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "deepcontour-a-deep-convolutional-feature-for-contour-detection",
+    "section": "major",
+    "year_group": "2015",
+    "li_html": "<li><p>Wei Shen, Xinggang Wang, Yan Wang, Xiang Bai, Zhijiang Zhang. <strong>DeepContour: A Deep Convolutional Feature for Contour Detection</strong>. IEEE Computer Society Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2015, Boston, USA. <a href=\"https://openaccess.thecvf.com/content_cvpr_2015/papers/Shen_DeepContour_A_Deep_2015_CVPR_paper.pdf\">pdf</a>, <a href=\"https://github.com/shenwei1231/DeepContour\">code</a>, <a href=\"bib/shen2015deepcontour.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "learning-discriminative-pattern-for-real-time-car-brand-recognit",
+    "section": "major",
+    "year_group": "2015",
+    "li_html": "<li><p>Chuanping Hu, Xiang Bai, Li Qi, Xinggang Wang, Gengjian Xue, Lin Mei. <strong>Learning Discriminative Pattern for Real-Time Car Brand Recognition</strong>. IEEE Transactions on Intelligent Transportation Systems (<strong>TITS</strong>) 16(6): 3170-3181 (2015)</p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "beyond-diffusion-process-neighbor-set-similarity-for-fast-re-ran",
+    "section": "major",
+    "year_group": "2015",
+    "li_html": "<li><p>Xiang Bai, Song Bai, Xinggang Wang*. <strong>Beyond diffusion process: Neighbor set similarity for fast re-ranking</strong>. <strong>Information Sciences</strong> Volume 325, 20 December 2015, Pages 342-354, doi: 10.1016/j.ins.2015.07.022. <a href=\"bib/bai2015beyond.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "generative-model"
+    ]
+  },
+  {
+    "id": "robust-foreground-detection-using-smoothness-and-arbitrariness-c",
+    "section": "major",
+    "year_group": "2014",
+    "li_html": "<li value=\"164\"><p> Xiaojie Guo, Xinggang Wang, Liang Yang, Xiaochun Cao and Yi Ma, <strong>Robust Foreground Detection Using Smoothness and Arbitrariness Constraints</strong>, European Conference on Computer Vision (<strong>ECCV</strong>), Zurich, September, 2014. <a href=\"http://cs.tju.edu.cn/orgs/vision/~xguo/publication/eccv14_guo.pdf\">pdf</a>, <a href=\"bib/guo2014robust.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "shape-vocabulary-a-robust-and-efficient-shape-representation-for",
+    "section": "major",
+    "year_group": "2014",
+    "li_html": "<li> <p>Xiang Bai, Cong Rao, and Xinggang Wang*. <strong>Shape Vocabulary: A Robust and Efficient Shape Representation for Shape Matching</strong>. IEEE Transactions on Image Processing <strong>(TIP)</strong> vol. 23, no. 9, pp. 3935-3949, Sept. 2014, doi: 10.1109/TIP.2014.2336542. <a href=\"https://www.vlrlab.net/admin/uploads/avatars/Shape_Vocabulary_A_Robust_and_Efficient_Shape_Representation_for_Shape_Matching.pdf\">pdf</a>, <a href=\"bib/bai2014shape.txt\">bib</a>\n  </p> </li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "thermodynamic-design-of-stirling-engine-using-multi-objective-pa",
+    "section": "major",
+    "year_group": "2014",
+    "li_html": "<li> <p>Chen Duan, Xinggang Wang, Shuiming Shu, Changwei Jing, and Huawei Chang. <strong>Thermodynamic design of Stirling engine using multi-objective particle swarm optimization algorithm</strong>. <strong>Energy Conversion and Management</strong>, Volume 84, August 2014, Pages 88–96.</p> </li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "robust-subspace-discovery-via-relaxed-rank-minimization",
+    "section": "major",
+    "year_group": "2014",
+    "li_html": "<li> <p>Xinggang Wang, Zhengdong Zhang, Yi Ma, Xiang Bai, Wenyu Liu, and Zhuowen Tu. <strong>Robust Subspace Discovery via Relaxed Rank Minimization</strong>. <strong>Neural Computation</strong>, Vol. 26, No. 3 April 2014, Pages 611-635. <a href=\"./pubs/subspace_v7.pdf\">pdf</a>, <a href=\"pubs/subspace_learning.zip\">code</a>, <a href=\"bib/wang2014robust.txt\">bib</a>\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "bag-of-contour-fragments-for-robust-shape-classification",
+    "section": "major",
+    "year_group": "2014",
+    "li_html": "<li> <p>Xinggang Wang, Bin Feng, Xiang Bai, Wenyu Liu, and Longin Jan Latecki. <strong>Bag of Contour Fragments for Robust Shape Classification</strong>. <strong>Pattern Recognition</strong>, Volume 47, Issue 6, June 2014, Pages 2116-2125. <a href=\"./pubs/BagOfShape.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/BCF\">code</a>, <a href=\"bib/wang2014bag.txt\">bib</a>\n  </p> </li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "max-margin-multiple-instance-dictionary-learning",
+    "section": "major",
+    "year_group": "2009 - 2013",
+    "li_html": "<li value=\"169\"><p> Xinggang Wang, Baoyuan Wang, Xiang Bai, Wenyu Liu, and Zhuowen Tu, <strong>Max-Margin Multiple Instance Dictionary Learning</strong>, International Conference on Machine Learning (<strong>ICML</strong>), Atlanta, June, 2013. <a href=\"./pubs/icml2013_wang13d.pdf\">pdf</a>, <a href=\"https://bitbucket.org/xinggangw/mmdl\" >code</a>, <a href=\"bib/wang2013max.txt\">bib</a>\n    </p></li>",
+    "topics": []
+  },
+  {
+    "id": "fan-shape-model-for-object-detection",
+    "section": "major",
+    "year_group": "2009 - 2013",
+    "li_html": "<li> <p>Xinggang Wang, Xiang Bai, Tianyang Ma, Wenyu Liu, Longin Latecki. <strong>Fan Shape Model for Object Detection</strong>. IEEE Computer Society Conference on Computer vision and Pattern Recognition (<strong>CVPR</strong>), 2012. <a href=\"./pubs/cvpr12.pdf\">pdf</a>,\n    <a href=\"https://sites.google.com/site/cvxwang/fsm_release.7z?attredirects=0\">code</a>, <a href=\"bib/wang2012fan.txt\">bib</a> </p> </li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "maximal-cliques-that-satisfy-hard-constraints-with-application-t",
+    "section": "major",
+    "year_group": "2009 - 2013",
+    "li_html": "<li><p> Xinggang Wang, Xiang Bai, Xingwei Yang, Wenyu Liu, and Longin Jan Latecki. <strong>Maximal Cliques that Satisfy Hard Constraints with Application to Deformable Object Model Learning</strong>. Conference on Neural Information Processing Systems (<strong>NIPS</strong>) 2011.\n    <a href=\"./pubs/nips11.pdf\">pdf</a>, <a href=\"bib/wang2011maximal.txt\">bib</a>  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "feature-context-for-object-detection-and-image-classification",
+    "section": "major",
+    "year_group": "2009 - 2013",
+    "li_html": "<li><p> Xinggang Wang, Xiang Bai, Wenyu Liu, Longin Latecki. <strong>Feature Context for Object Detection and Image Classification</strong>. IEEE Computer Society Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2011. <a href=\"./pubs/cvpr11.pdf\" >pdf</a>, <a href=\"https://sites.google.com/site/cvxwang/feature_context.zip?attredirects=0\">code</a>, <a href=\"bib/wang2011feature.txt\">bib</a> </p></li>",
+    "topics": [
+      "detection-tracking",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "object-recognition-using-junctions",
+    "section": "major",
+    "year_group": "2009 - 2013",
+    "li_html": "<li><p> Bo Wang, Xiang Bai, Xinggang Wang, Wenyu Liu, Zhuowen Tu. <strong>Object Recognition using Junctions</strong>. European Conference on Computer Vision (<strong>ECCV</strong>), 2010. <a href=\"./pubs/eccv-ju.pdf\" >pdf</a>\n    </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "co-transduction-for-shape-retrieval",
+    "section": "major",
+    "year_group": "2009 - 2013",
+    "li_html": "<li><p> Xiang Bai, Bo Wang, Xinggang Wang, Wenyu Liu, Zhuowen Tu. <strong>Co-Transduction for Shape Retrieval</strong>. European Conference on Computer Vision (<strong>ECCV</strong>), 2010. <a href=\"./pubs/eccv-co.pdf\">pdf</a>\n      </p></li>",
+    "topics": [
+      "3d-4d-vision",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "active-skeleton-for-non-rigid-object-detection",
+    "section": "major",
+    "year_group": "2009 - 2013",
+    "li_html": "<li><p> Xiang Bai, Xinggang Wang, Longin Jan Latecki, Wenyu Liu, and Zhuowen Tu. <strong>Active Skeleton for Non-rigid Object Detection</strong>. IEEE International Conference on Computer Vision (<strong>ICCV</strong>), 2009. <a href=\"./pubs/iccv09.pdf\">pdf</a>, <a href=\"http://www.loni.ucla.edu/~ztu/publication/active_skeleton_code.zip\">code</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "food-r1-a-unified-multi-task-food-vision-language-model-with-rei",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>\n    Yu Zhu, Yongkang Li, Wenjie Zhu, Haoyi Jiang, Wenyu Liu, Wei Yang, Bin Li, Xinggang Wang. <strong>Food-R1: A Unified Multi-Task Food Vision-Language Model with Reinforcement Learning</strong>. Chinese Conference on Pattern Recognition and Computer Vision (<strong>PRCV</strong>) 2026. <a href=\"https://github.com/hustvl/Food-R1\">code</a>.\n  </p></li>",
+    "topics": [
+      "multimodal-llm"
+    ]
+  },
+  {
+    "id": "cross-layer-attentive-feature-upsampling-for-low-latency-semanti",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>\n    Tianheng Cheng, Xinggang Wang, Junchao Liao, Wenyu Liu. <strong>Cross-Layer Attentive Feature Upsampling for Low-latency Semantic Segmentation</strong>. Machine Vision and Applications, 36, 18, 2025. <a href=\"https://doi.org/10.1007/s00138-024-01631-2\">DOI: 10.1007/s00138-024-01631-2</a>.\n  </p></li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "polardetr-polar-parametrization-for-vision-based-surround-view-3",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>\n    Shaoyu Chen, Xinggang Wang, Tianheng Cheng, Qian Zhang, Chang Huang, Wenyu Liu. <strong>PolarDETR: Polar Parametrization for vision-based surround-view 3D detection</strong>. <strong>Image and Vision Computing</strong>, Volume 156, 2025, 105438. <a href=\"https://github.com/hustvl/PolarDETR\">code</a>.\n  </p></li>",
+    "topics": [
+      "3d-4d-vision",
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "personvit-large-scale-self-supervised-vision-transformer-for-per",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>\n    Bin Hu, Xinggang Wang, Wenyu Liu. <strong>Personvit: Large-scale Self-supervised Vision Transformer for Person Re-identification</strong>. <strong>Machine Vision and Applications</strong>, Volume 36, Number 2, pages 1–13, 2025. <a href=\"https://github.com/hustvl/personvit\">code</a>.\n  </p></li>",
+    "topics": [
+      "detection-tracking",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "learning-accurate-monocular-3d-voxel-representation-via-bilatera",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>\n    Tianheng Cheng, Haoyi Jiang, Shaoyu Chen, Bencheng Liao, Qian Zhang, Wenyu Liu, Xinggang Wang. <strong>Learning accurate monocular 3D voxel representation via bilateral voxel transformer</strong>. <strong>Image and Vision Computing</strong>, Volume 150, 2024, 105237. <a href=\"https://doi.org/10.1016/j.imavis.2024.105237\">DOI: 10.1016/j.imavis.2024.105237</a>, <a href=\"https://github.com/wondervictor/bvt\">code</a>.\n  </p></li>",
+    "topics": [
+      "3d-4d-vision",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "transgaze-exploring-plain-vision-transformers-for-gaze-estimatio",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>\n    Lang Ye, Xinggang Wang*, Jingfeng Yao, Wenyu Liu. <strong>Transgaze: exploring plain vision transformers for gaze estimation</strong>. <strong>Machine Vision and Applications</strong>, Volume 35, 128 (2024). <a href=\"https://doi.org/10.1007/s00138-024-01609-0\">DOI: 10.1007/s00138-024-01609-0</a>.\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "video-text-tracking-with-transformer-based-local-search",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>\n    Xingsheng Zhou, Cheng Wang, Xinggang Wang*, Wenyu Liu. <strong>Video text tracking with transformer-based local search</strong>. <strong>Neurocomputing</strong>, Volume 609, 15 September 2024, 128420. <a href=\"https://www.sciencedirect.com/science/article/pii/S0925231224011913\">DOI: 10.1016/j.neucom.2024.128420</a>.\n  </p></li>",
+    "topics": [
+      "detection-tracking",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "stabilized-activation-scale-estimation-for-precise-post-training",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>\n    Zhenyang Hao, Xinggang Wang*, Jiawei Liu, Zhihang Yuan, Dawei Yang, Wenyu Liu. <strong>Stabilized activation scale estimation for precise Post-Training Quantization</strong>. <strong>Neurocomputing</strong>, Volume 569, 7 February 2024, 127120, DOI: 10.1016/j.neucom.2023.127120. <a href=\"https://www.sciencedirect.com/science/article/pii/S0925231223012432\">pdf</a>, <a href=\"https://github.com/hustvl/StablePTQ\">code</a>.\n  </p></li>",
+    "topics": [
+      "efficient-llm"
+    ]
+  },
+  {
+    "id": "weakly-supervised-semantic-segmentation-via-online-pseudo-mask-c",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>\n    Jiapei Feng, Xinggang Wang, Te Li, Shanshan Ji, Wenyu Liu. <strong>Weakly-supervised semantic segmentation via online pseudo-mask correcting</strong>. Pattern Recognition Letters (<strong>PRL</strong>), 2023. <a href=\"https://www.sciencedirect.com/science/article/pii/S0167865522003531\">pdf</a>.\n  </p></li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "local-point-matching-network-for-stabilized-crowd-counting-and-l",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>\n    Lin Niu, Xinggang Wang, Chen Duan, Qiongxia Shen, Wenyu Liu. <strong>Local Point Matching Network for Stabilized Crowd Counting and Localization</strong>. Chinese Conference on Pattern Recognition and Computer Vision (<strong>PRCV</strong>) 2022, pp. 566-579\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "pyramid-self-attention-for-semantic-segmentation",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Jiyang Qi, Xinggang Wang*, Yao Hu, Xu Tang, Wenyu Liu. <strong>Pyramid Self-attention for Semantic Segmentation</strong>. Chinese Conference on Pattern Recognition and Computer Vision (<strong>PRCV</strong>), pp. 480-492, 2021.\n  </p></li>",
+    "topics": [
+      "segmentation",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "real-time-and-accurate-object-detection-in-compressed-video-by-l",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Xinggang Wang, Zhaojin Huang, Bencheng Liao, Lichao Huang, Yongchao Gong, Chang Huang. <strong>Real-Time and Accurate Object Detection in Compressed Video by Long Short-term Feature Aggregation</strong>. Computer Vision and Image Understanding (<strong>CVIU</strong>), Volume 206, 2021,103188, doi:10.1016/j.cviu.2021.103188. <a href=\"https://www.sciencedirect.com/science/article/abs/pii/S1077314221000321\">pdf</a>, <a href=\"https://github.com/hustvl/LSFA\">code</a>, <a href=\"bib/cviu_lsfa.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "object-recognition-for-remarkably-small-field-of-view-with-speck",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>\n  Qixin Hu, Siyan Xu, Xue-wen Chen, Xinggang Wang, Ken Xingze Wang. <strong>Object recognition for remarkably small field-of-view with speckles</strong>. Applied Physics Letters (<strong>APL</strong>), Vol.118, Issue 9, 2021. DOI: 10.1063/5.0040343, <a href=\"https://aip.scitation.org/doi/10.1063/5.0040343\">pdf</a>\n  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "deep-multi-metric-learning-for-text-independent-speaker-verifica",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Jiwei Xu, Xinggang Wang*, Wenyu Liu. <strong>Deep multi-metric learning for text-independent speaker verification</strong>. <strong>Neurocomputing</strong>, Volume 410, 14 October 2020, Pages 394-400. <a href=\"https://arxiv.org/pdf/2007.10479.pdf\">pdf</a>, <a href=\"https://github.com/GreatJiweix/DmmlTiSV\">code</a>, <a href=\"bib/xu2020deep.txt\">bib</a></p>\n  </li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "multi-scale-multi-patch-person-re-identification-with-exclusivit",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Cheng Wang, Liangchen Song, Guoli Wang, Qian Zhang, Xinggang Wang*. <strong>Multi-scale Multi-patch Person Re-Identification with Exclusivity Regularized Softmax</strong>.  <strong>Neurocomputing</strong>, Volume 382, 21 March 2020, Pages 64-70, doi:10.1016/j.neucom.2019.11.062. <a href=\"pubs/msmpreid.pdf\">pdf</a>, <a href=\"bib/wang2020multi.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "weakly-and-semi-supervised-fast-region-based-cnn-for-object-dete",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Xinggang Wang, Jiasi Wang, Peng Tang, Wenyu Liu*. <strong>Weakly- and Semi-Supervised Fast Region-Based CNN for Object Detection</strong>.  Journal of Computer Science and Technology (<strong>JCST</strong>) 34(6): 1269–1278 Nov. 2019. <a href=\"pubs/wassrcnn.pdf\">pdf</a>, <a href=\"bib/wang2019weakly.txt\">bib</a>\n  </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "automated-defect-inspection-of-led-chip-using-deep-convolutional",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Hui Lin, Bin Li, Xinggang Wang, Yufeng Shu, and Shuanglong Niu. <strong>Automated defect inspection of LED chip using deep convolutional neural network.</strong> Journal of Intelligent Manufacturing (<strong>J Intell Manuf</strong>) 30, no. 6 (2019): 2525-2534.</p></li>",
+    "topics": []
+  },
+  {
+    "id": "structured-random-forest-for-label-distribution-learning",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Mengting Chen, Xinggang Wang, Bin Feng, Wenyu Liu*. <strong>Structured random forest for label distribution learning</strong>. <strong>Neurocomputing</strong> Volume 320, 3 December 2018, Pages 171-182. <a href=\"./pubs/structRF.pdf\">pdf</a>, <a href=\"bib/chen2018structured.txt\">bib</a>\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "neural-features-for-pedestrian-detection",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Chao Li, Xinggang Wang, Wenyu Liu*. <strong>Neural features for pedestrian detection</strong>. <strong>Neurocomputing</strong>, Volume 238, 17 May 2017, Pages 420–432</p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "deep-sketch-feature-for-cross-domain-image-retrieval",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Xinggang Wang, Xiong Duan, Xiang Bai*. <strong>Deep sketch feature for cross-domain image retrieval</strong>. <strong>Neurocomputing</strong>, Volume 207, 26 September 2016, Pages 387–397. <a href=\"https://github.com/XiongDuan/deepsketch\">code</a></p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "deep-learning-representation-using-autoencoder-for-3d-shape-retr-2016",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Zhuotun Zhu, Xinggang Wang*, Song Bai, Cong Yao, Xiang Bai. <strong>Deep Learning Representation using Autoencoder for 3D Shape Retrieval</strong>. <strong>Neurocomputing</strong>, Volume 204, 5 September 2016, Pages 41–50</p></li>",
+    "topics": [
+      "3d-4d-vision",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "traffic-sign-detection-and-recognition-using-fully-convolutional",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Yingying Zhu, Chengquan Zhang, Duoyou Zhou, Xinggang Wang, Xiang Bai, Wenyu Liu*. <strong>Traffic Sign Detection and Recognition using Fully Convolutional Network Guided Proposals</strong>. <strong>Neurocomputing</strong>, Volume 214, 19 November 2016, Pages 758–766</p></li>",
+    "topics": [
+      "detection-tracking",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "shape-recognition-by-bag-of-skeleton-associated-contour-parts",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Wei Shen, Yuan Jiang, Wenjing Gao, Dan Zeng, Xinggang Wang. <strong>Shape recognition by bag of skeleton-associated contour parts</strong>. <strong>Pattern Recognition Letters</strong>, Volume 83, Part 3, 1 November 2016, Pages 321–329</p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "individual-adaptive-metric-learning-for-visual-tracking",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Sihua Yi, Nan Jiang, Xinggang Wang, Wenyu Liu. <strong>Individual adaptive metric learning for visual tracking</strong>. <strong>Neurocomputing</strong> 191: 273-285 (2016)</p></li>",
+    "topics": [
+      "detection-tracking",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "motion-guided-spatial-time-attention-for-video-object-segmentati",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Qiang Zhou, Zilong Huang, Lichao Huang, Yongchao Gong, Han Shen, Wenyu Liu, Xinggang Wang. <strong>Motion-Guided Spatial Time Attention for Video Object Segmentation</strong>. IEEE International Conference on Computer Vision Workshops (<strong>ICCVW</strong>), 2019. 2nd place in the 2nd Large-scale Video Object Segmentation Challenge. <a href=\"https://openaccess.thecvf.com/content_ICCVW_2019/papers/YouTube-VOS/Zhou_Motion-Guided_Spatial_Time_Attention_for_Video_Object_Segmentation_ICCVW_2019_paper.pdf\">pdf</a></p></li>",
+    "topics": [
+      "3d-4d-vision",
+      "segmentation",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "defectgan-weakly-supervised-defect-detection-using-generative-ad",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Shuanlong Niu, Hui Lin, Tongzhi Niu, Bin Li, Xinggang Wang. <strong>DefectGAN: Weakly-Supervised Defect Detection using Generative Adversarial Network</strong>. International Conference on Automation Science and Engineering (<strong>CASE</strong>), 2019.</p></li>",
+    "topics": [
+      "generative-model",
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "single-shot-detector-with-multiple-inference-paths",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Shoufa Chen, Xinggang Wang. <strong>Single-shot Detector with Multiple Inference Paths</strong>. IEEE International Conference on Image Processing (<strong>ICIP</strong>), 2019.</p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "weakly-and-semi-supervised-faster-r-cnn-with-curriculum-learning",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Jiasi Wang, Xinggang Wang, and Wenyu Liu. <strong>Weakly- and Semi-supervised Faster R-CNN with Curriculum Learning</strong>. International Conference on Pattern Recognition (<strong>ICPR</strong>), 2018 <a href=\"./pubs/wasscl-icpr18.pdf\">pdf</a> </p> </li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "joint-classification-loss-and-histogram-loss-for-sketch-based-im",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Yongluan Yan, Xinggang Wang, Xin Yang, Xiang Bai, and Wenyu Liu. <strong>Joint Classification Loss and Histogram Loss for Sketch-based Image Retrieval</strong>. ICIG, 2017 (oral)</p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "one-class-multiple-instance-learning-via-robust-pca-for-common-o",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p> Xinggang Wang, Zhengdong Zhang, Yi Ma, Xiang Bai, Wenyu Liu, and Zhuowen Tu. <strong>One-Class Multiple Instance Learning via Robust PCA for Common Object Discovery</strong>. Asian Conference on Computer Vision (<strong>ACCV</strong>), 2012. <a href=\"./pubs/accv12_oneclassMIL.pdf\">pdf</a> </p> </li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "scale-space-sift-flow-2014",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p> Weichao Qiu, Xinggang Wang, Xiang Bai, Alan Yuille, and Zhuowen Tu, <strong>Scale-space SIFT Flow</strong>. IEEE Winter Conference on Applications of Computer Vision (<strong>WACV</strong>), Steamboat Springs CO, March, 2014. <a href=\"./pubs/wacv14.pdf\">pdf</a></p></li>",
+    "topics": []
+  },
+  {
+    "id": "deep-learning-representation-using-autoencoder-for-3d-shape-retr-2014",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Zhuotun Zhu, Xinggang Wang, Song Bai, Cong Yao, Xiang Bai. <strong>Deep Learning Representation using Autoencoder for 3D Shape Retrieval</strong>, ICSPAC 2014, Wuhan</p></li>",
+    "topics": [
+      "3d-4d-vision",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "shape-recognition-by-combining-contour-and-skeleton-into-a-mid-l",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Wei Shen, Xinggang Wang, Cong Yao, Xiang Bai. <strong>Shape Recognition by Combining Contour and Skeleton into a Mid-Level Representation</strong>. Chinese Conference on Pattern Recognition (<strong>CCPR</strong>) 2014, pp. 391-400</p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "ogb-a-distinctive-and-efficient-feature-for-mobile-augmented-rea",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Xin Yang, Xinggang Wang, Tim Cheng. <strong>OGB: A Distinctive and Efficient Feature for Mobile Augmented Reality</strong>. International Conference on Multimedia Modeling (MMM), 2016</p></li>",
+    "topics": []
+  },
+  {
+    "id": "location-aware-image-classification",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Xinggang Wang, Xin Yang, Wenyu Liu, Chen Duan, Longin Latecki. <strong>Location-Aware Image Classification</strong>. International Conference on Multimedia Modeling (MMM), 2016</p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "multiple-stage-residual-model-for-accurate-image-classification",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Song Bai, Xinggang Wang, Cong Yao, Xiang Bai. <strong>Multiple Stage Residual Model for Accurate Image Classification</strong>. Asian Conference on Computer Vision (<strong>ACCV</strong>) 2014, pp. 430-445</p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "aggregating-contour-fragments-for-shape-classification",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p>Song Bai, Xinggang Wang, Xiang Bai. <strong>Aggregating contour fragments for shape classification</strong>. IEEE International Conference on Image Processing (<strong>ICIP</strong>) 2014, pp. 5252-5256</p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "traffic-sign-classification-using-twolayer-image-representation",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p> Yingying Zhu, Xinggang Wang, Cong Yao, Xiang Bai. <strong>Traffic sign classification using twolayer image representation</strong>. International Conference on Image Processing (<strong>ICIP</strong>), 2013.</p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "adjacent-coding-for-image-classification",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p> Yueming Wang, Xinggang Wang, Shaojun Zhu, Xiang Bai, Wenyu Liu, <strong>Adjacent Coding for Image Classification</strong>. International Conference on Pattern Recognition (<strong>ICPR</strong>), 2012.  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "lung-image-classification-using-locality-constrained-linear-codi",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p> Meng Yi, Tatyana Nuzhnaya, Vasileios Megalooikonomou, Xinggang Wang, Longin Jan Latecki, Mark Kohn, Robert Steiner. <strong>Lung Image Classification using Locality-Constrained Linear Coding</strong>. STMI 2012: MICCAI Workshop on Sparsity Techniques in Medical Imaging. <a href=\"./pubs/miccai11w.pdf\" >pdf</a>  </p></li>",
+    "topics": [
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "disagreement-based-multi-system-tracking",
+    "section": "other",
+    "year_group": "",
+    "li_html": "<li><p> Quannan Li, Xinggang Wang, Wei Wang, Yuan Jiang, Zhi-Hua Zhou, and Zhuowen Tu, <strong>Disagreement-Based Multi-System Tracking</strong>, Workshop of Detection and Tracking in Challenging Environments, 2012.  <a href=\"./pubs/accv12w.pdf\" >pdf</a> </p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "scale-space-sift-flow-2016",
+    "section": "book",
+    "year_group": "",
+    "li_html": "<li><p>Weichao Qiu, Xinggang Wang, Xiang Bai, Alan Yuille, Zhuowen Tu. <strong>Scale-Space SIFT Flow</strong>. Book Chapter: Dense Image Correspondences for Computer Vision (Edited by Tal Hassner and Ce Liu), pp. 51-70, Springer, 2016.</p></li>",
+    "topics": []
+  },
+  {
+    "id": "a-pytorch-semantic-segmentation-toolbox",
+    "section": "misc",
+    "year_group": "",
+    "li_html": "<li><p>Zilong Huang, Yunchao Wei, Xinggang Wang, Wenyu Liu. <strong>A PyTorch Semantic Segmentation Toolbox</strong>. <a href=\"./pubs/toolbox.pdf\">pdf</a> <a href=\"https://github.com/speedinghzl/pytorch-segmentation-toolbox\">code</a></p></li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "multimodal-flow-unified-flow-modeling-of-language-and-vision-in",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Hongyuan Tao, Xinggang Wang*, Lianghui Zhu, Yongkang Li, Yunchao Wei, Bin Feng, Shaoyu Chen, Qian Zhang, Chang Huang, Kai Yu. <strong>Multimodal Flow: Unified Flow Modeling of Language and Vision in Embedding Spaces</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2609.40362\">arXiv:2609.40362</a> (2026). <a href=\"https://github.com/hustvl/Multimodal-Flow\">code</a>, <a href=\"https://hustvl.github.io/Multimodal-Flow/\">project page</a>.\n  </p></li>",
+    "topics": [
+      "multimodal-llm",
+      "generative-model"
+    ]
+  },
+  {
+    "id": "bridge3d-enabling-vision-language-action-models-to-see-and-act-i",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Haoxuan Li, Sixu Yan, Lianghui Zhu, Xuanlai Tang, Shikang Wang, Xinggang Wang. <strong>Bridge3D: Enabling Vision-Language-Action Models to See and Act in 3D</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2609.24525\">arXiv:2609.24525</a> (2026). <a href=\"https://github.com/hustvl/Bridge3D\">code</a>, <a href=\"https://hustvl.github.io/Bridge3D/\">project page</a>.\n  </p></li>",
+    "topics": [
+      "embodied-ai"
+    ]
+  },
+  {
+    "id": "adarobovlg-adaptive-vision-language-grasping-via-composable-foun",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Sixu Yan, Shikang Wang, Binhua Huang, Xuanlai Tang, Guohua Fan, Fan Huang, Haoxuan Li, Yongkang Li, Yuhan Li, Bencheng Liao, Zeyu Zhang, Wenyu Liu, Hangxin Liu, Xinggang Wang. <strong>AdaRoboVLG: Adaptive Vision-Language Grasping via Composable Foundation Priors and Generalizable Grasp Synthesis</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2609.04096\">arXiv:2609.04096</a> (2026). <a href=\"https://adarobovlg.github.io/\">project page</a>.\n  </p></li>",
+    "topics": [
+      "embodied-ai"
+    ]
+  },
+  {
+    "id": "dreamwam-beyond-rgb-future-prediction-for-world-action-models",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Shanglin Yuan#, Weiheng Zhao#, Xin Shi, Haoyi Jiang, Xianda Guo, Liu Liu, Wenyu Liu, Wei Sui, Xinggang Wang*. <strong>DreamWAM: Beyond RGB Future Prediction for World Action Models</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2608.04996\">arXiv:2608.04996</a> (2026). <a href=\"https://github.com/hustvl/DreamWAM\">code</a>, <a href=\"https://hustvl.github.io/DreamWAM/\">project page</a>.\n  </p></li>",
+    "topics": [
+      "world-model",
+      "embodied-ai"
+    ]
+  },
+  {
+    "id": "faster-wam-efficient-inference-time-future-conditioning-for-robu",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Weiheng Zhao, Haoyi Jiang, Xin Shi, Liu Liu, Zhizhong Su, Wei Sui, Fan Huang, Xinggang Wang. <strong>Faster-WAM: Efficient Inference-Time Future Conditioning for Robust World Action Models</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2608.04404\">arXiv:2608.04404</a> (2026). <a href=\"https://github.com/hustvl/FasterWAM\">code</a>.\n  </p></li>",
+    "topics": [
+      "world-model",
+      "embodied-ai"
+    ]
+  },
+  {
+    "id": "eovsam-efficient-open-vocabulary-segmentation-with-sam-3-in-one",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Haomin Peng, Yongkang Li, Zhaoxiang Liu, Xiaojie Jin, Shiguo Lian, Yunchao Wei, Xinggang Wang*. <strong>EOVSAM: Efficient Open-Vocabulary Segmentation with SAM 3 in One Pass</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2608.02284\">arXiv:2608.02284</a> (2026). <a href=\"https://github.com/hustvl/EOVSAM\">code</a>.\n  </p></li>",
+    "topics": [
+      "segmentation"
+    ]
+  },
+  {
+    "id": "reworld-learning-better-representations-for-world-action-models",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Tianze Xia#, Lijun Zhou#, Kaixin Xiong, Jingfeng Yao, Yu Zhu, Zhenxin Zhu, Haiyang Sun, Bing Wang, Guang Chen, Hangjun Ye, Wenyu Liu, Xinggang Wang*. <strong>ReWorld: Learning Better Representations for World Action Models</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2606.27504\">arXiv:2606.27504</a> (2026). <a href=\"https://xiaomi-research.github.io/reworld/\">project page</a>.\n  </p></li>",
+    "topics": [
+      "world-model",
+      "autonomous-driving"
+    ]
+  },
+  {
+    "id": "rad-2-scaling-reinforcement-learning-in-a-generator-discriminato",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Hao Gao, Shaoyu Chen, Yifan Zhu, Yuehao Song, Wenyu Liu, Qian Zhang, Xinggang Wang*. <strong>RAD-2: Scaling Reinforcement Learning in a Generator-Discriminator Framework</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2604.15308\">arXiv:2604.15308</a> (2026). <a href=\"https://hgao-cv.github.io/RAD-2/\">project page</a>.\n  </p></li>",
+    "topics": [
+      "autonomous-driving"
+    ]
+  },
+  {
+    "id": "unidrivevla-unifying-understanding-perception-and-action-plannin",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Yongkang Li, Lijun Zhou, Sixu Yan, Bencheng Liao, Tianyi Yan, Kaixin Xiong, Long Chen, Hongwei Xie, Bing Wang, Guang Chen, Hangjun Ye, Haiyang Sun, Wenyu Liu, Xinggang Wang*. <strong>UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2604.02190\">arXiv:2604.02190</a> (2026). <a href=\"https://xiaomi-research.github.io/unidrivevla/\">project page</a>.\n  </p></li>",
+    "topics": [
+      "autonomous-driving"
+    ]
+  },
+  {
+    "id": "moda-mixture-of-depths-attention",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Lianghui Zhu, Yuxin Fang, Bencheng Liao, Shijie Wang, Tianheng Cheng, Zilong Huang, Chen Chen, Lai Wei, Yutao Zeng, Ya Wang, Yi Lin, Yu Li, Xinggang Wang*. <strong>MoDA: Mixture-of-Depths Attention</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2603.15619\">arXiv:2603.15619</a> (2026). <a href=\"https://github.com/hustvl/MoDA\">code</a>.\n  </p></li>",
+    "topics": [
+      "efficient-llm"
+    ]
+  },
+  {
+    "id": "senna-2-aligning-vlm-and-end-to-end-driving-policy-for-consisten",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Yuehao Song, Shaoyu Chen, Hao Gao, Yifan Zhu, Weixiang Yue, Jialv Zou, Bo Jiang, Zihao Lu, Yu Wang, Qian Zhang, Xinggang Wang*. <strong>Senna-2: Aligning VLM and End-to-End Driving Policy for Consistent Decision Making and Planning</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2603.11219\">arXiv:2603.11219</a> (2026). <a href=\"https://hgao-cv.github.io/senna2-project/\">project page</a>.\n  </p></li>",
+    "topics": [
+      "autonomous-driving",
+      "multimodal-llm"
+    ]
+  },
+  {
+    "id": "omnitrack-general-motion-tracking-via-physics-consistent-referen",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Peiyuan Zhi#, Yunshen Wang#, Tengyu Liu, Sixu Yan, Wenyu Liu, Xinggang Wang*, Baoxiong Jia*, Siyuan Huang*. <strong>OmniTrack: General Motion Tracking via Physics-Consistent Reference</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2602.23832\">arXiv:2602.23832</a> (2026). <a href=\"https://github.com/OmniTrack-Humanoid/OmniTrack\">code</a>, <a href=\"https://omnitrack-humanoid.github.io/\">project page</a>, <a href=\"https://youtu.be/5u93K6YZV3g\">video</a>.\n  </p></li>",
+    "topics": [
+      "embodied-ai"
+    ]
+  },
+  {
+    "id": "spa3r-predictive-spatial-field-modeling-for-3d-visual-reasoning",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Haoyi Jiang, Liu Liu, Xinjie Wang, Yonghao He, Wei Sui, Zhizhong Su, Wenyu Liu, Xinggang Wang. <strong>Spa3R: Predictive Spatial Field Modeling for 3D Visual Reasoning</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2602.21186\">arXiv:2602.21186</a> (2026). <a href=\"https://github.com/hustvl/Spa3R\">code</a>.\n  </p></li>",
+    "topics": [
+      "3d-4d-vision",
+      "multimodal-llm"
+    ]
+  },
+  {
+    "id": "4dlangvggt-4d-language-visual-geometry-grounded-transformer",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Xianfeng Wu, Yajing Bai#, Minghan Li, Xianzu Wu, Xueqi Zhao, Zhongyuan Lai, Wenyu Liu, Xinggang Wang*. <strong>4DLangVGGT: 4D Language-Visual Geometry Grounded Transformer</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2512.05060\">arXiv:2512.05060</a> (2025). <a href=\"https://github.com/hustvl/4DLangVGGT\">code</a>, <a href=\"https://hustvl.github.io/4DLangVGGT/\">project page</a>.\n  </p></li>",
+    "topics": [
+      "3d-4d-vision"
+    ]
+  },
+  {
+    "id": "vgt-visual-generation-tuning",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Jiahao Guo#, Sinan Du#, Jingfeng Yao, Wenyu Liu, Bo Li, Haoxiang Cao, Kun Gai, Chun Yuan, Kai Wu, Xinggang Wang*. <strong>VGT: Visual Generation Tuning</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2511.23469\">arXiv:2511.23469</a> (2025). <a href=\"https://github.com/hustvl/VGT\">code</a>.\n  </p></li>",
+    "topics": [
+      "generative-model",
+      "multimodal-llm"
+    ]
+  },
+  {
+    "id": "mobilei2v-fast-and-high-resolution-image-to-video-on-mobile-devi",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Shuai Zhang#, Bao Tang#, Siyuan Yu#, Yueting Zhu, Jingfeng Yao, Ya Zou, Shanglin Yuan, Li Yu, Wenyu Liu, Xinggang Wang*. <strong>MobileI2V: Fast and High-Resolution Image-to-Video on Mobile Devices</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2511.21475\">arXiv:2511.21475</a> (2025). <a href=\"https://github.com/hustvl/MobileI2V\">code</a>.\n  </p></li>",
+    "topics": [
+      "generative-model"
+    ]
+  },
+  {
+    "id": "perceive-interact-predict-learning-dynamic-and-static-clues-for",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Bo Jiang, Shaoyu Chen, Xinggang Wang, Bencheng Liao, Tianheng Cheng, Jiajie Chen, Helong Zhou, Qian Zhang, Wenyu Liu, Chang Huang. <strong>Perceive, Interact, Predict: Learning Dynamic and Static Clues for End-to-End Motion Prediction</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2212.02181\">arXiv:2212.02181</a> (2022).\n  </p></li>",
+    "topics": []
+  },
+  {
+    "id": "efficient-and-robust-2d-to-bev-representation-learning-via-geome",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Shaoyu Chen, Tianheng Cheng, Xinggang Wang, Wenming Meng, Qian Zhang, Wenyu Liu. <strong>Efficient and Robust 2D-to-BEV Representation Learning via Geometry-guided Kernel Transformer</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2206.04584\"> arXiv:2206.04584</a> (2022).\n  </p></li>",
+    "topics": [
+      "efficient-llm",
+      "3d-4d-vision",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "polar-parametrization-for-vision-based-surround-view-3d-detectio",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Shaoyu Chen, Xinggang Wang, Tianheng Cheng, Qian Zhang, Chang Huang, Wenyu Liu. <strong>Polar Parametrization for Vision-based Surround-View 3D Detection</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2206.10965\"> arXiv:2206.10965</a> (2022).\n  </p></li>",
+    "topics": [
+      "3d-4d-vision",
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "half-real-half-fake-distillation-for-class-incremental-semantic",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Zilong Huang, Wentian Hao, Xinggang Wang, Mingyuan Tao, Jianqiang Huang, Wenyu Liu, and Xian-Sheng Hua. <strong>Half-Real Half-Fake Distillation for Class-Incremental Semantic Segmentation</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2104.00875\">arXiv:2104.00875</a> (2021).\n  </p></li>",
+    "topics": [
+      "efficient-llm",
+      "segmentation"
+    ]
+  },
+  {
+    "id": "object-detection-in-video-with-spatial-temporal-context-aggregat",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>Hao Luo, Lichao Huang, Han Shen, Yuan Li, Chang Huang, Xinggang Wang. <strong>Object Detection in Video with Spatial-temporal Context Aggregation</strong>. <a href=\"https://arxiv.org/abs/1907.04988\">arXiv:1907.04988</a> (2019)\n  </p></li>",
+    "topics": [
+      "3d-4d-vision",
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "proposal-tracking-and-segmentation-pts-a-cascaded-network-for-vi",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>Qiang Zhou, Zilong Huang, Lichao Huang, Yongchao Gong, Han Shen, Chang Huang, Wenyu Liu, Xinggang Wang. <strong>Proposal, Tracking and Segmentation (PTS): A Cascaded Network for Video Object Segmentation</strong>. <a href=\"https://arxiv.org/pdf/1907.01203v2.pdf\">arXiv:1907.01203v2</a> (2019) <a href=\"https://github.com/sydney0zq/PTSNet\">code</a>\n  </p></li>",
+    "topics": [
+      "segmentation",
+      "detection-tracking"
+    ]
+  },
+  {
+    "id": "point-linking-network-for-object-detection",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>Xinggang Wang, Kaibing Chen, Zilong Huang, Cong Yao, Wenyu Liu. <strong>Point Linking Network for Object Detection</strong>. <a href=\"https://arxiv.org/abs/1706.03646\">arXiv:1706.03646</a> (2017)</p></li>",
+    "topics": [
+      "detection-tracking"
+    ]
+  }
+]

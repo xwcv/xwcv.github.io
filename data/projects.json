@@ -1,0 +1,1242 @@
+[
+  {
+    "id": "multimodal-flow",
+    "pub_id": "multimodal-flow-unified-flow-modeling-of-language-and-vision-in",
+    "href": "https://hustvl.github.io/Multimodal-Flow/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2609.40362"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/Multimodal-Flow"
+      },
+      {
+        "label": "project page",
+        "href": "https://hustvl.github.io/Multimodal-Flow/"
+      }
+    ],
+    "description_en": "A fully continuous multimodal flow framework that encodes each modality as continuous hyperchunks in one ordered, chunk-causal stream — unifying understanding, generation, and flexible mixed sequences under a single interface.",
+    "description_cn": "全连续多模态流式框架：将各模态编码为连续 hyperchunk 并置于统一的 chunk 因果序列中，以同一接口统一理解、生成与灵活的混合序列建模。",
+    "media": {
+      "src": "res/proj/multimodal-flow.png",
+      "alt_en": "Multimodal Flow: fully discrete vs hybrid vs continuous flow modeling paradigms",
+      "alt_cn": "Multimodal Flow：全离散、混合与连续流建模范式对比",
+      "gallery_alt_en": "Multimodal Flow: continuous flow modeling paradigm",
+      "gallery_alt_cn": "Multimodal Flow：连续流建模范式"
+    }
+  },
+  {
+    "id": "stablevq",
+    "pub_id": "stablevq-practical-guidelines-for-stable-vector-quantized-tokeni",
+    "href": "https://tt-day.github.io/StableVQ/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2609.26774"
+      },
+      {
+        "label": "project page",
+        "href": "https://tt-day.github.io/StableVQ/"
+      }
+    ],
+    "description_en": "A separation-of-concerns framework — Dynamic STE, Region VQ Loss, and Decoupled Schedule — that turns stable VQ tokenizer training into a principled property, reaching 100% codebook utilization with no new parameters.",
+    "description_cn": "关注点分离框架——Dynamic STE 稳定重构梯度、Region VQ Loss 显式追踪分布、解耦学习率调度——让稳定的 VQ tokenizer 训练成为有原则可循的性质，零新增参数实现 100% codebook 利用率。",
+    "media": {
+      "src": "res/proj/stablevq.png",
+      "alt_en": "StableVQ: three characteristic failure modes of vector-quantized tokenizer training",
+      "alt_cn": "StableVQ：向量量化 tokenizer 训练的三种典型失效模式",
+      "gallery_alt_en": "StableVQ: stable vector-quantized tokenizer training",
+      "gallery_alt_cn": "StableVQ：稳定的向量量化 tokenizer 训练"
+    }
+  },
+  {
+    "id": "bridge3d",
+    "pub_id": "bridge3d-enabling-vision-language-action-models-to-see-and-act-i",
+    "href": "https://hustvl.github.io/Bridge3D/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2609.24525"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/Bridge3D"
+      },
+      {
+        "label": "project page",
+        "href": "https://hustvl.github.io/Bridge3D/"
+      }
+    ],
+    "description_en": "Integrates implicit and explicit 3D geometry guidance into pretrained 2D VLA models — VGGT-feature fusion for 3D perception plus an explicit 3D semantic field conditioning action denoising — reaching 84.8% average success on RoboTwin 2.0 and +11.7pp real-world over Spatial Forcing.",
+    "description_cn": "将隐式与显式 3D 几何引导注入预训练 2D VLA 模型：VGGT 几何特征融合增强 3D 感知，3D 语义点场显式指导动作去噪；RoboTwin 2.0 平均成功率 84.8%，真机较 Spatial Forcing 提升 11.7 个百分点。",
+    "media": {
+      "src": "res/proj/bridge3d.jpg",
+      "alt_en": "Bridge3D: implicit fusion and explicit conditioning for 3D-aware vision-language-action models",
+      "alt_cn": "Bridge3D：面向视觉语言动作模型的隐式融合与显式条件 3D 几何引导",
+      "gallery_alt_en": "Bridge3D: enabling VLA models to see and act in 3D",
+      "gallery_alt_cn": "Bridge3D：让 VLA 模型在 3D 中感知与行动"
+    }
+  },
+  {
+    "id": "adarobovlg",
+    "pub_id": "adarobovlg-adaptive-vision-language-grasping-via-composable-foun",
+    "href": "https://adarobovlg.github.io/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2609.04096"
+      },
+      {
+        "label": "project page",
+        "href": "https://adarobovlg.github.io/"
+      }
+    ],
+    "description_en": "A task-adaptive Vision-Language-Grasp framework that decouples physical grasp synthesis from task-dependent understanding, supporting generalizable grasping across different robotic hands via composable foundation-model priors.",
+    "description_cn": "任务自适应的视觉-语言-抓取框架，将物理抓取合成与任务理解解耦，通过可组合的基础模型先验实现跨不同机械手的泛化抓取。",
+    "media": {
+      "src": "res/proj/adarobovlg-2.jpg",
+      "alt_en": "AdaRoboVLG: real-world robotic grasping across different hands",
+      "alt_cn": "AdaRoboVLG：跨机械手的真实场景机器人抓取",
+      "gallery_alt_en": "AdaRoboVLG: adaptive vision-language grasping across robotic hands",
+      "gallery_alt_cn": "AdaRoboVLG：跨机械手的自适应视觉语言抓取"
+    }
+  },
+  {
+    "id": "dreamwam",
+    "pub_id": "dreamwam-beyond-rgb-future-prediction-for-world-action-models",
+    "href": "https://hustvl.github.io/DreamWAM/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2608.04996"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/DreamWAM"
+      },
+      {
+        "label": "project page",
+        "href": "https://hustvl.github.io/DreamWAM/"
+      }
+    ],
+    "description_en": "A world action model that reformulates future prediction as structured world modeling beyond RGB, representing future states through complementary views of appearance, motion, geometry, and semantics for robust manipulation.",
+    "description_cn": "超越 RGB 的世界动作模型：将未来预测重构为结构化世界建模，从外观、运动、几何、语义四个互补视角表征未来状态，实现稳健的机器人操作。",
+    "media": {
+      "src": "res/proj/dreamwam.png",
+      "alt_en": "",
+      "alt_cn": "",
+      "gallery_alt_en": "",
+      "gallery_alt_cn": "",
+      "video": "res/proj/dreamwam-2.mp4",
+      "poster": "res/proj/dreamwam.png",
+      "aria_en": "",
+      "aria_cn": ""
+    }
+  },
+  {
+    "id": "faster-wam",
+    "pub_id": "faster-wam-efficient-inference-time-future-conditioning-for-robu",
+    "href": "https://github.com/hustvl/FasterWAM",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2608.04404"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/FasterWAM"
+      }
+    ],
+    "description_en": "A world action model that computes future representations once and selectively reuses them during action denoising, achieving robust out-of-distribution generalization with substantially reduced inference latency.",
+    "description_cn": "世界动作模型在推理时只计算一次未来表征并在动作去噪中选择性复用，大幅降低推理延迟，同时具备稳健的分布外泛化能力。",
+    "media": {
+      "src": "res/proj/fasterwam.png",
+      "alt_en": "Faster-WAM framework: inference-time future conditioning for world action models",
+      "alt_cn": "Faster-WAM：面向世界动作模型的推理时未来条件框架",
+      "gallery_alt_en": "Faster-WAM: efficient inference-time future conditioning",
+      "gallery_alt_cn": "Faster-WAM：高效的推理时未来条件世界动作模型"
+    }
+  },
+  {
+    "id": "eovsam",
+    "pub_id": "eovsam-efficient-open-vocabulary-segmentation-with-sam-3-in-one",
+    "href": "https://github.com/hustvl/EOVSAM",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2608.02284"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/EOVSAM"
+      }
+    ],
+    "description_en": "Adapts SAM 3 into a single-pass open-vocabulary segmenter — prompt-free mask generation with end-to-end Attentional Aggregation classification — improving accuracy over vanilla SAM 3 while accelerating inference by up to 338×.",
+    "description_cn": "将 SAM 3 改造为单趟开放词汇分割器：去除提示条件的高效掩码生成，配合端到端 Attentional Aggregation 分类，精度优于原版 SAM 3 的同时推理加速最高 338 倍。",
+    "media": {
+      "src": "res/proj/eovsam.png",
+      "alt_en": "EOVSAM: one-pass open-vocabulary segmentation architecture built on SAM 3",
+      "alt_cn": "EOVSAM：基于 SAM 3 的单趟开放词汇分割架构",
+      "gallery_alt_en": "EOVSAM: one-pass open-vocabulary segmentation with SAM 3",
+      "gallery_alt_cn": "EOVSAM：基于 SAM 3 的单趟开放词汇分割"
+    }
+  },
+  {
+    "id": "reworld",
+    "pub_id": "reworld-learning-better-representations-for-world-action-models",
+    "href": "https://xiaomi-research.github.io/reworld/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2606.27504"
+      },
+      {
+        "label": "project page",
+        "href": "https://xiaomi-research.github.io/reworld/"
+      }
+    ],
+    "description_en": "The first representation learning framework for autonomous-driving world action models, explicitly optimizing the latent world-to-action pathway without external encoders or teacher models at only +0.3% training cost.",
+    "description_cn": "首个面向自动驾驶世界动作模型的表示学习框架，无需外部编码器与教师模型，仅增加 0.3% 训练开销，显式优化从世界到动作的隐表征通路。",
+    "media": {
+      "src": "res/proj/reworld.jpg",
+      "alt_en": "ReWorld: representation learning framework for world action models",
+      "alt_cn": "ReWorld：面向世界动作模型的表示学习框架",
+      "gallery_alt_en": "ReWorld: representation learning for world action models",
+      "gallery_alt_cn": "ReWorld：面向世界动作模型的表示学习"
+    }
+  },
+  {
+    "id": "moebius",
+    "pub_id": "moebius-0-2b-lightweight-image-inpainting-framework-with-10b-lev",
+    "href": "https://hustvl.github.io/Moebius/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2606.19195"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/Moebius"
+      },
+      {
+        "label": "project page",
+        "href": "https://hustvl.github.io/Moebius/"
+      }
+    ],
+    "description_en": "A 0.2B lightweight image inpainting framework that delivers 10B-level performance.",
+    "description_cn": "0.2B 轻量级图像修复框架，性能达到 10B 级别模型水平。",
+    "media": {
+      "src": "res/proj/moebius.jpg",
+      "alt_en": "Moebius: lightweight image inpainting pipeline",
+      "alt_cn": "Moebius：轻量级图像修复流水线",
+      "gallery_alt_en": "Moebius: lightweight image inpainting framework",
+      "gallery_alt_cn": "Moebius：轻量级图像修复框架"
+    }
+  },
+  {
+    "id": "motionvla",
+    "pub_id": "motionvla-injecting-geometric-motion-into-vision-language-action",
+    "href": "https://hustvl.github.io/MotionVLA/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2606.08288"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/MotionVLA"
+      },
+      {
+        "label": "project page",
+        "href": "https://hustvl.github.io/MotionVLA/"
+      }
+    ],
+    "description_en": "Injects geometric motion into a VLA as compact, queryable trajectory-field tokens from strictly past frames, giving the policy a time-continuous motion history for long-horizon manipulation.",
+    "description_cn": "将严格过去帧的几何运动压缩为紧凑、可查询的轨迹场 token 注入 VLA，为策略提供时间连续的运动历史，提升长时程操作能力。",
+    "media": {
+      "src": "res/proj/motionvla.png",
+      "alt_en": "",
+      "alt_cn": "",
+      "gallery_alt_en": "",
+      "gallery_alt_cn": "",
+      "video": "res/proj/motionvla.mp4",
+      "poster": "res/proj/motionvla.png",
+      "aria_en": "",
+      "aria_cn": ""
+    }
+  },
+  {
+    "id": "rad-2",
+    "pub_id": "rad-2-scaling-reinforcement-learning-in-a-generator-discriminato",
+    "href": "https://hgao-cv.github.io/RAD-2/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2604.15308"
+      },
+      {
+        "label": "project page",
+        "href": "https://hgao-cv.github.io/RAD-2/"
+      }
+    ],
+    "description_en": "A generator-discriminator framework for closed-loop driving: a diffusion generator proposes diverse trajectory candidates while an RL-optimized discriminator reranks them by long-term driving quality, reducing the collision rate by 56% over strong diffusion planners.",
+    "description_cn": "闭环驾驶的生成器-判别器框架：扩散生成器产生多样化候选轨迹，强化学习优化的判别器按长期驾驶质量重排序，碰撞率较主流扩散规划器降低 56%。",
+    "media": {
+      "src": "res/proj/rad2.jpg",
+      "alt_en": "RAD-2: generator-discriminator framework for closed-loop planning",
+      "alt_cn": "RAD-2：闭环规划的生成器-判别器框架",
+      "gallery_alt_en": "RAD-2: generator-discriminator framework for closed-loop planning",
+      "gallery_alt_cn": "RAD-2：闭环规划的生成器-判别器框架"
+    }
+  },
+  {
+    "id": "unidrivevla",
+    "pub_id": "unidrivevla-unifying-understanding-perception-and-action-plannin",
+    "href": "https://xiaomi-research.github.io/unidrivevla/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2604.02190"
+      },
+      {
+        "label": "project page",
+        "href": "https://xiaomi-research.github.io/unidrivevla/"
+      }
+    ],
+    "description_en": "A unified driving vision-language-action model based on Mixture-of-Transformers, decoupling driving understanding, scene perception, and action planning into specialized experts coordinated through masked joint attention.",
+    "description_cn": "基于 Mixture-of-Transformers 的统一驾驶视觉-语言-动作模型，将驾驶理解、场景感知与动作规划解耦到三个专家网络，通过掩码联合注意力协同工作。",
+    "media": {
+      "src": "res/proj/unidrivevla.png",
+      "alt_en": "UniDriveVLA: Mixture-of-Transformers architecture for autonomous driving",
+      "alt_cn": "UniDriveVLA：基于 Mixture-of-Transformers 的自动驾驶架构",
+      "gallery_alt_en": "UniDriveVLA: unified driving vision-language-action model",
+      "gallery_alt_cn": "UniDriveVLA：统一的驾驶视觉语言动作模型"
+    }
+  },
+  {
+    "id": "moda",
+    "pub_id": "moda-mixture-of-depths-attention",
+    "href": "https://github.com/hustvl/MoDA",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2603.15619"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/MoDA"
+      }
+    ],
+    "description_en": "A depth-scaling attention primitive that lets each head attend to both sequence KV and depth KV from preceding layers, with a hardware-efficient Triton kernel reaching 97.3% of FlashAttention-2 efficiency at 64K sequence length.",
+    "description_cn": "深度扩展注意力原语：每个注意力头同时关注当前层序列 KV 与前序层的深度 KV，配套硬件高效的 Triton kernel，在 64K 序列长度下达到 FlashAttention-2 的 97.3% 效率。",
+    "media": {
+      "src": "res/proj/moda.png",
+      "alt_en": "MoDA: mixture-of-depths attention architecture and visible relationships",
+      "alt_cn": "MoDA：混合深度注意力架构与可见性关系",
+      "gallery_alt_en": "MoDA: mixture-of-depths attention architecture",
+      "gallery_alt_cn": "MoDA：混合深度注意力架构"
+    }
+  },
+  {
+    "id": "senna-2",
+    "pub_id": "senna-2-aligning-vlm-and-end-to-end-driving-policy-for-consisten",
+    "href": "https://hgao-cv.github.io/senna2-project/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2603.11219"
+      },
+      {
+        "label": "project page",
+        "href": "https://hgao-cv.github.io/senna2-project/"
+      }
+    ],
+    "description_en": "A VLM-E2E driving policy that explicitly aligns the VLM's high-level decisions with the E2E policy's low-level planning, via consistency-oriented three-stage training and hierarchical reinforcement learning in 3DGS environments.",
+    "description_cn": "显式对齐 VLM 高层决策与端到端策略低层规划的驾驶模型，通过面向一致性的三阶段训练与 3DGS 环境中的层次化强化学习，显著提升开环与闭环驾驶安全性。",
+    "media": {
+      "src": "res/proj/senna2.jpg",
+      "alt_en": "Senna-2: aligning VLM and end-to-end driving policy",
+      "alt_cn": "Senna-2：对齐 VLM 与端到端驾驶策略",
+      "gallery_alt_en": "Senna-2: aligning VLM and end-to-end driving policy",
+      "gallery_alt_cn": "Senna-2：对齐 VLM 与端到端驾驶策略"
+    }
+  },
+  {
+    "id": "omnitrack",
+    "pub_id": "omnitrack-general-motion-tracking-via-physics-consistent-referen",
+    "href": "https://omnitrack-humanoid.github.io/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2602.23832"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/OmniTrack-Humanoid/OmniTrack"
+      },
+      {
+        "label": "project page",
+        "href": "https://omnitrack-humanoid.github.io/"
+      },
+      {
+        "label": "video",
+        "href": "https://youtu.be/5u93K6YZV3g"
+      }
+    ],
+    "description_en": "A two-stage humanoid motion-tracking framework that decouples physical feasibility from general tracking — a privileged generalist policy generates dynamics-consistent reference motions that the control policy then learns to track — enabling hour-long stable real-world tracking of acrobatic motions like flips and cartwheels.",
+    "description_cn": "两阶段人形机器人运动跟踪框架，将物理可行性与通用跟踪解耦：特权通用策略先生成严格满足机器人动力学的参考运动，控制策略再学习跟踪这些可行运动——真机实现长达一小时的稳定跟踪，包括空翻、侧手翻等复杂杂技动作。",
+    "media": {
+      "src": "res/proj/omnitrack.jpg",
+      "alt_en": "",
+      "alt_cn": "",
+      "gallery_alt_en": "",
+      "gallery_alt_cn": "",
+      "video": "res/proj/omnitrack.mp4",
+      "poster": "res/proj/omnitrack.jpg",
+      "aria_en": "",
+      "aria_cn": ""
+    }
+  },
+  {
+    "id": "spa3r",
+    "pub_id": "spa3r-predictive-spatial-field-modeling-for-3d-visual-reasoning",
+    "href": "https://github.com/hustvl/Spa3R",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2602.21186"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/Spa3R"
+      }
+    ],
+    "description_en": "A predictive spatial field modeling framework that distills multi-view geometry into a unified, view-invariant spatial field, giving VLMs explicit 3D grounding for spatial reasoning.",
+    "description_cn": "预测性空间场建模框架：将多视角几何蒸馏为统一、视角无关的空间场，为视觉语言模型提供显式 3D 空间先验，提升空间推理能力。",
+    "media": {
+      "src": "res/proj/spa3r.png",
+      "alt_en": "Spa3R: predictive spatial field modeling framework with asymmetric view aggregation",
+      "alt_cn": "Spa3R：非对称视角聚合的预测性空间场建模框架",
+      "gallery_alt_en": "Spa3R: predictive spatial field modeling for 3D visual reasoning",
+      "gallery_alt_cn": "Spa3R：面向 3D 视觉推理的预测性空间场建模"
+    }
+  },
+  {
+    "id": "drivelaw",
+    "pub_id": "drivelaw-unifying-planning-and-video-generation-in-a-latent-driv",
+    "href": "https://xiaomi-research.github.io/drivelaw/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2512.23421"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/xiaomi-research/drivelaw"
+      },
+      {
+        "label": "project page",
+        "href": "https://xiaomi-research.github.io/drivelaw/"
+      }
+    ],
+    "description_en": "A driving world model that unifies video generation and motion planning by injecting the video generator's latent representation directly into a diffusion planner, achieving state-of-the-art results on both nuScenes video prediction and NAVSIM planning.",
+    "description_cn": "统一视频生成与运动规划的驾驶世界模型：将视频生成器的隐表征直接注入扩散规划器，在 nuScenes 视频预测与 NAVSIM 规划上均达到最先进水平。",
+    "media": {
+      "src": "res/proj/drivelaw.png",
+      "alt_en": "DriveLaW: unifying planning and video generation in a latent driving world",
+      "alt_cn": "DriveLaW：在潜在驾驶世界中统一规划与视频生成",
+      "gallery_alt_en": "DriveLaW: unifying planning and video generation",
+      "gallery_alt_cn": "DriveLaW：统一规划与视频生成"
+    },
+    "authors_html": "Tianze Xia, Yongkang Li#, Lijun Zhou#, Jingfeng Yao, Kaixin Xiong, Haiyang Sun, Bing Wang, Kun Ma, Guang Chen, Hangjun Ye, Wenyu Liu, Xinggang Wang*"
+  },
+  {
+    "id": "diffusionvl",
+    "pub_id": "diffusionvl-translating-any-autoregressive-models-into-diffusion",
+    "href": "https://github.com/hustvl/DiffusionVL",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2512.15713"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/DiffusionVL"
+      }
+    ],
+    "description_en": "A framework that translates any autoregressive model into a diffusion vision-language model, combining the strengths of autoregressive pre-training with parallel diffusion decoding.",
+    "description_cn": "将任意自回归模型转换为扩散式视觉语言模型的框架，兼具自回归预训练的知识优势与扩散并行解码的效率优势。",
+    "media": {
+      "src": "res/proj/diffusionvl.png",
+      "alt_en": "DiffusionVL: translating autoregressive models into diffusion vision-language models",
+      "alt_cn": "DiffusionVL：将自回归模型转换为扩散视觉语言模型",
+      "gallery_alt_en": "DiffusionVL: diffusion vision-language models",
+      "gallery_alt_cn": "DiffusionVL：扩散视觉语言模型"
+    }
+  },
+  {
+    "id": "vtp",
+    "pub_id": "towards-scalable-pre-training-of-visual-tokenizers-for-generatio",
+    "href": "https://github.com/MiniMax-AI/VTP",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2512.13687"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/MiniMax-AI/VTP"
+      }
+    ],
+    "description_en": "A unified visual tokenizer pre-training framework that jointly optimizes contrastive, self-supervised, and reconstruction objectives, unlocking a new scaling law where generation performance scales with tokenizer pre-training compute, parameters, and data.",
+    "description_cn": "统一的视觉 tokenizer 预训练框架，联合优化对比学习、自监督与重建目标，揭示生成性能随 tokenizer 预训练算力、参数与数据扩展的新 scaling law。",
+    "media": {
+      "src": "res/proj/vtp.jpg",
+      "alt_en": "VTP: scalable pre-training of visual tokenizers for generation",
+      "alt_cn": "VTP：面向生成的视觉 tokenizer 可扩展预训练",
+      "gallery_alt_en": "VTP: scalable pre-training of visual tokenizers",
+      "gallery_alt_cn": "VTP：面向生成的视觉 tokenizer 可扩展预训练"
+    },
+    "title_html": "VTP: Towards Scalable Pre-training of Visual Tokenizers for Generation"
+  },
+  {
+    "id": "infinitevl",
+    "pub_id": "infinitevl-synergizing-linear-and-sparse-attention-for-highly-ef",
+    "href": "https://github.com/hustvl/InfiniteVL",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2512.08829"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/InfiniteVL"
+      }
+    ],
+    "description_en": "An efficient vision-language model that combines linear attention for compact long-term memory with sparse attention for precise visual perception, supporting unlimited-input streaming with a constant memory footprint.",
+    "description_cn": "高效视觉语言模型：线性注意力维持紧凑的长期记忆，稀疏注意力保障精细视觉感知，支持恒定显存占用的无限输入流式理解。",
+    "media": {
+      "src": "res/proj/infinitevl.jpg",
+      "alt_en": "InfiniteVL: linear and sparse attention for unlimited-input vision-language models",
+      "alt_cn": "InfiniteVL：线性注意力与稀疏注意力协同的无限输入视觉语言模型",
+      "gallery_alt_en": "InfiniteVL: unlimited-input vision-language model",
+      "gallery_alt_cn": "InfiniteVL：无限输入视觉语言模型"
+    }
+  },
+  {
+    "id": "4dlangvggt",
+    "pub_id": "4dlangvggt-4d-language-visual-geometry-grounded-transformer",
+    "href": "https://hustvl.github.io/4DLangVGGT/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2512.05060"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/4DLangVGGT"
+      },
+      {
+        "label": "project page",
+        "href": "https://hustvl.github.io/4DLangVGGT/"
+      }
+    ],
+    "description_en": "The first Transformer-based feed-forward framework for 4D language grounding, jointly integrating geometric perception (StreamVGGT) and language alignment (Semantic Bridging Decoder) — no per-scene optimization, generalizing across dynamic scenes.",
+    "description_cn": "首个基于 Transformer 的前馈式四维语言接地框架，在单一架构中联合几何感知（StreamVGGT）与语言对齐（语义桥接解码器），无需逐场景优化即可泛化到动态场景。",
+    "media": {
+      "src": "res/proj/4dlangvggt.png",
+      "alt_en": "4DLangVGGT: 4D language-visual geometry grounded transformer",
+      "alt_cn": "4DLangVGGT：四维语言-视觉几何接地 Transformer",
+      "gallery_alt_en": "4DLangVGGT: 4D language-visual geometry grounded transformer",
+      "gallery_alt_cn": "4DLangVGGT：四维语言-视觉几何接地 Transformer"
+    }
+  },
+  {
+    "id": "vgt",
+    "pub_id": "vgt-visual-generation-tuning",
+    "href": "https://github.com/hustvl/VGT",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2511.23469"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/VGT"
+      }
+    ],
+    "description_en": "Unleashes visual generation from any pretrained VLM by aligning its semantic encoder with a pixel decoder (VGT-AE) and tuning a lightweight flow-matching head (VGT-AR) — GenEval 0.82, DPG-Bench 81.28, 20× faster convergence.",
+    "description_cn": "通过对齐 VLM 语义编码器与像素解码器（VGT-AE）并调优轻量流匹配头（VGT-AR），让任意预训练 VLM 获得视觉生成能力——GenEval 0.82、DPG-Bench 81.28，收敛提速 20 倍。",
+    "media": {
+      "src": "res/proj/vgt.png",
+      "alt_en": "VGT: visual generation tuning pipeline that turns a pretrained VLM into an image generator",
+      "alt_cn": "VGT：将预训练 VLM 转变为图像生成模型的视觉生成调优流程",
+      "gallery_alt_en": "VGT: visual generation tuning for pretrained VLMs",
+      "gallery_alt_cn": "VGT：面向预训练 VLM 的视觉生成调优"
+    }
+  },
+  {
+    "id": "mobilei2v",
+    "pub_id": "mobilei2v-fast-and-high-resolution-image-to-video-on-mobile-devi",
+    "href": "https://github.com/hustvl/MobileI2V",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2511.21475"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/MobileI2V"
+      }
+    ],
+    "description_en": "A 0.27B image-to-video model for mobile devices — 5.55× smaller than SVD-XT with comparable quality, generating 720p video in 2.24s on mobile and running 199× faster on an A100.",
+    "description_cn": "面向移动设备的 0.27B 图生视频模型——比 SVD-XT 小 5.55 倍且画质相当，移动端 2.24 秒生成 720p 视频，A100 上提速 199 倍。",
+    "media": {
+      "src": "res/proj/mobilei2v.jpg",
+      "alt_en": "MobileI2V: fast high-resolution image-to-video generation on mobile devices",
+      "alt_cn": "MobileI2V：移动端快速高分辨率图生视频",
+      "gallery_alt_en": "MobileI2V: fast high-resolution image-to-video on mobile devices",
+      "gallery_alt_cn": "MobileI2V：移动端快速高分辨率图生视频"
+    }
+  },
+  {
+    "id": "translight",
+    "pub_id": "translight-image-guided-customized-lighting-control-with-generat",
+    "href": "https://hustvl.github.io/TransLight/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2508.14814"
+      },
+      {
+        "label": "project page",
+        "href": "https://hustvl.github.io/TransLight/"
+      }
+    ],
+    "description_en": "Image-guided customized lighting control: generative decoupling transfers the lighting effects of any reference image onto user content, enabling text-free, precise relighting.",
+    "description_cn": "图像引导的定制化光照控制：通过生成式解耦将任意参考图像的光照效果迁移到用户内容上，实现无需文本描述的精确重光照。",
+    "media": {
+      "src": "res/proj/translight.jpg",
+      "alt_en": "TransLight: image-guided customized lighting control with generative decoupling",
+      "alt_cn": "TransLight：图像引导的定制化光照控制",
+      "gallery_alt_en": "TransLight: image-guided customized lighting control",
+      "gallery_alt_cn": "TransLight：图像引导的定制化光照控制"
+    }
+  },
+  {
+    "id": "lens",
+    "pub_id": "lens-learning-to-segment-anything-with-unified-reinforced-reason",
+    "href": "https://hustvl.github.io/LENS/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2508.14153"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/LENS"
+      },
+      {
+        "label": "project page",
+        "href": "https://hustvl.github.io/LENS/"
+      }
+    ],
+    "description_en": "Segment anything with unified reinforced reasoning: a multimodal model that reasons over complex referring expressions and produces precise segmentation masks, trained end-to-end with reinforcement learning.",
+    "description_cn": "统一强化推理的万物分割：多模态模型对复杂指代表达进行推理并输出精确分割掩码，全流程以强化学习端到端训练。",
+    "media": {
+      "src": "res/proj/lens.jpg",
+      "alt_en": "LENS: learning to segment anything with unified reinforced reasoning",
+      "alt_cn": "LENS：统一强化推理的万物分割",
+      "gallery_alt_en": "LENS: segment anything with unified reinforced reasoning",
+      "gallery_alt_cn": "LENS：统一强化推理的万物分割"
+    }
+  },
+  {
+    "id": "recogdrive",
+    "pub_id": "recogdrive-a-reinforced-cognitive-framework-for-end-to-end-auton",
+    "href": "https://xiaomi-research.github.io/recogdrive/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2506.08052"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/xiaomi-research/recogdrive"
+      },
+      {
+        "label": "project page",
+        "href": "https://xiaomi-research.github.io/recogdrive/"
+      }
+    ],
+    "description_en": "A reinforced cognitive driving framework that unifies driving understanding and planning by combining a cognition-enhanced VLM with a diffusion planner, further reinforced by DiffGRPO for safer and more comfortable trajectories.",
+    "description_cn": "强化认知驾驶框架：认知增强的视觉语言模型与扩散规划器相结合，并通过 DiffGRPO 强化学习进一步提升轨迹的安全性与舒适性。",
+    "media": {
+      "src": "res/proj/recogdrive.jpg",
+      "alt_en": "ReCogDrive: reinforced cognitive framework for end-to-end autonomous driving",
+      "alt_cn": "ReCogDrive：端到端自动驾驶的强化认知框架",
+      "gallery_alt_en": "ReCogDrive: reinforced cognitive framework for autonomous driving",
+      "gallery_alt_cn": "ReCogDrive：端到端自动驾驶的强化认知框架"
+    },
+    "authors_html": "Yongkang Li#, Kaixin Xiong#, Xiangyu Guo, Fang Li, Sixu Yan, Gangwei Xu, Lijun Zhou, Long Chen, Haiyang Sun, Bing Wang, Kun Ma, Guang Chen, Hangjun Ye, Wenyu Liu, Xinggang Wang*"
+  },
+  {
+    "id": "groundingsuite",
+    "pub_id": "groundingsuite-measuring-complex-multi-granular-pixel-grounding",
+    "href": "https://github.com/hustvl/GroundingSuite",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2503.10596"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/GroundingSuite"
+      },
+      {
+        "label": "dataset",
+        "href": "https://huggingface.co/datasets/hustvl/GSEval"
+      }
+    ],
+    "description_en": "A comprehensive pixel grounding framework: an automated VLM-based annotation pipeline (4.5× faster than GLaMM), a 9.56M-sample training set with diverse referring expressions, and a 3,800-instance evaluation benchmark.",
+    "description_cn": "综合性的像素接地框架：基于 VLM 的自动标注流水线（比 GLaMM 快 4.5 倍）、956 万条多样指代表达的训练集，以及 3800 条精心构建的评测基准。",
+    "media": {
+      "src": "res/proj/groundingsuite.jpg",
+      "alt_en": "GroundingSuite: multi-granular pixel grounding tasks versus RefCOCO, gRefCOCO and GranD",
+      "alt_cn": "GroundingSuite：与 RefCOCO、gRefCOCO、GranD 对比的多粒度像素接地任务",
+      "gallery_alt_en": "GroundingSuite: multi-granular pixel grounding benchmark",
+      "gallery_alt_cn": "GroundingSuite：多粒度像素接地基准"
+    },
+    "authors_html": "Rui Hu#, Lianghui Zhu#, Yuxuan Zhang, Tianheng Cheng, Lei Liu, Heng Liu, Longjin Ran, Xiaoxin Chen, Wenyu Liu, Xinggang Wang*"
+  },
+  {
+    "id": "omnimamba",
+    "pub_id": "omnimamba-efficient-and-unified-multimodal-understanding-and-gen",
+    "href": "https://github.com/hustvl/OmniMamba",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2503.08686"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/OmniMamba"
+      }
+    ],
+    "description_en": "The first linear-model-based unified multimodal understanding and visual generation model — competitive with only 2M training data, up to 119.2× speedup and 63% GPU memory reduction on long-sequence generation vs Transformer counterparts.",
+    "description_cn": "首个基于线性模型的统一多模态理解与视觉生成模型——仅用 2M 数据训练即具竞争力，长序列生成相比 Transformer 提速最高 119.2 倍、显存降低 63%。",
+    "media": {
+      "src": "res/proj/omnimamba.png",
+      "alt_en": "OmniMamba: unified multimodal understanding and generation architecture based on Mamba-2",
+      "alt_cn": "OmniMamba：基于 Mamba-2 的统一多模态理解与生成架构",
+      "gallery_alt_en": "OmniMamba: unified multimodal understanding and generation via state space models",
+      "gallery_alt_cn": "OmniMamba：基于状态空间模型的统一多模态理解与生成"
+    },
+    "authors_html": "Jialv Zou, Bencheng Liao, Qian Zhang, Wenyu Liu, Xinggang Wang*"
+  },
+  {
+    "id": "lightningdit",
+    "pub_id": "reconstruction-vs-generation-taming-optimization-dilemma-in-late",
+    "href": "https://github.com/hustvl/LightningDiT",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2501.01423"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/LightningDiT"
+      }
+    ],
+    "description_en": "Aligns the VAE latent space with vision foundation models (VA-VAE) and pairs it with an enhanced DiT baseline (LightningDiT) — FID 1.35 with 0.28 rFID on ImageNet-256, converging 21.8× faster than the original DiT (FID 2.11 in 64 epochs). CVPR 2025 Oral.",
+    "description_cn": "将 VAE 潜空间与视觉基础模型对齐（VA-VAE），配合增强版 DiT 基线（LightningDiT）——ImageNet-256 上 FID 1.35、rFID 0.28，收敛比原版 DiT 快 21.8 倍（64 个 epoch 即达 FID 2.11）。CVPR 2025 Oral。",
+    "media": {
+      "src": "res/proj/lightningdit.jpg",
+      "alt_en": "LightningDiT: ImageNet-256 samples generated with the VA-VAE aligned latent diffusion system",
+      "alt_cn": "LightningDiT：VA-VAE 对齐潜空间扩散系统的 ImageNet-256 生成样本",
+      "gallery_alt_en": "LightningDiT: fast-converging latent diffusion with VA-VAE",
+      "gallery_alt_cn": "LightningDiT：基于 VA-VAE 的快速收敛潜空间扩散模型"
+    },
+    "title_html": "LightningDiT &amp; VA-VAE: Taming the Reconstruction-Generation Dilemma in Latent Diffusion Models",
+    "short_name": "LightningDiT"
+  },
+  {
+    "id": "gausstr",
+    "pub_id": "gausstr-foundation-model-aligned-gaussian-transformer-for-self-s",
+    "href": "https://hustvl.github.io/GaussTR/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2412.13193"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/GaussTR"
+      },
+      {
+        "label": "project page",
+        "href": "https://hustvl.github.io/GaussTR/"
+      }
+    ],
+    "description_en": "Self-supervised 3D spatial understanding: aligning Gaussian-based 3D representations with foundation-model features, enabling open-vocabulary 3D perception without manual 3D annotations.",
+    "description_cn": "自监督三维空间理解：将基于高斯的三维表征与基础模型特征对齐，无需人工三维标注即可实现开放词汇的三维感知。",
+    "media": {
+      "src": "res/proj/gausstr.jpg",
+      "alt_en": "GaussTR: foundation model-aligned Gaussian transformer for self-supervised 3D spatial understanding",
+      "alt_cn": "GaussTR：基础模型对齐的高斯 Transformer 自监督三维空间理解",
+      "gallery_alt_en": "GaussTR: foundation model-aligned Gaussian transformer",
+      "gallery_alt_cn": "GaussTR：基础模型对齐的高斯 Transformer"
+    }
+  },
+  {
+    "id": "diffusiondrive",
+    "pub_id": "diffusiondrive-truncated-diffusion-model-for-end-to-end-autonomo",
+    "href": "https://github.com/hustvl/DiffusionDrive",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2411.15139"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/DiffusionDrive"
+      }
+    ],
+    "description_en": "A truncated diffusion policy for real-time end-to-end driving, denoising from an anchored Gaussian prior to generate diverse, high-quality trajectories in just a few steps.",
+    "description_cn": "面向实时端到端驾驶的截断扩散策略，从锚定高斯先验出发仅需少量去噪步数即可生成多样、高质量的轨迹。",
+    "media": {
+      "src": "res/proj/diffusiondrive.png",
+      "alt_en": "DiffusionDrive: truncated diffusion model for end-to-end autonomous driving",
+      "alt_cn": "DiffusionDrive：端到端自动驾驶的截断扩散模型",
+      "gallery_alt_en": "DiffusionDrive: truncated diffusion model for end-to-end driving",
+      "gallery_alt_cn": "DiffusionDrive：端到端自动驾驶的截断扩散模型"
+    }
+  },
+  {
+    "id": "senna",
+    "pub_id": "senna-bridging-large-vision-language-models-and-end-to-end-auton",
+    "href": "https://github.com/hustvl/Senna",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2410.22313"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/Senna"
+      }
+    ],
+    "description_en": "A driving VLM that bridges large vision-language models and end-to-end autonomous driving, combining high-level scene understanding and reasoning with precise trajectory planning.",
+    "description_cn": "连接大规模视觉语言模型与端到端自动驾驶的驾驶 VLM，将高层场景理解、推理与精确轨迹规划融为一体。",
+    "media": {
+      "src": "res/proj/senna.png",
+      "alt_en": "Senna: bridging large vision-language models and end-to-end autonomous driving",
+      "alt_cn": "Senna：连接大规模视觉语言模型与端到端自动驾驶",
+      "gallery_alt_en": "Senna: bridging large VLMs and end-to-end driving",
+      "gallery_alt_cn": "Senna：连接大规模视觉语言模型与端到端自动驾驶"
+    }
+  },
+  {
+    "id": "controlar",
+    "pub_id": "controlar-controllable-image-generation-with-autoregressive-mode",
+    "href": "https://github.com/hustvl/ControlAR",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2410.02705"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/ControlAR"
+      }
+    ],
+    "description_en": "Adds spatial controls (edges, depth, segmentation maps) to autoregressive image generators via conditional decoding on the control sequence — no hand-crafted special tokens, supporting arbitrary-resolution generation.",
+    "description_cn": "通过在控制序列上条件解码，为自回归图像生成模型加入空间控制（边缘、深度、分割图）——无需手工特殊 token，支持任意分辨率生成。",
+    "media": {
+      "src": "res/proj/controlar.jpg",
+      "alt_en": "ControlAR: controllable image generation with autoregressive models",
+      "alt_cn": "ControlAR：自回归模型的可控图像生成",
+      "gallery_alt_en": "ControlAR: controllable autoregressive image generation",
+      "gallery_alt_cn": "ControlAR：自回归可控图像生成"
+    },
+    "authors_html": "Zongming Li#, Tianheng Cheng#, Shoufa Chen, Peize Sun, Haocheng Shen, Longjin Ran, Xiaoxin Chen, Wenyu Liu, Xinggang Wang*"
+  },
+  {
+    "id": "xs-vid",
+    "pub_id": "xs-vid-a-large-scale-benchmark-for-small-object-detection-and-tr",
+    "href": "https://gjhhust.github.io/XS-VID/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2407.18137"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/gjhhust/XS-VID"
+      },
+      {
+        "label": "project page",
+        "href": "https://gjhhust.github.io/XS-VID/"
+      },
+      {
+        "label": "dataset",
+        "href": "https://huggingface.co/datasets/lanlanlan23/XS-VID-v2"
+      }
+    ],
+    "description_en": "A large-scale video benchmark of extremely small objects across diverse day/night scenes, paired with YOLOFT — a detector that rethinks optical-flow feature alignment for tiny-object detection and tracking.",
+    "description_cn": "大规模视频微小目标基准，覆盖多样昼夜场景，并提出 YOLOFT 检测器——重新设计光流特征对齐，面向微小目标的检测与跟踪。",
+    "media": {
+      "src": "res/proj/xs-vid.jpg",
+      "alt_en": "XS-VID: extremely small objects across diverse day and night scenes",
+      "alt_cn": "XS-VID：多样昼夜场景下的微小目标检测与跟踪",
+      "gallery_alt_en": "XS-VID: benchmark for small object detection and tracking in videos",
+      "gallery_alt_cn": "XS-VID：视频小目标检测与跟踪基准"
+    }
+  },
+  {
+    "id": "dig",
+    "pub_id": "dig-scalable-and-efficient-diffusion-models-with-gated-linear-at",
+    "href": "https://github.com/hustvl/DiG",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2405.18428"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/DiG"
+      }
+    ],
+    "description_en": "Brings gated linear attention into the diffusion backbone with minimal parameter overhead — beating DiT at 256² while scaling far better at high resolutions: DiG-S/2 is 2.5× faster with 75.7% less GPU memory than DiT-S/2 at 1792², and DiG-XL/2 is 1.8× faster than DiT with FlashAttention-2 at 2048².",
+    "description_cn": "将门控线性注意力引入扩散骨干网络，参数开销极小——256² 分辨率下超越 DiT，高分辨率下效率优势显著：DiG-S/2 在 1792² 比 DiT-S/2 快 2.5 倍、省 75.7% 显存，DiG-XL/2 在 2048² 比 FlashAttention-2 版 DiT 快 1.8 倍。",
+    "media": {
+      "src": "res/proj/dig.jpg",
+      "alt_en": "DiG: high-resolution samples from diffusion models with gated linear attention",
+      "alt_cn": "DiG：门控线性注意力扩散模型的高分辨率生成样本",
+      "gallery_alt_en": "DiG: efficient diffusion models with gated linear attention",
+      "gallery_alt_cn": "DiG：门控线性注意力高效扩散模型"
+    },
+    "authors_html": "Lianghui Zhu, Zilong Huang*, Bencheng Liao, Jun Hao Liew, Hanshu Yan, Jiashi Feng, Xinggang Wang*"
+  },
+  {
+    "id": "vadv2",
+    "pub_id": "vadv2-end-to-end-autonomous-driving-via-probabilistic-planning",
+    "href": "https://hgao-cv.github.io/VADv2/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2402.13243"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/VAD"
+      },
+      {
+        "label": "project page",
+        "href": "https://hgao-cv.github.io/VADv2/"
+      }
+    ],
+    "description_en": "End-to-end vectorized autonomous driving that outputs a probabilistic distribution over actions learned from large-scale driving demonstrations and samples one action to control the vehicle.",
+    "description_cn": "端到端矢量化自动驾驶：从大规模驾驶示范中学习动作的概率分布，并采样一个动作控制车辆，无需规则包装即可稳定运行。",
+    "media": {
+      "src": "res/proj/vadv2.png",
+      "alt_en": "VADv2: end-to-end autonomous driving via probabilistic planning",
+      "alt_cn": "VADv2：基于概率规划的端到端自动驾驶",
+      "gallery_alt_en": "VADv2: end-to-end autonomous driving via probabilistic planning",
+      "gallery_alt_cn": "VADv2：基于概率规划的端到端自动驾驶"
+    }
+  },
+  {
+    "id": "eva-x",
+    "pub_id": "eva-x-a-foundation-model-for-general-chest-x-ray-analysis-with-s",
+    "href": "https://github.com/hustvl/EVA-X",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2405.05237"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/EVA-X"
+      },
+      {
+        "label": "pdf",
+        "href": "https://www.nature.com/articles/s41746-025-02032-z"
+      }
+    ],
+    "description_en": "The first X-ray self-supervised ViT foundation model capturing both semantic and geometric information, spanning 20+ chest diseases with leading results on 11+ detection tasks and strong few-shot capability.",
+    "description_cn": "首个同时捕捉语义与几何信息的 X 光自监督 ViT 基础模型，覆盖 20 余种胸部疾病，在 11 项以上检测任务中取得领先结果，并具备出色的少样本学习能力。",
+    "media": {
+      "src": "res/proj/evax.png",
+      "alt_en": "EVA-X: self-supervised pre-training pipeline for chest X-ray foundation models",
+      "alt_cn": "EVA-X：面向胸部 X 光基础模型的自监督预训练流程",
+      "gallery_alt_en": "EVA-X: self-supervised chest X-ray foundation model",
+      "gallery_alt_cn": "EVA-X：自监督胸部 X 光基础模型"
+    },
+    "title_html": "EVA-X: A Foundation Model for General Chest X-ray Analysis with Self-Supervised Learning",
+    "authors_html": "Jingfeng Yao, Xinggang Wang*, Yuehao Song, Huangxuan Zhao, Jun Ma, Yajie Chen, Wenyu Liu, Bo Wang*",
+    "venue": "npj Digital Medicine 2025"
+  },
+  {
+    "id": "mim4d",
+    "pub_id": "mim4d-masked-modeling-with-multi-view-video-for-autonomous-drivi",
+    "href": "https://github.com/hustvl/MIM4D",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2403.08760"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/MIM4D"
+      }
+    ],
+    "description_en": "A dual masked-image-modeling pre-training paradigm for multi-view driving videos, supervising pseudo-3D features via volumetric differentiable rendering — improving end-to-end planning (-9% collision), BEV segmentation (+8.7% IoU), 3D detection (+3.5% mAP) and HD map construction (+1.4% mAP) on nuScenes.",
+    "description_cn": "面向多视角驾驶视频的双重掩码图像建模预训练范式，通过 3D 体素可微渲染监督伪 3D 特征——在 nuScenes 上提升端到端规划（碰撞率降 9%）、BEV 分割（+8.7% IoU）、3D 检测（+3.5% mAP）与高精地图构建（+1.4% mAP)。",
+    "media": {
+      "src": "res/proj/mim4d.jpg",
+      "alt_en": "MIM4D: dual masked image modeling on multi-view video with 3D volumetric rendering supervision",
+      "alt_cn": "MIM4D：多视角视频双重掩码建模与 3D 体渲染监督",
+      "gallery_alt_en": "MIM4D: masked modeling with multi-view video for driving representation learning",
+      "gallery_alt_cn": "MIM4D：多视角视频掩码建模的自动驾驶表征学习"
+    },
+    "authors_html": "Jialv Zou#, Bencheng Liao#, Qian Zhang, Wenyu Liu, Xinggang Wang*"
+  },
+  {
+    "id": "yolo-world",
+    "pub_id": "yolo-world-real-time-open-vocabulary-object-detection",
+    "href": "https://wondervictor.github.io/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2401.17270"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/AILab-CVC/YOLO-World"
+      },
+      {
+        "label": "project page",
+        "href": "https://wondervictor.github.io/"
+      }
+    ],
+    "description_en": "Real-time open-vocabulary detection: YOLO enhanced with vision-language modeling via the re-parameterizable RepVL-PAN and region-text contrastive pre-training, reaching 35.4 AP at 52 FPS on LVIS zero-shot.",
+    "description_cn": "实时开放词汇目标检测：通过可重参数化的 RepVL-PAN 与区域-文本对比预训练为 YOLO 注入视觉语言能力，LVIS 零样本检测达 35.4 AP / 52 FPS。",
+    "media": {
+      "src": "res/proj/yoloworld.png",
+      "alt_en": "YOLO-World: real-time open-vocabulary object detection",
+      "alt_cn": "YOLO-World：实时开放词汇目标检测",
+      "gallery_alt_en": "YOLO-World: real-time open-vocabulary object detection",
+      "gallery_alt_cn": "YOLO-World：实时开放词汇目标检测"
+    }
+  },
+  {
+    "id": "vision-mamba",
+    "pub_id": "vision-mamba-efficient-visual-representation-learning-with-bidir",
+    "href": "https://github.com/hustvl/Vim",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2401.09417"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/Vim"
+      }
+    ],
+    "description_en": "A generic vision backbone built on bidirectional state space models, delivering Transformer-level representation power with linear complexity and no attention.",
+    "description_cn": "基于双向状态空间模型的通用视觉骨干网络，以线性复杂度、无注意力机制达到 Transformer 级别的表征能力。",
+    "media": {
+      "src": "res/proj/vim.png",
+      "alt_en": "Vision Mamba: efficient visual representation learning with bidirectional state space model",
+      "alt_cn": "Vision Mamba：双向状态空间模型的高效视觉表征学习",
+      "gallery_alt_en": "Vision Mamba: bidirectional state space model for vision",
+      "gallery_alt_cn": "Vision Mamba：双向状态空间模型视觉骨干"
+    },
+    "title_html": "Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model",
+    "authors_html": "Lianghui Zhu#, Bencheng Liao#, Qian Zhang, Xinlong Wang, Wenyu Liu, Xinggang Wang*"
+  },
+  {
+    "id": "4dgaussians",
+    "pub_id": "4d-gaussian-splatting-for-real-time-dynamic-scene-rendering",
+    "href": "https://guanjunwu.github.io/4dgs/index.html",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2310.08528"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/4DGaussians"
+      },
+      {
+        "label": "project page",
+        "href": "https://guanjunwu.github.io/4dgs/index.html"
+      }
+    ],
+    "description_en": "Real-time rendering of dynamic scenes by modeling 4D scenes with Gaussian splatting and a compact spatio-temporal representation, achieving high-quality novel-view synthesis at interactive frame rates.",
+    "description_cn": "用高斯泼溅与紧凑的时空联合表征建模动态场景，实现高质量新视角合成的实时渲染。",
+    "media": {
+      "src": "res/proj/4dgs.jpg",
+      "alt_en": "4DGaussians: real-time dynamic scene rendering",
+      "alt_cn": "4DGaussians：实时动态场景渲染",
+      "gallery_alt_en": "4DGaussians: real-time dynamic scene rendering",
+      "gallery_alt_cn": "4DGaussians：实时动态场景渲染"
+    },
+    "title_html": "4D Gaussian Splatting for Real-Time Dynamic Scene Rendering",
+    "authors_html": "Guanjun Wu#, Taoran Yi#, Jiemin Fang, Lingxi Xie, Xiaopeng Zhang, Wei Wei, Wenyu Liu, Qi Tian, Xinggang Wang*",
+    "short_name": "4DGaussians"
+  },
+  {
+    "id": "weaktr",
+    "pub_id": "weaktr-exploring-plain-vision-transformer-for-weakly-supervised",
+    "href": "https://github.com/hustvl/WeakTr",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2304.01184"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/WeakTr"
+      }
+    ],
+    "description_en": "Explores plain ViT for weakly-supervised semantic segmentation: end-to-end CAM generation by adaptively fusing self-attention maps with learned head weights, plus online retraining with a gradient-clipping decoder — 78.5% mIoU on VOC12, 51.1% on COCO14.",
+    "description_cn": "探索纯 ViT 用于弱监督语义分割：以可学习的注意力头权重自适应融合自注意力图，端到端生成高质量 CAM，并配合梯度裁剪解码器在线重训练——VOC12 上 78.5% mIoU、COCO14 上 51.1% mIoU。",
+    "media": {
+      "src": "res/proj/weaktr.png",
+      "alt_en": "WeakTr: plain ViT framework for weakly-supervised semantic segmentation with adaptive attention fusion",
+      "alt_cn": "WeakTr：基于纯 ViT 与自适应注意力融合的弱监督语义分割框架",
+      "gallery_alt_en": "WeakTr: plain ViT for weakly-supervised semantic segmentation",
+      "gallery_alt_cn": "WeakTr：纯 ViT 弱监督语义分割"
+    },
+    "authors_html": "Lianghui Zhu#, Yingyue Li#, Jiemin Fang, Yan Liu, Xin Hao, Wenyu Liu, Xinggang Wang*",
+    "venue": "IEEE TIP 2026",
+    "venue_class": "v-top"
+  },
+  {
+    "id": "maptr",
+    "pub_id": "maptrv2-an-end-to-end-framework-for-online-vectorized-hd-map-con",
+    "href": "https://github.com/hustvl/MapTR",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2308.05736"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/MapTR"
+      }
+    ],
+    "description_en": "An end-to-end framework for online vectorized HD map construction, modeling map elements as point sets with a hierarchical query design for real-time structured map learning.",
+    "description_cn": "在线矢量化高精地图构建的端到端框架，将地图元素建模为点集并通过层次化查询设计实现实时结构化地图学习。",
+    "media": {
+      "src": "res/proj/maptr.jpg",
+      "alt_en": "MapTR: online vectorized HD map construction",
+      "alt_cn": "MapTR：在线矢量化高精地图构建",
+      "gallery_alt_en": "MapTR: online vectorized HD map construction",
+      "gallery_alt_cn": "MapTR：在线矢量化高精地图构建"
+    },
+    "short_name": "MapTR"
+  },
+  {
+    "id": "eva",
+    "pub_id": "eva-exploring-the-limits-of-masked-visual-representation-learnin",
+    "href": "https://github.com/baaivision/EVA",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2211.07636"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/baaivision/EVA"
+      }
+    ],
+    "description_en": "Scaling masked image modeling to billion-parameter vision transformers: a vanilla ViT pre-trained with masked image modeling achieves state-of-the-art results across a wide range of downstream vision tasks.",
+    "description_cn": "将掩码图像建模扩展到十亿参数级视觉 Transformer：仅用掩码图像建模预训练的原始 ViT 即可在大量下游视觉任务上达到最先进水平。",
+    "media": {
+      "src": "res/proj/eva.png",
+      "alt_en": "EVA: exploring the limits of masked visual representation learning at scale",
+      "alt_cn": "EVA：规模化掩码视觉表征学习的极限探索",
+      "gallery_alt_en": "EVA: masked visual representation learning at scale",
+      "gallery_alt_cn": "EVA：规模化掩码视觉表征学习"
+    },
+    "authors_html": "Yuxin Fang#, Wen Wang, Binhui Xie, Quan Sun, Ledell Wu, Xinggang Wang*, Tiejun Huang, Xinlong Wang*, Yue Cao*"
+  },
+  {
+    "id": "bytetrack",
+    "pub_id": "bytetrack-multi-object-tracking-by-associating-every-detection-b",
+    "href": "https://github.com/FoundationVision/ByteTrack",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2110.06864"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/FoundationVision/ByteTrack"
+      }
+    ],
+    "description_en": "Simple yet effective multi-object tracking: by associating every detection box instead of only high-scoring ones, ByteTrack recovers true objects from low-score detections and filters out background, setting the standard tracker integrated in YOLOv8 and beyond.",
+    "description_cn": "简单而高效的多目标跟踪：关联每一个检测框而非仅高分框，从低分检测中找回真实目标并过滤背景，已成为集成进 YOLOv8 等框架的标准跟踪器。",
+    "media": {
+      "src": "res/proj/bytetrack.jpg",
+      "alt_en": "ByteTrack: multi-object tracking by associating every detection box",
+      "alt_cn": "ByteTrack：关联每一个检测框的多目标跟踪",
+      "gallery_alt_en": "ByteTrack: multi-object tracking by associating every detection box",
+      "gallery_alt_cn": "ByteTrack：关联每一个检测框的多目标跟踪"
+    }
+  },
+  {
+    "id": "fairmot",
+    "pub_id": "fairmot-on-the-fairness-of-detection-and-re-identification-in-mu",
+    "href": "https://github.com/ifzhang/FairMOT",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2004.01888"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/ifzhang/FairMOT"
+      }
+    ],
+    "description_en": "A one-shot multi-object tracker that fairly balances detection and re-identification in a shared homogeneous network, addressing the inherent unfairness of treating re-ID as a secondary task.",
+    "description_cn": "一站式多目标跟踪器：在同构网络中公平地平衡检测与重识别两个任务，解决了将重识别作为次要任务所带来的固有偏差。",
+    "media": {
+      "src": "res/proj/fairmot.jpg",
+      "alt_en": "FairMOT: on the fairness of detection and re-identification in multiple object tracking",
+      "alt_cn": "FairMOT：多目标跟踪中检测与重识别的公平性",
+      "gallery_alt_en": "FairMOT: fairness of detection and re-identification in MOT",
+      "gallery_alt_cn": "FairMOT：多目标跟踪中检测与重识别的公平性"
+    },
+    "authors_html": "Yifu Zhang#, Chunyu Wang, Xinggang Wang*, Wenjun Zeng, Wenyu Liu"
+  },
+  {
+    "id": "ccnet",
+    "pub_id": "ccnet-criss-cross-attention-for-semantic-segmentation-2023",
+    "href": "https://github.com/speedinghzl/CCNet",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/1811.11721"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/speedinghzl/CCNet"
+      }
+    ],
+    "description_en": "Criss-cross attention captures full-image context with sparse criss-cross paths instead of dense attention, an efficient long-range dependency module widely used in segmentation — notably used in AlphaFold.",
+    "description_cn": "十字交叉注意力以稀疏的十字路径替代稠密注意力捕获全图上下文，是分割领域广泛使用的高效长程依赖模块，并被 AlphaFold 采用。",
+    "media": {
+      "src": "res/proj/ccnet.png",
+      "alt_en": "CCNet: criss-cross attention for semantic segmentation",
+      "alt_cn": "CCNet：语义分割的十字交叉注意力",
+      "gallery_alt_en": "CCNet: criss-cross attention for semantic segmentation",
+      "gallery_alt_cn": "CCNet：语义分割的十字交叉注意力"
+    }
+  }
+]

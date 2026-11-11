@@ -151,13 +151,16 @@ def validate_data(papers, projects, config):
     report(not bad, "paper topics use the controlled vocabulary" + (" -> " + ", ".join(bad[:3]) if bad else ""))
     bad = []
     for paper in papers:
+        index = None
         try:
-            paper_index(paper)
+            index = paper_index(paper)
         except Exception as exc:
             bad.append(paper.get("id", "<missing>") + ": " + str(exc))
         for link in anchors(paper["li_html"]):
             if link["label"].lower() in RESOURCE_LABELS and not link["href"]:
                 bad.append(paper["id"] + ": empty " + link["label"])
+            if index and index["venue"]["slug"] in {"cvpr", "iccv", "eccv"} and "proceedings.mlr.press" in link["href"]:
+                bad.append(paper["id"] + ": " + index["venue"]["label"] + " paper links to PMLR")
     report(not bad, "paper rows expose valid derived metadata and links" + (" -> " + "; ".join(bad[:3]) if bad else ""))
     bad = []
     for project in projects:

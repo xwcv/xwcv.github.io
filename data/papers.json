@@ -12,7 +12,7 @@
     "id": "stablevq-practical-guidelines-for-stable-vector-quantized-tokeni",
     "section": "major",
     "year_group": "2026",
-    "li_html": "<li><p>\n    Bao Tang#, Jiahao Guo#, Haoxiang Cao#, Wenyu Liu, Changqian Yu*, Kun Gai, Xinggang Wang*. <strong>StableVQ: Practical Guidelines for Stable Vector-Quantized Tokenizer Training</strong>. Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>) 2026. <a href=\"https://tt-day.github.io/StableVQ/\">project page</a>, <a href=\"https://arxiv.org/abs/2609.26774\">arxiv</a>.\n  </p></li>",
+    "li_html": "<li><p>\n    Bao Tang, Jiahao Guo, Haoxiang Cao, Wenyu Liu, Changqian Yu*, Kun Gai, Xinggang Wang*. <strong>StableVQ: Practical Guidelines for Stable Vector-Quantized Tokenizer Training</strong>. Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>) 2026. <a href=\"https://tt-day.github.io/StableVQ/\">project page</a>, <a href=\"https://arxiv.org/abs/2609.26774\">arxiv</a>.\n  </p></li>",
     "topics": [
       "generative-model"
     ]
@@ -764,7 +764,7 @@
     "id": "pd-quant-post-training-quantization-based-on-prediction-differen",
     "section": "major",
     "year_group": "2023",
-    "li_html": "<li><p>\n    Jiawei Liu, Lin Niu, Zhihang Yuan, Dawei Yang, Xinggang Wang, Wenyu Liu. <strong>PD-Quant: Post-Training Quantization based on Prediction Difference Metric</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2023. <a href=\"https://proceedings.mlr.press/v205/liu23a/liu23a.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/PD-Quant\">code</a>.\n  </p></li>",
+    "li_html": "<li><p>\n    Jiawei Liu, Lin Niu, Zhihang Yuan, Dawei Yang, Xinggang Wang, Wenyu Liu. <strong>PD-Quant: Post-Training Quantization based on Prediction Difference Metric</strong>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>) 2023. <a href=\"https://openaccess.thecvf.com/content/CVPR2023/papers/Liu_PD-Quant_Post-Training_Quantization_Based_on_Prediction_Difference_Metric_CVPR_2023_paper.pdf\">pdf</a>, <a href=\"https://github.com/hustvl/PD-Quant\">code</a>.\n  </p></li>",
     "topics": [
       "efficient-llm"
     ]

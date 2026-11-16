@@ -1,0 +1,8 @@
+@misc{li2026bridge3d,
+  title={Bridge3D: Enabling Vision-Language-Action Models to See and Act in 3D},
+  author={Haoxuan Li and Sixu Yan and Lianghui Zhu and Xuanlai Tang and Shikang Wang and Xinggang Wang},
+  year={2026},
+  eprint={2609.24525},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

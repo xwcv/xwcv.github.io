@@ -1,0 +1,1 @@
+@article{Wang_2016, title={Deep sketch feature for cross-domain image retrieval}, volume={207}, ISSN={0925-2312}, url={http://dx.doi.org/10.1016/j.neucom.2016.04.046}, DOI={10.1016/j.neucom.2016.04.046}, journal={Neurocomputing}, publisher={Elsevier BV}, author={Wang, Xinggang and Duan, Xiong and Bai, Xiang}, year={2016}, month=Sept, pages={387–397} }

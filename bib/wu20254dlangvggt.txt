@@ -1,0 +1,8 @@
+@misc{wu20254dlangvggt,
+  title={4DLangVGGT: 4D Language-Visual Geometry Grounded Transformer},
+  author={Xianfeng Wu and Yajing Bai and Minghan Li and Xianzu Wu and Xueqi Zhao and Zhongyuan Lai and Wenyu Liu and Xinggang Wang},
+  year={2025},
+  eprint={2512.05060},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

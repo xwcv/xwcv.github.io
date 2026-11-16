@@ -1,0 +1,8 @@
+@misc{gao2026rad,
+  title={RAD-2: Scaling Reinforcement Learning in a Generator-Discriminator Framework},
+  author={Hao Gao and Shaoyu Chen and Yifan Zhu and Yuehao Song and Wenyu Liu and Qian Zhang and Xinggang Wang},
+  year={2026},
+  eprint={2604.15308},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

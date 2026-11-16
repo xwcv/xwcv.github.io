@@ -1,0 +1,8 @@
+@misc{chen2022efficient,
+  title={Efficient and Robust 2D-to-BEV Representation Learning via Geometry-guided Kernel Transformer},
+  author={Shaoyu Chen and Tianheng Cheng and Xinggang Wang and Wenming Meng and Qian Zhang and Wenyu Liu},
+  year={2022},
+  eprint={2206.04584},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

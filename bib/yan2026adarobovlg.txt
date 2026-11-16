@@ -1,0 +1,8 @@
+@misc{yan2026adarobovlg,
+  title={AdaRoboVLG: Adaptive Vision-Language Grasping via Composable Foundation Priors and Generalizable Grasp Synthesis},
+  author={Sixu Yan and Shikang Wang and Binhua Huang and Xuanlai Tang and Guohua Fan and Fan Huang and Haoxuan Li and Yongkang Li and Yuhan Li and Bencheng Liao and Zeyu Zhang and Wenyu Liu and Hangxin Liu and Xinggang Wang},
+  year={2026},
+  eprint={2609.04096},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

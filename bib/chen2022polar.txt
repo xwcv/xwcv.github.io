@@ -1,0 +1,8 @@
+@misc{chen2022polar,
+  title={Polar Parametrization for Vision-based Surround-View 3D Detection},
+  author={Shaoyu Chen and Xinggang Wang and Tianheng Cheng and Qian Zhang and Chang Huang and Wenyu Liu},
+  year={2022},
+  eprint={2206.10965},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

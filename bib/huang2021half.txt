@@ -1,0 +1,8 @@
+@misc{huang2021half,
+  title={Half-Real Half-Fake Distillation for Class-Incremental Semantic Segmentation},
+  author={Zilong Huang and Wentian Hao and Xinggang Wang and Mingyuan Tao and Jianqiang Huang and Wenyu Liu and and Xian-Sheng Hua},
+  year={2021},
+  eprint={2104.00875},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

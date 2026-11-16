@@ -1,0 +1,1 @@
+@inproceedings{Weichao_Qiu_2014, title={Scale-Space SIFT flow}, url={http://dx.doi.org/10.1109/wacv.2014.6835734}, DOI={10.1109/wacv.2014.6835734}, booktitle={IEEE Winter Conference on Applications of Computer Vision}, publisher={IEEE}, author={Weichao Qiu and Xinggang Wang and Xiang Bai and Yuille, Alan and Zhuowen Tu}, year={2014}, month=Mar, pages={1112–1119} }

@@ -1,0 +1,8 @@
+@misc{li2026translight,
+  title={TransLight: Image-Guided Customized Lighting Control with Generative Decoupling},
+  author={Zongming Li and Lianghui Zhu and Haocheng Shen and Longjin Ran and Wenyu Liu and Xinggang Wang},
+  year={2026},
+  eprint={2508.14814},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

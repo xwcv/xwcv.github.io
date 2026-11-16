@@ -1,0 +1,8 @@
+@misc{yuan2026dreamwam,
+  title={DreamWAM: Beyond RGB Future Prediction for World Action Models},
+  author={Shanglin Yuan and Weiheng Zhao and Xin Shi and Haoyi Jiang and Xianda Guo and Liu Liu and Wenyu Liu and Wei Sui and Xinggang Wang},
+  year={2026},
+  eprint={2608.04996},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

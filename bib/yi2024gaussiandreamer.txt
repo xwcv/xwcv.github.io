@@ -1,0 +1,8 @@
+@misc{yi2024gaussiandreamer,
+  title={Gaussiandreamer: Fast generation from text to 3d gaussian splatting with point cloud priors},
+  author={Taoran Yi and Jiemin Fang and Guanjun Wu and Lingxi Xie and Xiaopeng Zhang and Wenyu Liu and Qi Tian and Xinggang Wang},
+  year={2024},
+  eprint={2310.08529},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

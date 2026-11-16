@@ -1,0 +1,1 @@
+@inproceedings{Chen_2019, title={Single-Shot Detector with Multiple Inference Paths}, url={http://dx.doi.org/10.1109/icip.2019.8803137}, DOI={10.1109/icip.2019.8803137}, booktitle={2019 IEEE International Conference on Image Processing (ICIP)}, publisher={IEEE}, author={Chen, Shoufa and Wang, Xinggang}, year={2019}, month=Sept, pages={2005–2009} }

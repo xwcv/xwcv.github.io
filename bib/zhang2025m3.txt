@@ -1,0 +1,7 @@
+@article{Zhang_2025, title={M${}^{3}$Bench: Benchmarking Whole-Body
+                    <u>M</u>
+                    otion Generation for
+                    <u>M</u>
+                    obile
+                    <u>M</u>
+                    anipulation in 3D Scenes}, volume={10}, ISSN={2377-3774}, url={http://dx.doi.org/10.1109/lra.2025.3575013}, DOI={10.1109/lra.2025.3575013}, number={7}, journal={IEEE Robotics and Automation Letters}, publisher={Institute of Electrical and Electronics Engineers (IEEE)}, author={Zhang, Zeyu and Yan, Sixu and Han, Muzhi and Wang, Zaijin and Wang, Xinggang and Zhu, Song-Chun and Liu, Hangxin}, year={2025}, month=July, pages={7286–7293} }

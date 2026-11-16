@@ -1,0 +1,8 @@
+@misc{zhao2026faster,
+  title={Faster-WAM: Efficient Inference-Time Future Conditioning for Robust World Action Models},
+  author={Weiheng Zhao and Haoyi Jiang and Xin Shi and Liu Liu and Zhizhong Su and Wei Sui and Fan Huang and Xinggang Wang},
+  year={2026},
+  eprint={2608.04404},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

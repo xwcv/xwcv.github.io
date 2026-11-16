@@ -1,0 +1,8 @@
+@misc{zhou2019proposal,
+  title={Proposal, Tracking and Segmentation (PTS): A Cascaded Network for Video Object Segmentation},
+  author={Qiang Zhou and Zilong Huang and Lichao Huang and Yongchao Gong and Han Shen and Chang Huang and Wenyu Liu and Xinggang Wang},
+  year={2019},
+  eprint={1907.01203},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

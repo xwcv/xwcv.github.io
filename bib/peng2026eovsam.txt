@@ -1,0 +1,8 @@
+@misc{peng2026eovsam,
+  title={EOVSAM: Efficient Open-Vocabulary Segmentation with SAM 3 in One Pass},
+  author={Haomin Peng and Yongkang Li and Zhaoxiang Liu and Xiaojie Jin and Shiguo Lian and Yunchao Wei and Xinggang Wang},
+  year={2026},
+  eprint={2608.02284},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

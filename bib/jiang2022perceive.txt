@@ -1,0 +1,8 @@
+@misc{jiang2022perceive,
+  title={Perceive, Interact, Predict: Learning Dynamic and Static Clues for End-to-End Motion Prediction},
+  author={Bo Jiang and Shaoyu Chen and Xinggang Wang and Bencheng Liao and Tianheng Cheng and Jiajie Chen and Helong Zhou and Qian Zhang and Wenyu Liu and Chang Huang},
+  year={2022},
+  eprint={2212.02181},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

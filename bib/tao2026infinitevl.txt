@@ -1,0 +1,8 @@
+@misc{tao2026infinitevl,
+  title={InfiniteVL: Synergizing Linear and Sparse Attention for Highly-Efficient, Unlimited-Input Vision-Language Models},
+  author={Hongyuan Tao and Bencheng Liao and Shaoyu Chen and Haoran Yin and Qian Zhang and Wenyu Liu and Xinggang Wang},
+  year={2026},
+  eprint={2512.08829},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

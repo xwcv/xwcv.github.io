@@ -1,0 +1,8 @@
+@misc{xia2026reworld,
+  title={ReWorld: Learning Better Representations for World Action Models},
+  author={Tianze Xia and Lijun Zhou and Kaixin Xiong and Jingfeng Yao and Yu Zhu and Zhenxin Zhu and Haiyang Sun and Bing Wang and Guang Chen and Hangjun Ye and Wenyu Liu and Xinggang Wang},
+  year={2026},
+  eprint={2606.27504},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

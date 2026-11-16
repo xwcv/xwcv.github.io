@@ -1,0 +1,8 @@
+@misc{fang2023corrupted,
+  title={Corrupted Image Modeling for Self-Supervised Visual Pre-Training},
+  author={Yuxin Fang and Li Dong and Hangbo Bao and Xinggang Wang and Furu Wei},
+  year={2023},
+  eprint={2202.03382},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

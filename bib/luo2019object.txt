@@ -1,0 +1,8 @@
+@misc{luo2019object,
+  title={Object Detection in Video with Spatial-temporal Context Aggregation},
+  author={Hao Luo and Lichao Huang and Han Shen and Yuan Li and Chang Huang and Xinggang Wang},
+  year={2019},
+  eprint={1907.04988},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

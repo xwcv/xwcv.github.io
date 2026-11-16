@@ -1,0 +1,8 @@
+@misc{jiang2026spa3r,
+  title={Spa3R: Predictive Spatial Field Modeling for 3D Visual Reasoning},
+  author={Haoyi Jiang and Liu Liu and Xinjie Wang and Yonghao He and Wei Sui and Zhizhong Su and Wenyu Liu and Xinggang Wang},
+  year={2026},
+  eprint={2602.21186},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

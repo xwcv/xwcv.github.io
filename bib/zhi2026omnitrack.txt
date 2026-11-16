@@ -1,0 +1,8 @@
+@misc{zhi2026omnitrack,
+  title={OmniTrack: General Motion Tracking via Physics-Consistent Reference},
+  author={Peiyuan Zhi and Yunshen Wang and Tengyu Liu and Sixu Yan and Wenyu Liu and Xinggang Wang and Baoxiong Jia and Siyuan Huang},
+  year={2026},
+  eprint={2602.23832},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

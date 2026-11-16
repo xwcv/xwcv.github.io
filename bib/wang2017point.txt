@@ -1,0 +1,8 @@
+@misc{wang2017point,
+  title={Point Linking Network for Object Detection},
+  author={Xinggang Wang and Kaibing Chen and Zilong Huang and Cong Yao and Wenyu Liu},
+  year={2017},
+  eprint={1706.03646},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

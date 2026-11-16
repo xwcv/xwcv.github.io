@@ -1,0 +1,8 @@
+@misc{guo2025vgt,
+  title={VGT: Visual Generation Tuning},
+  author={Jiahao Guo and Sinan Du and Jingfeng Yao and Wenyu Liu and Bo Li and Haoxiang Cao and Kun Gai and Chun Yuan and Kai Wu and Xinggang Wang},
+  year={2025},
+  eprint={2511.23469},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

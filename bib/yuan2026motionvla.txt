@@ -1,0 +1,8 @@
+@misc{yuan2026motionvla,
+  title={MotionVLA: Injecting Geometric Motion into Vision-Language-Action Model},
+  author={Shanglin Yuan and Weiheng Zhao and Xianda Guo and Wei Sui and Li Yu and Wenyu Liu and Xinggang Wang},
+  year={2026},
+  eprint={2606.08288},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

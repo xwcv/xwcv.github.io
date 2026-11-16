@@ -1,0 +1,8 @@
+@misc{cheng2023exploring,
+  title={Exploring High-Quality Pseudo Masks for Weakly Supervised Instance Segmentation},
+  author={Tianheng Cheng and Xinggang Wang and Shaoyu Chen and Qian Zhang and Wenyu Liu},
+  year={2023},
+  eprint={2210.05174},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

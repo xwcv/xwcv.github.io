@@ -1,0 +1,1 @@
+@article{Zhou_2024, title={Video text tracking with transformer-based local search}, volume={609}, ISSN={0925-2312}, url={http://dx.doi.org/10.1016/j.neucom.2024.128420}, DOI={10.1016/j.neucom.2024.128420}, journal={Neurocomputing}, publisher={Elsevier BV}, author={Zhou, Xingsheng and Wang, Cheng and Wang, Xinggang and Liu, Wenyu}, year={2024}, month=Dec, pages={128420} }

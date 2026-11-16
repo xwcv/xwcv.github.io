@@ -1,0 +1,8 @@
+@misc{tang2026stablevq,
+  title={StableVQ: Practical Guidelines for Stable Vector-Quantized Tokenizer Training},
+  author={Bao Tang and Jiahao Guo and Haoxiang Cao and Wenyu Liu and Changqian Yu and Kun Gai and Xinggang Wang},
+  year={2026},
+  eprint={2609.26774},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

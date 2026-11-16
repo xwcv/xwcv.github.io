@@ -1,0 +1,8 @@
+@misc{xia2026drivelaw,
+  title={DriveLaW: Unifying Planning and Video Generation in a Latent Driving World},
+  author={Tianze Xia and Yongkang Li and Lijun Zhou and Jingfeng Yao and Kaixin Xiong and Haiyang Sun and Bing Wang and Kun Ma and Guang Chen and Hangjun Ye and Wenyu Liu and Xinggang Wang},
+  year={2026},
+  eprint={2512.23421},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

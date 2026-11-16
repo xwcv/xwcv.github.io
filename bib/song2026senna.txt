@@ -1,0 +1,8 @@
+@misc{song2026senna,
+  title={Senna-2: Aligning VLM and End-to-End Driving Policy for Consistent Decision Making and Planning},
+  author={Yuehao Song and Shaoyu Chen and Hao Gao and Yifan Zhu and Weixiang Yue and Jialv Zou and Bo Jiang and Zihao Lu and Yu Wang and Qian Zhang and Xinggang Wang},
+  year={2026},
+  eprint={2603.11219},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

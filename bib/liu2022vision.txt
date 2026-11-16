@@ -1,0 +1,8 @@
+@misc{liu2022vision,
+  title={Vision-based uneven bev representation learning with polar rasterization and surface estimation},
+  author={Zhi Liu and Shaoyu Chen and Xiaojie Guo and Xinggang Wang and Tianheng Cheng and Hongmei Zhu and Qian Zhang and Wenyu Liu and Yi Zhang},
+  year={2022},
+  eprint={2207.01878},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

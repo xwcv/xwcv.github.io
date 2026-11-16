@@ -1,0 +1,8 @@
+@misc{zhu2024vision,
+  title={Vision mamba: Efficient visual representation learning with bidirectional state space model},
+  author={Lianghui Zhu and Bencheng Liao and Qian Zhang and Xinlong Wang and Wenyu Liu and Xinggang Wang},
+  year={2024},
+  eprint={2401.09417},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

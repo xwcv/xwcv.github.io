@@ -1,0 +1,8 @@
+@misc{tao2026multimodal,
+  title={Multimodal Flow: Unified Flow Modeling of Language and Vision in Embedding Spaces},
+  author={Hongyuan Tao and Xinggang Wang and Lianghui Zhu and Yongkang Li and Yunchao Wei and Bin Feng and Shaoyu Chen and Qian Zhang and Chang Huang and Kai Yu},
+  year={2026},
+  eprint={2609.40362},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

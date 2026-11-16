@@ -1,0 +1,1 @@
+@article{Yi_2016, title={Online similarity learning for visual tracking}, volume={364-365}, ISSN={0020-0255}, url={http://dx.doi.org/10.1016/j.ins.2016.05.019}, DOI={10.1016/j.ins.2016.05.019}, journal={Information Sciences}, publisher={Elsevier BV}, author={Yi, Sihua and Jiang, Nan and Feng, Bin and Wang, Xinggang and Liu, Wenyu}, year={2016}, month=Oct, pages={33–50} }

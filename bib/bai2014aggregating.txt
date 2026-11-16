@@ -1,0 +1,1 @@
+@inproceedings{Bai_2014, title={Aggregating contour fragments for shape classification}, url={http://dx.doi.org/10.1109/icip.2014.7026063}, DOI={10.1109/icip.2014.7026063}, booktitle={2014 IEEE International Conference on Image Processing (ICIP)}, publisher={IEEE}, author={Bai, Song and Wang, Xinggang and Bai, Xiang}, year={2014}, month=Oct, pages={5252–5256} }

@@ -1,0 +1,8 @@
+@misc{liao2023maptr,
+  title={MapTR: Structured Modeling and Learning for Online Vectorized HD Map Construction},
+  author={Bencheng Liao and Shaoyu Chen and Xinggang Wang and Tianheng Cheng and Qian Zhang and Wenyu Liu and Chang Huang},
+  year={2023},
+  eprint={2208.14437},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

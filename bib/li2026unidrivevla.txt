@@ -1,0 +1,8 @@
+@misc{li2026unidrivevla,
+  title={UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving},
+  author={Yongkang Li and Lijun Zhou and Sixu Yan and Bencheng Liao and Tianyi Yan and Kaixin Xiong and Long Chen and Hongwei Xie and Bing Wang and Guang Chen and Hangjun Ye and Haiyang Sun and Wenyu Liu and Xinggang Wang},
+  year={2026},
+  eprint={2604.02190},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}

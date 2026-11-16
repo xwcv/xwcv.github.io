@@ -59,7 +59,7 @@
     "id": "senna-bridging-large-vision-language-models-and-end-to-end-auton",
     "section": "major",
     "year_group": "2026",
-    "li_html": "<li><p>\n    Bo Jiang, Shaoyu Chen, Bencheng Liao, Xingyu Zhang, Wei Yin, Qian Zhang, Chang Huang, Wenyu Liu, Xinggang Wang. <strong>Senna: Bridging Large Vision-Language Models and End-to-End Autonomous Driving</strong>. International Journal of Computer Vision (<strong>IJCV</strong>), 2026. <a href=\"https://arxiv.org/abs/2410.22313\">pdf</a>, <a href=\"https://github.com/hustvl/Senna\">code</a>.\n  </p></li>",
+    "li_html": "<li><p>\n    Bo Jiang, Shaoyu Chen, Bencheng Liao, Xingyu Zhang, Wei Yin, Qian Zhang, Chang Huang, Wenyu Liu, Xinggang Wang. <strong>Senna: Bridging Large Vision-Language Models and End-to-End Autonomous Driving</strong>. International Journal of Computer Vision (<strong>IJCV</strong>) Volume 134, Issue 9, Article 407, (2026). <a href=\"https://doi.org/10.1007/s11263-026-03002-y\">DOI: 10.1007/s11263-026-03002-y</a>, <a href=\"https://arxiv.org/abs/2410.22313\">pdf</a>, <a href=\"https://github.com/hustvl/Senna\">code</a>.\n  </p></li>",
     "topics": [
       "autonomous-driving",
       "multimodal-llm"

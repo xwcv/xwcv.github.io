@@ -41,7 +41,7 @@
     "id": "weaktr-exploring-plain-vision-transformer-for-weakly-supervised",
     "section": "major",
     "year_group": "2026",
-    "li_html": "<li><p>\n    Lianghui Zhu, Yingyue Li, Jiemin Fang, Yan Liu, Xin Hao, Wenyu Liu, Xinggang Wang. <strong>WeakTr: Exploring Plain Vision Transformer for Weakly-Supervised Semantic Segmentation</strong>. IEEE Transactions on Image Processing (<strong>IEEE TIP</strong>), vol. 35, pp. 4425-4439, 2026. <a href=\"https://arxiv.org/abs/2304.01184\">pdf</a>, <a href=\"https://github.com/hustvl/WeakTr\">code</a>.\n  </p></li>",
+    "li_html": "<li><p>\n    Lianghui Zhu, Yingyue Li, Jiemin Fang, Yan Liu, Xin Hao, Wenyu Liu, Xinggang Wang. <strong>WeakTr: Exploring Plain Vision Transformer for Weakly-Supervised Semantic Segmentation</strong>. IEEE Transactions on Image Processing (<strong>IEEE TIP</strong>), vol. 35, pp. 4425-4439, 2026. <a href=\"https://doi.org/10.1109/TIP.2026.3678362\">DOI: 10.1109/TIP.2026.3678362</a>, <a href=\"https://arxiv.org/abs/2304.01184\">pdf</a>, <a href=\"https://github.com/hustvl/WeakTr\">code</a>.\n  </p></li>",
     "topics": [
       "segmentation"
     ]
@@ -199,7 +199,7 @@
     "id": "evf-sam-early-vision-language-fusion-for-text-prompted-segment-a",
     "section": "major",
     "year_group": "2026",
-    "li_html": "<li><p>\n    Yuxuan Zhang, Tianheng Cheng, Lianghui Zhu, Rui Hu, Lei Liu, Heng Liu, Longjin Ran, Xiaoxin Chen, Wenyu Liu, Xinggang Wang. <strong>EVF-SAM: Early Vision-Language Fusion for Text-Prompted Segment Anything Model</strong>. Image and Vision Computing, Volume 173, 106028, 2026. <a href=\"https://arxiv.org/abs/2406.20076\">pdf</a>, <a href=\"https://github.com/hustvl/EVF-SAM\">code</a>.\n  </p></li>",
+    "li_html": "<li><p>\n    Yuxuan Zhang, Tianheng Cheng, Lianghui Zhu, Rui Hu, Lei Liu, Heng Liu, Longjin Ran, Xiaoxin Chen, Wenyu Liu, Xinggang Wang. <strong>EVF-SAM: Early Vision-Language Fusion for Text-Prompted Segment Anything Model</strong>. Image and Vision Computing, Volume 173, 106028, 2026. <a href=\"https://doi.org/10.1016/j.imavis.2026.106028\">DOI: 10.1016/j.imavis.2026.106028</a>, <a href=\"https://arxiv.org/abs/2406.20076\">pdf</a>, <a href=\"https://github.com/hustvl/EVF-SAM\">code</a>.\n  </p></li>",
     "topics": [
       "multimodal-llm",
       "segmentation"
@@ -1672,7 +1672,7 @@
     "id": "weakly-supervised-semantic-segmentation-via-online-pseudo-mask-c",
     "section": "other",
     "year_group": "",
-    "li_html": "<li><p>\n    Jiapei Feng, Xinggang Wang, Te Li, Shanshan Ji, Wenyu Liu. <strong>Weakly-supervised semantic segmentation via online pseudo-mask correcting</strong>. Pattern Recognition Letters (<strong>PRL</strong>), 2023. <a href=\"https://www.sciencedirect.com/science/article/pii/S0167865522003531\">pdf</a>.\n  </p></li>",
+    "li_html": "<li><p>\n    Jiapei Feng, Xinggang Wang, Te Li, Shanshan Ji, Wenyu Liu. <strong>Weakly-supervised semantic segmentation via online pseudo-mask correcting</strong>. Pattern Recognition Letters (<strong>PRL</strong>), Volume 165, Pages 33-38, January 2023. <a href=\"https://doi.org/10.1016/j.patrec.2022.11.024\">DOI: 10.1016/j.patrec.2022.11.024</a>, <a href=\"https://www.sciencedirect.com/science/article/pii/S0167865522003531\">pdf</a>.\n  </p></li>",
     "topics": [
       "segmentation"
     ]

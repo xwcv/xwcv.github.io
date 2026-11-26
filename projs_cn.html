@@ -19,8 +19,8 @@
     <!-- Primary Meta Tags -->
     <title>科研项目 - 王兴刚 | 计算机视觉与人工智能</title>
     <meta name="title" content="科研项目 - 王兴刚 | 计算机视觉与人工智能">
-    <meta name="description" content="王兴刚教授团队的开源科研项目，涵盖计算机视觉、机器人、自动驾驶与人工智能，包括Mixture-of-Loops Transformer、TransHarness、Multimodal Flow、StableVQ、Bridge3D、AdaRoboVLG、DreamWAM、Faster-WAM、EOVSAM、ReWorld、Moebius、MotionVLA、RAD-2、UniDriveVLA、MoDA、Senna-2、OmniTrack、Spa3R、DriveLaW、DiffusionVL、VTP、InfiniteVL、4DLangVGGT、VGT、MobileI2V、TransLight、LENS、ReCogDrive、GroundingSuite、OmniMamba、LightningDiT、GaussTR、DiffusionDrive、Senna、ControlAR、XS-VID、DiG、VADv2、EVA-X、MIM4D、YOLO-World、Vision Mamba、4DGaussians、WeakTr、MapTR、EVA、ByteTrack、FairMOT、CCNet。">
-    <meta name="keywords" content="王兴刚 项目, 计算机视觉, 机器人, 自动驾驶, Mixture-of-Loops Transformer, TransHarness, Multimodal Flow, StableVQ, Bridge3D, AdaRoboVLG, DreamWAM, Faster-WAM, EOVSAM, ReWorld, Moebius, MotionVLA, RAD-2, UniDriveVLA, MoDA, Senna-2, OmniTrack, Spa3R, DriveLaW, DiffusionVL, VTP, InfiniteVL, 4DLangVGGT, VGT, MobileI2V, TransLight, LENS, ReCogDrive, GroundingSuite, OmniMamba, LightningDiT, GaussTR, DiffusionDrive, Senna, ControlAR, XS-VID, DiG, VADv2, EVA-X, MIM4D, YOLO-World, Vision Mamba, 4DGaussians, WeakTr, MapTR, EVA, ByteTrack, FairMOT, CCNet">
+    <meta name="description" content="王兴刚教授团队的开源科研项目，涵盖计算机视觉、机器人、自动驾驶与人工智能，包括Mixture-of-Loops Transformer、TransHarness、MoETok、Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals?、DriveWLA、ConDenseDrive、Multimodal Flow、ReWAM、ReDrive、StableVQ、ForeDrive、Bridge3D、AdaRoboVLG、DreamWAM、Faster-WAM、EOVSAM、ReWorld、Moebius、MotionVLA、RAD-2、UniDriveVLA、MoDA、Senna-2、OmniTrack、Spa3R、DriveLaW、DiffusionVL、VTP、InfiniteVL、4DLangVGGT、VGT、MobileI2V、TransLight、LENS、ReCogDrive、GroundingSuite、OmniMamba、LightningDiT、GaussTR、DiffusionDrive、Senna、ControlAR、XS-VID、DiG、EVA-X、MIM4D、VADv2、YOLO-World、Vision Mamba、4DGaussians、MapTR、WeakTr、EVA、ByteTrack、FairMOT、CCNet。">
+    <meta name="keywords" content="王兴刚 项目, 计算机视觉, 机器人, 自动驾驶, Mixture-of-Loops Transformer, TransHarness, MoETok, Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals?, DriveWLA, ConDenseDrive, Multimodal Flow, ReWAM, ReDrive, StableVQ, ForeDrive, Bridge3D, AdaRoboVLG, DreamWAM, Faster-WAM, EOVSAM, ReWorld, Moebius, MotionVLA, RAD-2, UniDriveVLA, MoDA, Senna-2, OmniTrack, Spa3R, DriveLaW, DiffusionVL, VTP, InfiniteVL, 4DLangVGGT, VGT, MobileI2V, TransLight, LENS, ReCogDrive, GroundingSuite, OmniMamba, LightningDiT, GaussTR, DiffusionDrive, Senna, ControlAR, XS-VID, DiG, EVA-X, MIM4D, VADv2, YOLO-World, Vision Mamba, 4DGaussians, MapTR, WeakTr, EVA, ByteTrack, FairMOT, CCNet">
     <meta name="author" content="Xinggang Wang">
     <meta name="robots" content="index, follow">
 
@@ -127,6 +127,54 @@
   </div>
 </li>
 <li class="proj-card">
+  <a class="proj-media" href="https://gjhhust.github.io/moetok-project" title="MoETok: Sparse Expert Routing for 1D Visual Tokenizers">
+    <img src="res/proj/moetok.jpg" alt="MoETok：基于稀疏专家路由的语义 1D tokenizer" loading="lazy" decoding="async">
+  </a>
+  <div class="proj-body">
+    <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">生成模型</span></div>
+    <h3 class="proj-title">MoETok: Sparse Expert Routing for 1D Visual Tokenizers</h3>
+    <p class="proj-authors">Jiahao Guo#, Bao Tang#, Haoxiang Cao, Jingfeng Yao, Bo Li, Wenyu Liu, Kun Gai, Changqian Yu, Xinggang Wang*</p>
+    <p class="proj-desc">1D 视觉 tokenizer：将 token 路由至稀疏激活的专家，在固定 token 预算下为内容查询与细节查询学习角色特化的处理路径。</p>
+    <p class="proj-links"><a href="https://arxiv.org/abs/2610.41992">pdf</a> <a href="https://gjhhust.github.io/moetok-project">project page</a></p>
+  </div>
+</li>
+<li class="proj-card">
+  <a class="proj-media" href="https://doctor-james.github.io/FVQ-Page/" title="Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals?">
+    <img src="res/proj/fvq.jpg" alt="FVQ：重构误差不决定语义保真度，有效比特预算决定语义容量" loading="lazy" decoding="async">
+  </a>
+  <div class="proj-body">
+    <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">生成模型</span><span class="proj-topic">视觉表征</span></div>
+    <h3 class="proj-title">Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals?</h3>
+    <p class="proj-authors">Jialv Zou#, Xiaotong Li#, Zhengrong Yue, Xu Huang, Yaxin Luo, Wenhao Yan, Haodong Li, Wenyu Liu, Xinggang Wang*</p>
+    <p class="proj-desc">因子化向量量化（FVQ）：决定离散视觉 token 语义保真度的是有效比特预算而非量化误差——足够大的比特预算即可让离散表征在多模态理解上追平连续表征。</p>
+    <p class="proj-links"><a href="https://arxiv.org/abs/2610.37662">pdf</a> <a href="https://github.com/hustvl/FVQ">code</a> <a href="https://doctor-james.github.io/FVQ-Page/">project page</a></p>
+  </div>
+</li>
+<li class="proj-card">
+  <a class="proj-media" href="https://arxiv.org/abs/2610.17903" title="DriveWLA: Unifying Future Dynamics and Scene Semantics through World-Language-Action Modeling for Autonomous Driving">
+    <img src="res/proj/drivewla.jpg" alt="DriveWLA：世界-语言-动作模型架构与两阶段训练策略" loading="lazy" decoding="async">
+  </a>
+  <div class="proj-body">
+    <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">自动驾驶</span><span class="proj-topic">世界模型</span></div>
+    <h3 class="proj-title">DriveWLA: Unifying Future Dynamics and Scene Semantics through World-Language-Action Modeling for Autonomous Driving</h3>
+    <p class="proj-authors">Shuzheng Wang, Haoxuan Li, Shengzhen Li, Chenxi Wu, Yajing Sun, Lu Hou, Wenyu Liu, Xinggang Wang*</p>
+    <p class="proj-desc">统一的世界-语言-动作模型：通过 Cross-Expert Attention 联合建模场景语义、未来动态与轨迹生成，服务自动驾驶规划。</p>
+    <p class="proj-links"><a href="https://arxiv.org/abs/2610.17903">pdf</a></p>
+  </div>
+</li>
+<li class="proj-card">
+  <a class="proj-media" href="https://arxiv.org/abs/2610.16908" title="ConDenseDrive: Knowledge-Dense, Token-Sparse Visual Encoder for End-to-End Autonomous Driving">
+    <img src="res/proj/condensedrive.jpg" alt="ConDenseDrive：面向端到端驾驶的知识稠密、token 稀疏视觉编码器" loading="lazy" decoding="async">
+  </a>
+  <div class="proj-body">
+    <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">自动驾驶</span></div>
+    <h3 class="proj-title">ConDenseDrive: Knowledge-Dense, Token-Sparse Visual Encoder for End-to-End Autonomous Driving</h3>
+    <p class="proj-authors">Shengzhen Li, Yongkang Li, Hao Gao, Chenxi Wu, Yajing Sun, Lu Hou, Wenyu Liu, Xinggang Wang</p>
+    <p class="proj-desc">知识稠密、token 稀疏的视觉编码器：先从三个视觉基础模型蒸馏互补的视觉、语义与几何知识，再稀疏化 patch token，实现高效端到端驾驶。</p>
+    <p class="proj-links"><a href="https://arxiv.org/abs/2610.16908">pdf</a></p>
+  </div>
+</li>
+<li class="proj-card">
   <a class="proj-media" href="https://hustvl.github.io/Multimodal-Flow/" title="Multimodal Flow: Unified Flow Modeling of Language and Vision in Embedding Spaces">
     <img src="res/proj/multimodal-flow.png" alt="Multimodal Flow：全离散、混合与连续流建模范式对比" loading="lazy" decoding="async">
   </a>
@@ -139,6 +187,30 @@
   </div>
 </li>
 <li class="proj-card">
+  <a class="proj-media" href="https://hustvl.github.io/ReWAM/" title="ReWAM: Rethinking Representations for World-Action Modeling">
+    <img src="res/proj/rewam.jpg" alt="ReWAM：面向世界-动作模型的动作接地表征" loading="lazy" decoding="async">
+  </a>
+  <div class="proj-body">
+    <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">具身智能</span><span class="proj-topic">世界模型</span></div>
+    <h3 class="proj-title">ReWAM: Rethinking Representations for World-Action Modeling</h3>
+    <p class="proj-authors">Haoyi Jiang, Liu Liu, Xinjiang Wang, Zhihao Sun, Zequn Chen, Sen Wang, Xinjie Wang, Xia Chen, Jingfeng Yao, Weiheng Zhao, Shanglin Yuan, Zhizhong Su, Wei Sui, Wenyu Liu, Xinggang Wang*</p>
+    <p class="proj-desc">以表征为中心的世界-动作模型：校准 DINO 特征、时间表征瓶颈与动作接地的表征塑形——让策略塑造表征，世界模型专注学习动态演化。</p>
+    <p class="proj-links"><a href="https://arxiv.org/abs/2609.38163">pdf</a> <a href="https://github.com/hustvl/ReWAM">code</a> <a href="https://hustvl.github.io/ReWAM/">project page</a></p>
+  </div>
+</li>
+<li class="proj-card">
+  <a class="proj-media" href="https://arxiv.org/abs/2609.33854" title="ReDrive: Shaping Representations with World Modeling for End-to-End Driving">
+    <img src="res/proj/redrive.jpg" alt="ReDrive：自监督预训练、联合训练与规划器适配的三阶段训练" loading="lazy" decoding="async">
+  </a>
+  <div class="proj-body">
+    <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">自动驾驶</span><span class="proj-topic">世界模型</span></div>
+    <h3 class="proj-title">ReDrive: Shaping Representations with World Modeling for End-to-End Driving</h3>
+    <p class="proj-authors">Yueting Zhu, Shaoyu Chen, Yuehao Song, Hui Sun, Qian Zhang, Wenyu Liu, Xinggang Wang*</p>
+    <p class="proj-desc">通过三阶段表征世界建模训练方案强化面向规划的视觉特征，无需推理时的辅助模块即可支撑高性能端到端驾驶。</p>
+    <p class="proj-links"><a href="https://arxiv.org/abs/2609.33854">pdf</a></p>
+  </div>
+</li>
+<li class="proj-card">
   <a class="proj-media" href="https://tt-day.github.io/StableVQ/" title="StableVQ: Practical Guidelines for Stable Vector-Quantized Tokenizer Training">
     <img src="res/proj/stablevq.png" alt="StableVQ：向量量化 tokenizer 训练的三种典型失效模式" loading="lazy" decoding="async">
   </a>
@@ -148,6 +220,18 @@
     <p class="proj-authors">Bao Tang, Jiahao Guo, Haoxiang Cao, Wenyu Liu, Changqian Yu*, Kun Gai, Xinggang Wang*</p>
     <p class="proj-desc">关注点分离框架——Dynamic STE 稳定重构梯度、Region VQ Loss 显式追踪分布、解耦学习率调度——让稳定的 VQ tokenizer 训练成为有原则可循的性质，零新增参数实现 100% codebook 利用率。</p>
     <p class="proj-links"><a href="https://arxiv.org/abs/2609.26774">pdf</a> <a href="https://tt-day.github.io/StableVQ/">project page</a></p>
+  </div>
+</li>
+<li class="proj-card">
+  <a class="proj-media" href="https://arxiv.org/abs/2609.26299" title="ForeDrive: Foresight-Guided End-to-End Autonomous Driving with a Planning-Relevant Latent World Model">
+    <img src="res/proj/foredrive.jpg" alt="ForeDrive：隐式世界模型引导扩散规划器的端到端驾驶" loading="lazy" decoding="async">
+  </a>
+  <div class="proj-body">
+    <div class="proj-meta"><span class="venue-tag v-journal">arXiv 2026</span><span class="proj-topic">自动驾驶</span><span class="proj-topic">世界模型</span></div>
+    <h3 class="proj-title">ForeDrive: Foresight-Guided End-to-End Autonomous Driving with a Planning-Relevant Latent World Model</h3>
+    <p class="proj-authors">Sinuo Wang#, Zichong Gu#, Yuhan Huang, Wenxin Wen, Xun Yang, Yiqing Zhang, Xingyu Zhang, Ningyu Che, Jie Ling, Qiankun Yu, Wei Liu, Jing Xu*, Xinggang Wang*</p>
+    <p class="proj-desc">面向规划的隐式世界模型：多时间尺度的未来隐表征通过门控融合、未来状态注入与轨迹自适应偏置引导扩散规划器。</p>
+    <p class="proj-links"><a href="https://arxiv.org/abs/2609.26299">pdf</a></p>
   </div>
 </li>
 <li class="proj-card">
@@ -547,18 +631,6 @@
   </div>
 </li>
 <li class="proj-card">
-  <a class="proj-media" href="https://hgao-cv.github.io/VADv2/" title="VADv2: End-to-End Autonomous Driving via Probabilistic Planning">
-    <img src="res/proj/vadv2.png" alt="VADv2：基于概率规划的端到端自动驾驶" loading="lazy" decoding="async">
-  </a>
-  <div class="proj-body">
-    <div class="proj-meta"><span class="venue-tag v-iclr">ICLR 2026</span><span class="proj-topic">自动驾驶</span></div>
-    <h3 class="proj-title">VADv2: End-to-End Autonomous Driving via Probabilistic Planning</h3>
-    <p class="proj-authors">Bo Jiang, Shaoyu Chen, Hao Gao, Bencheng Liao, Qian Zhang, Wenyu Liu, Xinggang Wang</p>
-    <p class="proj-desc">端到端矢量化自动驾驶：从大规模驾驶示范中学习动作的概率分布，并采样一个动作控制车辆，无需规则包装即可稳定运行。</p>
-    <p class="proj-links"><a href="https://arxiv.org/abs/2402.13243">pdf</a> <a href="https://github.com/hustvl/VAD">code</a> <a href="https://hgao-cv.github.io/VADv2/">project page</a></p>
-  </div>
-</li>
-<li class="proj-card">
   <a class="proj-media" href="https://github.com/hustvl/EVA-X" title="EVA-X: A Foundation Model for General Chest X-ray Analysis with Self-Supervised Learning">
     <img src="res/proj/evax.png" alt="EVA-X：面向胸部 X 光基础模型的自监督预训练流程" loading="lazy" decoding="async">
   </a>
@@ -580,6 +652,18 @@
     <p class="proj-authors">Jialv Zou#, Bencheng Liao#, Qian Zhang, Wenyu Liu, Xinggang Wang*</p>
     <p class="proj-desc">面向多视角驾驶视频的双重掩码图像建模预训练范式，通过 3D 体素可微渲染监督伪 3D 特征——在 nuScenes 上提升端到端规划（碰撞率降 9%）、BEV 分割（+8.7% IoU）、3D 检测（+3.5% mAP）与高精地图构建（+1.4% mAP)。</p>
     <p class="proj-links"><a href="https://arxiv.org/abs/2403.08760">pdf</a> <a href="https://github.com/hustvl/MIM4D">code</a></p>
+  </div>
+</li>
+<li class="proj-card">
+  <a class="proj-media" href="https://hgao-cv.github.io/VADv2/" title="VADv2: End-to-End Autonomous Driving via Probabilistic Planning">
+    <img src="res/proj/vadv2.png" alt="VADv2：基于概率规划的端到端自动驾驶" loading="lazy" decoding="async">
+  </a>
+  <div class="proj-body">
+    <div class="proj-meta"><span class="venue-tag v-iclr">ICLR 2026</span><span class="proj-topic">自动驾驶</span></div>
+    <h3 class="proj-title">VADv2: End-to-End Autonomous Driving via Probabilistic Planning</h3>
+    <p class="proj-authors">Bo Jiang, Shaoyu Chen, Hao Gao, Bencheng Liao, Qian Zhang, Wenyu Liu, Xinggang Wang</p>
+    <p class="proj-desc">端到端矢量化自动驾驶：从大规模驾驶示范中学习动作的概率分布，并采样一个动作控制车辆，无需规则包装即可稳定运行。</p>
+    <p class="proj-links"><a href="https://arxiv.org/abs/2402.13243">pdf</a> <a href="https://github.com/hustvl/VAD">code</a> <a href="https://hgao-cv.github.io/VADv2/">project page</a></p>
   </div>
 </li>
 <li class="proj-card">
@@ -619,18 +703,6 @@
   </div>
 </li>
 <li class="proj-card">
-  <a class="proj-media" href="https://github.com/hustvl/WeakTr" title="WeakTr: Exploring Plain Vision Transformer for Weakly-Supervised Semantic Segmentation">
-    <img src="res/proj/weaktr.png" alt="WeakTr：基于纯 ViT 与自适应注意力融合的弱监督语义分割框架" loading="lazy" decoding="async">
-  </a>
-  <div class="proj-body">
-    <div class="proj-meta"><span class="venue-tag v-top">IEEE TIP 2026</span><span class="proj-topic">图像分割</span></div>
-    <h3 class="proj-title">WeakTr: Exploring Plain Vision Transformer for Weakly-Supervised Semantic Segmentation</h3>
-    <p class="proj-authors">Lianghui Zhu#, Yingyue Li#, Jiemin Fang, Yan Liu, Xin Hao, Wenyu Liu, Xinggang Wang*</p>
-    <p class="proj-desc">探索纯 ViT 用于弱监督语义分割：以可学习的注意力头权重自适应融合自注意力图，端到端生成高质量 CAM，并配合梯度裁剪解码器在线重训练——VOC12 上 78.5% mIoU、COCO14 上 51.1% mIoU。</p>
-    <p class="proj-links"><a href="https://arxiv.org/abs/2304.01184">pdf</a> <a href="https://github.com/hustvl/WeakTr">code</a></p>
-  </div>
-</li>
-<li class="proj-card">
   <a class="proj-media" href="https://github.com/hustvl/MapTR" title="MapTRv2: An End-to-End Framework for Online Vectorized HD Map Construction">
     <img src="res/proj/maptr.jpg" alt="MapTR：在线矢量化高精地图构建" loading="lazy" decoding="async">
   </a>
@@ -640,6 +712,18 @@
     <p class="proj-authors">Bencheng Liao, Shaoyu Chen, Yunchi Zhang, Bo Jiang, Qian Zhang, Wenyu Liu, Chang Huang, Xinggang Wang</p>
     <p class="proj-desc">在线矢量化高精地图构建的端到端框架，将地图元素建模为点集并通过层次化查询设计实现实时结构化地图学习。</p>
     <p class="proj-links"><a href="https://arxiv.org/abs/2308.05736">pdf</a> <a href="https://github.com/hustvl/MapTR">code</a></p>
+  </div>
+</li>
+<li class="proj-card">
+  <a class="proj-media" href="https://github.com/hustvl/WeakTr" title="WeakTr: Exploring Plain Vision Transformer for Weakly-Supervised Semantic Segmentation">
+    <img src="res/proj/weaktr.png" alt="WeakTr：基于纯 ViT 与自适应注意力融合的弱监督语义分割框架" loading="lazy" decoding="async">
+  </a>
+  <div class="proj-body">
+    <div class="proj-meta"><span class="venue-tag v-top">IEEE TIP 2026</span><span class="proj-topic">图像分割</span></div>
+    <h3 class="proj-title">WeakTr: Exploring Plain Vision Transformer for Weakly-Supervised Semantic Segmentation</h3>
+    <p class="proj-authors">Lianghui Zhu#, Yingyue Li#, Jiemin Fang, Yan Liu, Xin Hao, Wenyu Liu, Xinggang Wang*</p>
+    <p class="proj-desc">探索纯 ViT 用于弱监督语义分割：以可学习的注意力头权重自适应融合自注意力图，端到端生成高质量 CAM，并配合梯度裁剪解码器在线重训练——VOC12 上 78.5% mIoU、COCO14 上 51.1% mIoU。</p>
+    <p class="proj-links"><a href="https://arxiv.org/abs/2304.01184">pdf</a> <a href="https://github.com/hustvl/WeakTr">code</a></p>
   </div>
 </li>
 <li class="proj-card">

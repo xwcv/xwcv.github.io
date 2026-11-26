@@ -44,6 +44,98 @@
     }
   },
   {
+    "id": "moetok",
+    "pub_id": "moetok-sparse-expert-routing-for-1d-visual-tokenizers",
+    "href": "https://gjhhust.github.io/moetok-project",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2610.41992"
+      },
+      {
+        "label": "project page",
+        "href": "https://gjhhust.github.io/moetok-project"
+      }
+    ],
+    "description_en": "A 1D visual tokenizer that routes tokens through sparsely activated experts, learning role-specialized processing for content and detail queries under a fixed token budget.",
+    "description_cn": "1D 视觉 tokenizer：将 token 路由至稀疏激活的专家，在固定 token 预算下为内容查询与细节查询学习角色特化的处理路径。",
+    "media": {
+      "src": "res/proj/moetok.jpg",
+      "alt_en": "MoETok: semantic 1D tokenizer with sparse mixture-of-experts routing",
+      "alt_cn": "MoETok：基于稀疏专家路由的语义 1D tokenizer",
+      "gallery_alt_en": "MoETok: sparse expert routing for 1D visual tokenizers",
+      "gallery_alt_cn": "MoETok：面向 1D 视觉 tokenizer 的稀疏专家路由"
+    }
+  },
+  {
+    "id": "fvq",
+    "pub_id": "can-discrete-tokens-serve-as-semantically-lossless-represen",
+    "href": "https://doctor-james.github.io/FVQ-Page/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2610.37662"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/FVQ"
+      },
+      {
+        "label": "project page",
+        "href": "https://doctor-james.github.io/FVQ-Page/"
+      }
+    ],
+    "description_en": "Factorized Vector Quantization shows that a sufficiently large effective bit budget, not quantization error, governs the semantic fidelity of discrete visual tokens — matching continuous representations in multimodal understanding.",
+    "description_cn": "因子化向量量化（FVQ）：决定离散视觉 token 语义保真度的是有效比特预算而非量化误差——足够大的比特预算即可让离散表征在多模态理解上追平连续表征。",
+    "media": {
+      "src": "res/proj/fvq.jpg",
+      "alt_en": "FVQ: reconstruction error does not determine semantic fidelity; effective bit budget shapes semantic capacity",
+      "alt_cn": "FVQ：重构误差不决定语义保真度，有效比特预算决定语义容量",
+      "gallery_alt_en": "FVQ: semantically lossless discrete visual tokens",
+      "gallery_alt_cn": "FVQ：语义无损的离散视觉 token"
+    }
+  },
+  {
+    "id": "drivewla",
+    "pub_id": "drivewla-unifying-future-dynamics-and-scene-semantics-throug",
+    "href": "https://arxiv.org/abs/2610.17903",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2610.17903"
+      }
+    ],
+    "description_en": "A unified World-Language-Action model with Cross-Expert Attention, jointly modeling scene semantics, future dynamics, and trajectory generation for autonomous driving.",
+    "description_cn": "统一的世界-语言-动作模型：通过 Cross-Expert Attention 联合建模场景语义、未来动态与轨迹生成，服务自动驾驶规划。",
+    "media": {
+      "src": "res/proj/drivewla.jpg",
+      "alt_en": "DriveWLA: World-Language-Action architecture and two-stage training strategy",
+      "alt_cn": "DriveWLA：世界-语言-动作模型架构与两阶段训练策略",
+      "gallery_alt_en": "DriveWLA: World-Language-Action model architecture",
+      "gallery_alt_cn": "DriveWLA：世界-语言-动作模型架构"
+    }
+  },
+  {
+    "id": "condensedrive",
+    "pub_id": "condensedrive-knowledge-dense-token-sparse-visual-encoder-f",
+    "href": "https://arxiv.org/abs/2610.16908",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2610.16908"
+      }
+    ],
+    "description_en": "A knowledge-dense, token-sparse visual encoder that distills visual, semantic, and geometric knowledge from three foundation models, then sparsifies patch tokens for efficient end-to-end driving.",
+    "description_cn": "知识稠密、token 稀疏的视觉编码器：先从三个视觉基础模型蒸馏互补的视觉、语义与几何知识，再稀疏化 patch token，实现高效端到端驾驶。",
+    "media": {
+      "src": "res/proj/condensedrive.jpg",
+      "alt_en": "ConDenseDrive: knowledge-dense, token-sparse visual encoder for end-to-end driving",
+      "alt_cn": "ConDenseDrive：面向端到端驾驶的知识稠密、token 稀疏视觉编码器",
+      "gallery_alt_en": "ConDenseDrive visual encoder",
+      "gallery_alt_cn": "ConDenseDrive 视觉编码器"
+    }
+  },
+  {
     "id": "multimodal-flow",
     "pub_id": "multimodal-flow-unified-flow-modeling-of-language-and-vision-in",
     "href": "https://hustvl.github.io/Multimodal-Flow/",
@@ -72,6 +164,54 @@
     }
   },
   {
+    "id": "rewam",
+    "pub_id": "rewam-rethinking-representations-for-world-action-modeling",
+    "href": "https://hustvl.github.io/ReWAM/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2609.38163"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/ReWAM"
+      },
+      {
+        "label": "project page",
+        "href": "https://hustvl.github.io/ReWAM/"
+      }
+    ],
+    "description_en": "A representation-centric world-action model: calibrated DINO features, a temporal representation bottleneck, and action-grounded representation shaping that lets the policy shape the representation while the world model learns dynamics.",
+    "description_cn": "以表征为中心的世界-动作模型：校准 DINO 特征、时间表征瓶颈与动作接地的表征塑形——让策略塑造表征，世界模型专注学习动态演化。",
+    "media": {
+      "src": "res/proj/rewam.jpg",
+      "alt_en": "ReWAM: action-grounded representations for world-action modeling",
+      "alt_cn": "ReWAM：面向世界-动作模型的动作接地表征",
+      "gallery_alt_en": "ReWAM: rethinking representations for world-action modeling",
+      "gallery_alt_cn": "ReWAM：重新思考世界-动作建模的表征"
+    }
+  },
+  {
+    "id": "redrive",
+    "pub_id": "redrive-shaping-representations-with-world-modeling-for-en",
+    "href": "https://arxiv.org/abs/2609.33854",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2609.33854"
+      }
+    ],
+    "description_en": "Strengthens planning-oriented visual features through a three-stage representation world-modeling recipe, supporting high-performance end-to-end driving without inference-time auxiliary modules.",
+    "description_cn": "通过三阶段表征世界建模训练方案强化面向规划的视觉特征，无需推理时的辅助模块即可支撑高性能端到端驾驶。",
+    "media": {
+      "src": "res/proj/redrive.jpg",
+      "alt_en": "ReDrive: three-stage training with self-supervised pretraining, joint training and planner adaptation",
+      "alt_cn": "ReDrive：自监督预训练、联合训练与规划器适配的三阶段训练",
+      "gallery_alt_en": "ReDrive: representation world modeling for end-to-end driving",
+      "gallery_alt_cn": "ReDrive：面向端到端驾驶的表征世界建模"
+    }
+  },
+  {
     "id": "stablevq",
     "pub_id": "stablevq-practical-guidelines-for-stable-vector-quantized-tokeni",
     "href": "https://tt-day.github.io/StableVQ/",
@@ -93,6 +233,26 @@
       "alt_cn": "StableVQ：向量量化 tokenizer 训练的三种典型失效模式",
       "gallery_alt_en": "StableVQ: stable vector-quantized tokenizer training",
       "gallery_alt_cn": "StableVQ：稳定的向量量化 tokenizer 训练"
+    }
+  },
+  {
+    "id": "foredrive",
+    "pub_id": "foredrive-foresight-guided-end-to-end-autonomous-driving-wi",
+    "href": "https://arxiv.org/abs/2609.26299",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2609.26299"
+      }
+    ],
+    "description_en": "A planning-relevant latent world model whose multi-horizon future latents guide a diffusion planner through gated fusion, future-status injection, and trajectory-adaptive bias.",
+    "description_cn": "面向规划的隐式世界模型：多时间尺度的未来隐表征通过门控融合、未来状态注入与轨迹自适应偏置引导扩散规划器。",
+    "media": {
+      "src": "res/proj/foredrive.jpg",
+      "alt_en": "ForeDrive: latent world model guiding a diffusion planner for end-to-end driving",
+      "alt_cn": "ForeDrive：隐式世界模型引导扩散规划器的端到端驾驶",
+      "gallery_alt_en": "ForeDrive: foresight-guided end-to-end driving",
+      "gallery_alt_cn": "ForeDrive：预见引导的端到端驾驶"
     }
   },
   {
@@ -965,34 +1125,6 @@
     "authors_html": "Lianghui Zhu, Zilong Huang*, Bencheng Liao, Jun Hao Liew, Hanshu Yan, Jiashi Feng, Xinggang Wang*"
   },
   {
-    "id": "vadv2",
-    "pub_id": "vadv2-end-to-end-autonomous-driving-via-probabilistic-planning",
-    "href": "https://hgao-cv.github.io/VADv2/",
-    "links": [
-      {
-        "label": "pdf",
-        "href": "https://arxiv.org/abs/2402.13243"
-      },
-      {
-        "label": "code",
-        "href": "https://github.com/hustvl/VAD"
-      },
-      {
-        "label": "project page",
-        "href": "https://hgao-cv.github.io/VADv2/"
-      }
-    ],
-    "description_en": "End-to-end vectorized autonomous driving that outputs a probabilistic distribution over actions learned from large-scale driving demonstrations and samples one action to control the vehicle.",
-    "description_cn": "端到端矢量化自动驾驶：从大规模驾驶示范中学习动作的概率分布，并采样一个动作控制车辆，无需规则包装即可稳定运行。",
-    "media": {
-      "src": "res/proj/vadv2.png",
-      "alt_en": "VADv2: end-to-end autonomous driving via probabilistic planning",
-      "alt_cn": "VADv2：基于概率规划的端到端自动驾驶",
-      "gallery_alt_en": "VADv2: end-to-end autonomous driving via probabilistic planning",
-      "gallery_alt_cn": "VADv2：基于概率规划的端到端自动驾驶"
-    }
-  },
-  {
     "id": "eva-x",
     "pub_id": "eva-x-a-foundation-model-for-general-chest-x-ray-analysis-with-s",
     "href": "https://github.com/hustvl/EVA-X",
@@ -1047,6 +1179,34 @@
       "gallery_alt_cn": "MIM4D：多视角视频掩码建模的自动驾驶表征学习"
     },
     "authors_html": "Jialv Zou#, Bencheng Liao#, Qian Zhang, Wenyu Liu, Xinggang Wang*"
+  },
+  {
+    "id": "vadv2",
+    "pub_id": "vadv2-end-to-end-autonomous-driving-via-probabilistic-planning",
+    "href": "https://hgao-cv.github.io/VADv2/",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2402.13243"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/VAD"
+      },
+      {
+        "label": "project page",
+        "href": "https://hgao-cv.github.io/VADv2/"
+      }
+    ],
+    "description_en": "End-to-end vectorized autonomous driving that outputs a probabilistic distribution over actions learned from large-scale driving demonstrations and samples one action to control the vehicle.",
+    "description_cn": "端到端矢量化自动驾驶：从大规模驾驶示范中学习动作的概率分布，并采样一个动作控制车辆，无需规则包装即可稳定运行。",
+    "media": {
+      "src": "res/proj/vadv2.png",
+      "alt_en": "VADv2: end-to-end autonomous driving via probabilistic planning",
+      "alt_cn": "VADv2：基于概率规划的端到端自动驾驶",
+      "gallery_alt_en": "VADv2: end-to-end autonomous driving via probabilistic planning",
+      "gallery_alt_cn": "VADv2：基于概率规划的端到端自动驾驶"
+    }
   },
   {
     "id": "yolo-world",
@@ -1134,6 +1294,31 @@
     "short_name": "4DGaussians"
   },
   {
+    "id": "maptr",
+    "pub_id": "maptrv2-an-end-to-end-framework-for-online-vectorized-hd-map-con",
+    "href": "https://github.com/hustvl/MapTR",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2308.05736"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/MapTR"
+      }
+    ],
+    "description_en": "An end-to-end framework for online vectorized HD map construction, modeling map elements as point sets with a hierarchical query design for real-time structured map learning.",
+    "description_cn": "在线矢量化高精地图构建的端到端框架，将地图元素建模为点集并通过层次化查询设计实现实时结构化地图学习。",
+    "media": {
+      "src": "res/proj/maptr.jpg",
+      "alt_en": "MapTR: online vectorized HD map construction",
+      "alt_cn": "MapTR：在线矢量化高精地图构建",
+      "gallery_alt_en": "MapTR: online vectorized HD map construction",
+      "gallery_alt_cn": "MapTR：在线矢量化高精地图构建"
+    },
+    "short_name": "MapTR"
+  },
+  {
     "id": "weaktr",
     "pub_id": "weaktr-exploring-plain-vision-transformer-for-weakly-supervised",
     "href": "https://github.com/hustvl/WeakTr",
@@ -1159,31 +1344,6 @@
     "authors_html": "Lianghui Zhu#, Yingyue Li#, Jiemin Fang, Yan Liu, Xin Hao, Wenyu Liu, Xinggang Wang*",
     "venue": "IEEE TIP 2026",
     "venue_class": "v-top"
-  },
-  {
-    "id": "maptr",
-    "pub_id": "maptrv2-an-end-to-end-framework-for-online-vectorized-hd-map-con",
-    "href": "https://github.com/hustvl/MapTR",
-    "links": [
-      {
-        "label": "pdf",
-        "href": "https://arxiv.org/abs/2308.05736"
-      },
-      {
-        "label": "code",
-        "href": "https://github.com/hustvl/MapTR"
-      }
-    ],
-    "description_en": "An end-to-end framework for online vectorized HD map construction, modeling map elements as point sets with a hierarchical query design for real-time structured map learning.",
-    "description_cn": "在线矢量化高精地图构建的端到端框架，将地图元素建模为点集并通过层次化查询设计实现实时结构化地图学习。",
-    "media": {
-      "src": "res/proj/maptr.jpg",
-      "alt_en": "MapTR: online vectorized HD map construction",
-      "alt_cn": "MapTR：在线矢量化高精地图构建",
-      "gallery_alt_en": "MapTR: online vectorized HD map construction",
-      "gallery_alt_cn": "MapTR：在线矢量化高精地图构建"
-    },
-    "short_name": "MapTR"
   },
   {
     "id": "eva",

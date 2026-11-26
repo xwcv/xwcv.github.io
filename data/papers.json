@@ -1998,6 +1998,44 @@
     ]
   },
   {
+    "id": "moetok-sparse-expert-routing-for-1d-visual-tokenizers",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Jiahao Guo#, Bao Tang#, Haoxiang Cao, Jingfeng Yao, Bo Li, Wenyu Liu, Kun Gai, Changqian Yu, Xinggang Wang*. <strong>MoETok: Sparse Expert Routing for 1D Visual Tokenizers</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2610.41992\">arXiv:2610.41992</a> (2026). <a href=\"https://gjhhust.github.io/moetok-project\">project page</a>.\n  </p></li>",
+    "topics": [
+      "generative-model"
+    ]
+  },
+  {
+    "id": "can-discrete-tokens-serve-as-semantically-lossless-represen",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Jialv Zou#, Xiaotong Li#, Zhengrong Yue, Xu Huang, Yaxin Luo, Wenhao Yan, Haodong Li, Wenyu Liu, Xinggang Wang*. <strong>Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals?</strong> arXiv preprint <a href=\"https://arxiv.org/abs/2610.37662\">arXiv:2610.37662</a> (2026). <a href=\"https://github.com/hustvl/FVQ\">code</a>, <a href=\"https://doctor-james.github.io/FVQ-Page/\">project page</a>.\n  </p></li>",
+    "topics": [
+      "generative-model",
+      "visual-representation"
+    ]
+  },
+  {
+    "id": "drivewla-unifying-future-dynamics-and-scene-semantics-throug",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Shuzheng Wang, Haoxuan Li, Shengzhen Li, Chenxi Wu, Yajing Sun, Lu Hou, Wenyu Liu, Xinggang Wang*. <strong>DriveWLA: Unifying Future Dynamics and Scene Semantics through World-Language-Action Modeling for Autonomous Driving</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2610.17903\">arXiv:2610.17903</a> (2026).\n  </p></li>",
+    "topics": [
+      "autonomous-driving",
+      "world-model"
+    ]
+  },
+  {
+    "id": "condensedrive-knowledge-dense-token-sparse-visual-encoder-f",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Shengzhen Li, Yongkang Li, Hao Gao, Chenxi Wu, Yajing Sun, Lu Hou, Wenyu Liu, Xinggang Wang. <strong>ConDenseDrive: Knowledge-Dense, Token-Sparse Visual Encoder for End-to-End Autonomous Driving</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2610.16908\">arXiv:2610.16908</a> (2026).\n  </p></li>",
+    "topics": [
+      "autonomous-driving"
+    ]
+  },
+  {
     "id": "multimodal-flow-unified-flow-modeling-of-language-and-vision-in",
     "section": "tech",
     "year_group": "",
@@ -2005,6 +2043,36 @@
     "topics": [
       "multimodal-llm",
       "generative-model"
+    ]
+  },
+  {
+    "id": "rewam-rethinking-representations-for-world-action-modeling",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Haoyi Jiang, Liu Liu, Xinjiang Wang, Zhihao Sun, Zequn Chen, Sen Wang, Xinjie Wang, Xia Chen, Jingfeng Yao, Weiheng Zhao, Shanglin Yuan, Zhizhong Su, Wei Sui, Wenyu Liu, Xinggang Wang*. <strong>ReWAM: Rethinking Representations for World-Action Modeling</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2609.38163\">arXiv:2609.38163</a> (2026). <a href=\"https://github.com/hustvl/ReWAM\">code</a>, <a href=\"https://hustvl.github.io/ReWAM/\">project page</a>.\n  </p></li>",
+    "topics": [
+      "embodied-ai",
+      "world-model"
+    ]
+  },
+  {
+    "id": "redrive-shaping-representations-with-world-modeling-for-en",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Yueting Zhu, Shaoyu Chen, Yuehao Song, Hui Sun, Qian Zhang, Wenyu Liu, Xinggang Wang*. <strong>ReDrive: Shaping Representations with World Modeling for End-to-End Driving</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2609.33854\">arXiv:2609.33854</a> (2026).\n  </p></li>",
+    "topics": [
+      "autonomous-driving",
+      "world-model"
+    ]
+  },
+  {
+    "id": "foredrive-foresight-guided-end-to-end-autonomous-driving-wi",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Sinuo Wang#, Zichong Gu#, Yuhan Huang, Wenxin Wen, Xun Yang, Yiqing Zhang, Xingyu Zhang, Ningyu Che, Jie Ling, Qiankun Yu, Wei Liu, Jing Xu*, Xinggang Wang*. <strong>ForeDrive: Foresight-Guided End-to-End Autonomous Driving with a Planning-Relevant Latent World Model</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2609.26299\">arXiv:2609.26299</a> (2026).\n  </p></li>",
+    "topics": [
+      "autonomous-driving",
+      "world-model"
     ]
   },
   {

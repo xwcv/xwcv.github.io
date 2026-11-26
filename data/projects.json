@@ -1,5 +1,29 @@
 [
   {
+    "id": "molt",
+    "pub_id": "mixture-of-loops-transformer",
+    "href": "https://github.com/hustvl/MoLT",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2611.34923"
+      },
+      {
+        "label": "code",
+        "href": "https://github.com/hustvl/MoLT"
+      }
+    ],
+    "description_en": "Mixture-of-Loops Attention reuses keys and values as memory across depths and loops, pushing the expressivity-efficiency frontier of looped Transformers to single-traversal decoding.",
+    "description_cn": "Mixture-of-Loops Attention 将 keys 与 values 作为跨深度、跨循环的记忆选择性复用，把循环 Transformer 的表达力-效率边界推进到单次遍历解码。",
+    "media": {
+      "src": "res/proj/molt.jpg",
+      "alt_en": "Mixture-of-Loops Transformer family: Loop Model, MoLT-R, MoLT-KV and U-MoLT",
+      "alt_cn": "Mixture-of-Loops Transformer 家族：Loop Model、MoLT-R、MoLT-KV 与 U-MoLT",
+      "gallery_alt_en": "Mixture-of-Loops Transformer architecture family",
+      "gallery_alt_cn": "Mixture-of-Loops Transformer 架构家族"
+    }
+  },
+  {
     "id": "transharness",
     "pub_id": "transharness-from-benchmark-overfitting-to-transferable-har",
     "href": "https://arxiv.org/abs/2611.33757",

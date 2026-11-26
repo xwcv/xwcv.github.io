@@ -1980,6 +1980,15 @@
     ]
   },
   {
+    "id": "mixture-of-loops-transformer",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Lianghui Zhu, Shijie Wang, Xinggang Wang*, Jinze Bai, Bo Wang, Xiang Bai. <strong>Mixture-of-Loops Transformer</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2611.34923\">arXiv:2611.34923</a> (2026). <a href=\"https://github.com/hustvl/MoLT\">code</a>.\n  </p></li>",
+    "topics": [
+      "efficient-llm"
+    ]
+  },
+  {
     "id": "transharness-from-benchmark-overfitting-to-transferable-har",
     "section": "tech",
     "year_group": "",

@@ -1,5 +1,25 @@
 [
   {
+    "id": "transharness",
+    "pub_id": "transharness-from-benchmark-overfitting-to-transferable-har",
+    "href": "https://arxiv.org/abs/2611.33757",
+    "links": [
+      {
+        "label": "pdf",
+        "href": "https://arxiv.org/abs/2611.33757"
+      }
+    ],
+    "description_en": "Transferable harness evolution that learns intervention policies from success-failure contrasts, improving coding agents beyond their evolution benchmarks.",
+    "description_cn": "可迁移的 harness 演化框架：从同任务成败轨迹对比中学习干预策略，让编码智能体在基准之外持续受益。",
+    "media": {
+      "src": "res/proj/transharness.jpg",
+      "alt_en": "TransHarness: transferable intervention evolution for coding agents",
+      "alt_cn": "TransHarness：面向编码智能体的可迁移干预策略演化",
+      "gallery_alt_en": "TransHarness: transferable harness evolution for coding agents",
+      "gallery_alt_cn": "TransHarness：面向编码智能体的可迁移 harness 演化"
+    }
+  },
+  {
     "id": "multimodal-flow",
     "pub_id": "multimodal-flow-unified-flow-modeling-of-language-and-vision-in",
     "href": "https://hustvl.github.io/Multimodal-Flow/",

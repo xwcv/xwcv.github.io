@@ -1980,6 +1980,15 @@
     ]
   },
   {
+    "id": "transharness-from-benchmark-overfitting-to-transferable-har",
+    "section": "tech",
+    "year_group": "",
+    "li_html": "<li><p>\n  Tianze Xia, Zimo Wang, Heng Tong, Zhaoxiang Liu, Shiguo Lian, Fan Huang, Wenyu Liu, Yunchao Wei, Xinggang Wang. <strong>TransHarness: From Benchmark Overfitting to Transferable Harness Evolution</strong>. arXiv preprint <a href=\"https://arxiv.org/abs/2611.33757\">arXiv:2611.33757</a> (2026).\n  </p></li>",
+    "topics": [
+      "multimodal-llm"
+    ]
+  },
+  {
     "id": "multimodal-flow-unified-flow-modeling-of-language-and-vision-in",
     "section": "tech",
     "year_group": "",

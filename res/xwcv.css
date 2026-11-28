@@ -693,6 +693,16 @@ main section:not(.profile-section) {
     padding: 24px 28px;
 }
 
+main section.csc-section {
+    padding: 14px 28px;
+}
+
+main section.csc-section p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
 main section.proj-hero,
 main section.pubs-links {
     background:
